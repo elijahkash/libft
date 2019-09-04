@@ -5,7 +5,7 @@
 • memmove
 • memchr
 • memcmp
-• strlen
+	• strlen
 • strdup
 • strcpy
 • strncpy
@@ -44,11 +44,11 @@
 • ft_itoa
 	• ft_putchar
 	• ft_putstr
-• ft_putendl
+	• ft_putendl
 • ft_putnbr
-• ft_putchar_fd
-• ft_putstr_fd
-• ft_putendl_fd
+	• ft_putchar_fd
+	• ft_putstr_fd
+	• ft_putendl_fd
 • ft_putnbr_fd
 
 

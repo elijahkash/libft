@@ -6,18 +6,16 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 13:59:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 14:06:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 15:52:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#include <unistd.h>
+
 void	ft_putstr(char const *s)
 {
-	int i;
-
-	i = -1;
-	while (s[++i] != '\0')
-		ft_putchar(s[i]);
+	write(1, s, ft_strlen(s));
 	return ;
 }

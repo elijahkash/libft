@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 14:29:51 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 15:52:29 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ int main()
 	fflush(stdout);
 	ft_putendl("I LOVE YOU");
 	printf("\n");
+
+// ft_putchar_fd		MISS
+// ft_putstr_fd			MISS
+// ft_putendl_fd		MISS
+
+// ft_putendl
+	printf("ft_strlen(\"\")=%zd, ft_strlen(\"1\")=%zd\n",
+			ft_strlen(""), ft_strlen("1"));
 
 	return (0);
 }
