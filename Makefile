@@ -6,14 +6,15 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/04 17:19:34 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/04 18:12:26 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft
 SOURCES = ft_putchar.c ft_putstr.c ft_putendl.c ft_putchar_fd.c ft_strlen.c\
 ft_putstr_fd.c ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_isalnum.c\
-ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_bzero.c
+ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_bzero.c ft_itoa\
+ft_putnbr.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
