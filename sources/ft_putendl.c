@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 14:09:41 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 17:51:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 18:29:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putendl(char const *s)
 {

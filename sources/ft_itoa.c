@@ -6,39 +6,49 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 17:45:47 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 18:11:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 18:45:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 #include <stdlib.h>
 
-char	*ft_itoa(int n)
+static int	ft_itoa_strlen(int n)
 {
-	char	*str;
-	int		tmp;
 	int		len;
 
-	tmp = n;
 	len = (n <= 0) ? 1 : 0;
-	while (tmp != 0)
+	while (n != 0)
 	{
 		++len;
-		tmp /= 10;
+		n /= 10;
 	}
+	return (len);
+}
+
+char		*ft_itoa(int n)
+{
+	long long int	tmp;
+	int				len;
+	char			*str;
+
+	tmp = n;
+	len = ft_itoa_strlen(n);
 	if (!(str = (char *)malloc(len + 1)))
 		return (NULL);
+	str[len--] = '\0';
+	if (n == 0)
+		*str = '0';
 	if (n < 0)
 	{
 		*str = '-';
-		n *= -1;
+		tmp *= -1;
 	}
-	str[len--] = '\0';
-	while (n != 0)
+	while (tmp != 0)
 	{
-		str[len--] = (n % 10) + '0';
-		n /= 10;
+		str[len--] = (tmp % 10) + '0';
+		tmp /= 10;
 	}
 	return (str);
 }
