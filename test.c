@@ -6,11 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 15:52:29 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 16:23:16 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 
 #include "libft.h"
 
@@ -44,5 +45,6 @@ int main()
 	printf("ft_strlen(\"\")=%zd, ft_strlen(\"1\")=%zd\n",
 			ft_strlen(""), ft_strlen("1"));
 
+// ft_isalpha
 	return (0);
 }

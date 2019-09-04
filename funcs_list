@@ -19,13 +19,14 @@
 • strcmp
 • strncmp
 • atoi
-• isalpha
+• 	isalpha
 • isdigit
 • isalnum
 • isascii
 • isprint
 • toupper
 • tolower
+
 • ft_memalloc
 • ft_memdel
 • ft_strnew
