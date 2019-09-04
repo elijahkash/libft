@@ -6,12 +6,15 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/03 23:22:35 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/04 11:21:22 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libft
 SOURCES = main.c
+
+DESTLIB = ./$(NAME).a
+HEADER = ./$(NAME).h
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -27,11 +30,11 @@ OBJ = $(addprefix $(OBJDIR), $(OBJECTS))
 
 all: $(NAME)
 
-$(NAME): ./libft.h $(OBJ)
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
+$(NAME): $(HEADER) $(OBJ)
+		ar rc $(DESTLIB) $(OBJ)
+		ranlib $(DESTLIB)
 
-$(OBJDIR)%.o: ./libft.h $(SRCDIR)%.c
+$(OBJDIR)%.o: $(HEADER) $(SRCDIR)%.c
 		$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $^
 
 compile: clean $(OBJ)
