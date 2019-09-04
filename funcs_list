@@ -27,18 +27,18 @@
 	• toupper
 	• tolower
 
-• ft_memalloc
-• ft_memdel
-• ft_strnew
-• ft_strdel
-• ft_strclr
-• ft_striter
-• ft_striteri
-• ft_strmap
-• ft_strmapi
-• ft_strequ
-• ft_strnequ
-• ft_strsub
+	• ft_memalloc
+	• ft_memdel
+	• ft_strnew
+	• ft_strdel
+	• ft_strclr
+	• ft_striter
+	• ft_striteri
+	• ft_strmap
+	• ft_strmapi
+	• ft_strequ
+	• ft_strnequ
+• ft_strsub // wait for strcpy
 • ft_strjoin
 • ft_strtrim
 • ft_strsplit
