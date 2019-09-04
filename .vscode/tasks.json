@@ -1,0 +1,30 @@
+{
+// Документацию по формату tasks.json см.
+	// по адресу https://go.microsoft.com/fwlink/?LinkId=733558
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-L${fileDirname}",
+				"-lft",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "/usr/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
