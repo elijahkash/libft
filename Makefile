@@ -6,12 +6,12 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/04 11:21:22 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/04 12:11:38 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft
-SOURCES = main.c
+SOURCES = ft_putchar.c
 
 DESTLIB = ./$(NAME).a
 HEADER = ./$(NAME).h
@@ -21,7 +21,7 @@ CFLAGS = -Wall -Wextra -Werror
 DEBUG = -O3
 debug: DEBUG = -g3
 
-SRCDIR = ./
+SRCDIR = ./sources/
 OBJDIR = ./
 
 OBJECTS = $(SOURCES:.c=.o)
@@ -34,8 +34,11 @@ $(NAME): $(HEADER) $(OBJ)
 		ar rc $(DESTLIB) $(OBJ)
 		ranlib $(DESTLIB)
 
-$(OBJDIR)%.o: $(HEADER) $(SRCDIR)%.c
-		$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $^
+#######################################################
+# DEL FIX FOR INCDIR
+#######################################################
+$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADER)
+		$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I ./
 
 compile: clean $(OBJ)
 
@@ -43,7 +46,7 @@ clean:
 		rm -r -f $(OBJ)
 
 fclean: clean
-		rm -r -f $(NAME)
+		rm -r -f $(DESTLIB)
 
 debug: all
 

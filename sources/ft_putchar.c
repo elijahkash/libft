@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 11:49:06 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/04 11:44:01 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/04 11:48:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
+#include <unistd.h>
 
-void	ft_putchar(char c);
-
-#endif
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return ;
+}
