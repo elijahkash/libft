@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:50:48 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 22:55:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 23:15:30 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *ptr;
+	unsigned char *ptr;
 
-	ptr = (char *)s;
+	ptr = (unsigned char *)s;
 	while (n-- > 0)
-		if (*ptr == (unsigned int)c)
+		if (*ptr == (unsigned char)c)
 			return ((void *)ptr);
 	return (NULL);
 }
