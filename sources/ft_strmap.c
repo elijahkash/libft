@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:44:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 21:22:55 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 21:48:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!str)
 		return (NULL);
 	while (s[i])
-		str[i++] = f(s[i]);
+	{
+		str[i] = f(s[i]);
+		++i;
+	}
 	return (str);
 }

@@ -6,11 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:12:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 20:21:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 21:45:28 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {

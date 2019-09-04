@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:57:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 21:22:49 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/04 21:48:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!str)
 		return (NULL);
 	while (s[i])
-		str[i++] = f(i, s[i]);
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
 	return (str);
 }
