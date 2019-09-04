@@ -1,5 +1,5 @@
 • memset
-• bzero
+	• bzero
 • memcpy
 • memccpy
 • memmove
@@ -24,8 +24,8 @@
 	• isalnum
 	• isascii
 	• isprint
-• toupper
-• tolower
+	• toupper
+	• tolower
 
 • ft_memalloc
 • ft_memdel
