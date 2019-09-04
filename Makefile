@@ -6,12 +6,12 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/04 13:41:48 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/04 14:16:24 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft
-SOURCES = ft_putchar.c
+SOURCES = ft_putchar.c ft_putstr.c ft_putendl.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

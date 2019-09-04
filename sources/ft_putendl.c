@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 14:16:22 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/04 14:09:41 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/04 14:16:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
+void	ft_putendl(char const *s)
+{
+	int i;
 
-void	ft_putchar(char c);
-void	ft_putstr(char const *s);
-void	ft_putendl(char const *s);
-
-#endif
+	i = -1;
+	while (s[++i] != '\0')
+		ft_putchar(s[i]);
+	ft_putchar('\n');
+	return ;
+}
