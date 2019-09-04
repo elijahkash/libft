@@ -19,11 +19,11 @@
 • strcmp
 • strncmp
 • atoi
-• 	isalpha
-• isdigit
-• isalnum
-• isascii
-• isprint
+	• isalpha
+	• isdigit
+	• isalnum
+	• isascii
+	• isprint
 • toupper
 • tolower
 
