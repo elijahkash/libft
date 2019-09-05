@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:01:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 16:53:11 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 17:01:59 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_strtrim(char const *s)
 	str = ft_strnew(len);
 	if (!str)
 		return(NULL);
-	ft_memcpy(str, &(s[start]), len);
+	ft_memcpy((void *)str, &(s[start]), len);
 	return (str);
 }
