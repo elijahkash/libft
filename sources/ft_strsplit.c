@@ -6,15 +6,17 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 23:12:42 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 23:37:54 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#include <stdlib.h>
+
 char		**ft_strsplit(char const *s, char c)
 {
-	char	temp_str[1000];
+	char	temp_str[ft_findlwordlc(s, c) + 1];
 	char	**result;
 	int		is_word;
 	char	**current_word;
