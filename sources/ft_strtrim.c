@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:01:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 19:22:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 19:26:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char	*ft_strtrim(char const *s)
 	size_t	len;
 
 	start = 0;
-	end = ft_strlen(s) - 1;
+	end = ft_strlen(s);
 	while (ft_isws(s[start]))
 		start++;
-	while (ft_isws(s[end]))
-		end = (!end) ? 0 : end - 1;
+	while (&s[end] != s && ft_isws(s[--end]))
+		continue;
 	len = (start < end) ? end - start + 1 : 0;
 	str = ft_strnew(len);
 	if (!str)
