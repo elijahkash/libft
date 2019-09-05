@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:30:11 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 22:51:12 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 20:59:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,19 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	void *buf;
+	size_t i;
 
-	buf = malloc(len);
-	ft_memcpy(buf, src, len);
-	ft_memcpy(dst, buf, len);
-	free(buf);
+	if (dst >= src)
+		while (len--)
+			((char *)dst)[len] = ((char *)src)[len];
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
+	}
 	return (dst);
 }

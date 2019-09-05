@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:57:33 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 19:39:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 20:58:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *i;
+	const char *i;
 
 	i = &s[ft_strlen(s)];
 	while (i >= s)
