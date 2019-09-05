@@ -11,9 +11,9 @@
 	• strncpy
 	• strcat
 	• strncat
-• strlcat
-• strchr
-• strrchr
+	• strlcat
+	• strchr
+	• strrchr
 • strstr
 • strnstr
 • strcmp
