@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 21:19:06 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 16:12:39 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/05 16:10:50 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/05 16:18:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char *str;
-
-	str = ft_strnew(len);
-	if (!str)
-		return (NULL);
-	ft_memcpy((void *)str, (void *)(s[start]), len);
-	return (str);
+	ft_memcpy((void *)dst, (void *)src, ft_strlen(src) + 1);
+	return (dst);
 }

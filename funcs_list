@@ -6,11 +6,11 @@
 	• memchr
 	• memcmp
 	• strlen
-• strdup
-• strcpy
-• strncpy
-• strcat
-• strncat
+	• strdup
+	• strcpy
+	• strncpy
+	• strcat
+	• strncat
 • strlcat
 • strchr
 • strrchr
@@ -38,10 +38,10 @@
 	• ft_strmapi
 	• ft_strequ
 	• ft_strnequ
-• ft_strsub // wait for strcpy
-• ft_strjoin
-• ft_strtrim
-• ft_strsplit
+	• ft_strsub
+	• ft_strjoin
+	• ft_strtrim
+• ft_strsplit // only f
 	• ft_itoa
 	• ft_putchar
 	• ft_putstr

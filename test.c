@@ -6,17 +6,18 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 18:29:22 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 16:13:33 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
+//#include <ctype.h>
 
 #include "libft.h"
 
 int main()
 {
+/*
 // ft_putchar
 	printf("ft_putchar('T')=");
 	fflush(stdout);
@@ -46,5 +47,11 @@ int main()
 			ft_strlen(""), ft_strlen("1"));
 
 // ft_isalpha
+*/
+
+	char *str;
+
+	str = NULL;
+	memset(str, '1', 3);
 	return (0);
 }
