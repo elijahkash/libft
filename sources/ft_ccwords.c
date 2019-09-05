@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_ccwords.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 23:12:42 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/05 22:57:17 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/05 23:01:08 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**ft_strsplit(char const *s, char c)
+size_t	ft_ccwords(const char *str, char c)
 {
-	char	temp_str[1000];
-	char	**result;
+	size_t	count;
 	int		is_word;
-	char	**current_word;
 
-	result = (char **)malloc(sizeof(char *) * (ft_ccwords(s, c) + 1));
-	if (!result)
-		return (NULL);
+	if (!str)
+		return (0);
 	is_word = 0;
-	current_word = result;
-	while ((*s) || is_word)
+	count = 0;
+	while (*str)
 	{
-		if (is_word && (*s == c || !(*s)))
+		if (is_word && *str == c)
 		{
-			temp_str[is_word] = 0;
-			*current_word = ft_strdup(temp_str);
-			current_word++;
+			count++;
 			is_word = 0;
 		}
-		if (*s != c && *s)
-			temp_str[is_word++] = *s;
-		s = (*s) ? s + 1 : s;
+		if (*str != c && !is_word)
+			is_word++;
+		str++;
 	}
-	*current_word = 0;
-	return (result);
+	if (is_word)
+		count++;
+	return (count);
 }

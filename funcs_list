@@ -41,7 +41,7 @@
 	• ft_strsub
 	• ft_strjoin
 	• ft_strtrim
-• ft_strsplit // only f
+	• ft_strsplit
 	• ft_itoa
 	• ft_putchar
 	• ft_putstr
