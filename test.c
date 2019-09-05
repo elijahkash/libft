@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 16:13:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 18:29:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ int main()
 // ft_isalpha
 */
 
-	char *str;
-
-	str = NULL;
-	memset(str, '1', 3);
+	char str1[15] = {'a', '1', '2', '3', '4', '5', '6', '7',};
+	//char str2[10] = {'7', '8', '9'};
+	ft_strncat(str1, "lorem", 2);
+	printf("%s\n", str1);
 	return (0);
 }
