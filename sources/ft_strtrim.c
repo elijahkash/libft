@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:01:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 17:01:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/05 19:22:05 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ char	*ft_strtrim(char const *s)
 		start++;
 	while (ft_isws(s[end]))
 		end = (!end) ? 0 : end - 1;
-	len = (start < end) ? end - start : 0;
+	len = (start < end) ? end - start + 1 : 0;
 	str = ft_strnew(len);
 	if (!str)
-		return(NULL);
+		return (NULL);
 	ft_memcpy((void *)str, &(s[start]), len);
 	return (str);
 }
