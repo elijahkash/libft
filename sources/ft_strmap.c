@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:44:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 17:03:18 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

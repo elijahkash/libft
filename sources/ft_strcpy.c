@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 16:10:50 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 17:03:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strcpy(char *dst, const char *src)
 {

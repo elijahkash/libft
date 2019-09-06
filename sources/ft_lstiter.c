@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 12:22:09 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 17:02:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
