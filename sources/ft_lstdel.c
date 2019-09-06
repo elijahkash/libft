@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 12:08:29 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 12:19:47 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 13:03:52 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	head = *alst;
 	while (head)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		next = head;
+		del(head->content, head->content_size);
+		next = head->next;
 		free(head);
 		head = next;
 	}

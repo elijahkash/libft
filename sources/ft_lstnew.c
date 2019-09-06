@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:54:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 12:32:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 12:59:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,15 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		nlist->content = NULL;
 		nlist->content_size = 0;
 	}
-	nlist->content = content ? (void *)content : NULL;
-	nlist->content_size = content ? content_size : 0;
+	else
+	{
+		if (!(nlist->content = malloc(content_size)))
+		{
+			free(nlist);
+			return (NULL);
+		}
+		ft_memcpy(nlist->content, content, content_size);
+		nlist->content_size = content_size;
+	}
 	return (nlist);
 }

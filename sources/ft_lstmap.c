@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 12:23:37 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 12:31:11 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 13:21:09 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 
 	while (lst)
 	{
-		nitem = ft_lstnew(f(lst), sizeof(t_list *));
+		nitem = f(lst);
 		if (!nlist)
 		{
 			nlist = nitem;

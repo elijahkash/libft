@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:43:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 16:17:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 12:42:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strdup(const char *s1)
 		errno = ENOMEM;
 		return (NULL);
 	}
-	str = memcpy(str, s1, ft_strlen(s1));
+	str = ft_memcpy(str, s1, ft_strlen(s1));
 	return (str);
 }
