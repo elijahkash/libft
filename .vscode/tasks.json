@@ -1,0 +1,33 @@
+{
+// Документацию по формату tasks.json см.
+	// по адресу https://go.microsoft.com/fwlink/?LinkId=733558
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "clang build debug file",
+			"command": "/usr/bin/clang",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}",
+				"-I",
+				"${fileDirname}/../includes/",
+				"-L",
+				"${fileDirname}/../",
+				"-lft"
+			],
+			"options": {
+				"cwd": "/usr/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

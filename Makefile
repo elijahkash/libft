@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/06 17:01:51 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/06 17:28:22 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,13 @@ debug: DEBUG = -g3
 MKDIR = mkdir -p
 
 LIBDIR = ./
-HEADERDIR = ./
-
 SRCDIR = ./sources/
 OBJDIR = ./objects/
+INCDIR = ./includes/
+DEBDIR = ./debug/
 
 LIB = $(LIBDIR)$(NAME).a
-HEADER = $(HEADERDIR)$(NAME).h
+HEADER = $(INCDIR)$(NAME).h
 
 OBJECTS = $(SOURCES:.c=.o)
 SRC = $(addprefix $(SRCDIR), $(SOURCES))
@@ -51,7 +51,7 @@ $(LIB): $(HEADER) $(OBJ) $(OBJDIR)
 	ranlib $(LIB)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c $(HEADER)
-	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(HEADERDIR)
+	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
 
 $(OBJDIR):
 	$(MKDIR) $(OBJDIR)
@@ -71,7 +71,7 @@ re: fclean all
 redebug: fclean debug
 
 test: testclean
-	gcc -Wall -Wextra -Werror -g3 -o test test.c -L. -lft
+	$(CC) $(CFLAGS) $(DEBUG) -o $(DEBDIR)test $(DEBDIR)test.c -L $(LIBDIR) -lft -I $(INCDIR)
 
 testclean:
-	rm -f test
+	rm -f ./debug/test
