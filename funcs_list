@@ -18,7 +18,7 @@
 	• strnstr
 	• strcmp
 	• strncmp
-• atoi
+	• atoi
 	• isalpha
 	• isdigit
 	• isalnum
@@ -54,4 +54,4 @@
 
 
 
-+ BONUS
+	+ BONUS
