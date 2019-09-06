@@ -6,13 +6,27 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 23:37:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 13:41:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #include <stdlib.h>
+
+static void	*destroy(char **start_destr, char **end_destr)
+{
+	char	**iter;
+
+	iter = start_destr;
+	while (iter < end_destr)
+	{
+		free(*iter);
+		iter++;
+	}
+	free(start_destr);
+	return (NULL);
+}
 
 char		**ft_strsplit(char const *s, char c)
 {
@@ -21,8 +35,7 @@ char		**ft_strsplit(char const *s, char c)
 	int		is_word;
 	char	**current_word;
 
-	result = (char **)malloc(sizeof(char *) * (ft_ccwords(s, c) + 1));
-	if (!result)
+	if (!(result = (char **)malloc(sizeof(char *) * (ft_ccwords(s, c) + 1))))
 		return (NULL);
 	is_word = 0;
 	current_word = result;
@@ -32,7 +45,8 @@ char		**ft_strsplit(char const *s, char c)
 		{
 			temp_str[is_word] = 0;
 			*current_word = ft_strdup(temp_str);
-			current_word++;
+			if (!*(current_word++))
+				return (destroy(result, --current_word));
 			is_word = 0;
 		}
 		if (*s != c && *s)
