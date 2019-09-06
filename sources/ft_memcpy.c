@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:10:14 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 22:24:25 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 11:09:37 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t i;
 
 	i = 0;
+	if (dst == src && dst == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dst)[i] = ((char *)src)[i];

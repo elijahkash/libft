@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:24:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/04 20:27:20 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 10:59:45 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strnew(size_t size)
 {
 	char *str;
 
+	if (size == __SIZE_MAX__)
+		return (NULL);
 	str = (char *)ft_memalloc(size + 1);
 	return (str);
 }

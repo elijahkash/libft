@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:30:11 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/05 20:59:14 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/06 11:09:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t i;
 
+	if (dst == src && dst == NULL)
+		return (NULL);
 	if (dst >= src)
 		while (len--)
 			((char *)dst)[len] = ((char *)src)[len];
