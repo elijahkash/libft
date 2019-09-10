@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/06 17:28:22 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/10 17:41:06 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ ft_strsub.c ft_strtrim.c  ft_isws.c ft_strdup.c ft_strcpy.c ft_strncpy.c\
 ft_strcat.c ft_strncat.c ft_strjoin.c ft_strlcat.c ft_strchr.c ft_strnequ.c\
 ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_cwords.c\
 ft_ccwords.c ft_findlwordlc.c ft_strsplit.c ft_atoi.c\
-ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c
+ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
+ft_free.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

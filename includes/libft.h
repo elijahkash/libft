@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 17:01:43 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/10 17:42:34 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,13 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+t_list			*ft_lstfind(t_list *head, void *search_d,
+							int (*f)(void *, void *));
+void			ft_lstdelnode(t_list **alst, t_list **node,
+							void (*del)(void*, size_t));
+
+void			*ft_remalloc(void *ptr, size_t oldsize, size_t newsize);
+void			ft_free(void *data, size_t size);
 
 #endif
