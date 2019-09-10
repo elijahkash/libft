@@ -6,23 +6,31 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:32:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/07 16:40:48 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/10 19:58:52 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t lendst;
-	size_t lensrc;
+	size_t i;
+	size_t j;
 
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
-	if (size <= lendst + 1)
-		return (size + lensrc);
-	ft_memcpy((void *)&dst[lendst], (void *)src,
-				(size - lendst - 1 > lensrc) ? lensrc : size - lendst - 1);
-	dst[(size - lendst - 1 > lensrc) ? size - 1 : lendst + lensrc] = '\0';
-	return (lendst + lensrc);
+	if (size == 0)
+		return (ft_strlen(src));
+	i = 0;
+	while (i < size && dst[i] != '\0')
+		++i;
+	j = 0;
+	while (src[j] != '\0' && i + j < size - 1)
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	if (i + j < size)
+		dst[i + j] = '\0';
+	while (src[j] != '\0')
+		j++;
+	return (i + j);
 }
