@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:44:48 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/10 17:48:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/11 11:35:46 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_lstdelnode(t_list **alst, t_list **node,
 	if (iter == *node)
 	{
 		*alst = iter->next;
+		del(iter->content, iter->content_size);
 		free(iter);
 		*node = NULL;
 	}
@@ -33,7 +34,7 @@ void	ft_lstdelnode(t_list **alst, t_list **node,
 		{
 			if (next == *node)
 			{
-				del(next->content, iter->content_size);
+				del(next->content, next->content_size);
 				iter->next = next->next;
 				free(next);
 				*node = NULL;
