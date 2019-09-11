@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/10 17:42:34 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/11 16:18:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,7 @@ void			ft_lstdelnode(t_list **alst, t_list **node,
 
 void			*ft_remalloc(void *ptr, size_t oldsize, size_t newsize);
 void			ft_free(void *data, size_t size);
+
+int				ft_get_next_line(const int fd, char **line);
 
 #endif
