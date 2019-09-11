@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:44:48 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/11 11:35:46 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/11 11:52:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,4 @@ void	ft_lstdelnode(t_list **alst, t_list **node,
 			iter = next;
 			next = next->next;
 		}
-	return ;
 }
