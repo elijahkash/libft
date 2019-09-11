@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/10 17:41:06 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/11 15:19:59 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,15 @@ all: $(NAME)
 
 $(NAME): $(LIB)
 
-$(LIB): $(HEADER) $(OBJ) $(OBJDIR)
+$(LIB): $(HEADER) $(OBJDIR) $(OBJ)
 	ar rc $(LIB) $(OBJ)
 	ranlib $(LIB)
 
-$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADER)
-	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
-
 $(OBJDIR):
 	$(MKDIR) $(OBJDIR)
+
+$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADER)
+	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
 
 compile: clean $(OBJ)
 
