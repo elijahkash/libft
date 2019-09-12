@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/11 16:20:10 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/12 19:29:45 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,22 +45,36 @@ OBJ = $(addprefix $(OBJDIR), $(OBJECTS))
 
 all: $(NAME)
 
-$(NAME): $(LIB)
+depend: .depend
 
-$(LIB): $(HEADER) $(OBJDIR) $(OBJ)
+.depend: $(SRC)
+	rm -f ./.depend
+	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > ./.depend2
+	sed '/.o/s/^/objects\//g' .depend2 > .depend
+	rm -f ./.depend2
+
+-include ./.depend
+
+#%.o:
+#	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
+
+$(NAME): depend $(LIB)
+
+$(LIB): $(OBJDIR) $(OBJ)
 	ar rc $(LIB) $(OBJ)
 	ranlib $(LIB)
 
 $(OBJDIR):
 	$(MKDIR) $(OBJDIR)
 
-$(OBJDIR)%.o: $(SRCDIR)%.c $(HEADER)
+$(OBJDIR)%.o: $(SRCDIR)%.c
 	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
 
 compile: clean $(OBJ)
 
 clean:
 	rm -r -f $(OBJ)
+	rm -rf .depend
 
 fclean: clean
 	rm -r -f $(LIB)

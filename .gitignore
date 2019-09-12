@@ -3,3 +3,4 @@
 *.dSYM
 /debug/test
 *.a
+.depend
