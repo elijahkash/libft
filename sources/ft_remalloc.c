@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/16 12:15:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/16 13:39:16 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
 	void *newptr;
 
+	if (newsize == oldsize)
+		return (ptr);
 	if (!(newptr = ft_memalloc(newsize)))
 	{
 		if (ptr)
@@ -26,7 +28,7 @@ void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 	}
 	if (ptr)
 	{
-		ft_memcpy(newptr, ptr, oldsize);
+		ft_memcpy(newptr, ptr, (oldsize < newsize) ? oldsize : newsize);
 		free(ptr);
 	}
 	return (newptr);
