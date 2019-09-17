@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/16 15:21:45 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/17 11:24:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,6 @@ void			*ft_remalloc(void *ptr, size_t oldsize, size_t newsize);
 void			ft_free(void *data, size_t size);
 
 int				ft_get_next_line(const int fd, char **line);
-void			ft_del_char_arr(char ***arr);
+void			ft_del_arr(void ***arr, size_t item_size);
 
 #endif

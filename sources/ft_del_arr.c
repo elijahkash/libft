@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_del_char_arr.c                                  :+:      :+:    :+:   */
+/*   ft_del_arr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 15:20:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/16 15:21:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/17 11:24:40 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 #include <stdlib.h>
 
-void	ft_del_char_arr(char ***arr)
+void	ft_del_arr(void ***arr, size_t item_size)
 {
 	int		i;
 
 	i = 0;
-	while ((*arr)[i])
+	while (((char **)(*arr))[i * item_size])
 	{
-		free((*arr)[i]);
-		(*arr)[i] = NULL;
+		free(((char **)(*arr))[i * item_size]);
+		((char **)(*arr))[i * item_size] = NULL;
 	}
 	free((*arr));
 	*arr = NULL;
