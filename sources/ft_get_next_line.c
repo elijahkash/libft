@@ -6,10 +6,9 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 20:51:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/11 16:19:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/17 21:39:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <libft.h>
 #include <ft_get_next_line.h>
