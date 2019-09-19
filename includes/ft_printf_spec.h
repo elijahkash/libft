@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/19 20:47:55 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/19 23:05:09 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 # define SIZE_HH	8
 # define SIZE_H		16
 
+# define READ_DATA	(-1)
 
 typedef struct	s_specifications_def
 {
@@ -60,7 +61,7 @@ const t_specifications_def specs_def[NUMBER_OF_SPECS] = {
 	{'b', 2, 1, 1, 0},
 	{'r', 2, 1, 1, 0}};
 
-static int	is_valid_spec(const char **format);
+static int	is_valid_spec(const char *format);
 static int	handle_spec(const char **format, va_list argptr)
 
 #endif
