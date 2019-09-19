@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/19 13:56:32 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/18 16:51:11 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/19 13:55:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libft.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int main()
-{
-//	char s1[21]= {"I am love school 21!\0"};
-	printf("%]qwer");
-	return (0);
-}
+int		ft_printf(const char *format, ...);
+
+#endif

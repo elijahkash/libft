@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/17 11:24:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/18 18:28:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# include <ft_printf.h>
 
 int				ft_isws(int c);
 size_t			ft_cwords(const char *str, int (*f)(int c));

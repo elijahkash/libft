@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   handle_spec.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/19 13:56:32 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/19 19:40:13 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libft.h>
+#include <ft_printf_spec.h>
 
-int main()
+static int	is_valid_spec(const char **format)
 {
-//	char s1[21]= {"I am love school 21!\0"};
-	printf("%]qwer");
-	return (0);
+	if (*(*format)++ != '%')
+		return (0);
+}
+
+static int	handle_spec(const char **format, va_list argptr)
+{
+	int result;
+
+	if (*(*format)++ != '%')
+		return (0);
+	result = 0;
+
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 15:20:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/17 11:24:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/19 16:31:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_del_arr(void ***arr, size_t item_size)
 	while (((char **)(*arr))[i * item_size])
 	{
 		free(((char **)(*arr))[i * item_size]);
-		((char **)(*arr))[i * item_size] = NULL;
+		((char **)(*arr))[i++ * item_size] = NULL;
 	}
 	free((*arr));
 	*arr = NULL;

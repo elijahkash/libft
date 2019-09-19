@@ -6,11 +6,11 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/17 13:17:02 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/19 20:50:16 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
+NAME = libftprintf
 SOURCES = ft_putchar.c ft_putstr.c ft_putendl.c ft_putchar_fd.c ft_strlen.c\
 ft_putstr_fd.c ft_putendl_fd.c ft_isalpha.c ft_isdigit.c ft_isalnum.c\
 ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_bzero.c ft_itoa.c\
@@ -23,7 +23,8 @@ ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_cwords.c\
 ft_ccwords.c ft_findlwordlc.c ft_strsplit.c ft_atoi.c\
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
 ft_free.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c\
-ft_del_arr.c
+ft_del_arr.c \
+ft_printf.c printf_src/handle_spec.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -38,7 +39,6 @@ INCDIR = ./includes/
 DEBDIR = ./debug/
 
 LIB = $(LIBDIR)$(NAME).a
-HEADER = $(INCDIR)$(NAME).h
 
 OBJECTS = $(SOURCES:.c=.o)
 SRC = $(addprefix $(SRCDIR), $(SOURCES))
@@ -46,20 +46,16 @@ OBJ = $(addprefix $(OBJDIR), $(OBJECTS))
 
 all: $(NAME)
 
-depend: .depend
+$(NAME): depend $(LIB)
 
-.depend: $(SRC)
-	rm -f ./.depend
-	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > ./.depend2
-	sed '/.o/s/^/objects\//g' .depend2 > .depend
-	rm -f ./.depend2
+depend: $(OBJDIR).depend
+
+$(OBJDIR).depend: $(SRC)
+	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > $(OBJDIR)dependtmp
+	sed '/.o/s/^/objects\//g' $(OBJDIR)dependtmp > $(OBJDIR).depend
+	rm -f $(OBJDIR)dependtmp
 
 -include ./.depend
-
-#%.o:
-#	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
-
-$(NAME): depend $(LIB)
 
 $(LIB): $(OBJDIR) $(OBJ)
 	ar rc $(LIB) $(OBJ)
@@ -75,7 +71,7 @@ compile: clean $(OBJ)
 
 clean:
 	rm -r -f $(OBJ)
-	rm -rf .depend
+	rm -rf $(OBJDIR).depend
 
 fclean: clean
 	rm -r -f $(LIB)
