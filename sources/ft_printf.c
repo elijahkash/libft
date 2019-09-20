@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 15:56:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/20 17:50:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	is_valid_format(const char *format)
 	while (*format)
 		if (*format != '%')
 			format++;
-		else if (!is_valid_spec(format))
+		else if (!(format = is_valid_spec(format)))
 			return (0);
 	return (1);
 }

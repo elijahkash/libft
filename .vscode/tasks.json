@@ -16,7 +16,7 @@
 				"${fileDirname}/../includes/",
 				"-L",
 				"${fileDirname}/../",
-				"-lft"
+				"-lftprintf"
 			],
 			"options": {
 				"cwd": "/usr/bin"
