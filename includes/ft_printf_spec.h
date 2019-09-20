@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 17:50:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/20 20:39:15 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,9 @@ typedef struct	s_specifications_def
 	int		sizes;
 }				t_specifications_def;
 
-const char	*is_valid_spec(const char *format);
-int			handle_spec(const char **format, va_list argptr);
+const char		*is_valid_spec(const char *format);
+int				handle_spec(const char **format, va_list argptr);
 
-const char	*skip_digits(const char *format);
-int			read_flag(const char *format, t_specifications_def *spec);
-const char	*read_size(const char *format, t_specifications_def *spec,
-						const char *sizes_map[NUMBER_OF_SIZES]);
-const char	*read_specification(const char *format,
-								t_specifications_def *spec,
-						const t_specifications_def specs_def[NUMBER_OF_SPECS]);
+typedef int		(*print_func)(t_specifications_def spec, va_list argptr);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 17:45:44 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/20 20:38:36 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ const char	*read_size(const char *format, t_specifications_def *spec,
 						const char *sizes_map[NUMBER_OF_SIZES])
 {
 	int		i;
-	char 	*ptr;
+	char	*ptr;
 
 	i = -1;
 	while (++i < NUMBER_OF_SIZES)

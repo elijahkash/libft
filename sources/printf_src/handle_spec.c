@@ -6,13 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 19:00:29 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/20 22:15:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_printf_spec.h>
 
 #include <libft.h>
+#include <read_spec.h>
+#include <print_funcs.h>
 
 /*
 **	place sizes in priority order (or by length)
@@ -37,16 +39,9 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'b', 2, 1, 1, 0},
 	{'r', 2, 1, 1, 0}};
 
-int			print_spec(t_specifications_def spec, va_list argptr)
-{
-	int res;
-
-
-	spec.spec = argptr ? 1 : 0;
-
-	res = 0;
-	return(res);
-}
+static const print_func				g_arr_print_funcs[NUMBER_OF_SPECS] = {
+	print_percent
+};
 
 int			check_spec(t_specifications_def spec)
 {
@@ -108,5 +103,5 @@ int		handle_spec(const char **format, va_list argptr)
 		return (0);
 	ft_bzero(&spec, sizeof(t_specifications_def));
 	*format = read_spec(*format, &spec);
-	return (print_spec(spec, argptr));
+	return (g_arr_print_funcs[spec.spec - 1](spec, argptr));
 }

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   print_funcs.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 22:17:57 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/20 20:42:40 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/20 22:16:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <libft.h>
+#ifndef PRINT_FUNC_H
+# define PRINT_FUNC_H
 
-int main()
-{
-//	char s1[21]= {"I am love school 21!\0"};
-	ft_printf("%%", "world");
-	return (0);
-}
+# include <ft_printf_spec.h>
+
+# include <stdarg.h>
+
+int		print_percent(t_specifications_def spec, va_list argptr);
+
+#endif
