@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 14:01:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 17:07:23 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <ft_printf_spec.h>
 #include <libft.h>
+#include <utils.h>
 
 static int			get_flag_bit(const char c)
 {

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 16:28:27 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 17:09:11 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ static char	determ_prefix(t_specifications_def spec, char *output)
 
 static void	handle_comma_flag(char **output)
 {
-	if (*output) ////////////////////////////////////////////////
+	//TODO: реализуй это
+	if (*output)
 		return ;
 	return ;
 }
@@ -54,13 +55,13 @@ int			print_output(t_specifications_def spec, char **output)
 		handle_comma_flag(output);
 	if (!*output)
 		return (-1);
-	len = ft_strlen(output) + (prefix ? 1 : 0);
+	len = ft_strlen(*output) + (prefix ? 1 : 0);
 	if (spec.width > len && !(spec.flags & FLAG_MINUS))
 		while (++i < spec.width - len)
 			ft_putchar(spec.flags & FLAG_ZERO ? '0' : ' ');
 	if (prefix)
 		ft_putchar(prefix);
-	ft_putstr(output);
+	ft_putstr(*output);
 	if (spec.width > len && spec.flags & FLAG_MINUS)
 		while (++i < spec.width - len)
 			ft_putchar(' ');
