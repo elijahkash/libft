@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 14:00:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 16:01:46 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <libft.h>
 #include <read_spec.h>
 #include <spectostr_funcs.h>
+#include <print_output.h>
 
 #include <stdlib.h>
 
@@ -57,10 +58,6 @@ static int							check_spec(t_specifications_def spec)
 		return (-1);
 	if (spec.precision && !g_specs_def[spec.spec - 1].precision)
 		return (-1);
-	if (spec.flags & FLAG_PLUS)
-		spec.flags &= (~FLAG_SPACE);
-	if (spec.spec >= 6 && spec.spec <= 11 && spec.precision)
-		spec.flags &= (~FLAG_ZERO);
 	return (0);
 }
 
@@ -78,22 +75,46 @@ const char							*is_valid_spec(const char *format)
 	return (format);
 }
 
+static void							handle_stars(t_specifications_def *spec,
+												va_list argptr)
+{
+	if (spec->width == READ_DATA)
+	{
+		spec->width = va_arg(argptr, int);
+		if (spec->width < 0)
+		{
+			spec->width *= -1;
+			spec->flags |= FLAG_MINUS;
+		}
+	}
+	if (spec->precision == READ_DATA)
+	{
+		spec->precision = va_arg(argptr, int);
+		if (spec->precision < 0)
+			spec->precision = 0;
+		if (spec->spec >= 6 && spec->spec <= 11 && spec->precision)
+			spec->flags &= (~FLAG_ZERO);
+	}
+}
+
 static int							print_spec(t_specifications_def spec,
 												va_list argptr)
 {
 	int		result;
 	char	*output;
 
-	handle_stars(spec, argptr);
+	handle_stars(&spec, argptr);
 	output = g_arr_spectostr_funcs[spec.spec - 1](spec, argptr);
-
-	result = print_output(spec, output);
-	free(output);
+	if (!output)
+		return(-1);
+	result = print_output(spec, &output);
+	if (output)
+		free(output);
 	return (result);
 }
 
 int									handle_spec(const char **format,
-													va_list argptr)
+												va_list argptr)
 {
 	t_specifications_def	spec;
 
@@ -101,5 +122,6 @@ int									handle_spec(const char **format,
 		return (0);
 	ft_bzero(&spec, sizeof(t_specifications_def));
 	*format = read_spec(*format, &spec, g_specs_def, g_sizes_map);
+	prepare_spec(&spec);
 	return (print_spec(spec, argptr));
 }
