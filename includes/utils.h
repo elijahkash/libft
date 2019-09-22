@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_percent.c                                    :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 20:43:41 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 22:17:40 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/22 13:51:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <print_funcs.h>
+#ifndef UTILS_H
+# define UTILS_H
 
-#include <ft_printf_spec.h>
-#include <libft.h>
+const char	*skip_digits(const char *format);
 
-int		print_percent(t_specifications_def spec, va_list argptr)
-{
-	spec.spec = argptr ? spec.spec : 0;
-	ft_putchar('%');
-	return (1);
-}
+#endif

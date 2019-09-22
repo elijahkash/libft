@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 15:20:48 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 15:54:48 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 12:52:26 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_pow(int n, int pow)
 	result = n;
 	if (pow == 0)
 		return (1);
-	while (i < pow)
+	while (i++ < pow)
 		result *= n;
 	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 20:39:15 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 13:55:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ typedef struct	s_specifications_def
 const char		*is_valid_spec(const char *format);
 int				handle_spec(const char **format, va_list argptr);
 
-typedef int		(*print_func)(t_specifications_def spec, va_list argptr);
+typedef char	*(*t_spectostr_func)(t_specifications_def spec, va_list argptr);
 
 #endif

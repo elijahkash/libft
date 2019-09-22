@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_funcs.h                                      :+:      :+:    :+:   */
+/*   spectostr_percent.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 20:42:40 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/20 22:16:49 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/20 20:43:41 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/22 13:41:20 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_FUNC_H
-# define PRINT_FUNC_H
+#include <spectostr_funcs.h>
 
-# include <ft_printf_spec.h>
+#include <ft_printf_spec.h>
+#include <libft.h>
 
-# include <stdarg.h>
-
-int		print_percent(t_specifications_def spec, va_list argptr);
-
-#endif
+char	*spectostr_percent(t_specifications_def spec, va_list argptr)
+{
+	spec.spec = argptr ? spec.spec : 0;
+	ft_putchar('%');
+	return (1);
+}

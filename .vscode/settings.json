@@ -3,6 +3,7 @@
 		"libft.h": "c",
 		"ft_printf.h": "c",
 		"print_funcs.h": "c",
-		"stdarg.h": "c"
+		"stdarg.h": "c",
+		"spectostr_funcs.h": "c"
 	}
 }
