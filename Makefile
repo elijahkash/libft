@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/22 15:06:30 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/22 17:12:42 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
 ft_free.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c\
 ft_del_arr.c ft_pow.c\
 ft_printf.c printf_src/handle_spec.c printf_src/read_spec.c \
-printf_src/spectostr_percent.c printf_src/print_output.c
+printf_src/spectostr_percent.c printf_src/print_output.c printf_src/utils.c \
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

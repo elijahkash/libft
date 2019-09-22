@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 17:07:23 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 17:35:04 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,22 @@ const char			*read_spec(const char *format,
 {
 	while (read_flag(format, spec))
 		format++;
-	if (ft_isdigit(*format))
+	if (*format == '*')
+		spec->width = READ_DATA + *(format++) * 0;
+	if (ft_isdigit(*format) && spec->width != READ_DATA)
 	{
 		spec->width = ft_atoi(format);
 		format = skip_digits(format);
 	}
 	if (*format == '.')
 	{
-		spec->precision = ft_atoi(++format);
-		format = skip_digits(format);
+		if (*(++format) == '*')
+			spec->precision = READ_DATA + *(format++) * 0;
+		else
+		{
+			spec->precision = ft_atoi(format);
+			format = skip_digits(format);
+		}
 	}
 	format = read_size(format, spec, g_sizes_map);
 	format = read_specification(format, spec, g_specs_def);

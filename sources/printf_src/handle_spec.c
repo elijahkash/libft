@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 16:01:46 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/22 17:41:52 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ static int							print_spec(t_specifications_def spec,
 	handle_stars(&spec, argptr);
 	output = g_arr_spectostr_funcs[spec.spec - 1](spec, argptr);
 	if (!output)
-		return(-1);
+		return (-1);
 	result = print_output(spec, &output);
 	if (output)
 		free(output);
