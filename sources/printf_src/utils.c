@@ -6,13 +6,19 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:41:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 17:28:49 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 18:20:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <utils.h>
 
 #include <libft.h>
+
+void					strset(char *str, char c, int len)
+{
+	while (len--)
+		*str++ = c;
+}
 
 long long int			get_dec_item_by_size(va_list argptr, int size)
 {

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 13:04:51 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 19:09:07 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static const char	*read_precision(const char *format,
 		if (*(++format) == '*')
 			spec->precision = READ_DATA + *(format++) * 0;
 		else if (!ft_isdigit(*format))
-			return (0);
+			spec->precision = 0;
 		else
 		{
 			spec->precision = ft_atoi(format);
@@ -99,8 +99,7 @@ const char			*read_spec(const char *format,
 	}
 	else
 		spec->width = NOT_DETERM;
-	if (!(format = read_precision(format, spec)))
-		return (0);
+	format = read_precision(format, spec);
 	format = read_size(format, spec, g_sizes_map);
 	format = read_specification(format, spec, g_specs_def);
 	return (format);

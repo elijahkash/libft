@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 17:41:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 19:06:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
 
 //	ret = ft_printf("%p", &ret);
 //	printf("\nret=%d\n", ret);
-	ret = ft_printf("%hd", -32768);
+	ret = printf("%.d", 0);
 	printf("\nret=%d\n", ret);
 
 /*
