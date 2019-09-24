@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 15:05:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 12:20:15 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@
 # define UNSIG_BITS	(1 & 2 & 16)
 
 # define FLAGS		"0-+ '"
+
+/*
+**	shoud be in same order(by id) as FLAGS
+*/
 # define FLAG_ZERO	1
 # define FLAG_MINUS	2
 # define FLAG_PLUS	4
@@ -40,7 +44,8 @@
 # define SIZE_HH	2
 # define SIZE_H		16
 
-# define READ_DATA	(-1)
+# define READ_DATA	(-2)
+# define NOT_DETERM (-1)
 
 typedef struct	s_specifications_def
 {

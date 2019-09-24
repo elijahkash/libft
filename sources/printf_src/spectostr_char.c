@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   spectostr_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 12:21:56 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/24 10:16:53 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/24 11:53:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <spectostr_funcs.h>
+
+#include <ft_printf_spec.h>
 #include <libft.h>
-#include <locale.h>
 
-#define TXT "!%15.5s!\n"
-
-int main()
+char	*spectostr_char(t_specifications_def spec, va_list argptr)
 {
-	int ret;
-	char s1[21]= {"qwert"};
-//	printf(TXT, s1);
-//	printf("\n%lc", LC_NUMERIC);
-	ret = ft_printf("qq%szz\n", s1);
-	printf("\nret=%d\n", ret);
-	return (0);
+	char	*output;
+	char	arg;
+
+	arg = (char)va_arg(argptr, int);
+	output = (char *)malloc(2);
+	if (!output)
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
+	output[0] = arg;
+	output[1] = '\0';
+	spec.spec = spec.spec;
+	return (output);
 }

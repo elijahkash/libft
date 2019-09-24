@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 17:35:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 12:19:31 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,36 @@
 #include <libft.h>
 #include <utils.h>
 
-static int			get_flag_bit(const char c)
-{
-	if (c == '-')
-		return (FLAG_MINUS);
-	if (c == '+')
-		return (FLAG_PLUS);
-	if (c == '0')
-		return (FLAG_ZERO);
-	if (c == ' ')
-		return (FLAG_SPACE);
-	if (c == '\'')
-		return (FLAG_COMMA);
-	return (0);
-}
-
 static int			read_flag(const char *format, t_specifications_def *spec)
 {
-	if (ft_strchr(FLAGS, *format))
+	char *ptr;
+
+	if ((ptr = ft_strchr(FLAGS, *format)))
 	{
-		spec->flags |= get_flag_bit(*format);
+		spec->flags |= ft_pow(2, (ptr - FLAGS));
 		return (1);
 	}
 	return (0);
+}
+
+static const char	*read_precision(const char *format,
+									t_specifications_def *spec)
+{
+	if (*format == '.')
+	{
+		if (*(++format) == '*')
+			spec->precision = READ_DATA + *(format++) * 0;
+		else if (read_flag(format, spec))
+			return (0);
+		else
+		{
+			spec->precision = ft_atoi(format);
+			format = skip_digits(format);
+		}
+	}
+	else
+		spec->precision = NOT_DETERM;
+	return (format);
 }
 
 static const char	*read_size(const char *format, t_specifications_def *spec,
@@ -85,21 +92,15 @@ const char			*read_spec(const char *format,
 		format++;
 	if (*format == '*')
 		spec->width = READ_DATA + *(format++) * 0;
-	if (ft_isdigit(*format) && spec->width != READ_DATA)
+	else if (ft_isdigit(*format))
 	{
 		spec->width = ft_atoi(format);
 		format = skip_digits(format);
 	}
-	if (*format == '.')
-	{
-		if (*(++format) == '*')
-			spec->precision = READ_DATA + *(format++) * 0;
-		else
-		{
-			spec->precision = ft_atoi(format);
-			format = skip_digits(format);
-		}
-	}
+	else
+		spec->width = NOT_DETERM;
+	if (!(format = read_precision(format, spec)))
+		return (0);
 	format = read_size(format, spec, g_sizes_map);
 	format = read_specification(format, spec, g_specs_def);
 	return (format);

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 20:42:40 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 17:07:26 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 10:17:12 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
 # include <errno.h>
 
 char	*spectostr_percent(t_specifications_def spec, va_list argptr);
+char	*spectostr_string(t_specifications_def spec, va_list argptr);
+char	*spectostr_char(t_specifications_def spec, va_list argptr);
 
 #endif

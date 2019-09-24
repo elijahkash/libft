@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/22 17:42:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 11:44:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		prepare_spec(t_specifications_def *spec)
 {
 	if (spec->flags & FLAG_PLUS)
 		spec->flags &= (~FLAG_SPACE);
-	if (spec->spec >= 6 && spec->spec <= 11 && spec->precision)
+	if (spec->spec >= 6 && spec->spec <= 11 && spec->precision != NOT_DETERM)
 		spec->flags &= (~FLAG_ZERO);
 	if (spec->spec == 1)
 		spec->flags &= (~FLAG_PLUS & ~FLAG_SPACE & ~FLAG_COMMA);
