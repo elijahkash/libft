@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spectostr_percent.c                                :+:      :+:    :+:   */
+/*   spectostr_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 20:43:41 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 13:06:10 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/24 15:15:50 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/24 15:28:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 
 #include <ft_printf_spec.h>
 #include <libft.h>
+#include <utils.h>
 
-char	*spectostr_percent(t_specifications_def spec, va_list argptr)
+char	*spectostr_ptr(t_specifications_def spec, va_list argptr)
 {
 	char *output;
+	char tmp[65];
 
-	output = (char *)malloc(2);
+	ft_getnbr_base((unsigned long long)va_arg(argptr, void *),
+												LOW_HEX_BASE, tmp);
+	output = (char *)malloc(ft_strlen(tmp) + 3);
 	if (!output)
 	{
 		errno = ENOMEM;
 		return (NULL);
 	}
-	output[1] = '\0';
-	output[0] = '%';
+	output[0] = '0';
+	output[1] = 'x';
+	ft_memcpy(output + 2, tmp, ft_strlen(tmp) + 1);
 	spec.spec = argptr ? spec.spec : 0;
 	return (output);
 }

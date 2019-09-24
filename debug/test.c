@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 12:21:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 17:41:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,28 @@
 int main()
 {
 	int ret;
-	char s1[21]= {"qwert"};
+//	char s1[21]= {"qwert"};
 //	printf(TXT, s1);
 //	printf("\n%lc", LC_NUMERIC);
-	ret = ft_printf("qq%szz\n", s1);
+
+//	ret = ft_printf("%p", &ret);
+//	printf("\nret=%d\n", ret);
+	ret = ft_printf("%hd", -32768);
 	printf("\nret=%d\n", ret);
+
+/*
+	ret = ft_printf("This is a simple test.");
+	printf("\nret=%d\n", ret);
+	fflush(stdout);
+	ret = ft_printf("This is a simple test.\nSecond sentence.\n");
+	printf("\nret=%d\n", ret);
+	fflush(stdout);
+	ret = ft_printf("");
+	printf("\nret=%d\n", ret);
+	fflush(stdout);
+	ret = ft_printf("\n");
+	printf("\nret=%d\n", ret);
+	fflush(stdout);
+	*/
 	return (0);
 }

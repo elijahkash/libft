@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 12:19:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 13:04:51 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static const char	*read_precision(const char *format,
 	{
 		if (*(++format) == '*')
 			spec->precision = READ_DATA + *(format++) * 0;
-		else if (read_flag(format, spec))
+		else if (!ft_isdigit(*format))
 			return (0);
 		else
 		{

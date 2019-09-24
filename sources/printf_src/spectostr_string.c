@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 17:54:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 11:49:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 13:57:30 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*spectostr_string(t_specifications_def spec, va_list argptr)
 	int		len;
 
 	arg = va_arg(argptr, char *);
+	if (!arg)
+		arg = "(null)";
 	len = ft_strlen(arg);
 	if (spec.precision != NOT_DETERM && len > spec.precision)
 		len = spec.precision;

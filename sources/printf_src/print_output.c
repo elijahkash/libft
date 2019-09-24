@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 11:44:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 16:29:48 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void		prepare_spec(t_specifications_def *spec)
 static char	determ_prefix(t_specifications_def spec, char *output)
 {
 	if (*output == '-')
-		return (0);
+	{
+		ft_memmove(output, output + 1, ft_strlen(output));
+		return ('-');
+	}
 	if (spec.flags & FLAG_PLUS)
 		return ('+');
 	if (spec.flags & FLAG_SPACE)
@@ -56,11 +59,17 @@ int			print_output(t_specifications_def spec, char **output)
 	if (!*output)
 		return (-1);
 	len = ft_strlen(*output) + (prefix ? 1 : 0);
+	if (spec.spec == 3 && **output == '\0')
+		len++;
+	if (prefix && (spec.flags & FLAG_ZERO))
+		ft_putchar(prefix);
 	if (spec.width > len && !(spec.flags & FLAG_MINUS))
 		while (++i < spec.width - len)
 			ft_putchar(spec.flags & FLAG_ZERO ? '0' : ' ');
-	if (prefix)
+	if (prefix && !(spec.flags & FLAG_ZERO))
 		ft_putchar(prefix);
+	if (spec.spec == 3 && **output == '\0')
+		ft_putchar('\0');
 	ft_putstr(*output);
 	if (spec.width > len && spec.flags & FLAG_MINUS)
 		while (++i < spec.width - len)

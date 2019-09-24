@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 12:20:15 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 16:04:11 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,20 @@
 /*
 **	shoud be in same order(by id) as sizes_map
 */
-# define SIZE_L		4
-# define SIZE_UP_L	8
 # define SIZE_LL	1
 # define SIZE_HH	2
-# define SIZE_H		16
+# define SIZE_L		4
+# define SIZE_H		8
+# define SIZE_UP_L	16
 
 # define READ_DATA	(-2)
 # define NOT_DETERM (-1)
+
+# define DEC_BASE "0123456789"
+# define OCT_BASE "01234567"
+# define BIN_BASE "01"
+# define BIG_HEX_BASE "0123456789ABCDEF"
+# define LOW_HEX_BASE "0123456789abcdef"
 
 typedef struct	s_specifications_def
 {

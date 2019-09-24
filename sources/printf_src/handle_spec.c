@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 12:07:29 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 16:03:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **	place sizes in priority order (or by length)
 */
 static const char					*g_sizes_map[NUMBER_OF_SIZES] = {
-	"ll", "hh", "l", "L", "h"};
+	"ll", "hh", "l", "h", "L"};
 
 static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'%', ALL_BITS, 1, 1, ALL_BITS},
@@ -45,7 +45,10 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
 	spectostr_string,
-	spectostr_char
+	spectostr_char,
+	spectostr_ptr,
+	spectostr_sdec,
+	spectostr_sdec,
 };
 
 static int							check_spec(t_specifications_def spec)
