@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spectostr_sdec.c                                   :+:      :+:    :+:   */
+/*   spectostr_oct.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/24 15:32:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 20:29:23 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/24 20:45:04 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/24 21:13:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <libft.h>
 #include <utils.h>
 
-char	*spectostr_sdec(t_specifications_def spec, va_list argptr)
+char	*spectostr_oct(t_specifications_def spec, va_list argptr)
 {
 	char 	*output;
 	char 	tmp[65];
@@ -24,7 +24,7 @@ char	*spectostr_sdec(t_specifications_def spec, va_list argptr)
 	int 	zero_count;
 	int		sign;
 
-	ft_getsnbr_base(get_dec_item_by_size(argptr, spec.sizes), DEC_BASE, tmp);
+	ft_getunbr_base(get_udec_item_by_size(argptr, spec.sizes), OCT_BASE, tmp);
 	len = ft_strlen(tmp);
 	if (len == 1 && *tmp == '0' && spec.precision == 0)
 		return (ft_zerostr());

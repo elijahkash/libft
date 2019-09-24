@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 19:09:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 20:33:46 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static const char	*read_precision(const char *format,
 		else
 		{
 			spec->precision = ft_atoi(format);
-			format = skip_digits(format);
+			format = ft_skip_digits(format);
 		}
 	}
 	else
@@ -95,7 +95,7 @@ const char			*read_spec(const char *format,
 	else if (ft_isdigit(*format))
 	{
 		spec->width = ft_atoi(format);
-		format = skip_digits(format);
+		format = ft_skip_digits(format);
 	}
 	else
 		spec->width = NOT_DETERM;

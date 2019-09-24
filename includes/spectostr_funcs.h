@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 20:42:40 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 15:31:49 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 20:59:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,10 @@ char	*spectostr_string(t_specifications_def spec, va_list argptr);
 char	*spectostr_char(t_specifications_def spec, va_list argptr);
 char	*spectostr_ptr(t_specifications_def spec, va_list argptr);
 char	*spectostr_sdec(t_specifications_def spec, va_list argptr);
+char	*spectostr_sdec(t_specifications_def spec, va_list argptr);
+char	*spectostr_oct(t_specifications_def spec, va_list argptr);
+char	*spectostr_udec(t_specifications_def spec, va_list argptr);
+char	*spectostr_lowhex(t_specifications_def spec, va_list argptr);
+char	*spectostr_bighex(t_specifications_def spec, va_list argptr);
 
 #endif

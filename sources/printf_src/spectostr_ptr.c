@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 15:15:50 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 15:28:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 20:49:40 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*spectostr_ptr(t_specifications_def spec, va_list argptr)
 	char *output;
 	char tmp[65];
 
-	ft_getnbr_base((unsigned long long)va_arg(argptr, void *),
+	ft_getunbr_base((unsigned long long)va_arg(argptr, void *),
 												LOW_HEX_BASE, tmp);
 	output = (char *)malloc(ft_strlen(tmp) + 3);
 	if (!output)

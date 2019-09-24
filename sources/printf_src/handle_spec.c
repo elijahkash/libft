@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 16:03:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 20:59:18 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_ptr,
 	spectostr_sdec,
 	spectostr_sdec,
+	spectostr_oct,
+	spectostr_udec,
+	spectostr_lowhex,
+	spectostr_bighex
 };
 
 static int							check_spec(t_specifications_def spec)

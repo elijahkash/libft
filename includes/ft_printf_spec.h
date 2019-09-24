@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 16:04:11 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 21:28:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define NUMBER_OF_SIZES 5
 
 # define ALL_BITS	(0 - 1)
-# define UNSIG_BITS	(1 & 2 & 16)
+# define UNSIG_BITS	(1 | 2 | 16)
 
 # define FLAGS		"0-+ '"
 

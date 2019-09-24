@@ -6,19 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:41:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 18:20:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/24 21:19:45 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <utils.h>
 
 #include <libft.h>
-
-void					strset(char *str, char c, int len)
-{
-	while (len--)
-		*str++ = c;
-}
 
 long long int			get_dec_item_by_size(va_list argptr, int size)
 {
@@ -31,6 +25,19 @@ long long int			get_dec_item_by_size(va_list argptr, int size)
 	if (size == 8)
 		return ((short int)va_arg(argptr, int));
 	return (va_arg(argptr, int));
+}
+
+unsigned long long int	get_udec_item_by_size(va_list argptr, int size)
+{
+	if (size == 1)
+		return (va_arg(argptr, unsigned long long int));
+	if (size == 2)
+		return ((unsigned char)va_arg(argptr, unsigned int));
+	if (size == 4)
+		return (va_arg(argptr, unsigned long int));
+	if (size == 8)
+		return ((unsigned short int)va_arg(argptr, unsigned int));
+	return (va_arg(argptr, unsigned int));
 }
 
 const char	*skip_digits(const char *format)
@@ -107,7 +114,7 @@ void					ft_getsnbr_base(long long int nbr, char *base,
 	*output = '\0';
 }
 
-void					ft_getnbr_base(unsigned long long int nbr, char *base,
+void					ft_getunbr_base(unsigned long long int nbr, char *base,
 															char *output)
 {
 	int				base_len;
