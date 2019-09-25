@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 15:48:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 16:34:34 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	is_zero(char *str)
 //TODO: for float
 static char	*determ_prefix(t_specifications_def spec, char *output)
 {
-	if (*output == '-')
+	if (spec.spec != 3 && *output == '-')
 	{
 		ft_memmove(output, output + 1, ft_strlen(output));
 		return ("-");
@@ -44,7 +44,7 @@ static char	*determ_prefix(t_specifications_def spec, char *output)
 		return ("+");
 	if (spec.flags & FLAG_SPACE)
 		return (" ");
-	if (spec.flags & FLAG_OCTT && spec.spec == 7)
+	if (spec.flags & FLAG_OCTT && spec.spec == 7 && ft_strcmp(output, "0"))
 		return ("0");
 	if (*output == '\0')
 		return (0);
