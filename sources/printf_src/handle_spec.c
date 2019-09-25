@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:35:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 14:24:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'p', 2, 1, 0, 0},
 	{'d', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'i', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'o', FLAG_MINUS + FLAG_ZERO, 1, 1, ALL_BITS - SIZE_UP_L},
+	{'o', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'u', UNSIG_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'x', FLAG_MINUS + FLAG_ZERO, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'X', FLAG_MINUS + FLAG_ZERO, 1, 1, ALL_BITS - SIZE_UP_L},
+	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
+	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
-	{'e', 1 & 2 & 4 & 8, 1, 1, SIZE_UP_L + SIZE_L},
+	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L},
 	{'g', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
 	{'b', 2, 1, 1, 0},
 	{'r', 2, 1, 1, 0}};

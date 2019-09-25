@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:40:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 14:20:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@
 # define ALL_BITS	(0 - 1)
 # define UNSIG_BITS	(1 | 2 | 16)
 
-# define FLAGS		"0-+ '"
+# define FLAGS		"0-+ '#"
 
-//TODO: ADD ########################
 /*
 **	shoud be in same order(by id) as FLAGS
 */
@@ -32,6 +31,7 @@
 # define FLAG_PLUS	4
 # define FLAG_SPACE	8
 # define FLAG_COMMA	16
+# define FLAG_OCTT	32
 
 # define SIZE_MAX_LEN 2
 
