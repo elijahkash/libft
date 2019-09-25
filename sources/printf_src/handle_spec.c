@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 14:24:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 15:46:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@
 static const char					*g_sizes_map[NUMBER_OF_SIZES] = {
 	"ll", "hh", "l", "h", "L"};
 
+/*
+**	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L},
+**	{'g', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
+**	{'r', 2, 1, 1, 0}};
+*/
 static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'%', ALL_BITS, 1, 1, ALL_BITS},
 	{'s', 2, 1, 1, 0},
@@ -37,10 +42,7 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
-	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L},
-	{'g', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
-	{'b', 2, 1, 1, 0},
-	{'r', 2, 1, 1, 0}};
+	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -52,7 +54,9 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_oct,
 	spectostr_udec,
 	spectostr_lowhex,
-	spectostr_bighex
+	spectostr_bighex,
+	spectostr_float,
+	spectostr_bin
 };
 
 static int							check_spec(t_specifications_def spec)

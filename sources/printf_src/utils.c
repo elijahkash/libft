@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:41:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:19:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 15:49:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <ft_printf_spec.h>
 
+//TODO: rename?????
 long long int			get_dec_item_by_size(va_list argptr, int size)
 {
 	if (size == SIZE_LL)

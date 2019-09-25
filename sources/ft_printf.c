@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 12:33:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 15:46:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ static int	is_valid_format(const char *format)
 	return (1);
 }
 
-//TODO: обработка отрицательных значений по * (и без нее)
-//TODO: locale.h
-//TODO:  обработка ошибок через errno
 int			ft_printf(const char *format, ...)
 {
 	va_list		argptr;

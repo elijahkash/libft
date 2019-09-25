@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/25 13:35:58 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/25 15:47:17 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ printf_src/spectostr_percent.c printf_src/spectostr_string.c \
 printf_src/spectostr_char.c printf_src/spectostr_ptr.c \
 printf_src/spectostr_sdec.c printf_src/spectostr_oct.c \
 printf_src/spectostr_lowhex.c printf_src/spectostr_bighex.c \
-printf_src/spectostr_udec.c
+printf_src/spectostr_udec.c printf_src/spectostr_bin.c \
+printf_src/spectostr_float.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
