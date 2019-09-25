@@ -6,34 +6,29 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 15:47:55 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 21:07:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <spectostr_funcs.h>
 
+
+#include <stdio.h>
+
 char	*spectostr_float(t_specifications_def spec, va_list argptr)
 {
 	char	*output;
-	char	tmp[65];
+	char	tmp[400];
 	int		len;
-	int		zero_count;
+	long double test;
 
-	ft_getunbr_base(get_udec_item_by_size(argptr, spec.sizes),
-					BIN_BASE, tmp);
+//	ft_getsnbr_base(get_dec_item_by_size(argptr, spec.sizes), DEC_BASE, tmp);
+	test = get_float_item_by_size(argptr, spec.sizes);
+	sprintf(tmp, "%.*Lf", spec.precision, test);
 	len = ft_strlen(tmp);
-	if (len == 1 && *tmp == '0' && spec.precision == 0)
-		return (ft_zerostr());
-	output = (char *)malloc(1 + ((spec.precision > len) ?
-								spec.precision : len));
+	output = (char *)malloc(len + 1);
 	if (!output)
 		return (NULL + (errno = ENOMEM) * 0);
 	ft_memcpy(output, tmp, len + 1);
-	zero_count = spec.precision - len;
-	if (spec.precision != NOT_DETERM && zero_count > 0)
-	{
-		ft_memmove(output + zero_count, output, len + 1);
-		ft_strset(output, '0', zero_count);
-	}
 	return (output);
 }
