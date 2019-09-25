@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 20:31:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 11:38:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string.h>
 
 # include <ft_printf.h>
+
+# define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 
 int				ft_isws(int c);
 size_t			ft_cwords(const char *str, int (*f)(int c));

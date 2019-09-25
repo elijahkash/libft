@@ -6,45 +6,39 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:41:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 21:19:45 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 12:15:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <utils.h>
 
 #include <libft.h>
+#include <ft_printf_spec.h>
 
 long long int			get_dec_item_by_size(va_list argptr, int size)
 {
-	if (size == 1)
+	if (size == SIZE_LL)
 		return (va_arg(argptr, long long int));
-	if (size == 2)
+	if (size == SIZE_HH)
 		return ((char)va_arg(argptr, int));
-	if (size == 4)
+	if (size == SIZE_L)
 		return (va_arg(argptr, long int));
-	if (size == 8)
+	if (size == SIZE_H)
 		return ((short int)va_arg(argptr, int));
 	return (va_arg(argptr, int));
 }
 
 unsigned long long int	get_udec_item_by_size(va_list argptr, int size)
 {
-	if (size == 1)
+	if (size == SIZE_LL)
 		return (va_arg(argptr, unsigned long long int));
-	if (size == 2)
+	if (size == SIZE_HH)
 		return ((unsigned char)va_arg(argptr, unsigned int));
-	if (size == 4)
+	if (size == SIZE_L)
 		return (va_arg(argptr, unsigned long int));
-	if (size == 8)
+	if (size == SIZE_H)
 		return ((unsigned short int)va_arg(argptr, unsigned int));
 	return (va_arg(argptr, unsigned int));
-}
-
-const char	*skip_digits(const char *format)
-{
-	while (ft_isdigit(*format))
-		format++;
-	return (format);
 }
 
 static int				check_base(char *base)
@@ -82,33 +76,37 @@ static long long int	get_bit_counter_in_base(long long int nbr, int base)
 	return (result);
 }
 
+static unsigned long long int	get_ubit_counter_in_base(
+								unsigned long long int nbr,
+								int base)
+{
+	unsigned long long int result;
+
+	result = 1;
+	while (nbr / base != 0)
+	{
+		result *= base;
+		nbr /= base;
+	}
+	return (result);
+}
+
 void					ft_getsnbr_base(long long int nbr, char *base,
 															char *output)
 {
 	int				base_len;
 	long long int	bit_counter_in_base;
-	long long int	src_nbr;
 
-	src_nbr = nbr;
 	if (!check_base(base))
 		return ;
-	if (!nbr) //TODO: you really need it? or ZERO can be nandle by main rule?
-	{
-		output[0] = base[0];
-		output[1] = '\0';
-		return ;
-	}
 	base_len = ft_strlen(base);
-	if (nbr < 0) //TODO: need handle min value
-	{
+	if (nbr < 0)
 		*output++ = '-';
-		src_nbr *= -1;
-	}
-	bit_counter_in_base = get_bit_counter_in_base(src_nbr, base_len);
+	bit_counter_in_base = get_bit_counter_in_base(nbr, base_len);
 	while (bit_counter_in_base)
 	{
-		*output++ = base[src_nbr / bit_counter_in_base];
-		src_nbr %= bit_counter_in_base;
+		*output++ = base[ABS(nbr / bit_counter_in_base)];
+		nbr = ABS(nbr % bit_counter_in_base);
 		bit_counter_in_base /= base_len;
 	}
 	*output = '\0';
@@ -117,25 +115,17 @@ void					ft_getsnbr_base(long long int nbr, char *base,
 void					ft_getunbr_base(unsigned long long int nbr, char *base,
 															char *output)
 {
-	int				base_len;
-	long long int	bit_counter_in_base;
-	long long int	src_nbr;
+	int						base_len;
+	unsigned long long int	bit_counter_in_base;
 
-	src_nbr = nbr;
 	if (!check_base(base))
 		return ;
-	if (!nbr) //TODO: you really need it? or ZERO can be nandle by main rule?
-	{
-		output[0] = base[0];
-		output[1] = '\0';
-		return ;
-	}
 	base_len = ft_strlen(base);
-	bit_counter_in_base = get_bit_counter_in_base(src_nbr, base_len);
+	bit_counter_in_base = get_ubit_counter_in_base(nbr, base_len);
 	while (bit_counter_in_base)
 	{
-		*output++ = base[src_nbr / bit_counter_in_base];
-		src_nbr %= bit_counter_in_base;
+		*output++ = base[nbr / bit_counter_in_base];
+		nbr %= bit_counter_in_base;
 		bit_counter_in_base /= base_len;
 	}
 	*output = '\0';

@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/24 21:28:26 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/25 11:27:33 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,12 +57,12 @@ $(NAME): depend $(LIB)
 
 depend: $(OBJDIR).depend
 
-//TODO: СХУЯЛИ БЛЯТЬ ЭТО ПЕРЕСТАЛО РАБОТАТЬ НАХ. ПРОВЕРЬ БЛЯ, ДОЛБАЕБ СУКА ЭТОТ //ЕБУЧИЙ МАКЕФАИЛ
+#TODO: sed doesnt wort perfect
 $(OBJDIR).depend: $(SRC)
 	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > $(OBJDIR).depend
 	sed -i.bak  '/.o/s/^/objects\//g' $(OBJDIR).depend
 
--include ./.depend
+-include $(OBJDIR).depend
 
 $(LIB): $(OBJDIR) $(OBJ)
 	ar rc $(LIB) $(OBJ)
