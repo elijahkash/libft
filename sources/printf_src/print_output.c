@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 18:49:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 13:41:36 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf_spec.h>
+#include <print_output.h>
 
 #include <libft.h>
 
@@ -38,9 +38,9 @@ static char	determ_prefix(t_specifications_def spec, char *output)
 	return (0);
 }
 
-static void	handle_comma_flag(char **output)
+void		handle_comma_flag(char **output)
 {
-	//TODO: реализуй это
+	//TODO: реализуй это + errrno
 	if (*output)
 		return ;
 	return ;
@@ -52,18 +52,13 @@ int			print_output(t_specifications_def spec, char **output)
 	int		i;
 	int		len;
 
-	i = -1;
 	prefix = determ_prefix(spec, *output);
-	if (spec.flags & FLAG_COMMA)
-		handle_comma_flag(output);
-	if (!*output)
-		return (-1);
 	len = ft_strlen(*output) + (prefix ? 1 : 0);
 	if (spec.spec == 3 && **output == '\0')
 		len++;
 	if (prefix && (spec.flags & FLAG_ZERO))
 		ft_putchar(prefix);
-	if (spec.width > len && !(spec.flags & FLAG_MINUS))
+	if (spec.width > len && !((spec.flags & FLAG_MINUS) + (i = -1) * 0))
 		while (++i < spec.width - len)
 			ft_putchar(spec.flags & FLAG_ZERO ? '0' : ' ');
 	if (prefix && !(spec.flags & FLAG_ZERO))

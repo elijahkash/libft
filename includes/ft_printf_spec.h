@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 11:23:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 13:40:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_PRINTF_SPEC_H
 
 # include <stdarg.h>
-# include <string.h>
 
 # define NUMBER_OF_SPECS 15
 # define NUMBER_OF_SIZES 5

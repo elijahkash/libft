@@ -6,15 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 20:33:46 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 13:41:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <read_spec.h>
 
-#include <ft_printf_spec.h>
 #include <libft.h>
-#include <utils.h>
 
 static int			read_flag(const char *format, t_specifications_def *spec)
 {

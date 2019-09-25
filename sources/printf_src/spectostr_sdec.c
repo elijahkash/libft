@@ -6,22 +6,18 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 15:32:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 20:29:23 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 13:42:08 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <spectostr_funcs.h>
 
-#include <ft_printf_spec.h>
-#include <libft.h>
-#include <utils.h>
-
 char	*spectostr_sdec(t_specifications_def spec, va_list argptr)
 {
-	char 	*output;
-	char 	tmp[65];
+	char	*output;
+	char	tmp[65];
 	int		len;
-	int 	zero_count;
+	int		zero_count;
 	int		sign;
 
 	ft_getsnbr_base(get_dec_item_by_size(argptr, spec.sizes), DEC_BASE, tmp);

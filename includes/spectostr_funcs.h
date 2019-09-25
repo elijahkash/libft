@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 20:42:40 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 20:59:38 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/25 13:40:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 # define SPECTOSTR_FUNCS_H
 
 # include <ft_printf_spec.h>
-
 # include <stdarg.h>
 # include <stdlib.h>
 # include <errno.h>
+# include <utils.h>
+# include <libft.h>
 
 char	*spectostr_percent(t_specifications_def spec, va_list argptr);
 char	*spectostr_string(t_specifications_def spec, va_list argptr);
