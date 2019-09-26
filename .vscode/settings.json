@@ -5,6 +5,7 @@
 		"print_funcs.h": "c",
 		"stdarg.h": "c",
 		"spectostr_funcs.h": "c",
-		"ft_printf_spec.h": "c"
+		"ft_printf_spec.h": "c",
+		"float.h": "c"
 	}
 }

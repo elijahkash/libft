@@ -6,17 +6,36 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 21:21:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/26 18:21:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <libft.h>
 #include <locale.h>
+#include <math.h>
+#include <float.h>
 
 #define TXT "!%15.5s!\n"
 
+#include "print_memory.c"
 
+
+int main()
+{
+	int ret;
+
+	ret = ft_printf("%05.0f", 7.3);
+	printf("\nret=%d\n", ret);
+
+	ret = printf("%05.0f", 7.3);
+	printf("\nret=%d\n", ret);
+
+	return (0);
+}
+
+
+/*
 int main()
 {
 	int ret;
@@ -24,33 +43,38 @@ int main()
 //	printf(TXT, s1);
 //	printf("\n%lc", LC_NUMERIC);
 
-//	ret = ft_printf("%p", &ret);
+//	ret = ft_printf("% f", -5);
 //	printf("\nret=%d\n", ret);
+
 	long double aaa;
 	aaa = 919999999999999999;
 	aaa = aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa;
-	ret = printf("%Lf", ((long double)(aaa)));
-	printf("\nret=%d\n", ret);
-	ret = printf("%Le", ((long double)(aaa)));
+
+//	double bbb = 0.0029166;
+	double bbb = 3.3264563657643576435764387567634265873465873465764376438756286457615872645872346586324;
+
+//	ret = printf("%Lf", ((long double)(aaa)));
+//	printf("\nret=%d\n", ret);
+
+//	ret = printf("%lf", ((double)(bbb)));
+//	printf("\nret=%d\n", ret);
+
+	ret = printf("%.100le", bbb);
 	printf("\nret=%d\n", ret);
 
+	ret = printf("%.100lf", bbb);
+	printf("\nret=%d\n", ret);
 
-/*
-	ret = ft_printf("This is a simple test.");
-	printf("\nret=%d\n", ret);
-	fflush(stdout);
-	ret = ft_printf("This is a simple test.\nSecond sentence.\n");
-	printf("\nret=%d\n", ret);
-	fflush(stdout);
-	ret = ft_printf("");
-	printf("\nret=%d\n", ret);
-	fflush(stdout);
-	ret = ft_printf("\n");
-	printf("\nret=%d\n", ret);
-	fflush(stdout);
-*/
+	char str[65];
+	memcpy(str, &bbb, 64);
+	str[64] = '\0';
+	print_memory(str, 64);
+
+
+//	fflush(stdout);
+
 	return (0);
-}
+}*/
 
 /*
 int				main(void)

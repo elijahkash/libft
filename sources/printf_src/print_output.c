@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 16:34:34 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/26 18:32:04 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ static int	is_zero(char *str)
 	return (1);
 }
 
-//TODO: for float
 static char	*determ_prefix(t_specifications_def spec, char *output)
 {
 	if (spec.spec != 3 && *output == '-')
@@ -52,12 +51,11 @@ static char	*determ_prefix(t_specifications_def spec, char *output)
 		return ("0x");
 	if (spec.flags & FLAG_OCTT && spec.spec == 10 && !is_zero(output))
 		return ("0X");
-	if (spec.flags & FLAG_OCTT && spec.spec == 12 && !is_zero(output))
+	if (spec.flags & FLAG_OCTT && spec.spec == 11 && !is_zero(output))
 		return ("0b");
 	return (0);
 }
 
-//TODO: реализуй это + errrno
 void		handle_comma_flag(char **output)
 {
 	if (*output)

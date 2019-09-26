@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 15:46:44 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/26 18:25:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'u', UNSIG_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
 	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
-	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L}};
+	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
+	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -55,8 +55,8 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_udec,
 	spectostr_lowhex,
 	spectostr_bighex,
-	spectostr_float,
-	spectostr_bin
+	spectostr_bin,
+	spectostr_float
 };
 
 static int							check_spec(t_specifications_def spec)
