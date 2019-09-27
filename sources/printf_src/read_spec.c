@@ -6,14 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 17:45:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 21:03:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <read_spec.h>
 
 #include <libft.h>
-#include <utils.h> //TODO: ???
+#include <extend_dollar.h>
 
 static int			read_flag(const char *format, t_specifications_def *spec)
 {

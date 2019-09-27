@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spectostr_percent.c                                :+:      :+:    :+:   */
+/*   get_item_by_size.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 20:43:41 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 21:07:48 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/27 21:06:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <spectostr_funcs.h>
+#ifndef UTILS_H
+# define UTILS_H
 
-char	*spectostr_percent(t_specifications_def spec, va_list argptr)
-{
-	char *output;
+# include <stdarg.h>
 
-	output = (char *)malloc(2);
-	if (!output)
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-	output[1] = '\0';
-	output[0] = '%';
-	spec.spec = argptr ? spec.spec : 0;
-	return (output);
-}
+long long int			get_dec_item_by_size(va_list argptr, int size);
+unsigned long long int	get_udec_item_by_size(va_list argptr, int size);
+long double				get_float_item_by_size(va_list argptr, int size);
+
+#endif

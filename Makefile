@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/27 19:53:36 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/27 21:07:08 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,14 @@ ft_free.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c\
 ft_del_arr.c ft_pow.c ft_strset.c ft_zerostr.c ft_skip_digits.c\
 ft_getnbr_base.c \
 ft_printf.c printf_src/handle_spec.c printf_src/read_spec.c \
-printf_src/print_output.c printf_src/utils.c \
+printf_src/print_output.c printf_src/get_item_by_size.c \
 printf_src/spectostr_percent.c printf_src/spectostr_string.c \
 printf_src/spectostr_char.c printf_src/spectostr_ptr.c \
 printf_src/spectostr_sdec.c printf_src/spectostr_oct.c \
 printf_src/spectostr_lowhex.c printf_src/spectostr_bighex.c \
 printf_src/spectostr_udec.c printf_src/spectostr_bin.c \
-printf_src/change_fd.c printf_src/spectostr_float.c
+printf_src/change_fd.c printf_src/spectostr_float.c \
+printf_src/extend_dollar.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

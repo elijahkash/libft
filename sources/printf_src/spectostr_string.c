@@ -6,14 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 17:54:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/24 13:57:30 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 21:08:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <spectostr_funcs.h>
-
-#include <ft_printf_spec.h>
-#include <libft.h>
 
 char	*spectostr_string(t_specifications_def spec, va_list argptr)
 {

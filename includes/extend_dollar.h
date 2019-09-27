@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   extend_dollar.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 15:59:00 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/27 21:02:03 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/27 21:02:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef EXTEND_DOLLAR_H
+# define EXTEND_DOLLAR_H
 
-# include <stdarg.h>
+int				is_dollor(const char *format);
+const char 		*skip_dollor(const char *format);
 
-long long int			get_dec_item_by_size(va_list argptr, int size);
-unsigned long long int	get_udec_item_by_size(va_list argptr, int size);
-long double				get_float_item_by_size(va_list argptr, int size);
-
-int						is_dollor(const char *format);
-const char 				*skip_dollor(const char *format);
 #endif

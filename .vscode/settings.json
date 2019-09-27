@@ -6,6 +6,8 @@
 		"stdarg.h": "c",
 		"spectostr_funcs.h": "c",
 		"ft_printf_spec.h": "c",
-		"float.h": "c"
+		"float.h": "c",
+		"utils.h": "c",
+		"get_item_by_size.h": "c"
 	}
 }

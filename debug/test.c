@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 20:53:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 21:07:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int main()
 	double x;
 	x = 1.1000000000000000;
 	x *= 1.0/10000000000000000000000000000000000000000000000000000000.0;
-//	int fd;
+	int fd;
 
-//	fd = open("1.test", O_WRONLY);
+	fd = open("1.test", O_WRONLY);
 
 //	ret = ft_printf("%.100lf", x);
 //	printf("\nret=%d\n", ret);
@@ -39,7 +39,7 @@ int main()
 	ret = ft_printf("%5$w%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45, fd);
 	printf("\nret=%d\n", ret);
 
-//	close(fd);
+	close(fd);
 //	ret = printf("%.10le", x);
 //	printf("\nret=%d\n", ret);
 

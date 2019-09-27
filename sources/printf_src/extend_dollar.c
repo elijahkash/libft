@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spectostr_percent.c                                :+:      :+:    :+:   */
+/*   extend_dollar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 20:43:41 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 21:07:48 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/27 21:04:25 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/27 21:04:48 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <spectostr_funcs.h>
+#include <extend_dollar.h>
 
-char	*spectostr_percent(t_specifications_def spec, va_list argptr)
+#include <libft.h>
+
+int						is_dollor(const char *format)
 {
-	char *output;
-
-	output = (char *)malloc(2);
-	if (!output)
+	if (ft_isdigit(*format) && *format != '0')
 	{
-		errno = ENOMEM;
-		return (NULL);
+		format = ft_skip_digits(format);
+		if (*format == '$')
+			return (1);
 	}
-	output[1] = '\0';
-	output[0] = '%';
-	spec.spec = argptr ? spec.spec : 0;
-	return (output);
+	return (0);
+}
+
+const char 				*skip_dollor(const char *format)
+{
+	format = ft_skip_digits(format);
+	format++;
+	return (format);
 }
