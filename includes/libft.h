@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:19:16 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 13:39:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,6 @@ const char		*ft_skip_digits(const char *str);
 void			ft_getsnbr_base(long long int nbr, char *base, char *output);
 void			ft_getunbr_base(unsigned long long int nbr,
 								char *base, char *output);
+void			ft_print_memory(const void *addr, size_t size);
 
 #endif
