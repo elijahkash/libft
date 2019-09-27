@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/26 18:25:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 18:23:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ static const char					*g_sizes_map[NUMBER_OF_SIZES] = {
 **	{'r', 2, 1, 1, 0}};
 */
 static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
-	{'%', ALL_BITS, 1, 1, ALL_BITS},
-	{'s', 2, 1, 1, 0},
-	{'c', 2, 1, 0, 0},
-	{'p', 2, 1, 0, 0},
-	{'d', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'i', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'o', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'u', UNSIG_BITS, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L},
-	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L}};
+	{'%', ALL_BITS, 1, 1, ALL_BITS, 0},
+	{'s', 2, 1, 1, 0, 0},
+	{'c', 2, 1, 0, 0, 0},
+	{'p', 2, 1, 0, 0, 0},
+	{'d', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'i', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'o', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'u', UNSIG_BITS, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -61,6 +61,8 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 
 static int							check_spec(t_specifications_def spec)
 {
+	static	int arg_mode = 0;
+
 	if (!spec.spec)
 		return (-1);
 	if (!(spec.flags & g_specs_def[spec.spec - 1].flags) && (spec.flags))
@@ -70,6 +72,14 @@ static int							check_spec(t_specifications_def spec)
 	if (spec.width != NOT_DETERM && !g_specs_def[spec.spec - 1].width)
 		return (-1);
 	if (spec.precision != NOT_DETERM && !g_specs_def[spec.spec - 1].precision)
+		return (-1);
+	if (!arg_mode)
+		arg_mode = (spec.arg > 0) ? 1 : -1;
+	if (spec.arg * arg_mode < 0
+		|| (spec.width > READ_DATA && spec.width < 0 && arg_mode < 0)
+		|| (spec.precision > READ_DATA && spec.precision < 0 && arg_mode < 0)
+		|| (spec.precision == READ_DATA && arg_mode > 0)
+		|| (spec.width == READ_DATA && arg_mode > 0))
 		return (-1);
 	return (0);
 }
@@ -91,8 +101,18 @@ const char							*is_valid_spec(const char *format)
 static void							handle_stars(t_specifications_def *spec,
 												va_list argptr)
 {
-	if (spec->width == READ_DATA)
+	int		i;
+	va_list	tmp;
+
+	va_copy(tmp, argptr);
+	if (spec->width >= READ_DATA && spec->width < 0)
 	{
+		if (spec->width != READ_DATA + (i = 0) * 0)
+		{
+			while ((spec->width)++ < -1)
+				va_arg(tmp, long long);
+			spec->width = va_arg(tmp, long long);
+		}
 		spec->width = va_arg(argptr, int);
 		if (spec->width < 0)
 		{
@@ -100,9 +120,15 @@ static void							handle_stars(t_specifications_def *spec,
 			spec->flags |= FLAG_MINUS;
 		}
 	}
-	if (spec->precision == READ_DATA)
+	va_copy(tmp, argptr);
+	if (spec->precision >= READ_DATA && spec->precision < 0)
 	{
-		spec->precision = va_arg(argptr, int);
+		if (spec->precision != READ_DATA + (i = 0) * 0)
+		{
+			while ((spec->precision)++ < -1)
+				va_arg(tmp, long long);
+			spec->precision = va_arg(tmp, long long);
+		}
 		if (spec->precision < 0)
 			spec->precision = NOT_DETERM;
 		if (spec->spec >= 6 && spec->spec <= 11 &&
@@ -118,6 +144,9 @@ static int							print_spec(t_specifications_def spec,
 	char	*output;
 
 	handle_stars(&spec, argptr);
+	if (spec.arg > 0)
+		while ((spec.arg)-- > 1)
+			va_arg(argptr, long long);
 	output = g_arr_spectostr_funcs[spec.spec - 1](spec, argptr);
 	if (!output)
 		return (-1);
@@ -135,11 +164,13 @@ int									handle_spec(const char **format,
 												va_list argptr)
 {
 	t_specifications_def	spec;
+	va_list					tmp;
 
 	if (*(*format)++ != '%')
 		return (0);
 	ft_bzero(&spec, sizeof(t_specifications_def));
 	*format = read_spec(*format, &spec, g_specs_def, g_sizes_map);
 	prepare_spec(&spec);
-	return (print_spec(spec, argptr));
+	(spec.arg > 0) ? va_copy(tmp, argptr) : 0;
+	return (print_spec(spec, (spec.arg > 0) ? tmp : argptr));
 }

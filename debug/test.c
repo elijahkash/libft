@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/26 18:21:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 18:25:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,26 @@
 #include <math.h>
 #include <float.h>
 
-#define TXT "!%15.5s!\n"
-
-#include "print_memory.c"
+#define TXT "%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45
 
 
 int main()
 {
 	int ret;
+	double x;
+	x = 1.1000000000000000;
+	x *= 1.0/10000000000000000000000000000000000000000000000000000000.0;
 
-	ret = ft_printf("%05.0f", 7.3);
+//	ret = ft_printf("%.100lf", x);
+//	printf("\nret=%d\n", ret);
+
+	ret = printf(TXT);
+	printf("\nret=%d\n", ret);
+	ret = ft_printf(TXT);
 	printf("\nret=%d\n", ret);
 
-	ret = printf("%05.0f", 7.3);
-	printf("\nret=%d\n", ret);
+//	ret = printf("%.10le", x);
+//	printf("\nret=%d\n", ret);
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 20:29:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 15:59:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,7 @@
 long long int			get_dec_item_by_size(va_list argptr, int size);
 unsigned long long int	get_udec_item_by_size(va_list argptr, int size);
 long double				get_float_item_by_size(va_list argptr, int size);
+
+int						is_dollor(const char *format);
+const char 				*skip_dollor(const char *format);
 #endif

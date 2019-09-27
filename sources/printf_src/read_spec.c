@@ -6,13 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:41:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 17:45:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <read_spec.h>
 
 #include <libft.h>
+#include <utils.h> //TODO: ???
 
 static int			read_flag(const char *format, t_specifications_def *spec)
 {
@@ -32,7 +33,13 @@ static const char	*read_precision(const char *format,
 	if (*format == '.')
 	{
 		if (*(++format) == '*')
-			spec->precision = READ_DATA + *(format++) * 0;
+		{
+			if (is_dollor(format + 1) &&
+				(spec->precision = ft_atoi(format + 1) * -1))
+				format = skip_dollor(++format);
+			else
+				spec->precision = READ_DATA + *(format++) * 0;
+		}
 		else if (!ft_isdigit(*format))
 			spec->precision = 0;
 		else
@@ -86,10 +93,19 @@ const char			*read_spec(const char *format,
 						const t_specifications_def g_specs_def[NUMBER_OF_SPECS],
 						const char *g_sizes_map[NUMBER_OF_SIZES])
 {
+	if (is_dollor(format) && (spec->arg = ft_atoi(format)))
+		format = skip_dollor(format);
+	else
+		spec->arg = -1;
 	while (read_flag(format, spec))
 		format++;
-	if (*format == '*')
-		spec->width = READ_DATA + *(format++) * 0;
+	if (*format == '*') //TODO: чертов норминет. этот иф здесь потому что нельзя 6 функций в файле. ублюдская хрень.
+	{
+		if (is_dollor(format) && (spec->width = ft_atoi(format) * -1))
+			format = skip_dollor(format);
+		else
+			spec->width = READ_DATA + *(format++) * 0;
+	}
 	else if (ft_isdigit(*format))
 	{
 		spec->width = ft_atoi(format);

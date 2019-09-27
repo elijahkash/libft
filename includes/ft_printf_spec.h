@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 15:14:42 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 14:44:10 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@
 # define SIZE_H		8
 # define SIZE_UP_L	16
 
-# define READ_DATA	(-2)
-# define NOT_DETERM (-1)
+# define READ_DATA	(NOT_DETERM + 1)
+# define NOT_DETERM (1 << (sizeof(int) * 8 - 1))
 
 # define DEC_BASE "0123456789"
 # define OCT_BASE "01234567"
@@ -60,6 +60,7 @@ typedef struct	s_specifications_def
 	int		width;
 	int		precision;
 	int		sizes;
+	int		arg;
 }				t_specifications_def;
 
 const char		*is_valid_spec(const char *format);
