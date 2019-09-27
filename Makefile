@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/25 20:44:32 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/27 13:00:27 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,11 +59,11 @@ $(NAME): depend $(LIB)
 
 depend: $(OBJDIR).depend
 
-#TODO: сука опять нихуя не работает фикси блять долбаеб
-#TODO: sed doesnt wort perfect
 $(OBJDIR).depend: $(SRC)
 	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > $(OBJDIR).depend
 	sed -i.bak  '/.o/s/^/objects\//g' $(OBJDIR).depend
+	sed -i.bak  '/.o/s/objects\/  //g' $(OBJDIR).depend
+	rm -rf $(OBJDIR).depend.bak
 
 -include $(OBJDIR).depend
 
@@ -92,7 +92,8 @@ fclean: clean
 
 debug: all
 
-re: fclean all
+re: fclean
+	$(MAKE)
 
 redebug: fclean debug
 
