@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   change_fd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/18 16:51:11 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 20:03:46 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/27 19:43:08 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/27 19:50:27 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <spectostr_funcs.h>
 
-extern int	g_fd_printf;
-
-int			ft_printf(const char *format, ...);
-
-#endif
+char	*change_fd(t_specifications_def spec, va_list argptr)
+{
+	if (spec.spec == 13)
+		g_fd_printf = va_arg(argptr, int);
+	return (ft_zerostr());
+}

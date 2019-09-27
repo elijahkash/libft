@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/26 20:53:36 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 19:18:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*spectostr_float(t_specifications_def spec, va_list argptr)
 
 //	ft_getsnbr_base(get_dec_item_by_size(argptr, spec.sizes), DEC_BASE, tmp);
 	test = get_float_item_by_size(argptr, spec.sizes);
-//	ld_to_str(tmp, test, spec);
+//	ld_to_str(tmp, test, spec.precision);
 
 	if (spec.flags & FLAG_OCTT)
 		sprintf(tmp, "%#.*Lf", spec.precision, test);

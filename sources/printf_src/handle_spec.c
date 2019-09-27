@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 18:23:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 19:48:16 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
 	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
 	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0}};
+	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
+	{'w', 0, 0, 0, 0, 0}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -56,7 +57,8 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_lowhex,
 	spectostr_bighex,
 	spectostr_bin,
-	spectostr_float
+	spectostr_float,
+	change_fd
 };
 
 static int							check_spec(t_specifications_def spec)
@@ -148,6 +150,7 @@ static int							print_spec(t_specifications_def spec,
 		while ((spec.arg)-- > 1)
 			va_arg(argptr, long long);
 	output = g_arr_spectostr_funcs[spec.spec - 1](spec, argptr);
+	//TODO: double special number handler
 	if (!output)
 		return (-1);
 	if (spec.flags & FLAG_COMMA)
