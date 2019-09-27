@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 21:07:14 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 22:29:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,23 @@
 
 int main()
 {
-	int ret;
+	int ret = 0;
 	double x;
 	x = 1.1000000000000000;
 	x *= 1.0/10000000000000000000000000000000000000000000000000000000.0;
-	int fd;
+//	int fd;
 
-	fd = open("1.test", O_WRONLY);
+//	fd = open("1.test", O_WRONLY);
 
 //	ret = ft_printf("%.100lf", x);
 //	printf("\nret=%d\n", ret);
 
+	ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
+	printf("\nret=%d\n", ret);
 	ret = ft_printf("%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45);
 	printf("\nret=%d\n", ret);
-	ret = ft_printf("%5$w%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45, fd);
-	printf("\nret=%d\n", ret);
 
-	close(fd);
+//	close(fd);
 //	ret = printf("%.10le", x);
 //	printf("\nret=%d\n", ret);
 
@@ -59,28 +59,26 @@ int main()
 //	printf("\nret=%d\n", ret);
 
 	long double aaa;
-	aaa = 919999999999999999;
-	aaa = aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa;
+	aaa = 0.00000011;
+	aaa = aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa;
+
+	//  * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa * aaa;
 
 //	double bbb = 0.0029166;
-	double bbb = 3.3264563657643576435764387567634265873465873465764376438756286457615872645872346586324;
+//	double bbb = 3.3264563657643576435764387567634265873465873465764376438756286457615872645872346586324;
 
-//	ret = printf("%Lf", ((long double)(aaa)));
-//	printf("\nret=%d\n", ret);
+	ret = printf("%.4000Lf", ((long double)(aaa)));
+	printf("\nret=%d\n", ret);
 
 //	ret = printf("%lf", ((double)(bbb)));
 //	printf("\nret=%d\n", ret);
 
-	ret = printf("%.100le", bbb);
-	printf("\nret=%d\n", ret);
+	// ret = printf("%.100le", bbb);
+	// printf("\nret=%d\n", ret);
 
-	ret = printf("%.100lf", bbb);
-	printf("\nret=%d\n", ret);
+	// ret = printf("%.100lf", bbb);
+	// printf("\nret=%d\n", ret);
 
-	char str[65];
-	memcpy(str, &bbb, 64);
-	str[64] = '\0';
-	print_memory(str, 64);
 
 
 //	fflush(stdout);

@@ -6,16 +6,18 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 19:48:16 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 23:30:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf_spec.h>
+#include <handle_spec.h>
 
+#include <ft_printf_spec.h>
 #include <libft.h>
 #include <read_spec.h>
 #include <spectostr_funcs.h>
 #include <print_output.h>
+#include <handle_stars.h>
 
 #include <stdlib.h>
 
@@ -61,10 +63,18 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	change_fd
 };
 
+/*
+** if dollar mode g_arg_mode > 0 else < 0
+*/
+static int							g_arg_mode = 0;
+
+void								re_init_argmode(void)
+{
+	g_arg_mode = 0;
+}
+
 static int							check_spec(t_specifications_def spec)
 {
-	static	int arg_mode = 0;
-
 	if (!spec.spec)
 		return (-1);
 	if (!(spec.flags & g_specs_def[spec.spec - 1].flags) && (spec.flags))
@@ -75,13 +85,13 @@ static int							check_spec(t_specifications_def spec)
 		return (-1);
 	if (spec.precision != NOT_DETERM && !g_specs_def[spec.spec - 1].precision)
 		return (-1);
-	if (!arg_mode)
-		arg_mode = (spec.arg > 0) ? 1 : -1;
-	if (spec.arg * arg_mode < 0
-		|| (spec.width > READ_DATA && spec.width < 0 && arg_mode < 0)
-		|| (spec.precision > READ_DATA && spec.precision < 0 && arg_mode < 0)
-		|| (spec.precision == READ_DATA && arg_mode > 0)
-		|| (spec.width == READ_DATA && arg_mode > 0))
+	if (!g_arg_mode)
+		g_arg_mode = (spec.arg > 0) ? 1 : -1;
+	if (spec.arg * g_arg_mode < 0
+		|| (spec.width > READ_DATA && spec.width < 0 && g_arg_mode < 0)
+		|| (spec.precision > READ_DATA && spec.precision < 0 && g_arg_mode < 0)
+		|| (spec.precision == READ_DATA && g_arg_mode > 0)
+		|| (spec.width == READ_DATA && g_arg_mode > 0))
 		return (-1);
 	return (0);
 }
@@ -100,52 +110,13 @@ const char							*is_valid_spec(const char *format)
 	return (format);
 }
 
-static void							handle_stars(t_specifications_def *spec,
-												va_list argptr)
-{
-	int		i;
-	va_list	tmp;
-
-	va_copy(tmp, argptr);
-	if (spec->width >= READ_DATA && spec->width < 0)
-	{
-		if (spec->width != READ_DATA + (i = 0) * 0)
-		{
-			while ((spec->width)++ < -1)
-				va_arg(tmp, long long);
-			spec->width = va_arg(tmp, long long);
-		}
-		spec->width = va_arg(argptr, int);
-		if (spec->width < 0)
-		{
-			spec->width *= -1;
-			spec->flags |= FLAG_MINUS;
-		}
-	}
-	va_copy(tmp, argptr);
-	if (spec->precision >= READ_DATA && spec->precision < 0)
-	{
-		if (spec->precision != READ_DATA + (i = 0) * 0)
-		{
-			while ((spec->precision)++ < -1)
-				va_arg(tmp, long long);
-			spec->precision = va_arg(tmp, long long);
-		}
-		if (spec->precision < 0)
-			spec->precision = NOT_DETERM;
-		if (spec->spec >= 6 && spec->spec <= 11 &&
-			spec->precision != NOT_DETERM)
-			spec->flags &= (~FLAG_ZERO);
-	}
-}
-
 static int							print_spec(t_specifications_def spec,
 												va_list argptr)
 {
 	int		result;
 	char	*output;
 
-	handle_stars(&spec, argptr);
+	handle_stars(&spec, argptr, g_arg_mode);
 	if (spec.arg > 0)
 		while ((spec.arg)-- > 1)
 			va_arg(argptr, long long);

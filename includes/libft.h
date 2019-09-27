@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 16:11:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 23:26:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <errno.h>
 
 # include <ft_printf.h>
 

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 21:03:49 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 22:06:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,26 @@ static int			read_flag(const char *format, t_specifications_def *spec)
 		return (1);
 	}
 	return (0);
+}
+
+static const char	*read_width(const char *format,
+									t_specifications_def *spec)
+{
+	if (*format == '*')
+	{
+		if (is_dollor(format) && (spec->width = ft_atoi(format) * -1))
+			format = skip_dollor(format);
+		else
+			spec->width = READ_DATA + *(format++) * 0;
+	}
+	else if (ft_isdigit(*format))
+	{
+		spec->width = ft_atoi(format);
+		format = ft_skip_digits(format);
+	}
+	else
+		spec->width = NOT_DETERM;
+	return (format);
 }
 
 static const char	*read_precision(const char *format,
@@ -99,20 +119,7 @@ const char			*read_spec(const char *format,
 		spec->arg = -1;
 	while (read_flag(format, spec))
 		format++;
-	if (*format == '*') //TODO: чертов норминет. этот иф здесь потому что нельзя 6 функций в файле. ублюдская хрень.
-	{
-		if (is_dollor(format) && (spec->width = ft_atoi(format) * -1))
-			format = skip_dollor(format);
-		else
-			spec->width = READ_DATA + *(format++) * 0;
-	}
-	else if (ft_isdigit(*format))
-	{
-		spec->width = ft_atoi(format);
-		format = ft_skip_digits(format);
-	}
-	else
-		spec->width = NOT_DETERM;
+	format = read_width(format, spec);
 	format = read_precision(format, spec);
 	format = read_size(format, spec, g_sizes_map);
 	format = read_specification(format, spec, g_specs_def);

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 19:41:13 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/27 23:22:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,12 @@
 # define BIG_HEX_BASE "0123456789ABCDEF"
 # define LOW_HEX_BASE "0123456789abcdef"
 
+/*
+** spec == 0: wrong spec; else spec == index in g_specs_def
+** width < 0 && > READ_DATA: dollar mode
+** same shit with precision
+** arg > 0: dollar mode else arg < 0 (usual mode)
+*/
 typedef struct	s_specifications_def
 {
 	char	spec;
@@ -62,9 +68,6 @@ typedef struct	s_specifications_def
 	int		sizes;
 	int		arg;
 }				t_specifications_def;
-
-const char		*is_valid_spec(const char *format);
-int				handle_spec(const char **format, va_list argptr);
 
 typedef char	*(*t_spectostr_func)(t_specifications_def spec, va_list argptr);
 

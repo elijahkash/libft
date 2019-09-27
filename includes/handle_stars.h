@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   extend_dollar.c                                    :+:      :+:    :+:   */
+/*   handle_stars.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/27 21:04:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:31:16 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/27 23:11:25 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/27 23:15:45 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <extend_dollar.h>
+#ifndef HANDLE_STARS_H
+# define HANDLE_STARS_H
 
-#include <libft.h>
+# include <ft_printf_spec.h>
 
-int				is_dollor(const char *format)
-{
-	if (ft_isdigit(*format) && *format != '0')
-	{
-		format = ft_skip_digits(format);
-		if (*format == '$')
-			return (1);
-	}
-	return (0);
-}
+# include <stdarg.h>
 
-const char		*skip_dollor(const char *format)
-{
-	format = ft_skip_digits(format);
-	format++;
-	return (format);
-}
+void	handle_stars(t_specifications_def *spec, va_list argptr,
+													int g_arg_mode);
+
+#endif

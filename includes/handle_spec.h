@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   extend_dollar.c                                    :+:      :+:    :+:   */
+/*   handle_spec.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/27 21:04:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:31:16 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/27 23:04:53 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/09/27 23:05:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <extend_dollar.h>
+#ifndef HANDLE_SPEC_H
+# define HANDLE_SPEC_H
 
-#include <libft.h>
+# include <stdarg.h>
 
-int				is_dollor(const char *format)
-{
-	if (ft_isdigit(*format) && *format != '0')
-	{
-		format = ft_skip_digits(format);
-		if (*format == '$')
-			return (1);
-	}
-	return (0);
-}
+void			re_init_argmode(void);
+const char		*is_valid_spec(const char *format);
+int				handle_spec(const char **format, va_list argptr);
 
-const char		*skip_dollor(const char *format)
-{
-	format = ft_skip_digits(format);
-	format++;
-	return (format);
-}
+#endif
