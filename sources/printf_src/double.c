@@ -20,7 +20,7 @@ void	ft_intpart(int pow, unsigned long int mant, int exp, t_bigdec *bd)
 	}
 }
 
-void 	ft_fractpart(int pow, unsigned long int mant, char *output, t_bigdec *bd)
+void 	ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 {
 	int		i;
 	t_bignum	five;
@@ -104,7 +104,7 @@ int		countmaxsize(exp)
 }
 
 
-int 	ft_itoa_f(union u_double d, char *output, int prec)
+void 	ft_itoa_f(union u_double d, char *output, int prec)
 {
 	int 				exp;
 	int 				pow;
@@ -113,7 +113,7 @@ int 	ft_itoa_f(union u_double d, char *output, int prec)
 	t_bignum			res;
 
 	if (check_specvalues(d, output))
-		return (1);
+		return ;
 	else
 	{
 		pow = 0;
@@ -129,7 +129,7 @@ int 	ft_itoa_f(union u_double d, char *output, int prec)
 		bd.sign = d.s_parts.s == 1 ? -1 : 1;
 		ft_intpart(pow, mant, exp, &bd);
 		if (exp <= 65)
-			ft_fractpart(pow, exp <= 0 ? d.s_parts.m : d.s_parts.m << exp, output, &bd);
+			ft_fractpart(pow, exp <= 0 ? d.s_parts.m : d.s_parts.m << exp, &bd);
 		makebnwithfract(&res, bd);
 		round_bn(&res, prec);
 		put_bn_output(res, output, prec);

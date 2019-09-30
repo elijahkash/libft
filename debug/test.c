@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 17:34:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 18:20:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,17 @@
 int main()
 {
 	int ret = 0;
-	double x;
-	x = -0.000385;
+//	double x;
+//	x = 1.6;
 
 //	int fd;
 
 //	fd = open("1.test", O_WRONLY);
 
-	ret = ft_printf("%f", x);
+	ret = ft_printf("%f", (double)-0);
 	printf("\nret=%d\n", ret);
 
-	ret = printf("%f", x);
+	ret = printf("%f", (double)-0);
 	printf("\nret=%d\n", ret);
 
 	// ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);

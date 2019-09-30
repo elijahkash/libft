@@ -48,7 +48,7 @@ void			ft_ipow_bignum(t_bignum *res, unsigned int n);
 t_bignum		ft_mul_bignum(t_bignum bn1, t_bignum bn2);
 t_bignum		ft_pow_bignum(t_bignum bn, unsigned int n);
 void			putnzeros(char *output, int prec);
-int 			ft_itoa_f(union u_double d, char *output, int prec);
+void 			ft_itoa_f(union u_double d, char *output, int prec);
 int				ft_pow_bn(int num, unsigned int p);
 void			initialize_bd(t_bigdec *bd, int maxsize);
 void			ft_strcatnbr(char *output, long int nbr);
