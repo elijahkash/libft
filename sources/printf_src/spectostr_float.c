@@ -6,21 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 17:56:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 20:54:43 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <spectostr_funcs.h>
 
 #include <double.h>
-
-
-
-#include <stdio.h>
-	// if (spec.flags & FLAG_OCTT)
-	// 	sprintf(tmp, "%#.*Lf", spec.precision, test);
-	// else
-	// 	sprintf(tmp, "%.*Lf", spec.precision, test);
 
 char	*spectostr_float(t_specifications_def spec, va_list argptr)
 {
