@@ -43,7 +43,7 @@ void 	ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 	bd->sizefract = 64 + pow;
 }
 
-int		check_specvalues(union u_double d, char *output)
+int		check_specvalues(union u_double d, char *output, int prec)
 {
 	if (!((d.ld != d.ld || d.ld == 1.0 / 0.0 || d.ld == -1.0 / 0.0 ||
 		   (d.s_parts.e == 0 && d.s_parts.m == 0))))
@@ -62,6 +62,7 @@ int		check_specvalues(union u_double d, char *output)
 				ft_strcat(output, "-0");
 			else
 				ft_strcat(output, "0");
+			prec = prec ? prec : 0;
 			reformat_output(output, prec);
 		}
 	}
@@ -113,7 +114,7 @@ void 	ft_itoa_f(union u_double d, char *output, int prec)
 	t_bigdec			bd;
 	t_bignum			res;
 
-	if (check_specvalues(d, output))
+	if (check_specvalues(d, output, prec))
 		return ;
 	else
 	{

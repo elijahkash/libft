@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 18:20:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 18:26:34 by odrinkwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int main()
 
 //	fd = open("1.test", O_WRONLY);
 
-	ret = ft_printf("%f", (double)-0);
+	ret = ft_printf("%f", (double)0);
 	printf("\nret=%d\n", ret);
 
-	ret = printf("%f", (double)-0);
+	ret = printf("%f", (double)0);
 	printf("\nret=%d\n", ret);
 
 	// ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
