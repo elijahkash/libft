@@ -62,6 +62,7 @@ int		check_specvalues(union u_double d, char *output)
 				ft_strcat(output, "-0");
 			else
 				ft_strcat(output, "0");
+			reformat_output(output, prec);
 		}
 	}
 	return (1);
