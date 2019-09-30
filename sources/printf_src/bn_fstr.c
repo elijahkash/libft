@@ -55,7 +55,7 @@ void			ft_strcatnbr_wzeros(char *output, long long nbr, int len)
 	tmp[0] = 0;
 
 	ft_strcatnbr(tmp, nbr);
-	while(len-- > (int)ft_strlen(tmp)) //TODO:fix types
+	while(len-- > (int)ft_strlen(tmp))
 		ft_strcat(output, "0");
 	ft_strcat(output, tmp);
 }
