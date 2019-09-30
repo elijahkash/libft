@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bn_fix.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/30 18:41:50 by odrinkwa          #+#    #+#             */
+/*   Updated: 2019/09/30 19:39:07 by odrinkwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "double.h"
 
 void			fixsize_bignum(t_bignum *bn)
@@ -19,7 +31,7 @@ void			fixup_bignum(t_bignum *bn)
 	int i;
 
 	i = 0;
-	while(i < bn->maxsize - 1)
+	while (i < bn->maxsize - 1)
 	{
 		bn->number[i + 1] += bn->number[i] / BASE_BN;
 		bn->number[i] = bn->number[i] % BASE_BN;
@@ -40,19 +52,33 @@ void			fixzero_bignum(t_bignum *bn)
 		i++;
 	}
 	bn->size = 0;
-//	bn->sign = 0;
 }
 
 int				ft_pow_bn(int num, unsigned int p)
 {
-	unsigned int i = 0;
-	int tmp;
+	unsigned int	i;
+	int				tmp;
 
 	if (p == 0)
 		return (1);
 	tmp = num;
-
+	i = 0;
 	while (++i < p)
 		num = num * tmp;
 	return (num);
+}
+
+void			makebnwithfract(t_bignum *res, t_bigdec bd)
+{
+	t_bignum ten;
+
+	ft_deepcopy_bignum(res, bd.intpart);
+	res->exp = bd.sizefract;
+	res->sign = bd.sign;
+	if (bd.sizefract != 0)
+	{
+		ft_put_one_inpos_bignum(&ten, res->maxsize, bd.sizefract + 1);
+		ft_imul_bignum(res, ten);
+		ft_isumabs_bignum(res, bd.fractpart);
+	}
 }

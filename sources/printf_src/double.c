@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   double.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
+/*   Updated: 2019/09/30 20:20:09 by odrinkwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include "double.h"
 
-void	ft_intpart(int pow, unsigned long int mant, int exp, t_bigdec *bd)
+static void		ft_intpart(int pow, unsigned long int mant,
+							int exp, t_bigdec *bd)
 {
 	t_bignum	mult;
 	t_bignum	*res;
@@ -20,15 +33,14 @@ void	ft_intpart(int pow, unsigned long int mant, int exp, t_bigdec *bd)
 	}
 }
 
-void 	ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
+static void		ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 {
-	int		i;
+	int			i;
 	t_bignum	five;
 	t_bignum	two;
 	t_bignum	*res;
 
 	res = &(bd->fractpart);
-
 	ft_assign_bignum(res, res->maxsize, 0);
 	ft_assign_bignum(&five, res->maxsize, 5);
 	ft_assign_bignum(&two, res->maxsize, 2);
@@ -36,17 +48,18 @@ void 	ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 	i = 0;
 	while (++i <= 64)
 	{
-		if (mant &0x8000000000000000)
-			ft_isumabs_bignum(res, ft_mul_bignum(five, ft_pow_bignum(two, 64 - i + (pow == 0 ? 0 : 1))));
+		if (mant & 0x8000000000000000)
+			ft_isumabs_bignum(res, ft_mul_bignum(five,
+						ft_pow_bignum(two, 64 - i + (pow == 0 ? 0 : 1))));
 		mant <<= 1;
 	}
 	bd->sizefract = 64 + pow;
 }
 
-int		check_specvalues(union u_double d, char *output, int prec)
+static int		check_specvalues(union u_double d, char *output, int prec)
 {
 	if (!((d.ld != d.ld || d.ld == 1.0 / 0.0 || d.ld == -1.0 / 0.0 ||
-		   (d.s_parts.e == 0 && d.s_parts.m == 0))))
+		(d.s_parts.e == 0 && d.s_parts.m == 0))))
 		return (0);
 	else
 	{
@@ -69,47 +82,24 @@ int		check_specvalues(union u_double d, char *output, int prec)
 	return (1);
 }
 
-void 	makebnwithfract(t_bignum *res, t_bigdec bd)
+static void		count_parts_d(union u_double d, int *pow, int *exp,
+							unsigned long int *mant)
 {
-	t_bignum ten;
-
-
-	ft_deepcopy_bignum(res, bd.intpart);
-	res->exp = bd.sizefract;
-	res->sign = bd.sign;
-	if (bd.sizefract != 0)
+	*pow = 0;
+	*exp = (d.s_parts.e == 0) ? 0 : d.s_parts.e - 16382;
+	if (*exp > 0 && *exp < 65)
+		*mant = d.s_parts.m >> (64 - *exp);
+	else
 	{
-		ft_put_one_inpos_bignum(&ten, res->maxsize, bd.sizefract + 1);
-		ft_imul_bignum(res, ten);
-		ft_isumabs_bignum(res, bd.fractpart);
+		*pow = (exp <= 0) ? -(*exp) + 1 : (*exp) - 64;
+		*mant = d.s_parts.m;
 	}
 }
 
-
-int		countmaxsize(exp)
+void			ft_itoa_f(union u_double d, char *output, int prec)
 {
-	if (exp < 600)
-		return (100);
-	else if (exp < 1200)
-		return (200);
-	else if (exp < 2400)
-		return (300);
-	else if (exp < 3600)
-		return (400);
-	else if (exp < 6000)
-		return (600);
-	else if (exp < 12000)
-		return (1100);
-	else
-		return (1300);
-
-}
-
-
-void 	ft_itoa_f(union u_double d, char *output, int prec)
-{
-	int 				exp;
-	int 				pow;
+	int					exp;
+	int					pow;
 	unsigned long int	mant;
 	t_bigdec			bd;
 	t_bignum			res;
@@ -118,16 +108,8 @@ void 	ft_itoa_f(union u_double d, char *output, int prec)
 		return ;
 	else
 	{
-		pow = 0;
-		exp = (d.s_parts.e == 0) ? 0 : d.s_parts.e - 16382;
-		if (exp > 0 && exp < 65)
-			mant = d.s_parts.m >> (64 - exp);
-		else
-		{
-			pow = (exp <= 0) ? -exp + 1 : exp - 64;
-			mant = d.s_parts.m;
-		}
-		initialize_bd(&bd, countmaxsize(exp));
+		count_parts_d(d, &pow, &exp, &mant);
+		initialize_bd(&bd, countmaxsize_bignum(exp));
 		bd.sign = d.s_parts.s == 1 ? -1 : 1;
 		ft_intpart(pow, mant, exp, &bd);
 		if (exp <= 65)

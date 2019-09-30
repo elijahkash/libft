@@ -6,12 +6,26 @@
 /*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 19:31:16 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 18:34:27 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/09/30 19:32:51 by odrinkwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "double.h"
+
+static void		reformat_checkzero(char *output, int prec, char *c)
+{
+	while (prec-- >= 0 && *c != '\0')
+		c++;
+	if (*c != '\0')
+		*c = '\0';
+	else
+	{
+		prec++;
+		while (prec-- >= 0)
+			ft_strcat(output, "0");
+	}
+}
 
 void			reformat_output(char *output, int prec)
 {
@@ -25,18 +39,7 @@ void			reformat_output(char *output, int prec)
 		return ;
 	}
 	if (c != NULL)
-	{
-		while (prec-- >= 0 && *c != '\0')
-			c++;
-		if (*c != '\0')
-			*c = '\0';
-		else
-		{
-			prec++;
-			while (prec-- >= 0)
-				ft_strcat(output, "0");
-		}
-	}
+		reformat_checkzero(output, prec, c);
 	else
 	{
 		ft_strcat(output, ".");
@@ -44,7 +47,31 @@ void			reformat_output(char *output, int prec)
 	}
 }
 
-void 			put_bn_output(t_bignum res, char *output, int prec)
+static void		put_bn_outp_aux(t_bignum res, char *output, int *i)
+{
+	if (res.size - 1 <= (res.exp - 1) / 4)
+	{
+		*i = (res.exp - 1) / 4;
+		ft_strcatnbr(output, res.number[(res.exp - 1) / 4] /
+				ft_pow_bn(10, (res.exp - 1) % 4 + 1));
+	}
+	else
+	{
+		ft_strcatnbr(output, res.number[res.size - 1]);
+		*i = res.size - 2;
+		while (*i > (res.exp - 1) / 4)
+		{
+			ft_strcatnbr_wzeros(output, res.number[*i], 4);
+			(*i)--;
+		}
+		if (3 - (res.exp - 1) % 4 > 0)
+			ft_strcatnbr_wzeros(output,
+						res.number[*i] / ft_pow_bn(10, (res.exp - 1) % 4 + 1),
+						3 - (res.exp - 1) % 4);
+	}
+}
+
+void			put_bn_output(t_bignum res, char *output, int prec)
 {
 	int i;
 
@@ -53,40 +80,15 @@ void 			put_bn_output(t_bignum res, char *output, int prec)
 	if (res.size == 0)
 	{
 		ft_strcat(output, "0");
-		return;
+		return ;
 	}
-	//дальнейшее условие - это печать целой части и первого элемента, где целая часть соединяется с дробной.
-	if (res.size - 1 <= (res.exp - 1) / 4)
-	{
-		i = (res.exp - 1) / 4;
-		ft_strcatnbr(output, res.number[(res.exp - 1) / 4] / ft_pow_bn(10, (res.exp - 1) % 4 + 1));
-	}
-	else
-	{
-		ft_strcatnbr(output, res.number[res.size - 1]);
-		i = res.size - 2;
-		while (i > (res.exp - 1) / 4)
-		{
-			ft_strcatnbr_wzeros(output, res.number[i], 4);
-			i--;
-		}
-		if (3 - (res.exp - 1) % 4 > 0)
-			ft_strcatnbr_wzeros(output,
-								res.number[i] / ft_pow_bn(10, (res.exp - 1) % 4 + 1),
-								3 - (res.exp - 1) % 4);
-	}
+	put_bn_outp_aux(res, output, &i);
 	ft_strcat(output, ".");
 	ft_strcatnbr_wzeros(output,
-						res.number[(res.exp - 1) / 4] % ft_pow_bn(10, (res.exp - 1) % 4 + 1),
-						(res.exp - 1) % 4 + 1);
+		res.number[(res.exp - 1) / 4] % ft_pow_bn(10, (res.exp - 1) % 4 + 1),
+		(res.exp - 1) % 4 + 1);
 	i--;
 	while (i >= 0)
 		ft_strcatnbr_wzeros(output, res.number[i--], 4);
-
 	reformat_output(output, prec);
-	// (res.exp - 1) % 4 + 1 - размер дробной части
-	// 3 - (res.exp - 1) % 4 - размер целой части
-	// res.number[(res.exp - 1) / 4] % ft_pow_bn(10, (res.exp - 1) % 4 + 1) - это дробная часть
-	// res.number[(res.exp - 1) / 4] / ft_pow_bn(10, (res.exp - 1) % 4 + 1) - это целая часть
-
 }

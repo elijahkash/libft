@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bn_opers.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: odrinkwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/30 18:46:29 by odrinkwa          #+#    #+#             */
+/*   Updated: 2019/09/30 18:48:02 by odrinkwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "double.h"
 
 t_bignum		ft_pow_bignum(t_bignum bn, unsigned int n)
 {
-	unsigned int i;
-	t_bignum res_bn;
+	unsigned int	i;
+	t_bignum		res_bn;
 
 	if (n == 0)
 	{
@@ -23,12 +35,12 @@ t_bignum		ft_pow_bignum(t_bignum bn, unsigned int n)
 
 void			ft_isumabs_bignum(t_bignum *res, t_bignum bn2)
 {
-	int i;
+	int			i;
 	t_bignum	temp_bn;
 
 	i = 0;
 	initialize_bignum(&temp_bn, res->maxsize);
-	while(i < temp_bn.maxsize)
+	while (i < temp_bn.maxsize)
 	{
 		temp_bn.number[i] += res->number[i] + bn2.number[i];
 		fixup_bignum(&temp_bn);
@@ -42,7 +54,7 @@ void			ft_isumabs_bignum(t_bignum *res, t_bignum bn2)
 
 void			ft_imul_bignum(t_bignum *res, t_bignum bn2)
 {
-	int 		i;
+	int			i;
 	int			j;
 	t_bignum	temp_bn;
 
@@ -67,7 +79,7 @@ void			ft_imul_bignum(t_bignum *res, t_bignum bn2)
 
 t_bignum		ft_mul_bignum(t_bignum bn1, t_bignum bn2)
 {
-	int 		i;
+	int			i;
 	int			j;
 	t_bignum	res_bn;
 
@@ -91,15 +103,14 @@ t_bignum		ft_mul_bignum(t_bignum bn1, t_bignum bn2)
 
 void			ft_ipow_bignum(t_bignum *res, unsigned int n)
 {
-	unsigned int i;
-	t_bignum tmp_bn;
+	unsigned int	i;
+	t_bignum		tmp_bn;
 
 	if (n == 0)
 	{
 		ft_assign_bignum(res, res->maxsize, 1);
 		return ;
 	}
-
 	ft_deepcopy_bignum(&tmp_bn, *res);
 	i = 1;
 	while (i < n)

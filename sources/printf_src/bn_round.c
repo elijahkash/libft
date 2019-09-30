@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bn_round.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: odrinkwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/30 18:52:48 by odrinkwa          #+#    #+#             */
+/*   Updated: 2019/09/30 18:54:43 by odrinkwa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "double.h"
 
 void			ft_put_one_inpos_bignum(t_bignum *bn, int maxsize, int pos)
@@ -8,7 +20,7 @@ void			ft_put_one_inpos_bignum(t_bignum *bn, int maxsize, int pos)
 	bn->sign = 1;
 }
 
-int 			ft_get_inpos_bignum(t_bignum bn, int pos)
+int				ft_get_inpos_bignum(t_bignum bn, int pos)
 {
 	int tmp;
 
@@ -18,7 +30,7 @@ int 			ft_get_inpos_bignum(t_bignum bn, int pos)
 	return (tmp % 10);
 }
 
-static void 	zeroafterround(t_bignum *res, int pos)
+static void		zeroafterround(t_bignum *res, int pos)
 {
 	int i;
 	int ten;
@@ -33,13 +45,12 @@ static void 	zeroafterround(t_bignum *res, int pos)
 	res->number[(pos - 1) / 4] -= res->number[(pos - 1) / 4] % ten;
 }
 
-void 			round_bn(t_bignum *res, int prec)
+void			round_bn(t_bignum *res, int prec)
 {
 	t_bignum ten;
 
-	//TODO сделать обработчик для prec < 0 - то есть округление целочисленной части
 	if (res->exp - prec < 0)
-		return ; //(значит, мы вышли за пределы массива чисел, не нужно делать округление)
+		return ;
 	else
 	{
 		if (ft_get_inpos_bignum(*res, res->exp - prec) >= 5)
