@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/27 23:46:41 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/30 15:12:07 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,11 @@ printf_src/spectostr_sdec.c printf_src/spectostr_oct.c \
 printf_src/spectostr_lowhex.c printf_src/spectostr_bighex.c \
 printf_src/spectostr_udec.c printf_src/spectostr_bin.c \
 printf_src/change_fd.c printf_src/spectostr_float.c \
-printf_src/extend_dollar.c printf_src/handle_stars.c
+printf_src/extend_dollar.c printf_src/handle_stars.c \
+printf_src/read_spec_funcs.c \
+printf_src/bn_fix.c printf_src/bn_fstr.c printf_src/bn_init.c \
+printf_src/bn_opers.c printf_src/bn_outp.c printf_src/bn_round.c \
+printf_src/dbl_input.c printf_src/double.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,9 +62,9 @@ all: $(NAME)
 
 $(NAME): depend $(LIB)
 
-depend: $(OBJDIR).depend
+depend: $(OBJDIR) $(OBJDIR).depend
 
-$(OBJDIR).depend: $(SRC)
+$(OBJDIR).depend: $(OBJDIR) $(SRC)
 	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > $(OBJDIR).depend
 	sed -i.bak  '/.o/s/^/objects\//g' $(OBJDIR).depend
 	sed -i.bak  '/.o/s/objects\/  //g' $(OBJDIR).depend
@@ -81,9 +85,7 @@ $(OBJDIR)%.o: $(SRCDIR)%.c
 $(OBJDIR)%.o: $(SRCDIR)printf_src/%.c
 	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
 
-compile: clean $(OBJ)
-
-clean:
+clean: testclean
 	rm -r -f $(OBJ)
 	rm -rf $(OBJDIR).depend
 	rm -rf $(OBJDIR).depend.bak
@@ -96,10 +98,12 @@ debug: all
 re: fclean
 	$(MAKE)
 
-redebug: fclean debug
+redebug: fclean
+	$(MAKE) debug
 
 test: testclean
 	$(CC) $(CFLAGS) -g3 -o $(DEBDIR)test $(DEBDIR)test.c -L $(LIBDIR) -lftprintf -I $(INCDIR)
 
 testclean:
-	rm -f ./debug/test
+	rm -rf $(DEBDIR)*.dSYM/
+	rm -f $(DEBDIR)test
