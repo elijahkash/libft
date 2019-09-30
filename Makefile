@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/30 15:12:07 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/30 15:38:52 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,13 +58,13 @@ OBJECTS = $(notdir $(OBJECTS1))
 SRC = $(addprefix $(SRCDIR), $(SOURCES))
 OBJ = $(addprefix $(OBJDIR), $(OBJECTS))
 
-all: $(NAME)
+all: $(OBJDIR) $(NAME)
 
 $(NAME): depend $(LIB)
 
-depend: $(OBJDIR) $(OBJDIR).depend
+depend: $(OBJDIR).depend
 
-$(OBJDIR).depend: $(OBJDIR) $(SRC)
+$(OBJDIR).depend: $(SRC)
 	$(CC) $(CFLAGS) -MM $(SRC) -I $(INCDIR) > $(OBJDIR).depend
 	sed -i.bak  '/.o/s/^/objects\//g' $(OBJDIR).depend
 	sed -i.bak  '/.o/s/objects\/  //g' $(OBJDIR).depend
