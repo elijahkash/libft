@@ -27,8 +27,6 @@ void 	ft_fractpart(int pow, unsigned long int mant, char *output, t_bigdec *bd)
 	t_bignum	two;
 	t_bignum	*res;
 
-	output = output ? output : 0; //TODO: unused param
-
 	res = &(bd->fractpart);
 
 	ft_assign_bignum(res, res->maxsize, 0);
@@ -130,11 +128,10 @@ int 	ft_itoa_f(union u_double d, char *output, int prec)
 		initialize_bd(&bd, countmaxsize(exp));
 		bd.sign = d.s_parts.s == 1 ? -1 : 1;
 		ft_intpart(pow, mant, exp, &bd);
-		if (prec != 0 && exp <= 65)
+		if (exp <= 65)
 			ft_fractpart(pow, exp <= 0 ? d.s_parts.m : d.s_parts.m << exp, output, &bd);
 		makebnwithfract(&res, bd);
 		round_bn(&res, prec);
 		put_bn_output(res, output, prec);
 	}
-	return (0); //TODO: fix return. correct?
 }

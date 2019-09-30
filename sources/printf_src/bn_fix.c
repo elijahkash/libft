@@ -40,12 +40,12 @@ void			fixzero_bignum(t_bignum *bn)
 		i++;
 	}
 	bn->size = 0;
-	bn->sign = 0;
+//	bn->sign = 0;
 }
 
 int				ft_pow_bn(int num, unsigned int p)
 {
-	unsigned int i = 0; //TODO: fix types
+	unsigned int i = 0;
 	int tmp;
 
 	if (p == 0)
