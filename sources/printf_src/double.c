@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   double.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 20:20:09 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/09/30 21:04:46 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static void		count_parts_d(union u_double d, int *pow, int *exp,
 		*mant = d.s_parts.m >> (64 - *exp);
 	else
 	{
-		*pow = (exp <= 0) ? -(*exp) + 1 : (*exp) - 64;
+		*pow = (*exp <= 0) ? -(*exp) + 1 : (*exp) - 64;
 		*mant = d.s_parts.m;
 	}
 }
