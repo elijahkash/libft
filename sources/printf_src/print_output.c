@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 11:36:47 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 18:54:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ static char	*determ_prefix(t_specifications_def spec, char *output)
 		return ("+");
 	if (spec.flags & FLAG_SPACE)
 		return (" ");
-	if (spec.flags & FLAG_OCTT && spec.spec == 7 && ft_strcmp(output, "0"))
+	if (spec.flags & FLAG_OCTT && spec.spec == 7 && ((ft_strcmp(output, "0")
+		&& spec.precision <= 0) || (output[0] != '0')))
 		return ("0");
 	if (*output == '\0')
 		return (0);
