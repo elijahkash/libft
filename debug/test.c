@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 22:29:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 17:34:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,25 @@ int main()
 {
 	int ret = 0;
 	double x;
-	x = 1.1000000000000000;
-	x *= 1.0/10000000000000000000000000000000000000000000000000000000.0;
+	x = -0.000385;
+
 //	int fd;
 
 //	fd = open("1.test", O_WRONLY);
 
-//	ret = ft_printf("%.100lf", x);
-//	printf("\nret=%d\n", ret);
+	ret = ft_printf("%f", x);
+	printf("\nret=%d\n", ret);
 
-	ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
+	ret = printf("%f", x);
 	printf("\nret=%d\n", ret);
-	ret = ft_printf("%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45);
-	printf("\nret=%d\n", ret);
+
+	// ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
+	// printf("\nret=%d\n", ret);
+	// ret = ft_printf("%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45);
+	// printf("\nret=%d\n", ret);
 
 //	close(fd);
-//	ret = printf("%.10le", x);
-//	printf("\nret=%d\n", ret);
+
 
 	return (0);
 }

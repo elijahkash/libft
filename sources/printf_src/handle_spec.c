@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:30:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 17:16:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,9 @@ static int							print_spec(t_specifications_def spec,
 		while ((spec.arg)-- > 1)
 			va_arg(argptr, long long);
 	output = g_arr_spectostr_funcs[spec.spec - 1](spec, argptr);
-	//TODO: double special number handler
+	if (spec.spec == 12 && (ft_strstr(output, "inf")
+							|| ft_strstr(output, "nan")))
+		spec.flags &= ~FLAG_COMMA & ~FLAG_ZERO;
 	if (!output)
 		return (-1);
 	if (spec.flags & FLAG_COMMA)

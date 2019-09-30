@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 19:48:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/09/30 11:36:47 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void		prepare_spec(t_specifications_def *spec)
 		spec->flags &= (~FLAG_ZERO);
 	if (spec->spec == 1)
 		spec->flags &= (~FLAG_PLUS & ~FLAG_SPACE & ~FLAG_COMMA);
+	if (spec->spec == 12 && spec->precision == NOT_DETERM)
+		spec->precision = 6;
 }
 
 static int	is_zero(char *str)

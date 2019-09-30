@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/09/30 15:38:52 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/09/30 16:20:49 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ OBJECTS = $(notdir $(OBJECTS1))
 SRC = $(addprefix $(SRCDIR), $(SOURCES))
 OBJ = $(addprefix $(OBJDIR), $(OBJECTS))
 
-all: $(OBJDIR) $(NAME)
+all: $(NAME)
 
 $(NAME): depend $(LIB)
 
@@ -75,9 +75,6 @@ $(OBJDIR).depend: $(SRC)
 $(LIB): $(OBJDIR) $(OBJ)
 	ar rc $(LIB) $(OBJ)
 	ranlib $(LIB)
-
-$(OBJDIR):
-	$(MKDIR) $(OBJDIR)
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
 	$(CC) $(CFLAGS) $(DEBUG) -o $@ -c $< -I $(INCDIR)
