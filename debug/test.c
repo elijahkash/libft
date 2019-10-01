@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 21:08:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 11:38:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-/*
+
 int main()
 {
 	int ret = 0;
@@ -32,9 +32,9 @@ int main()
 
 //	fd = open("1.test", O_WRONLY);
 
-	ret = ft_printf("%f\\n", 0.45362456334563456);
+	ret = ft_printf("%.20000Lf\n", LDBL_MIN);
 	printf("\nret=%d\n", ret);
-	ret = printf("%f\\n", 0.45362456334563456);
+	ret = printf("%.20000Lf\n", LDBL_MIN);
 	printf("\nret=%d\n", ret);
 
 	// ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
@@ -47,7 +47,7 @@ int main()
 
 	return (0);
 }
-*/
+
 
 /*
 int main()
@@ -88,7 +88,7 @@ int main()
 	return (0);
 }*/
 
-
+/*
 int				main(void)
 {
   ft_printf("\\n");
@@ -127,4 +127,4 @@ int				main(void)
 
   return (0);
 }
-
+*/
