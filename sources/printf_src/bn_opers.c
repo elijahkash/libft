@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_opers.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:46:29 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 17:37:49 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 20:43:09 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void			ft_imul_small_bignum(t_bignum *res, unsigned int n)
 
 void 			ft_ipow_small_bignum(t_bignum *res, unsigned int n, unsigned int pow)
 {
-	int i;
+	unsigned int i; //TODO: check it (type)
 
 	if (pow == 0)
 	{
