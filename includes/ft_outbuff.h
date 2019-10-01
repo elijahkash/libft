@@ -6,14 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 13:34:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 14:18:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_OUTBUFF_H
 # define FT_OUTBUFF_H
 
-# define PRF_BUFF_SIZE 10
+# define PRF_BUFF_SIZE 6000
 
 typedef struct	s_outbuff
 {

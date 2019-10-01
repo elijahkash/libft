@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 13:29:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 14:12:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-/*
+
 int main()
 {
 	int ret = 0;
@@ -30,19 +30,20 @@ int main()
 
 //	fd = open("1.test", O_WRONLY);
 
-	ret = ft_printf("%f\n", 0.5625);
-	ft_printf("%d\n", ret);
+	// ret = ft_printf("%f\n", 0.5625);
+	// ft_printf("%d\n", ret);
 
-	// ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
-	// printf("\nret=%d\n", ret);
-	// ret = ft_printf("%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45);
-	// printf("\nret=%d\n", ret);
-
+	ret = ft_printf("qwerty%cqwerty", 0);
+	printf("\nret=%d", ret);
+	fflush(stdout);
+	ret = printf("qwerty%cqwerty", 0);
+	printf("\nret=%d", ret);
+	fflush(stdout);
 //	close(fd);
 
 
 	return (0);
-}*/
+}
 
 
 /*
@@ -84,7 +85,7 @@ int main()
 	return (0);
 }*/
 
-
+/*
 int				main(void)
 {
  ft_printf("\n");
@@ -123,4 +124,4 @@ int				main(void)
 
  return (0);
 }
-
+*/
