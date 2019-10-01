@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:07:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 13:25:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,7 @@ int			ft_printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format != '%')
-		{
-			ft_putchar_fd(*format++, g_fd_printf);
-			result++;
-		}
+			ft_buf_add(g_fd_printf + result++ * 0, format++, 1);
 		else
 			result += handle_spec(&format, argptr);
 		if (errno)
@@ -52,6 +49,7 @@ int			ft_printf(const char *format, ...)
 			break ;
 		}
 	}
+	forse_buff();
 	va_end(argptr);
 	return (result);
 }

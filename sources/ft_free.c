@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:46:22 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/10 17:46:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 13:22:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 void	ft_free(void *data, size_t size)
 {
 	size++;
-	free(data);
+	if (data)
+		free(data);
 }
