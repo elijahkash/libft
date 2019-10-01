@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 11:42:59 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 18:07:50 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int main()
 
 	ft_printf("%b %b %b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
 
-	ft_printf("%.5000Lf\n", ud.ld);
-	printf("%.5000Lf\n", ud.ld);
+	ft_printf("%.18000Lf\n", ud.ld);
+	printf("%.18000Lf\n", ud.ld);
 	//ft_printf("%Lf\n", ud.ld);
 	//printf("%.20000Lf\n", ud.ld);	fflush(stdout);
 
