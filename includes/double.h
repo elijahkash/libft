@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   double.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 09:04:45 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 11:50:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,5 @@ void						ft_strcatnbr_wzeros(char *output, long long nbr,
 												int len);
 void						makebnwithfract(t_bignum *res, t_bigdec bd);
 int							countmaxsize_bignum(int exp);
-int							ft_abs(int x);
 
 #endif

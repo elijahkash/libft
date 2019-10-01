@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_init.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:44:53 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 19:43:47 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/10/01 11:50:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,17 +77,17 @@ void			ft_deepcopy_bignum(t_bignum *res, t_bignum bn)
 
 int				countmaxsize_bignum(int exp)
 {
-	if (ft_abs(exp) < 600)
+	if (ABS(exp) < 600)
 		return (100);
-	else if (ft_abs(exp) < 1200)
+	else if (ABS(exp) < 1200)
 		return (200);
-	else if (ft_abs(exp) < 2400)
+	else if (ABS(exp) < 2400)
 		return (300);
-	else if (ft_abs(exp) < 3600)
+	else if (ABS(exp) < 3600)
 		return (400);
-	else if (ft_abs(exp) < 6000)
+	else if (ABS(exp) < 6000)
 		return (600);
-	else if (ft_abs(exp) < 12000)
+	else if (ABS(exp) < 12000)
 		return (1100);
 	return (1300);
 }
