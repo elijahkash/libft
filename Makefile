@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/10/01 11:28:14 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/10/01 11:44:58 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ ft_ccwords.c ft_findlwordlc.c ft_strsplit.c ft_atoi.c\
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
 ft_free.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c\
 ft_del_arr.c ft_pow.c ft_strset.c ft_zerostr.c ft_skip_digits.c\
-ft_getnbr_base.c \
+ft_getnbr_base.c ft_outbuff.c \
 ft_printf.c printf_src/handle_spec.c printf_src/read_spec.c \
 printf_src/print_output.c printf_src/get_item_by_size.c \
 printf_src/spectostr_percent.c printf_src/spectostr_string.c \
