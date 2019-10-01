@@ -6,7 +6,7 @@
 /*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 20:19:26 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/10/01 09:04:45 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ t_bignum					ft_pow_bignum(t_bignum bn, unsigned int n);
 void						putnzeros(char *output, int prec);
 void						ft_itoa_f(union u_double d, char *output, int prec);
 int							ft_pow_bn(int num, unsigned int p);
-void						initialize_bd(t_bigdec *bd, int maxsize);
 void						ft_strcatnbr(char *output, long int nbr);
 void						ft_putnbr_output(long int n, char *output);
 void						ft_put_one_inpos_bignum(t_bignum *bn,
@@ -77,5 +76,6 @@ void						ft_strcatnbr_wzeros(char *output, long long nbr,
 												int len);
 void						makebnwithfract(t_bignum *res, t_bigdec bd);
 int							countmaxsize_bignum(int exp);
+int							ft_abs(int x);
 
 #endif

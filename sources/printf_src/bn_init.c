@@ -77,17 +77,17 @@ void			ft_deepcopy_bignum(t_bignum *res, t_bignum bn)
 
 int				countmaxsize_bignum(int exp)
 {
-	if (exp < 600)
+	if (ft_abs(exp) < 600)
 		return (100);
-	else if (exp < 1200)
+	else if (ft_abs(exp) < 1200)
 		return (200);
-	else if (exp < 2400)
+	else if (ft_abs(exp) < 2400)
 		return (300);
-	else if (exp < 3600)
+	else if (ft_abs(exp) < 3600)
 		return (400);
-	else if (exp < 6000)
+	else if (ft_abs(exp) < 6000)
 		return (600);
-	else if (exp < 12000)
+	else if (ft_abs(exp) < 12000)
 		return (1100);
 	return (1300);
 }
