@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 11:42:59 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 14:54:03 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,33 @@
 
 #include <fcntl.h>
 #include <unistd.h>
+#include "double.h"
 
 
 int main()
 {
 	int ret = 0;
+	long double ld;
+	union u_double ud;
+
+	ud.ld = LDBL_MIN;
+	//ud.s_parts.e = 0x7FFE;
+	//ud.s_parts.m = 0x7FFFFFFFFFFFFFFF;
+
+	ft_printf("%b %b %b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
+
+	ft_printf("%.5000Lf\n", ud.ld);
+	printf("%.5000Lf\n", ud.ld);
+	//ft_printf("%Lf\n", ud.ld);
+	//printf("%.20000Lf\n", ud.ld);	fflush(stdout);
 
 //	int fd;
 
 //	fd = open("1.test", O_WRONLY);
 
-	ret = ft_printf("%f\n", 0.5625);
-	ft_printf("%d\n", ret);
+//	printf("%.20000Lf\n", LDBL_MIN);
 
 
-	printf("%.20000Lf\n", LDBL_MIN);
 	// ret = ft_printf("%d:%.*d:%.*d\n", 13, 51, 6, 45, 16);
 	// printf("\nret=%d\n", ret);
 	// ret = ft_printf("%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45);

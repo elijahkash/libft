@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 20:54:43 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 17:47:42 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 char	*spectostr_float(t_specifications_def spec, va_list argptr)
 {
 	char		*output;
-	char		tmp[8000];
+	char		tmp[20000];
 	int			len;
 	int			extralen;
 	long double	test;

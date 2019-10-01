@@ -6,7 +6,7 @@
 /*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:41:50 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 19:39:07 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/10/01 13:59:39 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,24 @@ void			fixzero_bignum(t_bignum *bn)
 		i++;
 	}
 	bn->size = 0;
+}
+
+void 			fixdown_bignum(t_bignum *bn)
+{
+	int i;
+
+	i = 0;
+	while (i < bn->maxsize - 1)
+	{
+		while (bn->number[i] < 0)
+		{
+			bn->number[i] += BASE_BN;
+			bn->number[i + 1] -= 1;
+		}
+		i++;
+	}
+	fixzero_bignum(bn);
+	fixsize_bignum(bn);
 }
 
 int				ft_pow_bn(int num, unsigned int p)
