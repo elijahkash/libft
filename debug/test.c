@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 18:22:52 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 22:51:31 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,34 @@ int main()
 	//long double ld;
 	union u_double ud;
 
-	ud.ld = LDBL_MAX;
+	char output[20000];
+
 	//ud.s_parts.e = 0x7FFE;
 	//ud.s_parts.m = 0x7FFFFFFFFFFFFFFF;
 
-	ft_printf("%b %b %b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
 
-	ft_printf("%Lf\n", ud.ld);
-	printf("%Lf\n", ud.ld);
-	//ft_printf("%Lf\n", ud.ld);
+	ud.ld = LDBL_MAX;
+	prf_dblcalc(ud.ld, 19000, output);
+//	ft_printf("%s\n", output);
+
+
+
+	//ud.ld = NAN;
+//	ft_printf("%b %b %b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
+
+//	ud.ld = 0.0;
+//	ft_printf("%Lf\n", ud.ld);
+//	ud.ld = -0.0;
+//	ft_printf("%Lf\n", ud.ld);
+//	ud.ld = 0.0000000001;
+//	ft_printf("%Lf\n", ud.ld);
+//	ud.ld = -0.0000000001;
+//	ft_printf("%Lf\n", ud.ld);
+//	ud.ld = 0.0;
+//	ft_printf("%Lf\n", ud.ld);
+//	ud.ld = 0.0;
+//	ft_printf("%Lf\n", ud.ld);
+//	//ft_printf("%Lf\n", ud.ld);
 	//printf("%.20000Lf\n", ud.ld);	fflush(stdout);
 
 //	int fd;
