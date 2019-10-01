@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 22:51:31 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/02 00:04:24 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,20 @@ int main()
 	//long double ld;
 	union u_double ud;
 
-	char output[20000];
+	char output[25000];
 
 	//ud.s_parts.e = 0x7FFE;
 	//ud.s_parts.m = 0x7FFFFFFFFFFFFFFF;
 
 
-	ud.ld = LDBL_MAX;
-	prf_dblcalc(ud.ld, 19000, output);
-//	ft_printf("%s\n", output);
+	ud.ld = LDBL_MIN;
+	ft_printf("%0b %015b %064b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
+	prf_dblcalc(ud.ld, 6, output);
+	ft_printf("ft_printf: %s\n", output);
+	printf("   printf: %Le\n", ud.ld);
 
 
+	printf("%Le\n", ud.ld);
 
 	//ud.ld = NAN;
 //	ft_printf("%b %b %b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
@@ -73,12 +76,12 @@ int main()
 	// ret = ft_printf("%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45);
 	// printf("\nret=%d\n", ret);
 
-	ret = ft_printf("qwerty%cqwerty", 0);
-	printf("\nret=%d", ret);
-	fflush(stdout);
-	ret = printf("qwerty%cqwerty", 0);
-	printf("\nret=%d", ret);
-	fflush(stdout);
+//	ret = ft_printf("qwerty%cqwerty", 0);
+//	printf("\nret=%d", ret);
+//	fflush(stdout);
+//	ret = printf("qwerty%cqwerty", 0);
+//	printf("\nret=%d", ret);
+//	fflush(stdout);
 //	close(fd);
 
 

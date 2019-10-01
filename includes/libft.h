@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 20:40:11 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 23:02:10 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <string.h>
 # include <errno.h>
 
-# include <ft_outbuff.h>
 # include <ft_printf.h>
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))

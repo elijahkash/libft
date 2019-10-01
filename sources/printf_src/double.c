@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 18:28:58 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/02 00:03:43 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ static void		count_parts_d(union u_double d, int *pow, int *exp,
 	}
 }
 
-void			ft_itoa_f(union u_double d, char *output, int prec)
+void			ft_itoa_f(union u_double d, char *output, int prec, char spec)
 {
 	int					exp;
 	int					pow;
@@ -132,7 +132,22 @@ void			ft_itoa_f(union u_double d, char *output, int prec)
 		if (exp <= 65)
 			ft_fractpart(pow, exp <= 0 ? d.s_parts.m : d.s_parts.m << exp, &bd);
 		makebnwithfract(&res, bd);
-		round_bn(&res, prec);
-		put_bn_output(res, output, prec);
+		if (spec == 'f')
+		{
+			round_bn(&res, prec);
+			put_bn_output(res, output, prec);
+		}
+		if (spec == 'e')
+		{
+			normalize_bn(&res);
+			round_bn(&res, prec);
+			put_bn_output(res, output, prec);
+			if (res.normalexp < 0)
+				ft_strcat(output, "e");
+			else
+				ft_strcat(output, "e+");
+			ft_strcatnbr_wzeros(output, res.normalexp, 2);
+
+		}
 	}
 }

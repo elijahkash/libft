@@ -6,7 +6,7 @@
 /*   By: odrinkwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:54:48 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 18:54:55 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/10/02 00:07:45 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 void	prf_dblcalc(long double d, int prec, char *str)
 {
 	union u_double ud;
+	char spec;
 
+	spec = 'e';
 	ud.ld = d;
-	ft_itoa_f(ud, str, prec);
+	ft_itoa_f(ud, str, prec, spec);
 }
