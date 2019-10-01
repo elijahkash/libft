@@ -6,7 +6,7 @@
 /*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:44:53 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 12:08:44 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 18:39:10 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,17 +78,39 @@ void			ft_deepcopy_bignum(t_bignum *res, t_bignum bn)
 
 int				countmaxsize_bignum(int exp)
 {
-	if (ABS(exp) < 600)
-		return (100);
-	else if (ABS(exp) < 1200)
-		return (200);
-	else if (ABS(exp) < 2400)
-		return (300);
-	else if (ABS(exp) < 3600)
-		return (400);
-	else if (ABS(exp) < 6000)
-		return (900);
-	else if (ABS(exp) < 12000)
-		return (1200);
+	if (exp >= 0)
+	{
+		if (ABS(exp) < 600)
+			return (100);
+		else if (ABS(exp) < 1200)
+			return (200);
+		else if (ABS(exp) < 2400)
+			return (300);
+		else if (ABS(exp) < 3600)
+			return (400);
+		else if (ABS(exp) < 6000)
+			return (900);
+		else if (ABS(exp) < 12000)
+			return (1200);
+		else
+			return (1500);
+	}
+	else
+	{
+		if (ABS(exp) < 600)
+			return (200);
+		else if (ABS(exp) < 1200)
+			return (400);
+		else if (ABS(exp) < 2400)
+			return (800);
+		else if (ABS(exp) < 3600)
+			return (1200);
+		else if (ABS(exp) < 6000)
+			return (2000);
+		else if (ABS(exp) < 12000)
+			return (3800);
+	}
+
+
 	return (SIZE_BN);
 }

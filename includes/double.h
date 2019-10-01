@@ -6,7 +6,7 @@
 /*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 17:37:54 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 18:19:42 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ void 						fixdown_bignum(t_bignum *bn);
 t_bignum					ft_div_bignum(t_bignum a, t_bignum b);
 void 						ft_ipow_small_bignum(t_bignum *res,
 									unsigned int n, unsigned int pow);
+void						ft_imul_small_bignum(t_bignum *res, unsigned int n);
 
 #endif
