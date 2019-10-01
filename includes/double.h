@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   double.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 11:52:44 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 18:19:42 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOUBLE_H
 # define DOUBLE_H
 
-# include "libft.h"
 # include <stdarg.h>
 
-# define SIZE_BN 1300
+# define SIZE_BN 5000
 # define BASE_BN 10000
 
 union						u_double
@@ -77,5 +76,10 @@ void						ft_strcatnbr_wzeros(char *output, long long nbr,
 												int len);
 void						makebnwithfract(t_bignum *res, t_bigdec bd);
 int							countmaxsize_bignum(int exp);
+void 						fixdown_bignum(t_bignum *bn);
+t_bignum					ft_div_bignum(t_bignum a, t_bignum b);
+void 						ft_ipow_small_bignum(t_bignum *res,
+									unsigned int n, unsigned int pow);
+void						ft_imul_small_bignum(t_bignum *res, unsigned int n);
 
 #endif

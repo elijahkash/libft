@@ -6,10 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 11:52:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 18:28:58 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "double.h"
 
 static void		ft_intpart(int pow, unsigned long int mant,
@@ -22,13 +23,14 @@ static void		ft_intpart(int pow, unsigned long int mant,
 	if (exp <= 0)
 		return ;
 	ft_assign_bignum(&mult, res->maxsize, 2);
-	ft_ipow_bignum(&mult, pow);
+	ft_ipow_small_bignum(&mult, 2, pow);
+//	ft_ipow_bignum(&mult, pow);
 	while (mant > 0)
 	{
 		if (mant & 1)
 			ft_isumabs_bignum(res, mult);
 		mant >>= 1;
-		ft_isumabs_bignum(&mult, mult);
+		ft_imul_small_bignum(&mult, 2);
 	}
 }
 
@@ -42,16 +44,32 @@ static void		ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 	res = &(bd->fractpart);
 	ft_assign_bignum(res, res->maxsize, 0);
 	ft_assign_bignum(&five, res->maxsize, 5);
-	ft_assign_bignum(&two, res->maxsize, 2);
-	ft_ipow_bignum(&five, 64 + pow);
+//	ft_assign_bignum(&two, res->maxsize, 2);
+	ft_ipow_small_bignum(&five, 5, 64 + pow);
+//	i = 0;
+//	while (++i <= 64)
+//	{
+//		if (mant & 0x8000000000000000)
+//			ft_isumabs_bignum(res, ft_pow_bignum(two, 64 - i + (pow == 0 ? 0 : 1)));
+//		mant <<= 1;
+//	}
+
+// для i = 64:
+// pow = 0: 64 - 64 + 0 = 0
+// pow = 1: 64 - 64 + 1 = 1
+	if (pow == 0)
+		ft_assign_bignum(&two, res->maxsize, 1);
+	else
+		ft_assign_bignum(&two, res->maxsize, 2);
 	i = 0;
 	while (++i <= 64)
 	{
-		if (mant & 0x8000000000000000)
-			ft_isumabs_bignum(res, ft_mul_bignum(five,
-						ft_pow_bignum(two, 64 - i + (pow == 0 ? 0 : 1))));
-		mant <<= 1;
+		if (mant & 0x0000000000000001)
+			ft_isumabs_bignum(res, two);
+		mant >>= 1;
+		ft_imul_small_bignum(&two, 2);
 	}
+	ft_imul_bignum(res, five);
 	bd->sizefract = 64 + pow;
 }
 
