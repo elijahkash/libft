@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/30 17:16:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 12:28:36 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static const char					*g_sizes_map[NUMBER_OF_SIZES] = {
 	"ll", "hh", "l", "h", "L"};
 
 /*
-**	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L},
+**
 **	{'g', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
 **	{'r', 2, 1, 1, 0}};
 */
@@ -45,7 +45,8 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
 	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
 	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
-	{'w', 0, 0, 0, 0, 0}};
+	{'w', 0, 0, 0, 0, 0},
+	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -60,7 +61,8 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_bighex,
 	spectostr_bin,
 	spectostr_float,
-	change_fd
+	change_fd,
+	spectostr_efloat
 };
 
 /*
@@ -83,7 +85,8 @@ static int							check_spec(t_specifications_def spec)
 		return (-1);
 	if (spec.width != NOT_DETERM && !g_specs_def[spec.spec - 1].width)
 		return (-1);
-	if (spec.precision != NOT_DETERM && !g_specs_def[spec.spec - 1].precision)
+	if (spec.precision != NOT_DETERM && spec.precision
+									&& !g_specs_def[spec.spec - 1].precision)
 		return (-1);
 	if (!g_arg_mode)
 		g_arg_mode = (spec.arg > 0) ? 1 : -1;
