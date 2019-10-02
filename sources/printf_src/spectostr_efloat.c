@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 12:21:21 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 12:45:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 13:21:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,12 @@ char	*spectostr_efloat(t_specifications_def spec, va_list argptr)
 	prf_dblcalc(test, (spec.precision > 19000) ? 19000 : spec.precision,
 																	tmp, 'e');
 	len = ft_strlen(tmp);
-	if (spec.flags & FLAG_OCTT && !ft_strchr(tmp, '.')
-		&& !ft_strstr(tmp, "inf") && !ft_strstr(tmp, "nan"))
+	if (spec.flags & FLAG_OCTT && ft_strchr(tmp, 'e') && !ft_strchr(tmp, '.'))
 	{
-		tmp[len++] = '.';
-		tmp[len] = '\0';
+		ft_memmove(ft_strchr(tmp, 'e') + 1, ft_strchr(tmp, 'e'),
+					tmp + len - ft_strchr(tmp, 'e'));
+		*ft_strchr(tmp, 'e') = '.';
+		tmp[++len] = '\0';
 	}
 	extralen = spec.precision - (tmp + len - ft_strchr(tmp, '.') - 1);
 	output = (char *)malloc(len + 1 + (extralen > 0 ? extralen : 0));
