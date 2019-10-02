@@ -22,7 +22,6 @@
 #include <unistd.h>
 #include "double.h"
 
-
 int main()
 {
 	int ret = 0;
@@ -37,8 +36,6 @@ int main()
 
 	ud.ld = LDBL_MIN;
 	ft_printf("%0b %015b %064b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
-	prf_dblcalc(ud.ld, 6, output);
-	ft_printf("ft_printf: %s\n", output);
 	printf("   printf: %Le\n", ud.ld);
 
 
