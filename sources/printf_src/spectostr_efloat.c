@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 12:21:21 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 12:28:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 12:45:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*spectostr_efloat(t_specifications_def spec, va_list argptr)
 
 	test = get_float_item_by_size(argptr, spec.sizes);
 	tmp[0] = '\0';
-	prf_dblcalc(test, (spec.precision > 19000) ? 19000 : spec.precision, tmp);
+	prf_dblcalc(test, (spec.precision > 19000) ? 19000 : spec.precision,
+																	tmp, 'e');
 	len = ft_strlen(tmp);
 	if (spec.flags & FLAG_OCTT && !ft_strchr(tmp, '.')
 		&& !ft_strstr(tmp, "inf") && !ft_strstr(tmp, "nan"))
