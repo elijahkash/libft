@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:16:50 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:20:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*spectostr_float(t_specifications_def spec, va_list argptr)
 		return (NULL + (errno = ENOMEM) * 0);
 	test = get_float_item_by_size(argptr, spec.sizes);
 	output[0] = '\0';
-	prf_dblcalc(test, spec.precision, output, 'f');
+	prf_dblcalc(test, output, spec);
 	return (output);
 }

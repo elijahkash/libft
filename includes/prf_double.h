@@ -6,12 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/02 17:09:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:22:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOUBLE_H
 # define DOUBLE_H
+
+# include <prf_printf_spec.h>
 
 # include <stdarg.h>
 
@@ -68,7 +70,8 @@ void						ft_strcatnbr(char *output, long int nbr);
 void						ft_putnbr_output(long int n, char *output);
 void						ft_put_one_inpos_bignum(t_bignum *bn,
 													int maxsize, int pos);
-void						prf_dblcalc(long double d, int prec, char *str, char spec);
+void						prf_dblcalc(long double d, char *str,
+										t_specifications_def spec);
 int							ft_get_inpos_bignum(t_bignum bn, int pos);
 void						put_bn_output(t_bignum res, char *output, int prec);
 void						reformat_output(char *output, int prec);
