@@ -17,5 +17,5 @@ void	prf_dblcalc(long double d, char *str, t_specifications_def spec)
 	union u_double ud;
 
 	ud.ld = d;
-	ft_itoa_f(ud, str, spec.precision, 'f'); //TODO: fix it
+	ft_itoa_f(ud, str, spec);
 }

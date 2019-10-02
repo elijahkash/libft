@@ -64,7 +64,7 @@ void						ft_ipow_bignum(t_bignum *res, unsigned int n);
 t_bignum					ft_mul_bignum(t_bignum bn1, t_bignum bn2);
 t_bignum					ft_pow_bignum(t_bignum bn, unsigned int n);
 void						putnzeros(char *output, int prec);
-void						ft_itoa_f(union u_double d, char *output, int prec, char spec);
+void						ft_itoa_f(union u_double d, char *output, t_specifications_def spec);
 int							ft_pow_bn(int num, unsigned int p);
 void						ft_strcatnbr(char *output, long int nbr);
 void						ft_putnbr_output(long int n, char *output);
@@ -73,8 +73,8 @@ void						ft_put_one_inpos_bignum(t_bignum *bn,
 void						prf_dblcalc(long double d, char *str,
 										t_specifications_def spec);
 int							ft_get_inpos_bignum(t_bignum bn, int pos);
-void						put_bn_output(t_bignum res, char *output, int prec);
-void						reformat_output(char *output, int prec);
+void						put_bn_output(t_bignum res, char *output, t_specifications_def spec);
+void						reformat_output(char *output, t_specifications_def spec);
 void						round_bn(t_bignum *res, int prec);
 void						ft_strcatnbr_wzeros(char *output, long long nbr,
 												int len);

@@ -27,23 +27,30 @@ static void		reformat_checkzero(char *output, int prec, char *c)
 	}
 }
 
-void			reformat_output(char *output, int prec)
+void			reformat_output(char *output, t_specifications_def spec)
 {
 	char *c;
 
 	c = ft_strchr(output, '.');
-	if (prec == 0)
+	if (spec.precision == 0)
 	{
-		if (c != NULL)
+		if (spec.flags & FLAG_OCTT)
+		{
+			if (c != NULL)
+				*(++c) = '\0';
+			else
+				ft_strcat(output, ".");
+		}
+		else if (c != NULL)
 			*c = '\0';
 		return ;
 	}
 	if (c != NULL)
-		reformat_checkzero(output, prec, c);
+		reformat_checkzero(output, spec.precision, c);
 	else
 	{
 		ft_strcat(output, ".");
-		putnzeros(output, prec);
+		putnzeros(output, spec.precision);
 	}
 }
 
@@ -71,7 +78,7 @@ static void		put_bn_outp_aux(t_bignum res, char *output, int *i)
 	}
 }
 
-void			put_bn_output(t_bignum res, char *output, int prec)
+void			put_bn_output(t_bignum res, char *output, t_specifications_def spec)
 {
 	int i;
 
@@ -90,5 +97,5 @@ void			put_bn_output(t_bignum res, char *output, int prec)
 	i--;
 	while (i >= 0)
 		ft_strcatnbr_wzeros(output, res.number[i--], 4);
-	reformat_output(output, prec);
+	reformat_output(output, spec);
 }
