@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 14:28:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 15:57:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <options.h>
+#include <ft_options.h>
 
 #include <libft.h>
 
