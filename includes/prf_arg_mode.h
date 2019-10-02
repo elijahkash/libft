@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff_dst.c                                   :+:      :+:    :+:   */
+/*   prf_arg_mode.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:11:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/02 20:10:43 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 20:13:40 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#ifndef PRF_ARG_MODE_H
+# define PRF_ARG_MODE_H
 
-#include <libft.h>
+void		init_argmode(void);
+int			get_argmode(void);
+void		set_argmode(int value);
 
-static char		*g_outstr = NULL;
-static int		g_outfd = 1;
-
-void			ft_set_g_outstr(char *ptr)
-{
-	g_outstr = ptr;
-}
-
-void			ft_set_g_outfd(int value)
-{
-	g_outfd = value;
-}
-
-int				ft_get_g_outfd(void)
-{
-	return (g_outfd);
-}
-
-char			*ft_get_g_outstr(void)
-{
-	return (g_outstr);
-}
+#endif

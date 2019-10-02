@@ -6,14 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:59:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 20:07:07 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include <ft_printf.h> //TODO: need global rename
 
 #include <prf_handle_spec.h>
 #include <libft.h>
+#include <prf_global_bak.h>
 
 static int	is_valid_format(const char *format)
 {
@@ -27,14 +28,12 @@ static int	is_valid_format(const char *format)
 
 int			ft_printf(const char *format, ...)
 {
-	va_list		argptr;
-	int			result;
+	va_list			argptr;
+	int				result;
+	t_global_bak	bak;
 
-	errno = 0;
 	result = 0;
-	ft_set_g_outfd(1);
-	ft_set_g_outstr(NULL);
-	re_init_argmode();
+	bak = global_init();
 	if (!is_valid_format(format))
 		return (-1);
 	va_start(argptr, format);
@@ -52,5 +51,6 @@ int			ft_printf(const char *format, ...)
 	}
 	ft_force_buff();
 	va_end(argptr);
+	global_restore(bak);
 	return (result);
 }

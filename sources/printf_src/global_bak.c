@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff_dst.c                                   :+:      :+:    :+:   */
+/*   global_bak.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:11:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/02 18:27:02 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 20:41:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#include <prf_global_bak.h>
 
 #include <libft.h>
+#include <prf_arg_mode.h>
 
-static char		*g_outstr = NULL;
-static int		g_outfd = 1;
-
-void			ft_set_g_outstr(char *ptr)
+t_global_bak	global_init(void)
 {
-	g_outstr = ptr;
+	t_global_bak bak;
+
+	bak.fd = ft_get_g_outfd();
+	bak.outstr = ft_get_g_outstr();
+	bak.arg_mode = get_argmode();
+	errno = 0;
+	ft_set_g_outfd(1);
+	ft_set_g_outstr(NULL);
+	init_argmode();
+	return (bak);
 }
 
-void			ft_set_g_outfd(int value)
+void			global_restore(t_global_bak bak)
 {
-	g_outfd = value;
-}
-
-int				ft_get_g_outfd(void)
-{
-	return (g_outfd);
-}
-
-char			*ft_get_g_outstr(void)
-{
-	return (g_outstr);
+	ft_set_g_outfd(bak.fd);
+	ft_set_g_outstr(bak.outstr);
+	set_argmode(bak.arg_mode);
 }

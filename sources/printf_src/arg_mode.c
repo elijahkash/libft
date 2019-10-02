@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff_dst.c                                   :+:      :+:    :+:   */
+/*   arg_mode.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:11:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/02 20:08:47 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 20:13:29 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#include <prf_arg_mode.h>
 
-#include <libft.h>
+/*
+** if dollar mode g_arg_mode > 0 else < 0
+*/
+static int	g_arg_mode = 0;
 
-static char		*g_outstr = NULL;
-static int		g_outfd = 1;
-
-void			ft_set_g_outstr(char *ptr)
+void		init_argmode(void)
 {
-	g_outstr = ptr;
+	g_arg_mode = 0;
 }
 
-void			ft_set_g_outfd(int value)
+int			get_argmode(void)
 {
-	g_outfd = value;
+	return (g_arg_mode);
 }
 
-int				ft_get_g_outfd(void)
+void		set_argmode(int value)
 {
-	return (g_outfd);
-}
-
-char			*ft_get_g_outstr(void)
-{
-	return (g_outstr);
+	g_arg_mode = value;
 }

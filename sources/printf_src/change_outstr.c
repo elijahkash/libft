@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff_dst.c                                   :+:      :+:    :+:   */
+/*   change_outstr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:11:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/02 18:08:25 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 18:17:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#include <prf_spectostr_funcs.h>
 
-#include <libft.h>
-
-static char		*g_outstr = NULL;
-static int		g_outfd = 1;
-
-void			ft_set_g_outstr(char *ptr)
+char	*change_outstr(t_specifications_def spec, va_list argptr)
 {
-	g_outstr = ptr;
-}
-
-void			ft_set_g_outfd(int value)
-{
-	g_outfd = value;
-}
-
-int				ft_get_g_outfd(void)
-{
-	return (g_outfd);
-}
-
-char			*ft_get_g_outstr(void)
-{
-	return (g_outstr);
+	if (spec.spec == 16)
+		ft_set_g_outstr(va_arg(argptr, char*));
+	return (ft_zerostr());
 }

@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff_dst.c                                   :+:      :+:    :+:   */
+/*   prf_global_bak.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:11:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/02 18:24:55 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 20:06:36 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#ifndef GLOBAL_BAK_H
+# define GLOBAL_BAK_H
 
-#include <libft.h>
-
-static char		*g_outstr = NULL;
-static int		g_outfd = 1;
-
-void			ft_set_g_outstr(char *ptr)
+typedef struct	s_global_bak
 {
-	g_outstr = ptr;
-}
+	int		fd;
+	int		arg_mode;
+	char	*outstr;
+}				t_global_bak;
 
-void			ft_set_g_outfd(int value)
-{
-	g_outfd = value;
-}
+t_global_bak	global_init(void);
+void			global_restore(t_global_bak);
 
-int				ft_get_g_outfd(void)
-{
-	return (g_outfd);
-}
-
-char			*ft_get_g_outstr(void)
-{
-	return (g_outstr);
-}
+#endif

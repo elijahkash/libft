@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:12:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 20:55:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <prf_spectostr_funcs.h>
 #include <prf_print_output.h>
 #include <prf_handle_stars.h>
+#include <prf_arg_mode.h>
+#include <prf_extend_dollar.h>
 
 #include <stdlib.h>
 
@@ -47,7 +49,8 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
 	{'w', 0, 0, 0, 0, 0},
 	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0},
-	{'E', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0}};
+	{'E', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0},
+	{'y', 0, 0, 0, 0, 0}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -64,17 +67,24 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_float,
 	change_fd,
 	spectostr_float,
-	spectostr_float
+	spectostr_float,
+	change_outstr
 };
 
-/*
-** if dollar mode g_arg_mode > 0 else < 0
-*/
-static int							g_arg_mode = 0;
-
-void								re_init_argmode(void)
+static const char					*read_spec(const char *format,
+												t_specifications_def *spec)
 {
-	g_arg_mode = 0;
+	if (is_dollar(format) && (spec->arg = ft_atoi(format)))
+		format = skip_dollar(format);
+	else
+		spec->arg = -1;
+	while (read_flag(format, spec))
+		format++;
+	format = read_width(format, spec);
+	format = read_precision(format, spec);
+	format = read_size(format, spec, g_sizes_map);
+	format = read_specification(format, spec, g_specs_def);
+	return (format);
 }
 
 static int							check_spec(t_specifications_def spec)
@@ -90,13 +100,13 @@ static int							check_spec(t_specifications_def spec)
 	if (spec.precision != NOT_DETERM && spec.precision
 									&& !g_specs_def[spec.spec - 1].precision)
 		return (-1);
-	if (!g_arg_mode)
-		g_arg_mode = (spec.arg > 0) ? 1 : -1;
-	if (spec.arg * g_arg_mode < 0
-		|| (spec.width > READ_DATA && spec.width < 0 && g_arg_mode < 0)
-		|| (spec.precision > READ_DATA && spec.precision < 0 && g_arg_mode < 0)
-		|| (spec.precision == READ_DATA && g_arg_mode > 0)
-		|| (spec.width == READ_DATA && g_arg_mode > 0))
+	if (!get_argmode())
+		set_argmode((spec.arg > 0) ? 1 : -1);
+	if (spec.arg * get_argmode() < 0
+	|| (spec.width > READ_DATA && spec.width < 0 && get_argmode() < 0)
+	|| (spec.precision > READ_DATA && spec.precision < 0 && get_argmode() < 0)
+	|| (spec.precision == READ_DATA && get_argmode() > 0)
+	|| (spec.width == READ_DATA && get_argmode() > 0))
 		return (-1);
 	return (0);
 }
@@ -108,7 +118,7 @@ const char							*is_valid_spec(const char *format)
 	if (*format++ != '%')
 		return (0);
 	ft_bzero(&spec, sizeof(t_specifications_def));
-	if (!(format = read_spec(format, &spec, g_specs_def, g_sizes_map)))
+	if (!(format = read_spec(format, &spec)))
 		return (0);
 	if (check_spec(spec))
 		return (0);
@@ -121,7 +131,7 @@ static int							print_spec(t_specifications_def spec,
 	int		result;
 	char	*output;
 
-	handle_stars(&spec, argptr, g_arg_mode);
+	handle_stars(&spec, argptr, get_argmode());
 	if (spec.arg > 0)
 		while ((spec.arg)-- > 1)
 			va_arg(argptr, long long);
@@ -150,7 +160,7 @@ int									handle_spec(const char **format,
 	if (*(*format)++ != '%')
 		return (0);
 	ft_bzero(&spec, sizeof(t_specifications_def));
-	*format = read_spec(*format, &spec, g_specs_def, g_sizes_map);
+	*format = read_spec(*format, &spec);
 	prepare_spec(&spec);
 	(spec.arg > 0) ? va_copy(tmp, argptr) : 0;
 	return (print_spec(spec, (spec.arg > 0) ? tmp : argptr));
