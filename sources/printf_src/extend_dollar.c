@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 21:04:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:31:16 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 15:28:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <libft.h>
 
-int				is_dollor(const char *format)
+int				is_dollar(const char *format)
 {
 	if (ft_isdigit(*format) && *format != '0')
 	{
@@ -25,7 +25,7 @@ int				is_dollor(const char *format)
 	return (0);
 }
 
-const char		*skip_dollor(const char *format)
+const char		*skip_dollar(const char *format)
 {
 	format = ft_skip_digits(format);
 	format++;

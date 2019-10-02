@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 23:02:10 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/02 15:29:05 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ const char			*read_spec(const char *format,
 						const t_specifications_def g_specs_def[NUMBER_OF_SPECS],
 						const char *g_sizes_map[NUMBER_OF_SIZES])
 {
-	if (is_dollor(format) && (spec->arg = ft_atoi(format)))
-		format = skip_dollor(format);
+	if (is_dollar(format) && (spec->arg = ft_atoi(format)))
+		format = skip_dollar(format);
 	else
 		spec->arg = -1;
 	while (read_flag(format, spec))

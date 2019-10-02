@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 23:02:10 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/02 15:27:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 static t_list	*g_buff = 0;
 
-void			forse_buff(void)
+void			forсe_buff(void)
 {
 	t_list		*tmp;
 	t_outbuff	*buff;
@@ -33,7 +33,7 @@ void			forse_buff(void)
 	}
 }
 
-static void		forse_item(t_list *item)
+static void		forсe_item(t_list *item)
 {
 	t_outbuff *buff;
 
@@ -60,7 +60,7 @@ int				ft_buf_add(int fd, const char *str, int len)
 			((t_outbuff *)item->content)->buff
 			[(((t_outbuff *)item->content)->curlen)++] = *str++ + (len--) * 0;
 			if (((t_outbuff *)item->content)->curlen == PRF_BUFF_SIZE)
-				forse_item(item);
+				forсe_item(item);
 		}
 		return (1);
 	}

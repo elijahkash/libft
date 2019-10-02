@@ -9,6 +9,7 @@
 		"float.h": "c",
 		"utils.h": "c",
 		"get_item_by_size.h": "c",
-		"sstream": "c"
+		"sstream": "c",
+		"ft_outbuff.h": "c"
 	}
 }

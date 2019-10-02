@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 12:32:52 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 23:02:10 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/02 15:29:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ const char	*read_width(const char *format, t_specifications_def *spec)
 {
 	if (*format == '*')
 	{
-		if (is_dollor(format + 1) && (spec->width = ft_atoi(format++ + 1) * -1))
-			format = skip_dollor(format);
+		if (is_dollar(format + 1) && (spec->width = ft_atoi(format++ + 1) * -1))
+			format = skip_dollar(format);
 		else
 			spec->width = READ_DATA + *(format++) * 0;
 	}
@@ -52,9 +52,9 @@ const char	*read_precision(const char *format, t_specifications_def *spec)
 	{
 		if (*(++format) == '*')
 		{
-			if (is_dollor(format + 1) &&
+			if (is_dollar(format + 1) &&
 				(spec->precision = ft_atoi(format + 1) * -1))
-				format = skip_dollor(++format);
+				format = skip_dollar(++format);
 			else
 				spec->precision = READ_DATA + *(format++) * 0;
 		}

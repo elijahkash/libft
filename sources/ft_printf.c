@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 12:40:38 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 15:25:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int			ft_printf(const char *format, ...)
 			break ;
 		}
 	}
-	forse_buff();
+	forсe_buff();
 	va_end(argptr);
 	return (result);
 }
