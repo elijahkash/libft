@@ -34,12 +34,11 @@ int main()
 	//ud.s_parts.m = 0x7FFFFFFFFFFFFFFF;
 
 
-	ud.ld = 0.0;
-	ft_printf("ft_printf: %Le\n", ud.ld);
-	printf("   printf: %Le\n", ud.ld);
+#define TXT ": %#.50LE\n", ud.ld
+	ud.ld = LDBL_MAX;
+	ft_printf(TXT);
+	printf(TXT);
 
-
-	printf("%Le\n", ud.ld);
 
 	//ud.ld = NAN;
 //	ft_printf("%b %b %b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);

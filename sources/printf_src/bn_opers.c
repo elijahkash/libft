@@ -115,7 +115,7 @@ void			ft_imul_small_bignum(t_bignum *res, unsigned int n)
 
 void 			ft_ipow_small_bignum(t_bignum *res, unsigned int n, unsigned int pow)
 {
-	unsigned int i; //TODO: check it (type)
+	unsigned int i;
 
 	if (pow == 0)
 	{
