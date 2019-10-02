@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:12:14 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 18:02:55 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void		prepare_spec(t_specifications_def *spec)
 		spec->flags &= (~FLAG_ZERO);
 	if (spec->spec == 1)
 		spec->flags &= (~FLAG_PLUS & ~FLAG_SPACE & ~FLAG_COMMA);
-	if (spec->spec == 12 && spec->precision == NOT_DETERM)
+	if ((spec->spec == 12 || spec->spec == 14 || spec->spec == 15) &&
+		spec->precision == NOT_DETERM)
 		spec->precision = 6;
 }
 
@@ -77,17 +78,17 @@ int			print_output(t_specifications_def spec, char **output)
 	if (spec.spec == 3 && **output == '\0')
 		len++;
 	if (prefix && (spec.flags & FLAG_ZERO))
-		ft_buf_add(g_fd_printf, prefix, ft_strlen(prefix));
+		ft_buf_add(ft_get_g_outfd(), prefix, ft_strlen(prefix));
 	if (spec.width > len && !((spec.flags & FLAG_MINUS) + (i = -1) * 0))
 		while (++i < spec.width - len)
-			ft_buf_add(g_fd_printf, spec.flags & FLAG_ZERO ? "0" : " ", 1);
+			ft_buf_add(ft_get_g_outfd(), spec.flags & FLAG_ZERO ? "0" : " ", 1);
 	if (prefix && !(spec.flags & FLAG_ZERO))
-		ft_buf_add(g_fd_printf, prefix, ft_strlen(prefix));
+		ft_buf_add(ft_get_g_outfd(), prefix, ft_strlen(prefix));
 	if (spec.spec == 3 && **output == '\0')
-		ft_buf_add(g_fd_printf, "", 1);
-	ft_buf_add(g_fd_printf, *output, ft_strlen(*output));
+		ft_buf_add(ft_get_g_outfd(), "", 1);
+	ft_buf_add(ft_get_g_outfd(), *output, ft_strlen(*output));
 	if (spec.width > len && spec.flags & FLAG_MINUS)
 		while (++i < spec.width - len)
-			ft_buf_add(g_fd_printf, " ", 1);
+			ft_buf_add(ft_get_g_outfd(), " ", 1);
 	return (spec.width > len ? spec.width : len);
 }

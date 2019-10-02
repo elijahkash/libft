@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:01:18 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:55:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@
 #include <unistd.h>
 
 static t_list	*g_buff = 0;
-static char		*g_outstr = NULL;
-
-void			set_goutstr(char *ptr)
-{
-	g_outstr = ptr;
-}
 
 static void		force_item(t_list *item)
 {
@@ -30,19 +24,19 @@ static void		force_item(t_list *item)
 	int			len;
 
 	buff = ((t_outbuff *)item->content);
-	if (!g_outstr)
+	if (!ft_get_g_outstr())
 		write(buff->fd, buff->buff, buff->curlen);
 	else
 	{
-		len = ft_strlen(g_outstr);
-		ft_memmove(g_outstr + len, buff->buff, buff->curlen);
-		g_outstr[len + buff->curlen] = '\0';
+		len = ft_strlen(ft_get_g_outstr());
+		ft_memmove(ft_get_g_outstr() + len, buff->buff, buff->curlen);
+		ft_get_g_outstr()[len + buff->curlen] = '\0';
 	}
 
 	((t_outbuff *)item->content)->curlen = 0;
 }
 
-void			force_buff(void)
+void			ft_force_buff(void)
 {
 	t_list		*tmp;
 

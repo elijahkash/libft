@@ -13,6 +13,7 @@
 		"ft_outbuff.h": "c",
 		"prf_printf_spec.h": "c",
 		"stdlib.h": "c",
-		"prf_double.h": "c"
+		"prf_double.h": "c",
+		"ft_options.h": "c"
 	}
 }

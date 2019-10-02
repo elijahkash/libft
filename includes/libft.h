@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 14:31:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:41:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <errno.h>
 
 # include <ft_outbuff.h>
+# include <ft_outbuff_dst.h>
 # include <ft_printf.h>
 # include <ft_options.h>
 

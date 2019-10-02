@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff.h                                       :+:      :+:    :+:   */
+/*   ft_outbuff_dst.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 11:43:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:51:07 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/02 17:41:12 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 17:54:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_OUTBUFF_H
-# define FT_OUTBUFF_H
+#ifndef FT_OUTBUFF_DST_H
+# define FT_OUTBUFF_DST_H
 
-# define PRF_BUFF_SIZE 8196
+void			ft_set_g_outstr(char *ptr);
+void			ft_set_g_outfd(int value);
 
-typedef struct	s_outbuff
-{
-	char	buff[PRF_BUFF_SIZE];
-	int		curlen;
-	int		fd;
-}				t_outbuff;
-
-void			ft_force_buff(void);
-int				ft_buf_add(int fd, const char *str, int len);
+int				ft_get_g_outfd(void);
+char			*ft_get_g_outstr(void);
 
 #endif
