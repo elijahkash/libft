@@ -17,7 +17,7 @@
 char	*spectostr_efloat(t_specifications_def spec, va_list argptr)
 {
 	char		*output;
-	char		tmp[20000];
+	char		tmp[25000];
 	int			len;
 	int			extralen;
 	long double	test;

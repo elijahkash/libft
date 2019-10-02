@@ -68,7 +68,7 @@ void						ft_strcatnbr(char *output, long int nbr);
 void						ft_putnbr_output(long int n, char *output);
 void						ft_put_one_inpos_bignum(t_bignum *bn,
 													int maxsize, int pos);
-void						prf_dblcalc(long double d, int prec, char *str);
+void						prf_dblcalc(long double d, int prec, char *str, char spec);
 int							ft_get_inpos_bignum(t_bignum bn, int pos);
 void						put_bn_output(t_bignum res, char *output, int prec);
 void						reformat_output(char *output, int prec);

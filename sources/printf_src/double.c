@@ -73,7 +73,7 @@ static void		ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 	bd->sizefract = 64 + pow;
 }
 
-static int		check_specvalues(union u_double d, char *output, int prec)
+static int		check_specvalues(union u_double d, char *output, int prec, char spec)
 {
 	if (!((d.ld != d.ld || d.ld == 1.0 / 0.0 || d.ld == -1.0 / 0.0 ||
 		(d.s_parts.e == 0 && d.s_parts.m == 0))))
@@ -94,6 +94,8 @@ static int		check_specvalues(union u_double d, char *output, int prec)
 				ft_strcat(output, "0");
 			prec = prec ? prec : 0;
 			reformat_output(output, prec);
+			if (spec == 'e' || spec == 'E')
+				ft_strcat(output, (spec == 'e') ? "e+00" : "E+00");
 		}
 	}
 	return (1);
@@ -121,7 +123,7 @@ void			ft_itoa_f(union u_double d, char *output, int prec, char spec)
 	t_bigdec			bd;
 	t_bignum			res;
 
-	if (check_specvalues(d, output, prec))
+	if (check_specvalues(d, output, prec, spec))
 		return ;
 	else
 	{
@@ -137,15 +139,15 @@ void			ft_itoa_f(union u_double d, char *output, int prec, char spec)
 			round_bn(&res, prec);
 			put_bn_output(res, output, prec);
 		}
-		if (spec == 'e')
+		if (spec == 'e' || spec == 'E')
 		{
 			normalize_bn(&res);
 			round_bn(&res, prec);
 			put_bn_output(res, output, prec);
 			if (res.normalexp < 0)
-				ft_strcat(output, "e");
+				ft_strcat(output, (spec == 'e') ? "e" : "E");
 			else
-				ft_strcat(output, "e+");
+				ft_strcat(output, (spec == 'e') ? "e+" : "E+");
 			ft_strcatnbr_wzeros(output, res.normalexp, 2);
 
 		}
