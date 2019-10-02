@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 16:05:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 16:31:51 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int			ft_printf(const char *format, ...)
 
 	errno = 0;
 	result = 0;
+	g_fd_printf = 1;
 	re_init_argmode();
 	if (!is_valid_format(format))
 		return (-1);
