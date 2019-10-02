@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:27:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 15:43:04 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@
 
 static t_list	*g_buff = 0;
 
+static void		forсe_item(t_list *item)
+{
+	t_outbuff *buff;
+
+	buff = ((t_outbuff *)item->content);
+	write(buff->fd, buff->buff, buff->curlen);
+	((t_outbuff *)item->content)->curlen = 0;
+}
+
 void			forсe_buff(void)
 {
 	t_list		*tmp;
@@ -26,20 +35,10 @@ void			forсe_buff(void)
 	while (g_buff)
 	{
 		tmp = g_buff->next;
-		buff = ((t_outbuff *)g_buff->content);
-		write(buff->fd, buff->buff, buff->curlen);
+		force_item(g_buff);
 		ft_lstdelone(&g_buff, ft_free);
 		g_buff = tmp;
 	}
-}
-
-static void		forсe_item(t_list *item)
-{
-	t_outbuff *buff;
-
-	buff = ((t_outbuff *)item->content);
-	write(buff->fd, buff->buff, buff->curlen);
-	((t_outbuff *)item->content)->curlen = 0;
 }
 
 static int		is_equalfd_in_toutbuf(void *item1, void *item2)
