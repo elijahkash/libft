@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:32:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 16:04:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct	s_outbuff
 	int		fd;
 }				t_outbuff;
 
-void			forсe_buff(void);
+void			force_buff(void);
 int				ft_buf_add(int fd, const char *str, int len);
 
 #endif

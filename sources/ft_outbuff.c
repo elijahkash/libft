@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:43:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 16:05:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 static t_list	*g_buff = 0;
 
-static void		forсe_item(t_list *item)
+static void		force_item(t_list *item)
 {
 	t_outbuff *buff;
 
@@ -30,7 +30,6 @@ static void		forсe_item(t_list *item)
 void			forсe_buff(void)
 {
 	t_list		*tmp;
-	t_outbuff	*buff;
 
 	while (g_buff)
 	{
@@ -59,7 +58,7 @@ int				ft_buf_add(int fd, const char *str, int len)
 			((t_outbuff *)item->content)->buff
 			[(((t_outbuff *)item->content)->curlen)++] = *str++ + (len--) * 0;
 			if (((t_outbuff *)item->content)->curlen == PRF_BUFF_SIZE)
-				forсe_item(item);
+				force_item(item);
 		}
 		return (1);
 	}
