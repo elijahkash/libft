@@ -34,9 +34,9 @@ int main()
 	//ud.s_parts.m = 0x7FFFFFFFFFFFFFFF;
 
 
-	ud.ld = LDBL_MIN;
-	ft_printf("%0b %015b %064b\n", ud.s_parts.s, ud.s_parts.e, ud.s_parts.m);
-	printf("   printf: %Le\n", ud.ld);
+	ud.ld = 0.0;
+	ft_printf("ft_printf: %Lf\n", ud.ld);
+	printf("   printf: %Lf\n", ud.ld);
 
 
 	printf("%Le\n", ud.ld);

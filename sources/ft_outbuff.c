@@ -27,7 +27,7 @@ static void		force_item(t_list *item)
 	((t_outbuff *)item->content)->curlen = 0;
 }
 
-void			forсe_buff(void)
+void			force_buff(void)
 {
 	t_list		*tmp;
 
