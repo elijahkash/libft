@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:54:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 18:06:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void			ft_set_g_outstr(char *ptr)
 
 void			ft_set_g_outfd(int value)
 {
-	g_outstr = value;
+	g_outfd = value;
 }
 
 int				ft_get_g_outfd(void)
