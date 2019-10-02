@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/10/02 12:40:28 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/10/02 16:53:43 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ printf_src/spectostr_lowhex.c printf_src/spectostr_bighex.c \
 printf_src/spectostr_udec.c printf_src/spectostr_bin.c \
 printf_src/change_fd.c printf_src/spectostr_float.c \
 printf_src/extend_dollar.c printf_src/handle_stars.c \
-printf_src/read_spec_funcs.c printf_src/spectostr_efloat.c\
+printf_src/read_spec_funcs.c \
 printf_src/bn_fix.c printf_src/bn_fstr.c printf_src/bn_init.c \
 printf_src/bn_opers.c printf_src/bn_outp.c printf_src/bn_round.c \
 printf_src/dbl_input.c printf_src/double.c

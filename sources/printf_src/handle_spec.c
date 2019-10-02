@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 12:28:36 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:01:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
 	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
 	{'w', 0, 0, 0, 0, 0},
-	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0}};
+	{'e', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0},
+	{'E', ALL_BITS - FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_percent,
@@ -62,7 +63,8 @@ static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
 	spectostr_bin,
 	spectostr_float,
 	change_fd,
-	spectostr_efloat
+	spectostr_float,
+	spectostr_float
 };
 
 /*

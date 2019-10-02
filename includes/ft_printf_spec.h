@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 12:19:42 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:01:51 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdarg.h>
 
-# define NUMBER_OF_SPECS 14
+# define NUMBER_OF_SPECS 15
 # define NUMBER_OF_SIZES 5
 
 # define ALL_BITS	(0 - 1)
