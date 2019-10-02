@@ -20,7 +20,7 @@
 
 #include <fcntl.h>
 #include <unistd.h>
-#include "double.h"
+#include "prf_double.h"
 
 int main()
 {
@@ -35,8 +35,8 @@ int main()
 
 
 	ud.ld = 0.0;
-	ft_printf("ft_printf: %Lf\n", ud.ld);
-	printf("   printf: %Lf\n", ud.ld);
+	ft_printf("ft_printf: %Le\n", ud.ld);
+	printf("   printf: %Le\n", ud.ld);
 
 
 	printf("%Le\n", ud.ld);

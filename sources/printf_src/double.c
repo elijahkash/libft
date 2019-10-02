@@ -73,7 +73,7 @@ static void		ft_fractpart(int pow, unsigned long int mant, t_bigdec *bd)
 	bd->sizefract = 64 + pow;
 }
 
-static int		check_specvalues(union u_double d, char *output, int prec, char spec)
+static int		check_specvalues(union u_double d, char *output, t_specifications_def spec)
 {
 	if (!((d.ld != d.ld || d.ld == 1.0 / 0.0 || d.ld == -1.0 / 0.0 ||
 		(d.s_parts.e == 0 && d.s_parts.m == 0))))
@@ -92,10 +92,9 @@ static int		check_specvalues(union u_double d, char *output, int prec, char spec
 				ft_strcat(output, "-0");
 			else
 				ft_strcat(output, "0");
-			prec = prec ? prec : 0;
-			reformat_output(output, prec);
-			if (spec == 'e' || spec == 'E')
-				ft_strcat(output, (spec == 'e') ? "e+00" : "E+00");
+			reformat_output(output, spec);
+			if (spec.spec == 14 || spec.spec == 15)
+				ft_strcat(output, (spec.spec == 14) ? "e+00" : "E+00");
 		}
 	}
 	return (1);
@@ -115,7 +114,7 @@ static void		count_parts_d(union u_double d, int *pow, int *exp,
 	}
 }
 
-void			ft_itoa_f(union u_double d, char *output, int prec, char spec)
+void			ft_itoa_f(union u_double d, char *output, t_specifications_def spec)
 {
 	int					exp;
 	int					pow;
@@ -123,7 +122,7 @@ void			ft_itoa_f(union u_double d, char *output, int prec, char spec)
 	t_bigdec			bd;
 	t_bignum			res;
 
-	if (check_specvalues(d, output, prec, spec))
+	if (check_specvalues(d, output, spec))
 		return ;
 	else
 	{
@@ -134,22 +133,21 @@ void			ft_itoa_f(union u_double d, char *output, int prec, char spec)
 		if (exp <= 65)
 			ft_fractpart(pow, exp <= 0 ? d.s_parts.m : d.s_parts.m << exp, &bd);
 		makebnwithfract(&res, bd);
-		if (spec == 'f')
+		if (spec.spec == 12)
 		{
-			round_bn(&res, prec);
-			put_bn_output(res, output, prec);
+			round_bn(&res, spec.precision);
+			put_bn_output(res, output, spec);
 		}
-		if (spec == 'e' || spec == 'E')
+		if (spec.spec == 14 || spec.spec == 15)
 		{
 			normalize_bn(&res);
-			round_bn(&res, prec);
-			put_bn_output(res, output, prec);
+			round_bn(&res, spec.precision);
+			put_bn_output(res, output, spec);
 			if (res.normalexp < 0)
-				ft_strcat(output, (spec == 'e') ? "e" : "E");
+				ft_strcat(output, (spec.spec == 14) ? "e" : "E");
 			else
-				ft_strcat(output, (spec == 'e') ? "e+" : "E+");
+				ft_strcat(output, (spec.spec == 14) ? "e+" : "E+");
 			ft_strcatnbr_wzeros(output, res.normalexp, 2);
-
 		}
 	}
 }
