@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_stars.h                                     :+:      :+:    :+:   */
+/*   prf_handle_spec.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/27 23:11:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:15:45 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/27 23:04:53 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 17:15:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HANDLE_STARS_H
-# define HANDLE_STARS_H
-
-# include <ft_printf_spec.h>
+#ifndef HANDLE_SPEC_H
+# define HANDLE_SPEC_H
 
 # include <stdarg.h>
 
-void	handle_stars(t_specifications_def *spec, va_list argptr,
-													int g_arg_mode);
+void			re_init_argmode(void);
+const char		*is_valid_spec(const char *format);
+int				handle_spec(const char **format, va_list argptr);
 
 #endif

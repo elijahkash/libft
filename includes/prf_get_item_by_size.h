@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   extend_dollar.h                                    :+:      :+:    :+:   */
+/*   prf_get_item_by_size.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/27 21:02:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:28:49 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 17:09:10 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EXTEND_DOLLAR_H
-# define EXTEND_DOLLAR_H
+#ifndef GET_ITEM_BY_SIZE_H
+# define GET_ITEM_BY_SIZE_H
 
-int				is_dollar(const char *format);
-const char		*skip_dollar(const char *format);
+# include <stdarg.h>
+
+long long int			get_dec_item_by_size(va_list argptr, int size);
+unsigned long long int	get_udec_item_by_size(va_list argptr, int size);
+long double				get_float_item_by_size(va_list argptr, int size);
 
 #endif

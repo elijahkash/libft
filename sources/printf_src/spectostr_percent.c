@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 20:43:41 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 21:07:48 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:11:31 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <spectostr_funcs.h>
+#include <prf_spectostr_funcs.h>
 
 char	*spectostr_percent(t_specifications_def spec, va_list argptr)
 {

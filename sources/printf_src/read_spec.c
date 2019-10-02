@@ -6,14 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 13:53:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:29:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:12:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <read_spec.h>
+#include <prf_read_spec.h>
 
 #include <libft.h>
-#include <extend_dollar.h>
+#include <prf_extend_dollar.h>
 
 const char			*read_spec(const char *format,
 						t_specifications_def *spec,

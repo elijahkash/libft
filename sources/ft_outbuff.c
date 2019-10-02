@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 16:33:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:01:18 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 
 static t_list	*g_buff = 0;
 static char		*g_outstr = NULL;
+
+void			set_goutstr(char *ptr)
+{
+	g_outstr = ptr;
+}
 
 static void		force_item(t_list *item)
 {

@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 21:04:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:28:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:12:48 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <extend_dollar.h>
+#include <prf_extend_dollar.h>
 
 #include <libft.h>
 

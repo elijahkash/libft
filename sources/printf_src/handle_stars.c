@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 23:13:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 23:15:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:12:18 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <handle_stars.h>
+#include <prf_handle_stars.h>
 
 static void	handle_width_star(t_specifications_def *spec, va_list argptr)
 {

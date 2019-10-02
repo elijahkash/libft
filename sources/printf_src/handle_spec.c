@@ -6,18 +6,18 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:01:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:12:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <handle_spec.h>
+#include <prf_handle_spec.h>
 
-#include <ft_printf_spec.h>
+#include <prf_printf_spec.h>
 #include <libft.h>
-#include <read_spec.h>
-#include <spectostr_funcs.h>
-#include <print_output.h>
-#include <handle_stars.h>
+#include <prf_read_spec.h>
+#include <prf_spectostr_funcs.h>
+#include <prf_print_output.h>
+#include <prf_handle_stars.h>
 
 #include <stdlib.h>
 

@@ -10,6 +10,9 @@
 		"utils.h": "c",
 		"get_item_by_size.h": "c",
 		"sstream": "c",
-		"ft_outbuff.h": "c"
+		"ft_outbuff.h": "c",
+		"prf_printf_spec.h": "c",
+		"stdlib.h": "c",
+		"prf_double.h": "c"
 	}
 }

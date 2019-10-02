@@ -6,13 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 14:41:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/27 21:06:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:12:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <get_item_by_size.h>
+#include <prf_get_item_by_size.h>
 
-#include <ft_printf_spec.h>
+#include <prf_printf_spec.h>
 #include <libft.h>
 
 long long int			get_dec_item_by_size(va_list argptr, int size)

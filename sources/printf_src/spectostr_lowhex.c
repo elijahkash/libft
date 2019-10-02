@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 20:55:05 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:43:11 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:11:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <spectostr_funcs.h>
+#include <prf_spectostr_funcs.h>
 
 char	*spectostr_lowhex(t_specifications_def spec, va_list argptr)
 {

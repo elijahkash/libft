@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_output.h                                     :+:      :+:    :+:   */
+/*   prf_extend_dollar.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/22 15:05:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 23:02:10 by semenbegunov     ###   ########.fr       */
+/*   Created: 2019/09/27 21:02:03 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/02 17:09:02 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_OUTPUT_H
-# define PRINT_OUTPUT_H
+#ifndef EXTEND_DOLLAR_H
+# define EXTEND_DOLLAR_H
 
-# include <ft_printf_spec.h>
-
-void	prepare_spec(t_specifications_def *spec);
-void	handle_comma_flag(char **output);
-int		print_output(t_specifications_def spec, char **output);
+int				is_dollar(const char *format);
+const char		*skip_dollar(const char *format);
 
 #endif

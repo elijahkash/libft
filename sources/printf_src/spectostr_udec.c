@@ -6,11 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 20:57:49 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:40:36 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 17:11:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <spectostr_funcs.h>
+#include <prf_spectostr_funcs.h>
 
 char	*spectostr_udec(t_specifications_def spec, va_list argptr)
 {
