@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 23:11:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:09:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:23:13 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HANDLE_STARS_H
-# define HANDLE_STARS_H
+#ifndef PRF_HANDLE_STARS_H
+# define PRF_HANDLE_STARS_H
 
 # include <prf_printf_spec.h>
 

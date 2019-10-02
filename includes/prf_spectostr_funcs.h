@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 20:42:40 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 20:32:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:22:48 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPECTOSTR_FUNCS_H
-# define SPECTOSTR_FUNCS_H
+#ifndef PRF_SPECTOSTR_FUNCS_H
+# define PRF_SPECTOSTR_FUNCS_H
 
 # include <prf_printf_spec.h>
 # include <stdarg.h>

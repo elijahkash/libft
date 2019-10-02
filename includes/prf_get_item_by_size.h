@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:09:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:22:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_ITEM_BY_SIZE_H
-# define GET_ITEM_BY_SIZE_H
+#ifndef PRF_GET_ITEM_BY_SIZE_H
+# define PRF_GET_ITEM_BY_SIZE_H
 
 # include <stdarg.h>
 

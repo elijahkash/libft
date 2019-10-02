@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:55:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:22:13 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ static void		force_item(t_list *item)
 		ft_memmove(ft_get_g_outstr() + len, buff->buff, buff->curlen);
 		ft_get_g_outstr()[len + buff->curlen] = '\0';
 	}
-
 	((t_outbuff *)item->content)->curlen = 0;
 }
 

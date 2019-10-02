@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:13:47 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:24:11 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_SPEC_H
-# define FT_PRINTF_SPEC_H
+#ifndef PRF_PRINTF_SPEC_H
+# define PRF_PRINTF_SPEC_H
 
 # include <stdarg.h>
 

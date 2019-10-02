@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 20:55:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:21:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ static const char					*g_sizes_map[NUMBER_OF_SIZES] = {
 	"ll", "hh", "l", "h", "L"};
 
 /*
-**
 **	{'g', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L},
 **	{'r', 2, 1, 1, 0}};
 */

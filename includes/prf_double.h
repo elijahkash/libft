@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/02 17:22:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:23:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOUBLE_H
-# define DOUBLE_H
+#ifndef PRF_DOUBLE_H
+# define PRF_DOUBLE_H
 
 # include <prf_printf_spec.h>
 

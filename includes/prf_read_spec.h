@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 20:29:33 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 20:18:28 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:22:54 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef READ_SPEC_H
-# define READ_SPEC_H
+#ifndef PRF_READ_SPEC_H
+# define PRF_READ_SPEC_H
 
 # include <prf_printf_spec.h>
 

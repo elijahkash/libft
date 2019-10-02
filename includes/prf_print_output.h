@@ -6,12 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:05:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:10:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/02 21:22:36 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_OUTPUT_H
-# define PRINT_OUTPUT_H
+#ifndef PRF_PRINT_OUTPUT_H
+# define PRF_PRINT_OUTPUT_H
 
 # include <prf_printf_spec.h>
 
