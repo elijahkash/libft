@@ -6,10 +6,11 @@
 /*   By: odrinkwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:52:48 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/09/30 18:54:43 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/10/01 23:54:13 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "double.h"
 
 void			ft_put_one_inpos_bignum(t_bignum *bn, int maxsize, int pos)
@@ -43,6 +44,34 @@ static void		zeroafterround(t_bignum *res, int pos)
 	}
 	ten = ft_pow_bn(10, (pos - 1) % 4 + 1);
 	res->number[(pos - 1) / 4] -= res->number[(pos - 1) / 4] % ten;
+}
+
+int 			ft_nbrlen(long int a)
+{
+	char tmp[20];
+
+	tmp[0] = '\0';
+	ft_strcatnbr(tmp, a);
+	return ft_strlen(tmp);
+}
+
+void 			normalize_bn(t_bignum *res)
+{
+	int len_res;
+
+	if (res->size == 0)
+		len_res = 0;
+	else if (res->size == 1)
+		len_res = ft_nbrlen(res->number[0]);
+	else
+		len_res = (res->size - 1) * 4 + ft_nbrlen(res->number[res->size - 1]);
+	if (len_res == 0)
+		res->normalexp = 0;
+	else
+	{
+		res->normalexp = len_res - res->exp - 1;
+		res->exp += res->normalexp;
+	}
 }
 
 void			round_bn(t_bignum *res, int prec)

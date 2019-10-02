@@ -6,7 +6,7 @@
 /*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 18:19:42 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/01 23:51:12 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct				s_bignum
 	int						sign;
 	int						size;
 	int						exp;
+	int 					normalexp;
 	int						maxsize;
 }							t_bignum;
 
@@ -61,7 +62,7 @@ void						ft_ipow_bignum(t_bignum *res, unsigned int n);
 t_bignum					ft_mul_bignum(t_bignum bn1, t_bignum bn2);
 t_bignum					ft_pow_bignum(t_bignum bn, unsigned int n);
 void						putnzeros(char *output, int prec);
-void						ft_itoa_f(union u_double d, char *output, int prec);
+void						ft_itoa_f(union u_double d, char *output, int prec, char spec);
 int							ft_pow_bn(int num, unsigned int p);
 void						ft_strcatnbr(char *output, long int nbr);
 void						ft_putnbr_output(long int n, char *output);
@@ -81,5 +82,6 @@ t_bignum					ft_div_bignum(t_bignum a, t_bignum b);
 void 						ft_ipow_small_bignum(t_bignum *res,
 									unsigned int n, unsigned int pow);
 void						ft_imul_small_bignum(t_bignum *res, unsigned int n);
+void 						normalize_bn(t_bignum *res);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_opers.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: odrinkwa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:46:29 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/01 20:43:09 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/01 20:18:00 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,27 @@ t_bignum		ft_pow_bignum(t_bignum bn, unsigned int n)
 void			ft_isumabs_bignum(t_bignum *res, t_bignum bn2)
 {
 	int			i;
-	t_bignum	temp_bn;
+	int 		maxsize;
+	int			div;
 
+
+	maxsize = res->size > bn2.size ? res->size : bn2.size;
+	div = 0;
 	i = 0;
-	initialize_bignum(&temp_bn, res->maxsize);
-	while (i < temp_bn.maxsize)
+	while (i < maxsize)
 	{
-		temp_bn.number[i] += res->number[i] + bn2.number[i];
-		fixup_bignum(&temp_bn);
+		res->number[i] += bn2.number[i] + div;
+		div = res->number[i] / BASE_BN;
+		res->number[i] %= BASE_BN;
 		i++;
 	}
-	fixsize_bignum(&temp_bn);
-	temp_bn.sign = res->sign;
-	temp_bn.exp = res->exp;
-	ft_deepcopy_bignum(res, temp_bn);
+	if (div != 0)
+	{
+		res->number[i] = div;
+		res->size = maxsize + 1;
+	}
+	else
+		res->size = maxsize;
 }
 
 void			ft_imul_bignum(t_bignum *res, t_bignum bn2)
