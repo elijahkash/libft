@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 21:12:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 22:33:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # include <ft_outbuff_dst.h>
 # include <ft_printf.h>
 # include <ft_options.h>
+
+# define FD_STDERR 2
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 
