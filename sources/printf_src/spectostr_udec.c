@@ -6,11 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 20:57:49 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:11:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:19:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
+
+#include <stdlib.h>
+#include <prf_get_item_by_size.h>
+#include <libft.h>
 
 char	*spectostr_udec(t_specifications_def spec, va_list argptr)
 {

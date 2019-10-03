@@ -6,13 +6,16 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:20:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:19:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
 
 #include <prf_double.h>
+#include <stdlib.h>
+#include <prf_get_item_by_size.h>
+#include <libft.h>
 
 char	*spectostr_float(t_specifications_def spec, va_list argptr)
 {

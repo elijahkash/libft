@@ -6,14 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 20:07:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:05:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_printf.h> //TODO: need global rename
 
-#include <prf_handle_spec.h>
 #include <libft.h>
+#include <prf_handle_spec.h>
 #include <prf_global_bak.h>
 
 static int	is_valid_format(const char *format)

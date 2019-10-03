@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/03 18:05:49 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/03 20:14:47 by mtrisha          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <ft_sort.h>
+
+#include <libft.h>
+
+#define BASE(i) (((char *)base)[i])
+
+void	ft_qsort(void *base, size_t nel, size_t width,
+				int (*cmp)(const void *, const void *))
+{
+	size_t	l;
+	size_t	r;
+	char	mid[width];
+	char	tmp[width];
+
+	if (nel == 0 || !(r = nel - 1))
+		return ;
+	ft_memcpy(mid, &(((char *)base)[(nel / 2) * width]), width + (l = 0));
+	while (l <= r)
+	{
+		while (cmp(&(((char *)base)[l * width]), mid) < 0)
+			l++;
+		while (cmp(&(((char *)base)[r * width]), mid) > 0)
+			r--;
+		if (l <= r)
+		{
+			ft_memcpy(tmp, &(((char *)base)[l * width]), width);
+			ft_memcpy(&BASE(l++ * width), &BASE(r * width), width);
+			ft_memcpy(&(((char *)base)[r-- * width]), tmp, width);
+		}
+	}
+	if (r > 0)
+		ft_qsort(base, r + 1, width, cmp);
+	if (l < nel)
+		ft_qsort(&(((char *)base)[l * width]), nel - l, width, cmp);
+}

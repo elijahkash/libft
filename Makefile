@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/10/02 20:41:06 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/10/03 19:02:03 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,10 @@ ft_strcat.c ft_strncat.c ft_strjoin.c ft_strlcat.c ft_strchr.c ft_strnequ.c \
 ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_cwords.c \
 ft_ccwords.c ft_findlwordlc.c ft_strsplit.c ft_atoi.c \
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
-ft_free.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c \
+ft_sfree.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c \
 ft_del_arr.c ft_pow.c ft_strset.c ft_zerostr.c ft_skip_digits.c \
 ft_getnbr_base.c ft_outbuff.c ft_outbuff_dst.c ft_printf.c \
+ft_dyn_arr.c ft_garbage_collector.c ft_sort.c\
 printf_src/global_bak.c printf_src/handle_spec.c printf_src/read_spec.c \
 printf_src/print_output.c printf_src/get_item_by_size.c \
 printf_src/spectostr_percent.c printf_src/spectostr_string.c \

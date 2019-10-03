@@ -6,11 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:08:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 13:14:55 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:16:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
+
+#include <libft.h>
 
 char	*change_outstr(t_specifications_def spec, va_list argptr)
 {

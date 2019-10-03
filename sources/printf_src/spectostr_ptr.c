@@ -6,11 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 15:15:50 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:11:28 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:20:23 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
+
+#include <stdlib.h>
+#include <prf_get_item_by_size.h>
+#include <libft.h>
 
 char	*spectostr_ptr(t_specifications_def spec, va_list argptr)
 {

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 00:04:24 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/03 20:13:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,25 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "prf_double.h"
+#include <ft_sort.h>
 
+int icmp(const void *p1, const void *p2)
+{
+	return (*((char *)p2) - *((char *)p1));
+}
+
+
+int main()
+{
+	char arr[10] = {"f15705ktp\0"};
+
+	ft_qsort(arr, 9, 1, &icmp);
+
+	printf("%s\n", arr);
+	return (0);
+}
+
+/*
 int main()
 {
 	int ret = 0;
@@ -82,7 +100,7 @@ int main()
 
 
 	return (0);
-}
+}*/
 
 
 /*

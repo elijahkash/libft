@@ -1,22 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   ft_dyn_arr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/10 17:46:22 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/01 23:02:10 by semenbegunov     ###   ########.fr       */
+/*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/03 15:22:31 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ft_dyn_arr.h>
+
 #include <libft.h>
-
-#include <stdlib.h>
-
-void	ft_free(void *data, size_t size)
-{
-	size++;
-	if (data)
-		free(data);
-}

@@ -6,11 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 20:57:17 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 17:11:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:19:34 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
+
+#include <stdlib.h>
+#include <prf_get_item_by_size.h>
+#include <libft.h>
 
 char	*spectostr_bighex(t_specifications_def spec, va_list argptr)
 {

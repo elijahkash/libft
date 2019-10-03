@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 21:22:13 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:09:07 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void			ft_force_buff(void)
 	{
 		tmp = g_buff->next;
 		force_item(g_buff);
-		ft_lstdelone(&g_buff, ft_free);
+		ft_lstdelone(&g_buff, ft_sfree);
 		g_buff = tmp;
 	}
 }
@@ -74,7 +74,7 @@ int				ft_buf_add(int fd, const char *str, int len)
 		return (0 + (errno = ENOMEM) * 0);
 	if (!(item->content = ft_memalloc(sizeof(t_outbuff))))
 	{
-		ft_lstdelone(&item, ft_free);
+		ft_lstdelone(&item, ft_sfree);
 		return (0 + (errno = ENOMEM) * 0);
 	}
 	item->content_size = sizeof(t_outbuff);

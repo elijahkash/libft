@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spectostr_char.c                                   :+:      :+:    :+:   */
+/*   ft_garbage_collector.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/24 10:16:53 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:19:19 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/03 15:24:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <prf_spectostr_funcs.h>
+#ifndef FT_GARBAGE_COLLECTOR_H
+# define FT_GARBAGE_COLLECTOR_H
 
-#include <stdlib.h>
-#include <libft.h>
+# include <string.h>
 
-char	*spectostr_char(t_specifications_def spec, va_list argptr)
-{
-	char	*output;
-	char	arg;
+void	ft_init_gb(void);
+void	*ft_malloc(size_t size);
+void	ft_free(void *ptr);
+void	ft_gb_clean();
 
-	arg = (char)va_arg(argptr, int);
-	output = (char *)malloc(2);
-	if (!output)
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-	output[0] = arg;
-	output[1] = '\0';
-	spec.spec = spec.spec;
-	return (output);
-}
+#endif

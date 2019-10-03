@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 20:51:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/17 21:39:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 15:09:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int		make_static_buff(char **line, t_list **lst_filebuff,
 	if (!(*line = ft_remalloc(*line, ft_strlen(*line) + 1,
 									ft_strlen(*line) + 1)))
 	{
-		ft_lstdelnode(lst_filebuff, lst_filebuff, ft_free);
+		ft_lstdelnode(lst_filebuff, lst_filebuff, ft_sfree);
 		return (-1);
 	}
 	return (1);
@@ -118,7 +118,7 @@ int				ft_get_next_line(const int fd, char **line)
 				return (-1);
 			ft_memcpy(*line, buf, ft_strlen(buf) + 1);
 		}
-		ft_lstdelnode(&lst_filebuff, &node, ft_free);
+		ft_lstdelnode(&lst_filebuff, &node, ft_sfree);
 		return (read_file(fd, line, &lst_filebuff));
 	}
 }
