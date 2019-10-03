@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:08:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:17:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 13:14:55 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 char	*change_outstr(t_specifications_def spec, va_list argptr)
 {
 	if (spec.spec == 16)
+	{
+		ft_force_buff();
 		ft_set_g_outstr(va_arg(argptr, char*));
+	}
 	return (ft_zerostr());
 }
