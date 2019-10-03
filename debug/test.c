@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 00:04:24 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/04 00:53:06 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <locale.h>
 #include <math.h>
 #include <float.h>
+#include <stdlib.h>
 
 #define TXT "%2$d:%1$.*4$d:%4$.*3$d\n", 13, 51, 6, 45
 
@@ -22,9 +23,30 @@
 #include <unistd.h>
 #include "prf_double.h"
 
+
+int	testfunc(int fd)
+{
+	char str[50];
+
+	ft_printf("%ywho is here? wow\n", str);
+	ft_printf("%s", str);
+
+	if (fd > 0)
+	{
+		ft_printf("%wstr test3 from func in file", fd);
+	}
+	return (11111);
+};
+
+int testdollar()
+{
+	ft_printf("%2$c%1$c%2$c", 'x', '\n');
+	return (555);
+}
+
 int main()
 {
-	int ret = 0;
+/*	int ret = 0;
 	//long double ld;
 	union u_double ud;
 
@@ -34,10 +56,105 @@ int main()
 	//ud.s_parts.m = 0x7FFFFFFFFFFFFFFF;
 
 
-#define TXT ": %#.50LE\n", ud.ld
+#define TXT ": %#.20LE\n", ud.ld
 	ud.ld = LDBL_MAX;
 	ft_printf(TXT);
 	printf(TXT);
+
+	char str[50];
+	char *teststr;
+
+	//teststr = (char*)malloc(10);
+	str[0] = '\0';
+
+	int fd1;
+	int fd2;
+
+	fd1 = open("test1", O_RDWR);
+	fd2 = open("test2", O_RDWR);
+
+	ft_printf("%ystr in str:%.20LE %d odin odin ", str, ud.ld, testfunc(-1));
+
+	ft_printf("%wstr to test1, test func %d, %wstr to test2\n", fd1, testfunc(fd1), fd2);
+	ft_printf("%s - test", str);
+
+
+	ft_printf("%1$ystr with $, %w2$str3 in test1, \n%2$wstr4intest1, %3$wstr5in test2\n,", str, fd1, fd2);
+	ft_printf("%s", str);
+
+	ft_printf("\n-------\n");
+	ft_printf("1st:%1$d, 4th:%4$d 2nd:%2$d, 1st:%1$d, 3rd:%3$s\n", 111, 222, "-333-", testdollar());
+	close(fd1);
+	close(fd2);
+
+	ud.ld = LDBL_MIN;
+//	ft_printf("LDBL_MIN = %.100Lf\n", ud.ld);
+//	ft_printf("LDBL_MINe = %1$.100Le\n", ud.ld);
+//	ft_printf("LDBL_MIN_E = %1$.50LE, %1$.50Le\n", ud.ld);
+
+	teststr = NULL;
+	ft_printf("%s %p\n", teststr, teststr);
+	ud.ld = LDBL_MAX;
+//	ft_printf("ft_pr:LDBL_MAX = %.100Lf\n", ud.ld);
+//	ft_printf("LDBL_MAXe = %1$.100Le\n", ud.ld);
+//	ft_printf("LDBL_MAX_E = %1$.50LE, %1$.50Le\n", ud.ld);
+
+	ud.ld = 0.0;
+	ft_printf("ft_pr:LDBL_0.0 = %.100Lf\n", ud.ld);
+	ft_printf("LDBL_0.0e = %1$.100Le\n", ud.ld);
+	ft_printf("LDBL_0.0_E = %1$.50LE, %1$.50Le\n", ud.ld);
+
+	ud.ld = -0.0;
+	ft_printf("ft_pr:LDBL_-0.0 = %.100Lf\n", ud.ld);
+	ft_printf("LDBL_-0.0e = %1$.100Le\n", ud.ld);
+	ft_printf("LDBL_-0.0_E = %1$.50LE, %1$.50Le\n", ud.ld);
+
+	ud.ld = INFINITY;
+	ft_printf("ft_pr:LDBL_INFINITY = %.100Lf\n", ud.ld);
+	ft_printf("LDBL_INFINITYe = %1$.100Le\n", ud.ld);
+	ft_printf("LDBL_INFINITY_E = %1$.50LE, %1$.50Le\n", ud.ld);
+	printf("%LE\n", ud.ld);
+
+	ud.ld = -INFINITY;
+	ft_printf("-inf");
+	ft_printf("ft_pr:LDBL_ = %.100Lf\n", ud.ld);
+	ft_printf("LDBL_e = %1$.100Le\n", ud.ld);
+	ft_printf("LDBL_E = %1$.50LE, %1$.50Le\n", ud.ld);
+	printf("%LE\n", ud.ld);
+
+	ud.ld = NAN;
+	ft_printf("nan\n");
+	ft_printf("ft_pr:LDBL_ = %.100Lf\n", ud.ld);
+	ft_printf("LDBL_e = %1$.100Le\n", ud.ld);
+	ft_printf("LDBL_E = %1$.50LE, %1$.50Le\n", ud.ld);
+	printf("%LE %Le %Lf\n", ud.ld, ud.ld, ud.ld);
+
+	ud.ld =-ud.ld;
+	ft_printf("-nan\n");
+	ft_printf("ft_pr:LDBL_ = %.100Lf\n", ud.ld);
+	ft_printf("LDBL_e = %1$.100Le\n", ud.ld);
+	ft_printf("LDBL_E = %1$.50LE, %1$.50Le\n", ud.ld);
+	printf("%LE %Le %Lf\n", ud.ld, ud.ld, ud.ld);
+
+	ud.ld = 1231231312321.123123123;
+	printf("%Lf\n", ud.ld);
+*/
+#define TXT1 14423435532L
+#define TXT2
+long double test = LDBL_MIN;
+
+	ft_printf("f=%'.30000Lf\n", test);
+	//ft_printf("f=%.30Lf\n", test);
+	ft_printf("d=%'lld\n", TXT1);
+	ft_printf("i=%'lli\n", TXT1);
+	ft_printf("d=%'lld\n", -TXT1);
+	ft_printf("i=%'lli\n", -TXT1);
+	ft_printf("u=%'llu\n", TXT1);
+	ft_printf("b=%'064llb\n", TXT1);
+	ft_printf("o=%'llo\n", TXT1);
+	ft_printf("x=%'llx\n", TXT1);
+	ft_printf("X=%'llX\n", TXT1);
+
 
 
 	//ud.ld = NAN;

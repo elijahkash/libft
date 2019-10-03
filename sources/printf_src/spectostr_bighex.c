@@ -15,7 +15,7 @@
 char	*spectostr_bighex(t_specifications_def spec, va_list argptr)
 {
 	char	*output;
-	char	tmp[65];
+	char	tmp[130];
 	int		len;
 	int		zero_count;
 
@@ -24,10 +24,14 @@ char	*spectostr_bighex(t_specifications_def spec, va_list argptr)
 	len = ft_strlen(tmp);
 	if (len == 1 && *tmp == '0' && spec.precision == 0)
 		return (ft_zerostr());
-	output = (char *)malloc(1 + ((spec.precision > len) ?
+	output = (char *)malloc(60 + ((spec.precision > len) ?
 								spec.precision : len));
 	if (!output)
-		return (NULL + (errno = ENOMEM) * 0);
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
+//		return (NULL + (errno = ENOMEM) * 0);
 	ft_memcpy(output, tmp, len + 1);
 	zero_count = spec.precision - len;
 	if (spec.precision != NOT_DETERM && zero_count > 0)

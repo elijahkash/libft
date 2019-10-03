@@ -37,7 +37,7 @@ printf_src/extend_dollar.c printf_src/handle_stars.c \
 printf_src/change_outstr.c printf_src/arg_mode.c \
 printf_src/bn_fix.c printf_src/bn_fstr.c printf_src/bn_init.c \
 printf_src/bn_opers.c printf_src/bn_outp.c printf_src/bn_round.c \
-printf_src/dbl_input.c printf_src/double.c
+printf_src/dbl_input.c printf_src/double.c printf_src/handle_comma.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

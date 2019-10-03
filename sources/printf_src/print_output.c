@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 18:02:55 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 23:16:47 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,12 @@ static char	*determ_prefix(t_specifications_def spec, char *output)
 	return (0);
 }
 
-void		handle_comma_flag(char **output)
+void		handle_comma_flag(char **output, t_specifications_def spec)
 {
-	if (*output)
+	handle_comma(*output, spec);
+	/*if (*output)
 		return ;
-	return ;
+	return ;*/
 }
 
 int			print_output(t_specifications_def spec, char **output)
