@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/10/03 19:02:03 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/10/03 21:03:30 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 ft_sfree.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c \
 ft_del_arr.c ft_pow.c ft_strset.c ft_zerostr.c ft_skip_digits.c \
 ft_getnbr_base.c ft_outbuff.c ft_outbuff_dst.c ft_printf.c \
-ft_dyn_arr.c ft_garbage_collector.c ft_sort.c\
+ft_dyn_arr.c ft_garbage_collector.c ft_sort.c ft_swap.c\
 printf_src/global_bak.c printf_src/handle_spec.c printf_src/read_spec.c \
 printf_src/print_output.c printf_src/get_item_by_size.c \
 printf_src/spectostr_percent.c printf_src/spectostr_string.c \

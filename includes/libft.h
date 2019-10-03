@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:17:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 21:12:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <string.h>
 # include <errno.h>
 
+# include <ft_dyn_arr.h>
+# include <ft_garbage_collector.h>
 # include <ft_outbuff.h>
 # include <ft_outbuff_dst.h>
 # include <ft_printf.h>
@@ -117,5 +119,7 @@ void			ft_getsnbr_base(long long int nbr, char *base, char *output);
 void			ft_getunbr_base(unsigned long long int nbr,
 								char *base, char *output);
 void			ft_print_memory(const void *addr, size_t size);
+
+void			ft_swap(void *p1, void *p2, size_t size);
 
 #endif
