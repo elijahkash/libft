@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:24:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 21:24:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 22:49:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ typedef struct	s_global_bak
 }				t_global_bak;
 
 t_global_bak	global_init(void);
-void			global_restore(t_global_bak bak);
+int				global_restore(t_global_bak bak);
 
 #endif

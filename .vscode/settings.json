@@ -32,6 +32,7 @@
 		"memory": "c",
 		"ratio": "c",
 		"tuple": "c",
-		"utility": "c"
+		"utility": "c",
+		"prf_global_bak.h": "c"
 	}
 }

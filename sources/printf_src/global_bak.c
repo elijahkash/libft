@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:27:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:58:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 22:49:10 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ t_global_bak	global_init(void)
 	return (bak);
 }
 
-void			global_restore(t_global_bak bak)
+int				global_restore(t_global_bak bak)
 {
 	ft_set_g_outfd(bak.fd);
 	ft_set_g_outstr(bak.outstr);
 	set_argmode(bak.arg_mode);
+	return (0);
 }
