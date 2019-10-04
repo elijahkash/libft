@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 22:33:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 14:31:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <errno.h>
 
+# include <ft_sort.h>
 # include <ft_dyn_arr.h>
 # include <ft_garbage_collector.h>
 # include <ft_outbuff.h>

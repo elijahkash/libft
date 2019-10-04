@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 22:54:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 18:52:07 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <stdlib.h>
 
 static t_darr	g_mem_collector;
+static void		*g_self_ptr = 0;
 
 static void		ft_mem_error(void)
 {
@@ -25,56 +26,78 @@ static void		ft_mem_error(void)
 	exit(0);
 }
 
-void			ft_init_gb(void)
+void			ft_gc_init(void)
 {
-	ft_bzero(&g_mem_collector, sizeof(t_darr));
-	darr_init(&g_mem_collector, sizeof(void *), INIT_GC_SIZE);
+	g_mem_collector.item_size = (size_t *)malloc(sizeof(size_t));
+	g_mem_collector.curlen = (size_t *)malloc(sizeof(size_t));
+	g_mem_collector.max_len = (size_t *)malloc(sizeof(size_t));
+	g_mem_collector.arr = (void **)malloc(sizeof(void *));
+	if (!g_mem_collector.arr || !g_mem_collector.item_size ||
+		!g_mem_collector.curlen || !g_mem_collector.max_len)
+		ft_mem_error();
+	*g_mem_collector.arr = malloc(sizeof(void *) * INIT_GC_SIZE);
+	if (!*g_mem_collector.arr)
+		ft_mem_error();
+	*g_mem_collector.item_size = sizeof(void *);
+	*g_mem_collector.curlen = 0;
+	*g_mem_collector.max_len = INIT_GC_SIZE;
+	g_self_ptr = *g_mem_collector.arr;
 }
 
 void			*ft_malloc(size_t size)
 {
-	void *res;
+	void	*tmp;
 
-	res = malloc(size);
-	if (!res)
+	if (*g_mem_collector.curlen == *g_mem_collector.max_len)
 	{
-		ft_gb_clean();
+		*g_mem_collector.max_len *= 2;
+		tmp = malloc(*g_mem_collector.max_len * *g_mem_collector.item_size);
+		if (!tmp)
+		{
+			ft_gc_clean();
+			ft_mem_error();
+		}
+		ft_memcpy(tmp, *g_mem_collector.arr,
+					*g_mem_collector.curlen * *g_mem_collector.item_size);
+		ft_swap(&tmp, g_mem_collector.arr, sizeof(void *));
+		free(tmp);
+		g_self_ptr = *g_mem_collector.arr;
+	}
+	tmp = malloc(size);
+	if (!tmp)
+	{
+		ft_gc_clean();
 		ft_mem_error();
 	}
-	if (!g_mem_collector.arr)
-	{
-		g_mem_collector.arr = res;
-		g_mem_collector.arr = res;
-	}
-	else
-		darr_add(g_mem_collector, res);
-	return (res);
+	darr_add(g_mem_collector, &tmp);
+	return (tmp);
 }
 
-void			ft_free(void **ptr)
+void			ft_free(void *ptr)
 {
 	void *tmp;
 
-	if (!(tmp = darr_find(g_mem_collector, *ptr))) //TODO here
+	if (!(tmp = darr_find(g_mem_collector, ptr)))
 	{
 		write(FD_STDERR, MEMFREE_ERR_MSG, MEMFREE_ERR_MSG_LEN);
 		return ;
 	}
-	tmp = darr_pop_p(g_mem_collector, tmp);
-	free(tmp);
-	*ptr = NULL;
+	darr_pop_p(g_mem_collector, tmp);
+	free(ptr);
 }
 
-void			ft_gb_clean(void)
+void			ft_gc_clean(void)
 {
-	void *tmp;
-
-	if (!g_mem_collector.arr)
+	if (!g_self_ptr)
 		ft_mem_error();
-	while (g_mem_collector.curlen > 1)
-		free(darr_pop(g_mem_collector));
-	tmp = darr_pop(g_mem_collector);
-	ft_bzero(&g_mem_collector, sizeof(t_darr));
-	free(tmp);
+	while (*g_mem_collector.curlen > 0)
+		free(*(void **)darr_pop(g_mem_collector));
+	g_mem_collector.arr[0] = NULL;
+	free(g_self_ptr);
+	free(g_mem_collector.curlen);
+	free(g_mem_collector.max_len);
+	free(g_mem_collector.item_size);
+	free(g_mem_collector.arr);
+	g_self_ptr = NULL;
 	return ;
 }
