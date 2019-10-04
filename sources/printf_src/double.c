@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/02 17:13:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/03 22:49:42 by semenbegunov     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,11 @@ static int		check_specvalues(union u_double d, char *output, t_specifications_de
 	else
 	{
 		if (d.ld != d.ld)
-			ft_strcat(output, "nan");
+			ft_strcat(output, (spec.spec == 15) ? "NAN" : "nan");
 		else if (d.ld == 1.0 / 0.0)
-			ft_strcat(output, "inf");
+			ft_strcat(output, (spec.spec == 15) ? "INF" : "inf");
 		else if (d.ld == -1.0 / 0.0)
-			ft_strcat(output, "-inf");
+			ft_strcat(output, (spec.spec == 15) ? "-INF" : "-inf");
 		else if (d.s_parts.e == 0 && d.s_parts.m == 0)
 		{
 			if (d.s_parts.s == 1)

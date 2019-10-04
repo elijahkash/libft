@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:47:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:19:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 13:34:23 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ char	*spectostr_float(t_specifications_def spec, va_list argptr)
 	char			*output;
 	long double		test;
 
-	output = (char *)malloc(spec.precision + 5005 > 25000 ?
+	if (!(spec.flags & FLAG_COMMA))
+		output = (char *)malloc(spec.precision + 5005 > 25000 ?
 							spec.precision + 5005 : 25000);
+	else
+		output = (char *)malloc(spec.precision + 5005 > 25000 ?
+								(int)(spec.precision * 1.5) + 8005 : 35000);
 	if (!output)
 		return (NULL + (errno = ENOMEM) * 0);
 	test = get_float_item_by_size(argptr, spec.sizes);

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 15:12:40 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:19:27 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 13:34:20 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 char	*spectostr_bin(t_specifications_def spec, va_list argptr)
 {
 	char	*output;
-	char	tmp[65];
+	char	tmp[130];
 	int		len;
 	int		zero_count;
 
@@ -28,7 +28,7 @@ char	*spectostr_bin(t_specifications_def spec, va_list argptr)
 	len = ft_strlen(tmp);
 	if (len == 1 && *tmp == '0' && spec.precision == 0)
 		return (ft_zerostr());
-	output = (char *)malloc(1 + ((spec.precision > len) ?
+	output = (char *)malloc(60 + ((spec.precision > len) ?
 								spec.precision : len));
 	if (!output)
 		return (NULL + (errno = ENOMEM) * 0);
