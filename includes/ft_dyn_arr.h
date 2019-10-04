@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 14:07:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 18:42:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 19:56:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <string.h>
 
-# define DARRINIT_ERR_MSG \
-	"[error] bad darr_init (developer's fail) args, aborting process."
+# define DARRINIT_ERR_MSG "[error] bad darr_init args, aborting process."
 # define DARRINIT_ERR_MSG_LEN (ft_strlen(DARRINIT_ERR_MSG))
 
 typedef struct	s_darr

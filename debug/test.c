@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 19:21:02 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 20:12:50 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,6 @@ int icmp(const void *p1, const void *p2)
 	return (*((char *)p2) - *((char *)p1));
 }
 
-static char	eval[16];
-
-void	*ft_eval(char eval[16])
-{
-
-}
-
-#define EVAL(x) (ft_eval(sizeof(x), x))
-
 int main()
 {
 	ft_gc_init();
@@ -46,7 +37,7 @@ int main()
 	darr_add(test, &i);
 
 	i = 15;
-	darr_add(test, &i);
+	darr_add(test, ft_i(15));
 
 	i = 25;
 	darr_add(test, &i);

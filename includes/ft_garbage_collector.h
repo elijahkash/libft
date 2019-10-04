@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 18:52:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 20:00:54 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <string.h>
 
-# define INIT_GC_SIZE 2 //TODO: here
+# define INIT_GC_SIZE 1024
 # define MEMALLOC_ERR_MSG \
 	"[error] memory allocation failed, aborting process.\n"
 # define MEMALLOC_ERR_MSG_LEN (ft_strlen(MEMALLOC_ERR_MSG))
