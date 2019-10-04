@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dyn_arr.c                                       :+:      :+:    :+:   */
+/*   ft_dyn_arr_1.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 18:53:44 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 20:54:40 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,27 +58,6 @@ void		darr_del(t_darr *arr)
 	arr->max_len = NULL;
 }
 
-void		*darr(t_darr arr, size_t i)
-{
-	return ((char *)(arr.arr[0]) + i * *arr.item_size);
-}
-
-size_t		darr_i(t_darr arr, void *item)
-{
-	return ((item - *arr.arr) / *arr.item_size);
-}
-
-size_t		darr_l(t_darr arr)
-{
-	return (*arr.curlen);
-}
-
-void		*darr_eq(t_darr arr, size_t i, void *data)
-{
-	ft_memcpy(darr(arr, i), data, *arr.item_size);
-	return (darr(arr, i));
-}
-
 void		*darr_add(t_darr arr, void *data)
 {
 	if (*arr.curlen == *arr.max_len)
@@ -97,57 +76,4 @@ void		*darr_add_i(t_darr arr, void *data, size_t i)
 	ft_memcpy(darr(arr, i), data, *arr.item_size);
 	(*arr.curlen)++;
 	return (darr(arr, i));
-}
-
-void		*darr_pop(t_darr arr)
-{
-	(*arr.curlen)--;
-	return (darr(arr, *arr.curlen));
-}
-
-void		*darr_pop_i(t_darr arr, size_t i)
-{
-	char	tmp[*arr.item_size];
-
-	ft_memcpy(tmp, darr(arr, i), *arr.item_size);
-	ft_memmove(darr(arr, i), darr(arr, i + 1),
-				(*arr.curlen - i - 1) * *arr.item_size);
-	ft_memcpy(darr(arr, *arr.curlen - 1), tmp, *arr.item_size);
-	(*arr.curlen)--;
-	return (darr(arr, *arr.curlen));
-}
-
-void		*darr_pop_p(t_darr arr, void *item)
-{
-	char	tmp[*arr.item_size];
-	size_t	i;
-
-	i = darr_i(arr, item);
-	ft_memcpy(tmp, darr(arr, i), *arr.item_size);
-	ft_memmove(darr(arr, i), darr(arr, i + 1),
-				(*arr.curlen - i - 1) * *arr.item_size);
-	ft_memcpy(darr(arr, *arr.curlen - 1), tmp, *arr.item_size);
-	(*arr.curlen)--;
-	return (darr(arr, *arr.curlen));
-}
-
-void		*darr_find(t_darr arr, void *data)
-{
-	size_t i;
-
-	i = 0;
-	while (i < *arr.curlen)
-	{
-		if (!ft_memcmp(darr(arr, i), &data, *arr.item_size))
-			return (darr(arr, i));
-		i++;
-	}
-	return (NULL);
-}
-
-void		darr_sort(t_darr arr, int (*cmp)(const void *, const void *),
-						void (*sort)(void *, size_t, size_t,
-									int (*cmp)(const void *, const void *)))
-{
-	sort(*arr.arr, *arr.curlen, *arr.item_size, cmp);
 }
