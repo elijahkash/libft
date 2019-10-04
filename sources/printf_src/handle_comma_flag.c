@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 12:06:17 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 12:25:27 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 13:09:16 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	handle_comma_intpart(char *output, int pos)
 		{
 			ft_memmove(&(output[pos + 1]), &(output[pos]),
 							1 + ft_strlen(&(output[pos])));
-			output[pos] = ' ';
+			output[pos] = LC_NUMERIC_ASCII;
 			pos--;
 		}
 	}
@@ -52,7 +52,7 @@ static void	handle_comma_fractpart(char *output, int pos)
 		{
 			ft_memmove(&(output[pos + 1]), &(output[pos]),
 							1 + ft_strlen(&(output[pos])));
-			output[pos] = ' ';
+			output[pos] = LC_NUMERIC_ASCII;
 			pos++;
 		}
 	}
