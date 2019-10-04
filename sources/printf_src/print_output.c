@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 23:16:47 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/04 12:18:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,6 @@ static char	*determ_prefix(t_specifications_def spec, char *output)
 	if (spec.flags & FLAG_OCTT && spec.spec == 11 && !is_zero(output))
 		return ("0b");
 	return (0);
-}
-
-void		handle_comma_flag(char **output, t_specifications_def spec)
-{
-	handle_comma(*output, spec);
-	/*if (*output)
-		return ;
-	return ;*/
 }
 
 int			print_output(t_specifications_def spec, char **output)

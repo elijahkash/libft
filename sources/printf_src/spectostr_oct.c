@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 20:45:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 01:00:21 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/04 11:51:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ char	*spectostr_oct(t_specifications_def spec, va_list argptr)
 	output = (char *)malloc(60 + ((spec.precision > len) ?
 								spec.precision : len));
 	if (!output)
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-//		return (NULL + (errno = ENOMEM) * 0);
+		return (NULL + (errno = ENOMEM) * 0);
 	ft_memcpy(output, tmp, len + 1);
 	zero_count = spec.precision - len;
 	if (spec.precision != NOT_DETERM && zero_count > 0)

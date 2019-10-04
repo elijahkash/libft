@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 00:05:26 by semenbegunov     ###   ########.fr       */
+/*   Updated: 2019/10/04 12:23:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <prf_handle_stars.h>
 #include <prf_arg_mode.h>
 #include <prf_extend_dollar.h>
+#include <prf_handle_comma_flag.h>
 
 #include <stdlib.h>
 
@@ -38,17 +39,17 @@ static const t_specifications_def	g_specs_def[NUMBER_OF_SPECS] = {
 	{'s', 2, 1, 1, 0, 0},
 	{'c', 2, 1, 0, 0, 0},
 	{'p', 2, 1, 0, 0, 0},
-	{'d', ALL_BITS | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'i', ALL_BITS | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'o', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'u', UNSIG_BITS | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT | FLAG_COMMA, 1, 1, ALL_BITS - SIZE_UP_L, 0},
-	{'f', ALL_BITS | FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0},
+	{'d', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'i', ALL_BITS, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'o', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'u', UNSIG_BITS, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'x', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'X', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'b', FLAG_MINUS + FLAG_ZERO + FLAG_OCTT, 1, 1, ALL_BITS - SIZE_UP_L, 0},
+	{'f', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
 	{'w', 0, 0, 0, 0, 0},
-	{'e', ALL_BITS | FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0},
-	{'E', ALL_BITS | FLAG_COMMA, 1, 1, SIZE_UP_L + SIZE_L, 0},
+	{'e', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
+	{'E', ALL_BITS, 1, 1, SIZE_UP_L + SIZE_L, 0},
 	{'y', 0, 0, 0, 0, 0}};
 
 static const t_spectostr_func		g_arr_spectostr_funcs[NUMBER_OF_SPECS] = {
@@ -141,7 +142,7 @@ static int							print_spec(t_specifications_def spec,
 	if (!output)
 		return (-1);
 	if (spec.flags & FLAG_COMMA)
-		handle_comma_flag(&output, spec);
+		handle_comma_flag(output);
 	if (!output)
 		return (-1);
 	result = print_output(spec, &output);
