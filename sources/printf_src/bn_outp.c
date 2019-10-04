@@ -78,7 +78,8 @@ static void		put_bn_outp_aux(t_bignum res, char *output, int *i)
 	}
 }
 
-void			put_bn_output(t_bignum res, char *output, t_specifications_def spec)
+void			put_bn_output(t_bignum res, char *output,
+							t_specifications_def spec)
 {
 	int i;
 
