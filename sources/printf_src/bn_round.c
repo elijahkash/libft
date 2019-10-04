@@ -46,16 +46,7 @@ static void		zeroafterround(t_bignum *res, int pos)
 	res->number[(pos - 1) / 4] -= res->number[(pos - 1) / 4] % ten;
 }
 
-int 			ft_nbrlen(long int a)
-{
-	char tmp[20];
-
-	tmp[0] = '\0';
-	ft_strcatnbr(tmp, a);
-	return ft_strlen(tmp);
-}
-
-void 			normalize_bn(t_bignum *res)
+void			normalize_bn(t_bignum *res)
 {
 	int len_res;
 

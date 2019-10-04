@@ -12,33 +12,11 @@
 
 #include <prf_double.h>
 
-t_bignum		ft_pow_bignum(t_bignum bn, unsigned int n)
-{
-	unsigned int	i;
-	t_bignum		res_bn;
-
-	if (n == 0)
-	{
-		ft_assign_bignum(&res_bn, bn.maxsize, 1);
-		return (res_bn);
-	}
-	ft_deepcopy_bignum(&res_bn, bn);
-	i = 1;
-	while (i < n)
-	{
-		ft_imul_bignum(&res_bn, bn);
-		i++;
-	}
-	res_bn.exp = bn.exp;
-	return (res_bn);
-}
-
 void			ft_isumabs_bignum(t_bignum *res, t_bignum bn2)
 {
 	int			i;
-	int 		maxsize;
+	int			maxsize;
 	int			div;
-
 
 	maxsize = res->size > bn2.size ? res->size : bn2.size;
 	div = 0;
@@ -101,7 +79,7 @@ void			ft_imul_small_bignum(t_bignum *res, unsigned int n)
 	i = 0;
 	while (i < res->size)
 	{
-		tmp = res->number[i] * (long int) n + div;
+		tmp = res->number[i] * (long int)n + div;
 		res->number[i] = tmp % BASE_BN;
 		div = tmp / BASE_BN;
 		i++;
@@ -110,23 +88,6 @@ void			ft_imul_small_bignum(t_bignum *res, unsigned int n)
 	{
 		res->number[i] = div;
 		res->size++;
-	}
-}
-
-void 			ft_ipow_small_bignum(t_bignum *res, unsigned int n, unsigned int pow)
-{
-	unsigned int i;
-
-	if (pow == 0)
-	{
-		ft_assign_bignum(res, res->maxsize, 1);
-		return ;
-	}
-	i = 1;
-	while (i < pow)
-	{
-		ft_imul_small_bignum(res, n);
-		i++;
 	}
 }
 
@@ -152,82 +113,4 @@ t_bignum		ft_mul_bignum(t_bignum bn1, t_bignum bn2)
 	fixup_bignum(&res_bn);
 	fixsize_bignum(&res_bn);
 	return (res_bn);
-}
-
-void			ft_ipow_bignum(t_bignum *res, unsigned int n)
-{
-	unsigned int	i;
-	t_bignum		tmp_bn;
-
-	if (n == 0)
-	{
-		ft_assign_bignum(res, res->maxsize, 1);
-		return ;
-	}
-	ft_deepcopy_bignum(&tmp_bn, *res);
-	i = 1;
-	while (i < n)
-	{
-		ft_imul_bignum(res, tmp_bn);
-		i++;
-	}
-}
-
-int				isgreateq_abs_bignum(t_bignum a, t_bignum b, int sdvig_b)
-{
-	int i;
-
-	i = a.maxsize - 1 - sdvig_b;
-	while (i >= 0)
-	{
-		if (a.number[i + sdvig_b] > b.number[i])
-			return (1);
-		if (a.number[i + sdvig_b] < b.number[i])
-			return (0);
-		i--;
-	}
-	return (1);
-}
-
-t_bignum		sub_abs(t_bignum a, t_bignum b, int sdvig_b)
-{
-	int i;
-
-	t_bignum res;
-	initialize_bignum(&res, a.maxsize);
-	i = 0;
-	while (i < sdvig_b - 1)
-	{
-		res.number[i] = a.number[i];
-		i++;
-	}
-	i = sdvig_b;
-	while(i < a.maxsize)
-	{
-		res.number[i] = a.number[i] - b.number[i - sdvig_b];
-		i++;
-	}
-	fixdown_bignum(&res);
-	return (res);
-}
-
-t_bignum		ft_div_bignum(t_bignum a, t_bignum b)
-{
-	int sdvig_b;
-	t_bignum res;
-
-	initialize_bignum(&res, a.maxsize);
-	res.sign = a.sign * b.sign;
-	sdvig_b = a.size - b.size;
-	while (sdvig_b >= 0)
-	{
-		while (isgreateq_abs_bignum(a, b, sdvig_b))
-		{
-			a = sub_abs(a, b, sdvig_b);
-			res.number[sdvig_b] += 1;
-		}
-		sdvig_b--;
-	}
-	fixup_bignum(&res);
-	return (res);
 }

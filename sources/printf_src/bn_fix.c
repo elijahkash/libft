@@ -54,7 +54,7 @@ void			fixzero_bignum(t_bignum *bn)
 	bn->size = 0;
 }
 
-void 			fixdown_bignum(t_bignum *bn)
+void			fixdown_bignum(t_bignum *bn)
 {
 	int i;
 
@@ -70,20 +70,6 @@ void 			fixdown_bignum(t_bignum *bn)
 	}
 	fixzero_bignum(bn);
 	fixsize_bignum(bn);
-}
-
-int				ft_pow_bn(int num, unsigned int p)
-{
-	unsigned int	i;
-	int				tmp;
-
-	if (p == 0)
-		return (1);
-	tmp = num;
-	i = 0;
-	while (++i < p)
-		num = num * tmp;
-	return (num);
 }
 
 void			makebnwithfract(t_bignum *res, t_bigdec bd)
