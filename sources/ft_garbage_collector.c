@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 18:52:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 22:39:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 static t_darr	g_mem_collector;
 static void		*g_self_ptr = 0;
 
-static void		ft_mem_error(void)
+static void		ft_mem_error(void) //TODO: ft_err
 {
 	write(FD_STDERR, MEMALLOC_ERR_MSG, MEMALLOC_ERR_MSG_LEN);
 	exit(0);

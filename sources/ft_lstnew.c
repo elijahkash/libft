@@ -6,19 +6,17 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:54:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:21:19 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-#include <stdlib.h>
-
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *nlist;
 
-	nlist = (t_list *)malloc(sizeof(t_list));
+	nlist = (t_list *)ft_malloc(sizeof(t_list));
 	if (!nlist)
 		return (NULL);
 	nlist->next = NULL;
@@ -29,9 +27,9 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(nlist->content = malloc(content_size)))
+		if (!(nlist->content = ft_malloc(content_size)))
 		{
-			free(nlist);
+			ft_free(nlist);
 			return (NULL);
 		}
 		ft_memcpy(nlist->content, content, content_size);

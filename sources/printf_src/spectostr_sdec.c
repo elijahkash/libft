@@ -6,13 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 15:32:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 13:34:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 22:32:34 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
 
-#include <stdlib.h>
 #include <prf_get_item_by_size.h>
 #include <libft.h>
 
@@ -29,11 +28,11 @@ char	*spectostr_sdec(t_specifications_def spec, va_list argptr)
 	if (len == 1 && *tmp == '0' && spec.precision == 0)
 		return (ft_zerostr());
 	if (spec.precision > len - (sign = ((*tmp == '-') ? 1 : 0)))
-		output = (char *)malloc(spec.precision + 60 + sign);
+		output = (char *)ft_malloc(spec.precision + 60 + sign);
 	else
-		output = (char *)malloc(len + 60);
+		output = (char *)ft_malloc(len + 60);
 	if (!output)
-		return (NULL + (errno = ENOMEM) * 0);
+		return (NULL);
 	ft_memcpy(output, tmp, len + 1);
 	zero_count = spec.precision - len + sign;
 	if (spec.precision != NOT_DETERM && zero_count > 0)

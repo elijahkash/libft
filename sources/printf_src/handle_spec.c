@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 12:23:22 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:10:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 #include <prf_arg_mode.h>
 #include <prf_extend_dollar.h>
 #include <prf_handle_comma_flag.h>
-
-#include <stdlib.h>
 
 /*
 **	place sizes in priority order (or by length)
@@ -147,7 +145,7 @@ static int							print_spec(t_specifications_def spec,
 		return (-1);
 	result = print_output(spec, &output);
 	if (output)
-		free(output);
+		ft_free(output);
 	return (result);
 }
 

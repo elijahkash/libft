@@ -6,13 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 17:45:47 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:09:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-#include <stdlib.h>
 
 static int	ft_itoa_strlen(int n)
 {
@@ -35,7 +33,7 @@ char		*ft_itoa(int n)
 
 	tmp = n;
 	len = ft_itoa_strlen(n);
-	if (!(str = (char *)malloc(len + 1)))
+	if (!(str = (char *)ft_malloc(len + 1)))
 		return (NULL);
 	str[len--] = '\0';
 	if (n == 0)

@@ -6,13 +6,12 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 15:15:50 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:20:23 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 22:32:28 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
 
-#include <stdlib.h>
 #include <prf_get_item_by_size.h>
 #include <libft.h>
 
@@ -23,12 +22,9 @@ char	*spectostr_ptr(t_specifications_def spec, va_list argptr)
 
 	ft_getunbr_base((unsigned long long)va_arg(argptr, void *),
 												LOW_HEX_BASE, tmp);
-	output = (char *)malloc(ft_strlen(tmp) + 3);
+	output = (char *)ft_malloc(ft_strlen(tmp) + 3);
 	if (!output)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	output[0] = '0';
 	output[1] = 'x';
 	ft_memcpy(output + 2, tmp, ft_strlen(tmp) + 1);

@@ -6,13 +6,11 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:09:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-#include <stdlib.h>
 
 static void	*destroy(char **start_destr, char **end_destr)
 {
@@ -21,10 +19,10 @@ static void	*destroy(char **start_destr, char **end_destr)
 	iter = start_destr;
 	while (iter < end_destr)
 	{
-		free(*iter);
+		ft_free(*iter);
 		iter++;
 	}
-	free(start_destr);
+	ft_free(start_destr);
 	return (NULL);
 }
 
@@ -35,7 +33,7 @@ char		**ft_strsplit(char const *s, char c)
 	int		is_word;
 	char	**current_word;
 
-	if (!(result = (char **)malloc(sizeof(char *) * (ft_ccwords(s, c) + 1))))
+	if (!(result = (char **)ft_malloc(sizeof(char *) * (ft_ccwords(s, c) + 1))))
 		return (NULL);
 	is_word = 0;
 	current_word = result;

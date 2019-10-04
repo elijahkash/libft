@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 13:33:51 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:58:29 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,32 @@ int			ft_printf(const char *format, ...)
 {
 	va_list			argptr;
 	int				result;
+	int				ret;
 	t_global_bak	bak;
 
 	result = 0;
 	bak = global_init();
 	if (!is_valid_format(format))
+	{
+		global_restore(bak);
 		return (-1);
+	}
 	va_start(argptr, format);
 	while (*format)
 	{
 		if (*format != '%')
-			ft_buf_add(ft_get_g_outfd() + result++ * 0, format++, 1);
-		else
-			result += handle_spec(&format, argptr);
-		if (errno)
 		{
-			result = -1;
-			break ;
+			ft_buf_add(ft_get_g_outfd() + result++ * 0, format++, 1);
+			continue ;
 		}
+		ret = handle_spec(&format, argptr);
+		if (ret == -1 && (result = -1))
+			break ;
+		else
+			result += ret;
 	}
 	ft_force_buff();
-	va_end(argptr);
 	global_restore(bak);
+	va_end(argptr);
 	return (result);
 }

@@ -6,17 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:46:22 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:09:16 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:09:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-#include <stdlib.h>
-
 void	ft_sfree(void *data, size_t size)
 {
 	size++;
 	if (data)
-		free(data);
+		ft_free(data);
 }

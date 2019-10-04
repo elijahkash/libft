@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 20:51:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:09:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:08:45 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <ft_get_next_line.h>
 
 #include <unistd.h>
-#include <stdlib.h>
 
 static int		find_fd(void *data, void *search_d)
 {
@@ -61,14 +60,14 @@ static int		read_file(const int fd, char **line, t_list **lst_filebuff)
 	{
 		if (ret < 0)
 		{
-			free(*line);
+			ft_free(*line);
 			return (-1);
 		}
 		buf[ret] = '\0';
 		len = ft_strlen(*line);
 		if (len + ret + 1 >= __SIZE_MAX__)
 		{
-			free(*line);
+			ft_free(*line);
 			return (-1);
 		}
 		if (!(*line = (char *)ft_remalloc(*line, len, len + ret + 1)))

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/03 15:09:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:36:08 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,11 @@ int				ft_buf_add(int fd, const char *str, int len)
 		return (1);
 	}
 	if (!(item = ft_lstnew(NULL, 0)))
-		return (0 + (errno = ENOMEM) * 0);
+		return (0);
 	if (!(item->content = ft_memalloc(sizeof(t_outbuff))))
 	{
 		ft_lstdelone(&item, ft_sfree);
-		return (0 + (errno = ENOMEM) * 0);
+		return (0);
 	}
 	item->content_size = sizeof(t_outbuff);
 	((t_outbuff *)item->content)->fd = fd;

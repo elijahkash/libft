@@ -6,17 +6,15 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:21:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:09:28 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-#include <stdlib.h>
-
 void	ft_memdel(void **ap)
 {
-	free(*ap);
+	ft_free(*ap);
 	*ap = NULL;
 	return ;
 }

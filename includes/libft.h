@@ -6,17 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 20:06:46 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/04 21:11:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//TODO: after gb need handle stdlib
-
 # include <string.h>
-# include <errno.h>
 
 # include <ft_sort.h>
 # include <ft_dyn_arr.h>
