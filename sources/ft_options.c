@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 15:21:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 15:40:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ t_options						ft_get_options(const char *line)
 		line++;
 	while (*line)
 	{
-		opt |= (*line >= 'a') ? (1 << (*line - 'a')) :
-								(1 << (*line - 'A' + 31));
+		opt |= (*line >= 'a') ? (1LLU << (*line - 'a')) :
+								(1LLU << (*line - 'A' + 32));
 		line++;
 	}
 	return (opt);
