@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 14:51:52 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 15:03:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,8 +128,8 @@ void			ft_print_memory(const void *addr, size_t size);
 
 void			ft_swap(void *p1, void *p2, size_t size);
 
-int		ft_icmp(const void *p1, const void *p2);
-int		ft_ccmp(const void *p1, const void *p2);
-int		ft_zcmp(const void *p1, const void *p2);
+int				ft_icmp(const void *p1, const void *p2);
+int				ft_ccmp(const void *p1, const void *p2);
+int				ft_zcmp(const void *p1, const void *p2);
 
 #endif
