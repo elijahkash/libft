@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:11:37 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 17:03:15 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 19:44:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,21 @@
 
 void	ft_error_exit(const char *msg, int exit_code)
 {
+	ft_force_buff();
 	write(FD_STDERR, msg, ft_strlen(msg));
 	exit(exit_code);
 }
 
 void	ft_error_free_exit(const char *msg, int exit_code)
 {
+	ft_force_buff();
 	ft_gc_clean();
-	ft_error_exit(msg, exit_code);
+	write(FD_STDERR, msg, ft_strlen(msg));
+	exit(exit_code);
 }
 
 void	ft_error_print(const char *msg)
 {
+	ft_force_buff_fd(FD_STDERR);
 	write(FD_STDERR, msg, ft_strlen(msg));
 }
