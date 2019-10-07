@@ -6,12 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 12:13:28 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 12:20:18 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define TURBO_MOD
 
 # include <string.h>
 
@@ -23,8 +25,6 @@
 # include <ft_printf.h>
 # include <ft_options.h>
 # include <ft_eval.h>
-
-# define FD_STDERR 2
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 

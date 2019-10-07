@@ -6,11 +6,20 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:30:11 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:09:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 12:31:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+
+#ifdef TURBO_MOD
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	return (memmove(dst, src, len));
+}
+
+#else
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -32,3 +41,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
+#endif

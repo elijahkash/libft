@@ -6,11 +6,20 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:19:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 12:30:48 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+
+#ifdef TURBO_MOD
+
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	return (memccpy(dst, src, c, n));
+}
+
+#else
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
@@ -26,3 +35,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
+
+#endif
