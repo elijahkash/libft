@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 15:40:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 16:47:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,14 @@ int								ft_is_validopt(char *line)
 	return (1);
 }
 
+t_options						ft_get_opt_bit(const char c)
+{
+	t_options opt;
+
+	opt = (c >= 'a') ? (1LLU << (c - 'a')) : (1LLU << (c - 'A' + 32));
+	return (opt);
+}
+
 t_options						ft_get_options(const char *line)
 {
 	t_options opt;
@@ -42,10 +50,6 @@ t_options						ft_get_options(const char *line)
 	if (*line == '-')
 		line++;
 	while (*line)
-	{
-		opt |= (*line >= 'a') ? (1LLU << (*line - 'a')) :
-								(1LLU << (*line - 'A' + 32));
-		line++;
-	}
+		opt |= ft_get_opt_bit(*line++);
 	return (opt);
 }
