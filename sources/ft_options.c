@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/02 15:57:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 15:21:04 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ t_options						ft_get_options(const char *line)
 	t_options opt;
 
 	opt = 0;
+	if (*line == '-')
+		line++;
 	while (*line)
 	{
 		opt |= (*line >= 'a') ? (1 << (*line - 'a')) :
