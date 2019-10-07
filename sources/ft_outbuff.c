@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 19:40:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 20:06:08 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 #include <unistd.h>
 
 static t_list	*g_buff = 0;
+
+static int		is_equalfd_in_toutbuf(void *item1, void *item2)
+{
+	if (((t_outbuff *)item1)->fd == *(int *)item2)
+		return (1);
+	return (0);
+}
 
 static void		force_item(t_list *item)
 {
@@ -56,13 +63,6 @@ void			ft_force_buff(void)
 		ft_lstdelone(&g_buff, ft_sfree);
 		g_buff = tmp;
 	}
-}
-
-static int		is_equalfd_in_toutbuf(void *item1, void *item2)
-{
-	if (((t_outbuff *)item1)->fd == *(int *)item2)
-		return (1);
-	return (0);
 }
 
 int				ft_buf_add(int fd, const char *str, int len)
