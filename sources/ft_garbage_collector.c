@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 14:41:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 17:04:09 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void			ft_gc_init(void)
 	g_mem_collector.arr = (void **)malloc(sizeof(void *));
 	if (!g_mem_collector.arr || !g_mem_collector.item_size ||
 		!g_mem_collector.curlen || !g_mem_collector.max_len)
-		ft_error_exit(ERR_MEMALLOC_MSG);
+		ft_error_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
 	*g_mem_collector.arr = malloc(sizeof(void *) * INIT_GC_SIZE);
 	if (!*g_mem_collector.arr)
 	{
@@ -35,7 +35,7 @@ void			ft_gc_init(void)
 		free(g_mem_collector.max_len);
 		free(g_mem_collector.curlen);
 		free(g_mem_collector.arr);
-		ft_error_exit(ERR_MEMALLOC_MSG);
+		ft_error_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
 	}
 	*g_mem_collector.item_size = sizeof(void *);
 	*g_mem_collector.curlen = 0;
@@ -52,7 +52,7 @@ void			*ft_malloc(size_t size)
 		*g_mem_collector.max_len *= 2;
 		tmp = malloc(*g_mem_collector.max_len * *g_mem_collector.item_size);
 		if (!tmp)
-			ft_error_free_exit(ERR_MEMALLOC_MSG);
+			ft_error_free_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
 		ft_memcpy(tmp, *g_mem_collector.arr,
 					*g_mem_collector.curlen * *g_mem_collector.item_size);
 		ft_swap(&tmp, g_mem_collector.arr, sizeof(void *));
@@ -61,7 +61,7 @@ void			*ft_malloc(size_t size)
 	}
 	tmp = malloc(size);
 	if (!tmp)
-		ft_error_free_exit(ERR_MEMALLOC_MSG);
+		ft_error_free_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
 	darr_add(g_mem_collector, &tmp);
 	return (tmp);
 }
