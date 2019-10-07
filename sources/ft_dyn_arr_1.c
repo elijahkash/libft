@@ -6,15 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 20:54:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 14:41:46 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_dyn_arr.h>
 
 #include <libft.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 static void	darr_extend(t_darr arr)
 {
@@ -29,12 +27,8 @@ static void	darr_extend(t_darr arr)
 
 void		darr_init(t_darr *arr, size_t item_size, size_t init_len)
 {
-	if (!item_size || !init_len)
-	{
-		write(FD_STDERR, DARRINIT_ERR_MSG, DARRINIT_ERR_MSG_LEN);
-		ft_gc_clean();
-		exit(0);
-	}
+	if (!arr || !item_size || !init_len)
+		ft_error_free_exit(ERR_DARR_MSG);
 	arr->item_size = (size_t *)ft_malloc(sizeof(size_t));
 	arr->curlen = (size_t *)ft_malloc(sizeof(size_t));
 	arr->max_len = (size_t *)ft_malloc(sizeof(size_t));

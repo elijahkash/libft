@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_garbage_collector.h                             :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 13:29:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/07 13:11:37 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/07 13:22:30 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GARBAGE_COLLECTOR_H
-# define FT_GARBAGE_COLLECTOR_H
+#include <ft_error.h>
 
-# include <string.h>
+#include <libft.h>
 
-# define INIT_GC_SIZE 1024
+#include <stdlib.h>
+#include <unistd.h>
 
-void	ft_gc_init(void);
-void	*ft_malloc(size_t size);
-void	ft_free(void *ptr);
-void	ft_gc_clean(void);
+void	ft_error_exit(const char *msg)
+{
+	write(FD_STDERR, msg, ft_strlen(msg));
+	exit(0);
+}
 
-#endif
+void	ft_error_free_exit(const char *msg)
+{
+	ft_gc_clean();
+	ft_error_exit(msg);
+}
+
+void	ft_error_print(const char *msg)
+{
+	write(FD_STDERR, msg, ft_strlen(msg));
+}

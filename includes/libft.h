@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 12:20:18 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 14:48:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,16 @@
 
 # define TURBO_MOD
 
+//TODO: change
+# define FD_STDERR 2
+# define FD_STDOUT 1
+# define FD_STDIN 0
+
 # include <string.h>
 
 # include <ft_dyn_arr.h>
 # include <ft_garbage_collector.h>
+# include <ft_error.h>
 # include <ft_sort.h>
 # include <ft_outbuff.h>
 # include <ft_outbuff_dst.h>
@@ -122,5 +128,9 @@ void			ft_getunbr_base(unsigned long long int nbr,
 void			ft_print_memory(const void *addr, size_t size);
 
 void			ft_swap(void *p1, void *p2, size_t size);
+
+int		ft_icmp(const void *p1, const void *p2);
+int		ft_ccmp(const void *p1, const void *p2);
+int		ft_zcmp(const void *p1, const void *p2);
 
 #endif

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_garbage_collector.h                             :+:      :+:    :+:   */
+/*   ft_cmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 13:29:02 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/10/07 14:46:52 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/10/07 14:48:28 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GARBAGE_COLLECTOR_H
-# define FT_GARBAGE_COLLECTOR_H
+#include <libft.h>
 
-# include <string.h>
+int		ft_icmp(const void *p1, const void *p2)
+{
+	return (*((int *)p1) - *((int *)p2));
+}
 
-# define INIT_GC_SIZE 1024
+int		ft_ccmp(const void *p1, const void *p2)
+{
+	return (*((char *)p1) - *((char *)p2));
+}
 
-void	ft_gc_init(void);
-void	*ft_malloc(size_t size);
-void	ft_free(void *ptr);
-void	ft_gc_clean(void);
-
-#endif
+int		ft_zcmp(const void *p1, const void *p2)
+{
+	return (*((size_t *)p1) - *((size_t *)p2));
+}
