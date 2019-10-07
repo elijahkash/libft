@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 14:48:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 14:51:52 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # define TURBO_MOD
 
-//TODO: change
 # define FD_STDERR 2
 # define FD_STDOUT 1
 # define FD_STDIN 0
