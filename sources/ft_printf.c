@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 23:01:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/07 12:08:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int			ft_printf(const char *format, ...)
 	int				ret;
 	t_global_bak	bak;
 
-	ft_gc_init();
 	bak = global_init();
 	if (!(is_valid_format(format) + (result = 0) * 0))
 		return (-1 + global_restore(bak));
