@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 17:03:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/09 15:49:18 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <libft.h>
 
-static void	darr_extend(t_darr arr)
+void		darr_extend(t_darr arr)
 {
 	void	*tmp;
 
