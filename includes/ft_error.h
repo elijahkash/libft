@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:11:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 17:42:46 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/09 23:23:31 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define ERR_DARR_MSG ERRTYPE_ERROR MSG_DARR ERRACT_ABORT
 
 # ifndef MEMERR_CODE
-# define MEMERR_CODE 0
+#  define MEMERR_CODE 0
 # endif
 
 void	ft_error_exit(const char *msg, int exit_code);
