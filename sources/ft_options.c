@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 17:54:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/10 20:45:27 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ t_options						ft_get_opt_bit(const char c)
 {
 	t_options opt;
 
+	opt = ft_isdigit(c) ? (1LLU << (63 - c + '0')) : 0;
+	if (opt)
+		return (opt);
 	opt = (c >= 'a') ? (1LLU << (c - 'a')) : (1LLU << (c - 'A' + 32));
 	return (opt);
 }
