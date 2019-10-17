@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/09 17:16:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/17 17:30:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,17 @@ void		*darr_add_str(t_darr arr, void *data)
 	ft_memcpy(darr(arr, *arr.curlen), &newstr, *arr.item_size);
 	(*arr.curlen)++;
 	return (darr(arr, *arr.curlen - 1));
+}
+
+size_t		darr_setl(t_darr arr, size_t newlen)
+{
+	*arr.curlen = newlen;
+	return (newlen);
+}
+
+void		*darr_clean(t_darr arr)
+{
+	ft_bzero(*arr.arr, *arr.curlen * *arr.item_size);
+	*arr.curlen = 0;
+	return (*arr.arr);
 }

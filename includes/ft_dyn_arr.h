@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 14:07:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/09 15:49:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/17 17:31:28 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ void			darr_sort(t_darr arr, int(*cmp)(const void *, const void *),
 
 void			*darr_add_str(t_darr arr, void *data);
 void			darr_extend(t_darr arr);
+
+size_t			darr_setl(t_darr arr, size_t newlen);
+void			*darr_clean(t_darr arr);
 
 /*
 ** void			*darr_cut(t_darr arr, size_t i);
