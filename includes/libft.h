@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 12:38:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:57:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ typedef struct	s_str
 	size_t	len;
 }				t_str;
 
-t_str			ft_tstrdup(t_str s);
+t_str			*ft_tstrdup(t_str s);
 size_t			ft_findlwordlf(t_str s, int (*f)(char));
 size_t			ft_cfwords(t_str s, int (*f)(char));
 t_str			*ft_tstrsplit(t_str s, int (*f)(char));

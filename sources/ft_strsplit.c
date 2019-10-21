@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 15:34:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:57:37 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_str		*ft_tstrsplit(t_str s, int (*f)(char))
 	{
 		if (temp_tstr.len && (f(s.str[i]) || i == s.len))
 		{
-			*current_word++ = ft_tstrdup(temp_tstr);
+			*current_word++ = *ft_tstrdup(temp_tstr);
 			temp_tstr.len = 0;
 		}
 		if (!f(s.str[i]) && i < s.len)
