@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/20 20:01:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/21 11:48:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,11 @@ int				ft_zcmp(const void *p1, const void *p2);
 
 int				ft_write_unprint(int fd, char *str, size_t len);
 int				ft_is_empty_str(char *str, size_t len);
+
+typedef struct	s_str
+{
+	char	*str;
+	size_t	len;
+}				t_str;
 
 #endif
