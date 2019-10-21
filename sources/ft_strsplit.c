@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 12:39:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:18:59 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ t_str		*ft_tstrsplit(t_str s, int (*f)(char))
 	is_word = 0;
 	temp_tstr.str = temp_str;
 	temp_tstr.len = 0;
-	result = (t_str *)ft_malloc(sizeof(t_str *) * (ft_cfwords(s, f) + 1));
+	result = (t_str *)ft_malloc(sizeof(t_str) * (ft_cfwords(s, f) + 1));
 	current_word = result;
 	while (i < s.len || is_word)
 	{
