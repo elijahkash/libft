@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 15:18:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:34:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,29 +60,23 @@ t_str		*ft_tstrsplit(t_str s, int (*f)(char))
 	char	temp_str[ft_findlwordlf(s, f) + 1];
 	t_str	temp_tstr;
 	t_str	*result;
-	int		is_word;
 	t_str	*current_word;
 	size_t	i;
 
 	i = 0;
-	is_word = 0;
 	temp_tstr.str = temp_str;
 	temp_tstr.len = 0;
 	result = (t_str *)ft_malloc(sizeof(t_str) * (ft_cfwords(s, f) + 1));
 	current_word = result;
-	while (i < s.len || is_word)
+	while (i < s.len || temp_tstr.len)
 	{
-		if (is_word && (f(s.str[i]) || i == s.len))
+		if (temp_tstr.len && (f(s.str[i]) || i == s.len))
 		{
 			*current_word++ = ft_tstrdup(temp_tstr);
-			is_word = 0;
 			temp_tstr.len = 0;
 		}
 		if (!f(s.str[i]) && i < s.len)
-		{
-			temp_str[is_word++] = s.str[i];
-			temp_tstr.len++;
-		}
+			temp_str[temp_tstr.len++] = s.str[i];
 		i = i < s.len ? i + 1 : i;
 	}
 	current_word->str = NULL;
