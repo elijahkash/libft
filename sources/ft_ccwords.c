@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 22:57:17 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 12:39:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/21 15:16:12 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ size_t	ft_cfwords(t_str s, int (*f)(char))
 	size_t	i;
 
 	i = 0;
-	if (s.str)
+	if (!s.str)
 		return (0);
 	is_word = 0;
 	count = 0;
