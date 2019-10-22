@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 19:58:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 20:06:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/22 20:55:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,11 @@ void		*ft_li(long long int i)
 void		*ft_c(char i)
 {
 	ft_memcpy(g_eval_mem, &i, sizeof(char));
+	return (g_eval_mem);
+}
+
+void		*ft_p(void *p)
+{
+	ft_bzero(g_eval_mem, sizeof(void *));
 	return (g_eval_mem);
 }
