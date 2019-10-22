@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 19:58:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/22 20:55:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/22 20:59:22 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void		*ft_c(char i)
 
 void		*ft_p(void *p)
 {
-	ft_bzero(g_eval_mem, sizeof(void *));
+	if (p || !p)
+		ft_bzero(g_eval_mem, sizeof(void *));
 	return (g_eval_mem);
 }
