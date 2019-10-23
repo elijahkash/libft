@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 16:12:15 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/23 14:16:23 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,5 +145,6 @@ t_str			*ft_tstrdup(t_str s);
 size_t			ft_findlwordlf(t_str s, int (*f)(char));
 size_t			ft_cfwords(t_str s, int (*f)(char));
 t_str			**ft_tstrsplit(t_str s, int (*f)(char));
+size_t			ft_strcmp_l(const char *s1, const char *s2);
 
 #endif
