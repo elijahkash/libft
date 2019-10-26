@@ -6,13 +6,13 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:12:43 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/26 19:19:45 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/26 22:07:40 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int			number;
 	size_t		i;
