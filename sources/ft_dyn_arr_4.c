@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/17 17:30:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/26 17:36:45 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ void		*darr_clean(t_darr arr)
 	ft_bzero(*arr.arr, *arr.curlen * *arr.item_size);
 	*arr.curlen = 0;
 	return (*arr.arr);
+}
+
+void		*darr_top(t_darr arr)
+{
+	return ((char *)(arr.arr[0]) + (*arr.curlen - 1) * *arr.item_size);
 }
