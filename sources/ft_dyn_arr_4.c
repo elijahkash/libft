@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/27 21:35:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/28 14:51:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void		*darr_top(t_darr arr)
 void		*darr_(t_darr arr, int i)
 {
 	if (i == 0)
-		return (NULL);
+		return (darr_top(arr));
 	while (ABS(i) >= (int)darr_l(arr))
 		i = (i > 0) ? i - (int)darr_l(arr) : i + (int)darr_l(arr);
 	if (i >= 0)
