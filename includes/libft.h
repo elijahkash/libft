@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/30 14:37:34 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/30 21:08:43 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,5 +149,8 @@ size_t			ft_strcmp_l(const char *s1, const char *s2);
 
 long long int	ft_atoi_l(const char *str);
 int				ft_isdigit_ws(char *s);
+
+void			ft_init_iarr(int ***arr, int row, int col);
+void			ft_del_iarr(int **arr, int row);
 
 #endif
