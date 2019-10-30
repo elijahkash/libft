@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/26 19:20:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/30 14:27:51 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,6 @@ t_str			**ft_tstrsplit(t_str s, int (*f)(char));
 size_t			ft_strcmp_l(const char *s1, const char *s2);
 
 long long int	ft_atoi_l(const char *str);
+int				ft_isdigit_ws(int c);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/16 18:33:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/10/30 14:29:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@
 #include <stdarg.h>
 #include <float.h>
 
-int icmp(const void *p1, const void *p2)
+int		icmp(const void *p1, const void *p2)
 {
 	return (*((char *)p2) - *((char *)p1));
 }
+
 /*
 int main()
 {
@@ -77,14 +78,14 @@ int main()
 }
 */
 
-int main()
+int		main(void)
 {
 	ft_gc_init();
 
 	char str[25000];
 	str[0] = '\0';
-	ft_printf("%2$y tata %1$.18000Lf", LDBL_MIN, str);
-	ft_printf("%-*s", 15, str);
+	printf("tata %1$Lf", str);
+	printf("%-*s", 15, str);
 
 	ft_force_buff();
 	ft_gc_clean();
