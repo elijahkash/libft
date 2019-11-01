@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 14:36:24 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/30 16:50:16 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/01 14:54:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ int	ft_isdigit_ws(char *s)
 	i = 0;
 	while (s[i])
 	{
-		if ((s[i] >= '0' && s[i] <= '9') || !ft_isws(s[i]))
+		if ((s[i] >= '0' && s[i] <= '9') || ft_isws(s[i]))
+			i++;
+		else
 			return (1);
-		i++;
 	}
 	return (0);
 }
