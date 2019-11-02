@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/30 14:29:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/02 16:18:07 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,12 @@ int		main(void)
 {
 	ft_gc_init();
 
-	char str[25000];
-	str[0] = '\0';
-	printf("tata %1$Lf", str);
-	printf("%-*s", 15, str);
+	int i = -100000000;
+	unsigned int d;
+
+	d = (unsigned int)(~(1 << (sizeof(int) * 8 - 1)) & i);
+
+	ft_printf("%d", d);
 
 	ft_force_buff();
 	ft_gc_clean();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_round.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:52:48 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/02 17:13:46 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/02 14:59:50 by odrinkwa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,23 @@ void			normalize_bn(t_bignum *res)
 
 void			round_bn(t_bignum *res, int prec)
 {
-	t_bignum ten;
+	t_bignum	ten;
 
 	if (res->exp - prec < 0)
 		return ;
 	else
 	{
-		if (ft_get_inpos_bignum(*res, res->exp - prec) >= 5)
+		if (ft_get_inpos_bignum(*res, res->exp - prec) == 5)
+		{
+			if (is_last_five(*res, res->exp - prec) == 0 ||
+				ft_get_inpos_bignum(*res, res->exp - prec + 1) % 2 == 1)
+			{
+				ft_put_one_inpos_bignum(&ten, res->maxsize,
+										res->exp - prec + 1);
+				ft_isumabs_bignum(res, ten);
+			}
+		}
+		else if (ft_get_inpos_bignum(*res, res->exp - prec) > 5)
 		{
 			ft_put_one_inpos_bignum(&ten, res->maxsize, res->exp - prec + 1);
 			ft_isumabs_bignum(res, ten);

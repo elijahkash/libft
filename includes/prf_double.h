@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 19:02:32 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/04 18:03:04 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/02 16:17:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ void						ft_intpart(int pow, unsigned long int mant,
 										int exp, t_bigdec *bd);
 void						ft_fractpart(int pow, unsigned long int mant,
 										t_bigdec *bd);
+int							is_last_five(t_bignum res, int start_check);
 
 #endif
