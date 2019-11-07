@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 20:54:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/07 20:08:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,31 @@ void		*darr_find(t_darr arr, void *data)
 		i++;
 	}
 	return (NULL);
+}
+
+size_t			darr_flfind_i(t_darr arr, void *data,
+								int (*cmp)(const void *, const void *))
+{
+	size_t	bot;
+	size_t	top;
+	int		tmp;
+
+	if (!darr_l(arr))
+		return (0);
+	top = darr_l(arr) - 1;
+	bot = 0;
+	while (bot != top)
+	{
+		tmp = cmp(data, darr(arr, bot + (top - bot) / 2));
+		if (!tmp)
+			return (1 + bot + (top - bot) / 2);
+		if (tmp < 0)
+			top = bot + (top - bot) / 2 - 1;
+		else
+			bot += (top - bot) / 2 + 1;
+	}
+	tmp = cmp(data, darr(arr, bot));
+	return (tmp ? 0 : 1 + bot);
 }
 
 void		darr_sort(t_darr arr, int (*cmp)(const void *, const void *),
