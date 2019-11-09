@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/09 19:18:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/09 19:38:04 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@
 # include <ft_eval.h>
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
+# define ABSINT(x) (((x) ^ ((x) >> 31)) - ((x) >> 31))
 # define SWAP(a, b) ({(a) ^= (b); (b) ^= (a); (a) ^= (b);})
+# define MAXINT(a, b) (b & ((a - b) >> 31) | a & (~(a - b) >> 31))
+# define MININT(a, b) (a & ((a - b) >> 31) | b & (~(a - b) >> 31))
+# define SAMESIGN(a, b) ((x ^ y) >= 0)
+# define CHANGESIGN(i) ({i = ~i + 1; i = (i ^ -1) + 1})
 
 int				ft_isws(int c);
 size_t			ft_cwords(const char *str, int (*f)(int c));
