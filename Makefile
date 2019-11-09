@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/11/02 16:16:29 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/11/05 13:20:46 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ printf_src/dbl_input.c printf_src/double.c printf_src/handle_comma_flag.c \
 printf_src/bn_auxfunc.c printf_src/bn_oppow.c printf_src/bn_opsub.c \
 printf_src/bn_opsummul.c printf_src/ft_nbrlen.c printf_src/bn_auxfunc1.c \
 \
-ft_isdigit_ws.c ft_iarr.c
+ft_isdigit_ws.c ft_iarr.c ft_print_memory.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:57:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:10:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/09 20:33:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,8 @@ static int							print_spec(t_specifications_def spec,
 	if (spec.spec == 12 && (ft_strstr(output, "inf")
 							|| ft_strstr(output, "nan")))
 		spec.flags &= ~FLAG_COMMA & ~FLAG_ZERO;
+	if (spec.spec == 12 && ft_strstr(output, "nan"))
+		spec.flags &= ~FLAG_SPACE & ~FLAG_PLUS;
 	if (!output)
 		return (-1);
 	if (spec.flags & FLAG_COMMA)
