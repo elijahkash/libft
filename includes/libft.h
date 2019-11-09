@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/30 21:08:43 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/09 19:18:32 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@
 # include <ft_eval.h>
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
+# define SWAP(a, b) ({(a) ^= (b); (b) ^= (a); (a) ^= (b);})
 
 int				ft_isws(int c);
 size_t			ft_cwords(const char *str, int (*f)(int c));
@@ -130,6 +131,7 @@ void			ft_swap(void *p1, void *p2, size_t size);
 
 int				ft_icmp(const void *p1, const void *p2);
 int				ft_ccmp(const void *p1, const void *p2);
+int				ft_scmp(const void *p1, const void *p2);
 int				ft_zcmp(const void *p1, const void *p2);
 
 int				ft_write_unprint(int fd, char *str, size_t len);
@@ -149,6 +151,7 @@ size_t			ft_strcmp_l(const char *s1, const char *s2);
 
 long long int	ft_atoi_l(const char *str);
 int				ft_isdigit_ws(char *s);
+char			*ft_skip_atoi(char *s);
 
 void			ft_init_iarr(int ***arr, int row, int col);
 void			ft_del_iarr(int **arr, int row);
