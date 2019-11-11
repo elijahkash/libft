@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/02 16:18:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/11 15:08:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,73 +21,32 @@
 #include <stdarg.h>
 #include <float.h>
 
-int		icmp(const void *p1, const void *p2)
+void	f(uint64_t n)
 {
-	return (*((char *)p2) - *((char *)p1));
+	ft_print_memory(&n, sizeof(uint64_t));
 }
-
-/*
-int main()
-{
-	ft_gc_init();
-	int i;
-	t_darr	test;
-
-	darr_init(&test, sizeof(int), 2);
-
-	i = 5;
-	darr_add(test, &i);
-
-	i = 15;
-	darr_add(test, ft_i(15));
-
-	i = 25;
-	darr_add(test, &i);
-
-	i = 35;
-	darr_add(test, &i);
-
-	ft_printf("%d\n", *(int *)darr_pop(test));
-
-	i = -5;
-	darr_add_i(test, &i, 0);
-
-	ft_printf("%d\n", *(int *)darr_pop_i(test, 0));
-
-	i = 45;
-	darr_add(test, &i);
-
-	i = 55;
-	darr_add(test, &i);
-
-	i = 65;
-	darr_add(test, &i);
-
-	i = -1;
-	darr_eq(test, 3, &i);
-
-	darr_sort(test, icmp, qsort);
-
-	while (darr_l(test))
-		ft_printf("%d\n", *(int *)darr_pop_i(test, 0));
-
-	darr_del(&test);
-
-	ft_gc_clean();
-	return (0);
-}
-*/
 
 int		main(void)
 {
 	ft_gc_init();
 
-	int i = -100000000;
-	unsigned int d;
+	uint64_t test;
 
-	d = (unsigned int)(~(1 << (sizeof(int) * 8 - 1)) & i);
+	test = 10;
 
-	ft_printf("%d", d);
+	f(test);
+	ft_printf("\n%.64llb\n", test);
+	asm("bsrq\t%1, %0" : "=r" (test) , "+rm" (test));
+	ft_printf("%lld\n", test);
+
+
+	ft_printf("\n\n");
+
+
+	f(test);
+	ft_printf("\n%.64llb\n", test);
+	asm("bsrq\t%1, %0" : "=r" (test) , "+rm" (test));
+	ft_printf("%lld\n", test);
 
 	ft_force_buff();
 	ft_gc_clean();
