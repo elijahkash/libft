@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/11 19:29:08 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/11 20:50:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 # define ABSINT(x) (((x) ^ ((x) >> 31)) - ((x) >> 31))
+# define ABS_LLU(x) (((x) ^ ((x) >> 63)) - ((x) >> 63))
 # define SWAP(a, b) ({(a) ^= (b); (b) ^= (a); (a) ^= (b);})
 # define MAXINT(a, b) ((b) & (((a) - (b)) >> 31) | (a) & (~((a) - (b)) >> 31))
 # define MININT(a, b) ((a) & (((a) - (b)) >> 31) | (b) & (~((a) - (b)) >> 31))
 # define SAMESIGN(a, b) (((x) ^ (y)) >= 0)
-# define CHANGESIGN(i) ({(i) = ~(i) + 1; (i) = ((i) ^ -1) + 1})
 # define GETBIT(n, m) (((n) >> (m)) & 1)
 # define SETBIT(n, m) ((n) | (1 << (m)))
 # define RESETBIT(n, m) ((n) & ~(1 << (m)))
