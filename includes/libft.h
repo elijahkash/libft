@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/11 11:43:51 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/11 14:04:02 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@
 # define CHANGESIGN(i) ({(i) = ~(i) + 1; (i) = ((i) ^ -1) + 1})
 # define GETBIT(n, m) (((n) >> ((m) - 1)) & 1)
 # define SETBIT(n, m) ((n) | (1 << ((m) - 1)))
+# define RESETBIT(n, m) ((n) & ~(1 << ((m) - 1)))
 
 int				ft_isws(int c);
 size_t			ft_cwords(const char *str, int (*f)(int c));
