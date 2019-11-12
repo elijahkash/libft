@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/11 20:50:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/12 11:38:00 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@
 # define GETBIT_LLU(n, m) (((n) >> (m)) & 1LLU)
 # define SETBIT_LLU(n, m) ((n) | (1LLU << (m)))
 # define RESETBIT_LLU(n, m) ((n) & ~(1LLU << (m)))
+# define BSR_ASM(n) asm("bsfq\t%0, %0" : "+rm" (n))
 
 int				ft_isws(int c);
 size_t			ft_cwords(const char *str, int (*f)(int c));

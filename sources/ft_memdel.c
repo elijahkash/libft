@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:21:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:09:28 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/12 12:00:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_memdel(void **ap)
 {
-	ft_free(*ap);
-	*ap = NULL;
+	if (*ap)
+	{
+		ft_free(*ap);
+		*ap = NULL;
+	}
 	return ;
 }
