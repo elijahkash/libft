@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/11/09 20:37:36 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/11/13 19:30:34 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,8 @@ ft_sfree.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c \
 ft_del_arr.c ft_pow.c ft_strset.c ft_zerostr.c ft_skip_digits.c \
 ft_getnbr_base.c ft_outbuff.c ft_outbuff_dst.c ft_printf.c \
 ft_garbage_collector.c ft_sort.c ft_swap.c ft_eval.c ft_cmp.c \
-ft_dyn_arr_1.c ft_dyn_arr_2.c ft_dyn_arr_3.c ft_error.c ft_options.c\
-ft_dyn_arr_4.c ft_write_unprint.c ft_is_empty_str.c\
+ft_dyn_arr_1.c ft_dyn_arr_2.c ft_dyn_arr_3.c ft_dyn_arr_5.c \
+ft_dyn_arr_4.c ft_error.c ft_options.c ft_write_unprint.c ft_is_empty_str.c\
 printf_src/global_bak.c printf_src/handle_spec.c printf_src/read_spec.c \
 printf_src/print_output.c printf_src/get_item_by_size.c \
 printf_src/spectostr_percent.c printf_src/spectostr_string.c \

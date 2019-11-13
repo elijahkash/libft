@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/11 13:02:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/13 16:51:31 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ void		*darr_find(t_darr arr, void *data)
 {
 	size_t i;
 
-	i = 0;
-	while (i < *arr.curlen)
+	i = *arr.curlen;
+	while (i > 0)
 	{
-		if (!ft_memcmp(darr(arr, i), &data, *arr.item_size))
-			return (darr(arr, i));
-		i++;
+		if (!ft_memcmp(darr(arr, i - 1), &data, *arr.item_size))
+			return (darr(arr, i - 1));
+		i--;
 	}
 	return (NULL);
 }
