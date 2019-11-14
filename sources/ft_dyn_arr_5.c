@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:20:39 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/13 20:13:28 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/14 18:23:07 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t			darr_insert_uniq(t_darr arr, void *data,
 		if (!tmp)
 			return (bot + (top - bot) / 2);
 		if (tmp < 0)
-			top = bot + (top - bot) / 2 - 1;
+			top = bot + (top - bot) / 2;
 		else
 			bot += (top - bot) / 2 + 1;
 	}

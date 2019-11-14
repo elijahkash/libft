@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/13 16:51:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/14 18:23:59 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ size_t		darr_flfind_i(t_darr arr, void *data,
 		if (!tmp)
 			return (1 + bot + (top - bot) / 2);
 		if (tmp < 0)
-			top = bot + (top - bot) / 2 - 1;
+			top = bot + (top - bot) / 2;
 		else
 			bot += (top - bot) / 2 + 1;
 	}

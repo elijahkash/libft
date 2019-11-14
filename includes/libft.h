@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/12 11:38:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/14 14:46:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # define FD_STDERR 2
 # define FD_STDOUT 1
 # define FD_STDIN 0
+
+# define PTR_SIZE __SIZEOF_POINTER__
 
 # include <string.h>
 
