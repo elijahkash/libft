@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 13:29:02 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/15 16:49:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 
 # include <string.h>
 
-# define INIT_GC_SIZE 1024
+# define INIT_GC_SIZE 128
 
 void	ft_gc_init(void);
 void	*ft_malloc(size_t size);
+void	*ft_gcremalloc(void *ptr, size_t newsize);
 void	ft_free(void *ptr);
 void	ft_gc_clean(void);
 

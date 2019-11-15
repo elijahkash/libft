@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 17:04:09 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/15 17:15:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void			*ft_malloc(size_t size)
 
 	if (*g_mem_collector.curlen == *g_mem_collector.max_len)
 	{
-		*g_mem_collector.max_len *= 2;
+		*g_mem_collector.max_len += ((*g_mem_collector.max_len < 1024) ?
+			*g_mem_collector.max_len : 1024);
 		tmp = malloc(*g_mem_collector.max_len * *g_mem_collector.item_size);
 		if (!tmp)
 			ft_error_free_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
@@ -60,6 +61,19 @@ void			*ft_malloc(size_t size)
 		g_self_ptr = *g_mem_collector.arr;
 	}
 	tmp = malloc(size);
+	if (!tmp)
+		ft_error_free_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
+	darr_add(g_mem_collector, &tmp);
+	return (tmp);
+}
+
+void			*ft_gcremalloc(void *ptr, size_t newsize)
+{
+	void *tmp;
+
+	if ((tmp = darr_find(g_mem_collector, ptr)))
+		darr_pop_p(g_mem_collector, tmp);
+	tmp = realloc(ptr, newsize);
 	if (!tmp)
 		ft_error_free_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
 	darr_add(g_mem_collector, &tmp);
@@ -77,6 +91,19 @@ void			ft_free(void *ptr)
 	}
 	darr_pop_p(g_mem_collector, tmp);
 	free(ptr);
+	if (*g_mem_collector.max_len > 128 &&
+		*g_mem_collector.curlen < (*g_mem_collector.max_len >> 1) - 64)
+	{
+		tmp = malloc(sizeof(void *) * (*g_mem_collector.max_len >> 1));
+		if (!tmp)
+			ft_error_free_exit(ERR_MEMALLOC_MSG, MEMERR_CODE);
+		ft_memcpy(tmp, *g_mem_collector.arr,
+				*g_mem_collector.curlen * sizeof(void *));
+		free(g_self_ptr);
+		g_self_ptr = tmp;
+		*g_mem_collector.arr = tmp;
+		*g_mem_collector.max_len = (*g_mem_collector.max_len >> 1);
+	}
 }
 
 void			ft_gc_clean(void)
