@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 14:07:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/13 20:13:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/15 13:57:12 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,6 @@ size_t			darr_flfind_i(t_darr arr, void *data,
 								int (*cmp)(const void *, const void *));
 
 size_t			darr_insert_uniq(t_darr arr, void *data,
-								int (*cmp)(const void *, const void *));
-int				darr_flfind_i_int(t_darr arr, void *data,
-								int (*cmp)(const void *, const void *));
-size_t			darr_insert_i(t_darr arr, void *data, size_t i,
 								int (*cmp)(const void *, const void *));
 /*
 ** void			*darr_cut(t_darr arr, size_t i);

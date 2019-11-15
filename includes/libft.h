@@ -6,13 +6,14 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/14 14:46:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/15 12:28:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+//TODO: add turbo to all
 # define TURBO_MOD
 
 # define FD_STDERR 2
