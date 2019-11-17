@@ -22,7 +22,7 @@ size_t			darr_insert_uniq(t_darr arr, void *data,
 	int		tmp;
 
 	if (!darr_l(arr))
-		return ((int)darr_add(arr, data) * 0);
+		return (0);
 	top = darr_l(arr) - 1;
 	bot = 0;
 	while (bot != top)
