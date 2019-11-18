@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:20:39 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/18 14:52:50 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/18 20:31:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ size_t			darr_insert_uniq(t_darr arr, void *data,
 
 void			darr_trim(t_darr arr)
 {
-	*arr.arr = ft_remalloc(*arr.arr, *arr.max_len, *arr.curlen);
+	*arr.arr = ft_remalloc(*arr.arr, *arr.max_len * *arr.item_size,
+									*arr.curlen * *arr.item_size);
 	*arr.max_len = *arr.curlen;
 }
 
