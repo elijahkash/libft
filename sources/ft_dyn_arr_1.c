@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/09 15:49:18 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/18 13:57:56 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 #include <libft.h>
 
-void		darr_extend(t_darr arr)
+void		darr_extend(t_darr arr, size_t n)
 {
 	void	*tmp;
 
-	*arr.max_len *= 2;
+	while (*arr.curlen + n >= *arr.max_len)
+		*arr.max_len *= 2;
 	tmp = ft_malloc(*arr.max_len * *arr.item_size);
 	ft_memcpy(tmp, *arr.arr, *arr.curlen * *arr.item_size);
 	ft_swap(&tmp, arr.arr, sizeof(void *));
@@ -55,7 +56,7 @@ void		darr_del(t_darr *arr)
 void		*darr_add(t_darr arr, void *data)
 {
 	if (*arr.curlen == *arr.max_len)
-		darr_extend(arr);
+		darr_extend(arr, 1);
 	ft_memcpy(darr(arr, *arr.curlen), data, *arr.item_size);
 	(*arr.curlen)++;
 	return (darr(arr, *arr.curlen - 1));
@@ -64,7 +65,7 @@ void		*darr_add(t_darr arr, void *data)
 void		*darr_add_i(t_darr arr, void *data, size_t i)
 {
 	if (*arr.curlen == *arr.max_len)
-		darr_extend(arr);
+		darr_extend(arr, 1);
 	ft_memmove(darr(arr, i + 1), darr(arr, i),
 				(*arr.curlen - i) * *arr.item_size);
 	ft_memcpy(darr(arr, i), data, *arr.item_size);

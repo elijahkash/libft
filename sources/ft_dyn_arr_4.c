@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/28 14:51:42 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:05:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		*darr_add_str(t_darr arr, void *data)
 	void	*newstr;
 
 	if (*arr.curlen == *arr.max_len)
-		darr_extend(arr);
+		darr_extend(arr, 1);
 	newstr = ft_malloc(ft_strlen(data) + 1);
 	ft_strcpy(newstr, data);
 	ft_memcpy(darr(arr, *arr.curlen), &newstr, *arr.item_size);

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:20:39 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/15 16:04:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/18 14:35:33 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t			darr_insert_uniq(t_darr arr, void *data,
 	int		tmp;
 
 	if (!darr_l(arr))
-		return ((int)darr_add(arr, data) * 0);
+		return (1 + (int)darr_add(arr, data) * 0);
 	top = darr_l(arr) - 1;
 	bot = 0;
 	while (bot != top)
@@ -48,4 +48,13 @@ void			darr_trim(t_darr arr)
 {
 	*arr.arr = ft_remalloc(*arr.arr, *arr.max_len, *arr.curlen);
 	*arr.max_len = *arr.curlen;
+}
+
+void			*darr_add_n(t_darr arr, void *data, size_t n)
+{
+	if (*arr.curlen + n >= *arr.max_len)
+		darr_extend(arr, n);
+	ft_memcpy(darr(arr, *arr.curlen), data, *arr.item_size * n);
+	*arr.curlen += n;
+	return (darr(arr, *arr.curlen - 1));
 }
