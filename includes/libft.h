@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/18 16:15:09 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/19 12:02:26 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 //TODO: add turbo to all
 //TODO: types in darr
+// realloc instead of malloc end memmove
 # define TURBO_MOD
 
 # define FD_STDERR 2
