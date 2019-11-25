@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dyn_arr_3.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/14 18:23:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/25 18:28:05 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		*darr_pop_p(t_darr arr, void *item)
 	return (darr(arr, *arr.curlen));
 }
 
-void		*darr_find(t_darr arr, void *data)
+void		*darr_find(t_darr arr, void *data) //TODO: it works?????
 {
 	size_t i;
 
