@@ -6,15 +6,12 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:53:18 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 21:03:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-//TODO: types in darr
-// restrict register
 
 # define FD_STDERR 2
 # define FD_STDOUT 1
@@ -25,7 +22,7 @@
 # include <ft_libft_mod.h>
 # include <ft_libc.h>
 # include <ft_memory_manager.h>
-# include <ft_dyn_arr.h> //!!!
+# include <ft_dyn_arr.h>
 # include <ft_error.h>
 # include <ft_sort.h>
 # include <ft_printf.h>

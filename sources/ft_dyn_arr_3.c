@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/25 18:28:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 21:06:45 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		*darr_pop_p(t_darr arr, void *item)
 	return (darr(arr, *arr.curlen));
 }
 
-void		*darr_find(t_darr arr, void *data) //TODO: it works?????
+void		*darr_find(t_darr arr, void *data)
 {
 	size_t i;
 
