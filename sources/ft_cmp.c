@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:46:52 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/13 12:52:27 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:49:54 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_cmp.h>
+
+#include <ft_libc.h>
+#include <string.h>
 
 inline int		ft_icmp(const void *p1, const void *p2)
 {

@@ -3,16 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 16:19:38 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 17:01:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_libc.h>
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+#ifdef USE_LIBC
+
+inline char	*ft_strncpy(char *dst, const char *src, size_t len)
+{
+	return (strncpy(dst, src, len));
+}
+
+#else
+
+char		*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t tmp;
 
@@ -21,3 +30,5 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	ft_memcpy(dst, src, tmp);
 	return (dst);
 }
+
+#endif

@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelnode.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:44:48 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:09:09 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:53:09 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_list.h>
+
+#include <ft_memory_manager.h>
 
 void	ft_lstdelnode(t_list **alst, t_list **node,
 						void (*del)(void*, size_t))

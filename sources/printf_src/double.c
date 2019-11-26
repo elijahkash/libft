@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   double.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/04 17:57:45 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:44:10 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <prf_double.h>
+
+#include <libft.h>
 
 static int	check_specvalues(union u_double d, char *output,
 							t_specifications_def spec)

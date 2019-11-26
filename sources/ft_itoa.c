@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 17:45:47 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:09:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:28:33 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
+
+#include <ft_memory_manager.h>
 
 static int	ft_itoa_strlen(int n)
 {

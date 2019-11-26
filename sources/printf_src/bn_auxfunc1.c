@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   bn_auxfunc1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 15:00:02 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/02 15:00:04 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:42:39 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <prf_double.h>
+
+#include <libft.h>
 
 int				is_last_five(t_bignum res, int start_check)
 {

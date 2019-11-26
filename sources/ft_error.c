@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:11:37 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 20:07:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:51:37 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_error_exit(const char *msg, int exit_code)
 void	ft_error_free_exit(const char *msg, int exit_code)
 {
 	ft_force_buff();
-	ft_gc_clean();
+	ft_memman_clean();
 	write(FD_STDERR, msg, ft_strlen(msg));
 	exit(exit_code);
 }

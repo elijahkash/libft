@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+         #
+#    By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/11/13 19:30:34 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/11/26 19:31:13 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 ft_sfree.c ft_lstfind.c ft_lstdelnode.c ft_remalloc.c ft_get_next_line.c \
 ft_del_arr.c ft_pow.c ft_strset.c ft_zerostr.c ft_skip_digits.c \
 ft_getnbr_base.c ft_outbuff.c ft_outbuff_dst.c ft_printf.c \
-ft_garbage_collector.c ft_sort.c ft_swap.c ft_eval.c ft_cmp.c \
+ft_memory_manager.c ft_sort.c ft_swap.c ft_eval.c ft_cmp.c \
 ft_dyn_arr_1.c ft_dyn_arr_2.c ft_dyn_arr_3.c ft_dyn_arr_5.c \
 ft_dyn_arr_4.c ft_error.c ft_options.c ft_write_unprint.c ft_is_empty_str.c\
 printf_src/global_bak.c printf_src/handle_spec.c printf_src/read_spec.c \
@@ -44,7 +44,8 @@ printf_src/dbl_input.c printf_src/double.c printf_src/handle_comma_flag.c \
 printf_src/bn_auxfunc.c printf_src/bn_oppow.c printf_src/bn_opsub.c \
 printf_src/bn_opsummul.c printf_src/ft_nbrlen.c printf_src/bn_auxfunc1.c \
 \
-ft_isdigit_ws.c ft_iarr.c ft_print_memory.c ft_skip_atoi.c
+ft_isdigit_ws.c ft_iarr.c ft_print_memory.c ft_skip_atoi.c ft_tstr.c \
+ft_strcmp_l.c ft_free.c ft_malloc.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

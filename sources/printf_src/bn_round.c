@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   bn_round.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:52:48 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/02 14:59:50 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:43:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <prf_double.h>
+
+#include <libft.h>
 
 void			ft_put_one_inpos_bignum(t_bignum *bn, int maxsize, int pos)
 {

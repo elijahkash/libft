@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:32:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:19:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
 
 void	ft_strclr(char *s)
 {

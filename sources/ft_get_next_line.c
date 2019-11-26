@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_next_line.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 20:51:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:08:45 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:56:37 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <ft_get_next_line.h>
+
+#include <libft.h>
 
 #include <unistd.h>
 

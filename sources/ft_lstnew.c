@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:54:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:21:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:47:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_list.h>
+
+#include <ft_memory_manager.h>
+#include <ft_libc.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

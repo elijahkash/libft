@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 15:10:27 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/21 16:14:23 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:28:15 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
+
+#include <ft_libc.h>
+#include <ft_memory_manager.h>
 
 static void	*destroy(char **start_destr, char **end_destr)
 {
@@ -52,33 +55,5 @@ char		**ft_strsplit(char const *s, char c)
 		s = (*s) ? s + 1 : s;
 	}
 	*current_word = 0;
-	return (result);
-}
-
-t_str		**ft_tstrsplit(t_str s, int (*f)(char))
-{
-	char	temp_str[ft_findlwordlf(s, f) + 1];
-	t_str	temp_tstr;
-	t_str	**result;
-	t_str	**current_word;
-	size_t	i;
-
-	i = 0;
-	temp_tstr.str = temp_str;
-	temp_tstr.len = 0;
-	result = (t_str **)ft_malloc(sizeof(t_str *) * (ft_cfwords(s, f) + 1));
-	current_word = result;
-	while (i < s.len || temp_tstr.len)
-	{
-		if (temp_tstr.len && (f(s.str[i]) || i == s.len))
-		{
-			*current_word++ = ft_tstrdup(temp_tstr);
-			temp_tstr.len = 0;
-		}
-		if (!f(s.str[i]) && i < s.len)
-			temp_str[temp_tstr.len++] = s.str[i];
-		i = i < s.len ? i + 1 : i;
-	}
-	*current_word = NULL;
 	return (result);
 }

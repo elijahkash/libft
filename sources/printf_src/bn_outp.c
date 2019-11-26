@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   bn_outp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 19:31:16 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/12 17:07:06 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:43:47 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #include <prf_double.h>
+
+#include <libft.h>
 
 static void		reformat_checkzero(char *output, int prec, char *c)
 {

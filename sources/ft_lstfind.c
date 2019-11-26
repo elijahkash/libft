@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstfind.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:44:05 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/10 17:46:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:53:02 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_list.h>
 
 t_list	*ft_lstfind(t_list *head, void *search_d,
 					int (*f)(void *, void *))

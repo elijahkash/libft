@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_options.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/10 20:46:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:54:47 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_options.h>
 
-#include <libft.h>
+#include <ft_libc.h>
 
 int								ft_is_option(const char *line)
 {

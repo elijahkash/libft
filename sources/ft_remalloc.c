@@ -3,26 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_remalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/15 15:52:23 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:30:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_memory_manager.h>
 
+#include <ft_libft_mod.h>
 
-#ifdef TURBO_MOD
+#ifdef USE_LIBC
 
-void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
+inline void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
-	return (ft_gcremalloc(ptr, newsize + oldsize * 0));
+	return (ft_memman_remalloc(ptr, newsize + oldsize * 0));
 }
 
 #else
 
-void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
+void		*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
 	void *newptr;
 

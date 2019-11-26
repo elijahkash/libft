@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cwords.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 22:32:33 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/06 20:09:05 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:31:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
 
 size_t	ft_cwords(const char *str, int (*f)(int c))
 {

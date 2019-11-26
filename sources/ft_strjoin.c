@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:49:48 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/11 11:42:27 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:27:30 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
+
+#include <ft_libc.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

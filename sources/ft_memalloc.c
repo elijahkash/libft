@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:12:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:09:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:18:26 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
+
+#include <ft_libc.h>
+#include <ft_memory_manager.h>
 
 void	*ft_memalloc(size_t size)
 {

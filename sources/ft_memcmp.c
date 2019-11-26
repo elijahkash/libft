@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 22:55:38 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 12:32:09 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:58:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_libc.h>
 
-#ifdef TURBO_MOD
+#ifdef USE_LIBC
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+inline int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	return (memcmp(s1, s2, n));
 }
 
 #else
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int				ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr1;

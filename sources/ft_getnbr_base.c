@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_getnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 13:16:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/25 13:19:26 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:33:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
+
+#include <ft_libc.h>
+#include <ft_bit_macro.h>
 
 static int						check_base(char *base)
 {

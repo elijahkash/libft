@@ -3,16 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 11:12:43 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/26 22:07:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 15:49:49 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_libc.h>
 
-int				ft_atoi(const char *str)
+#ifdef USE_LIBC
+
+# include <stdlib.h>
+
+inline int				ft_atoi(const char *str)
+{
+	return (atoi(str));
+}
+
+inline long long int	ft_atoi_l(const char *str)
+{
+	return (atoll(str));
+}
+
+#else
+
+int						ft_atoi(const char *str)
 {
 	int			number;
 	size_t		i;
@@ -37,7 +53,7 @@ int				ft_atoi(const char *str)
 	return (number);
 }
 
-long long int	ft_atoi_l(const char *str)
+long long int			ft_atoi_l(const char *str)
 {
 	long long int	number;
 	size_t			i;
@@ -61,3 +77,5 @@ long long int	ft_atoi_l(const char *str)
 	number *= sign;
 	return (number);
 }
+
+#endif

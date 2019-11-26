@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   bn_fix.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:41:50 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/12 17:07:06 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:42:47 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "prf_double.h"
+#include <prf_double.h>
 
 void			fixsize_bignum(t_bignum *bn)
 {

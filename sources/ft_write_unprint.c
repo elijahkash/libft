@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_write_unprint.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 14:36:33 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/20 16:10:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:37:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_diff_utils.h>
+
+#include <ft_libc.h>
 
 #include <unistd.h>
 

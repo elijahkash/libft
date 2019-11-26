@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   bn_auxfunc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odrinkwa <odrinkwa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 17:50:43 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/10/12 17:07:06 by odrinkwa         ###   ########.fr       */
+/*   Updated: 2019/11/26 20:42:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <prf_double.h>
+
 #include <libft.h>
-#include "prf_double.h"
 
 int				ft_pow_bn(int num, unsigned int p)
 {

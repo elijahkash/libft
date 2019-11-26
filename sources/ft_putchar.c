@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 11:44:01 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/07 14:51:18 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:29:10 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <ft_diff_utils.h>
 
 #include <libft.h>
 

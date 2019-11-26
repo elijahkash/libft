@@ -3,16 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 18:05:49 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 14:25:09 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:35:52 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_sort.h>
 
+#include <ft_libft_mod.h>
+
 #include <libft.h>
+
+#ifdef USE_LIBC
+
+# include <stdlib.h>
+
+inline void	ft_qsort(void *base, size_t nel, size_t width,
+				int (*cmp)(const void *, const void *))
+{
+	qsort(base, nel, width, cmp);
+}
+
+#else
 
 void	ft_qsort(void *base, size_t nel, size_t width,
 				int (*cmp)(const void *, const void *))
@@ -39,6 +53,8 @@ void	ft_qsort(void *base, size_t nel, size_t width,
 	if (left < nel)
 		ft_qsort(&(((char *)base)[left * width]), nel - left, width, cmp);
 }
+
+#endif
 
 void	ft_bublsort(void *base, size_t nel, size_t width,
 				int (*cmp)(const void *, const void *))

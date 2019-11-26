@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_eval.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 19:58:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/22 20:59:22 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:49:26 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_eval.h>
 
-#include <libft.h>
+#include <ft_libc.h>
 
-static char	g_eval_mem[64];
+static char	g_eval_mem[8];
 
 void		*ft_i(int i)
 {

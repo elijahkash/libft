@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/11 19:28:07 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 20:52:59 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,16 @@
 #include <stdarg.h>
 #include <float.h>
 
-void	f(uint64_t n)
-{
-	ft_print_memory(&n, sizeof(uint64_t));
-}
+#include <ctype.h>
 
 int		main(void)
 {
-	ft_gc_init();
-
-	uint64_t test;
-	uint64_t res;
-
-	test = 1LLU << 61;
-
-	f(test);
-	ft_printf("\n%.64llb\n", test);
-	asm("bsrq\t%1, %0" : "=r" (res) , "+rm" (test));
-	ft_printf("%lld\n", res);
+	ft_memman_init();
 
 
-	ft_printf("\n\n");
-	ft_force_buff();
-	test = RESETBIT(test, res);
 
-	f(test);
-	ft_printf("\n%.64llb\n", test);
-	asm("bsrq\t%1, %0" : "=r" (res) , "+rm" (test));
-	ft_printf("%lld\n", res);
 
 	ft_force_buff();
-	ft_gc_clean();
+	ft_memman_clean();
+	return(0);
 }

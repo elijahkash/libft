@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 12:08:29 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/10/04 21:09:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 19:52:23 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_list.h>
+
+#include <ft_memory_manager.h>
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {

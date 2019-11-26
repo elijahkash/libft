@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:32:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/09/10 19:58:52 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:58:35 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <ft_libc.h>
+
+#ifdef USE_LIBC
+
+inline size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	return (strlcat(dst, src, size));
+}
+
+#else
 
 size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -34,3 +43,5 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	return (i + j);
 }
+
+#endif
