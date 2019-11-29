@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/26 21:03:32 by mtrisha           #+#    #+#              #
-#    Updated: 2019/11/26 21:06:39 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/11/29 14:39:51 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,14 @@ darr_find: check for bugs!!!!!!!!!!!!!!!!!!!!
 types in darr
 
 restrict register
+
+
+mem_man optimize???
+
+
+
+ft_p (change)
+
 
 create nice author file
 

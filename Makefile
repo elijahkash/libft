@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/19 15:35:23 by mtrisha           #+#    #+#              #
-#    Updated: 2019/11/26 19:31:13 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/11/29 14:52:39 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ printf_src/bn_auxfunc.c printf_src/bn_oppow.c printf_src/bn_opsub.c \
 printf_src/bn_opsummul.c printf_src/ft_nbrlen.c printf_src/bn_auxfunc1.c \
 \
 ft_isdigit_ws.c ft_iarr.c ft_print_memory.c ft_skip_atoi.c ft_tstr.c \
-ft_strcmp_l.c ft_free.c ft_malloc.c
+ft_strcmp_l.c ft_free.c ft_malloc.c \
+ft_vector_1.c ft_vector_2.c ft_vector_3.c ft_vector_4.c ft_vector_5.c
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

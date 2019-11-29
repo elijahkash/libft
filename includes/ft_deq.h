@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_deq.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/04 12:03:18 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 16:31:05 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/11/29 12:10:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#ifndef FT_DEQ_H
+# define FT_DEQ_H
 
-#include <math.h>
-#include <stdlib.h>
+# include <string.h>
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdarg.h>
-#include <float.h>
-
-#include <ctype.h>
-
-int		main(void)
+typedef struct	s_deq
 {
-	ft_memman_init();
+	void	*mem;
+	size_t	front;
+	size_t	back;
+	size_t	item_size;
+	size_t	curlen;
+	size_t	max_len;
+}				t_deq;
 
-
-
-
-
-
-
-	ft_force_buff();
-	ft_memman_clean();
-	return(0);
-}
+#endif

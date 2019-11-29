@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 15:03:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:30:20 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/29 12:09:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@
 # define USE_LIBC
 # define USE_MEM_MAN
 # define XMALLOC_MOD
+
+# define LIKELY(x)   __builtin_expect(!!(x), 1)
+# define UNLIKELY(x) __builtin_expect(!!(x), 0)
 
 #endif

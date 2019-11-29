@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 15:12:36 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:50:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/29 14:11:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 # define ABSINT(x) (((x) ^ ((x) >> 31)) - ((x) >> 31))
-# define ABS_LLU(x) (((x) ^ ((x) >> 63)) - ((x) >> 63))
+# define ABS_LL(x) (((x) ^ ((x) >> 63)) - ((x) >> 63))
 # define SWAP(a, b) ({(a) ^= (b); (b) ^= (a); (a) ^= (b);})
 # define MAXINT(a, b) ((b) & (((a) - (b)) >> 31) | (a) & (~((a) - (b)) >> 31))
 # define MININT(a, b) ((a) & (((a) - (b)) >> 31) | (b) & (~((a) - (b)) >> 31))

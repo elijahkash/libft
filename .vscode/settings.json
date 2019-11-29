@@ -57,6 +57,10 @@
 		"ft_cmp.h": "c",
 		"ft_tstr.h": "c",
 		"ft_list.h": "c",
-		"ft_get_next_line.h": "c"
+		"ft_get_next_line.h": "c",
+		"__clang_cuda_complex_builtins.h": "c",
+		"ft_deq.h": "c",
+		"algorithm": "c",
+		"ft_vector.h": "c"
 	}
 }

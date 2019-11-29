@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 19:58:15 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:49:26 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/29 14:44:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,27 @@
 
 static char	g_eval_mem[8];
 
-void		*ft_i(int i)
+inline void		*ft_i(int i)
 {
-	ft_memcpy(g_eval_mem, &i, sizeof(int));
-	return (g_eval_mem);
+	return (ft_memcpy(g_eval_mem, &i, sizeof(int)));
 }
 
-void		*ft_z(size_t i)
+inline void		*ft_z(size_t i)
 {
-	ft_memcpy(g_eval_mem, &i, sizeof(size_t));
-	return (g_eval_mem);
+	return (ft_memcpy(g_eval_mem, &i, sizeof(size_t)));
 }
 
-void		*ft_li(long long int i)
+inline void		*ft_lli(long long int i)
 {
-	ft_memcpy(g_eval_mem, &i, sizeof(long long int));
-	return (g_eval_mem);
+	return (ft_memcpy(g_eval_mem, &i, sizeof(long long int)));
 }
 
-void		*ft_c(char i)
+inline void		*ft_c(char i)
 {
-	ft_memcpy(g_eval_mem, &i, sizeof(char));
-	return (g_eval_mem);
+	return (ft_memcpy(g_eval_mem, &i, sizeof(char)));
 }
 
-void		*ft_p(void *p)
+inline void		*ft_p(void *p)
 {
-	if (p || !p)
-		ft_bzero(g_eval_mem, sizeof(void *));
-	return (g_eval_mem);
+	return (ft_memcpy(g_eval_mem, &p, sizeof(void *)));
 }
