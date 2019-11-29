@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:46:52 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 15:45:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/29 17:18:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ inline int		ft_zcmp(const void *p1, const void *p2)
 
 inline int		ft_pcmp(const void *p1, const void *p2)
 {
-	return (p1 - p2);
+	return (*(void **)p1 - *(void **)p2);
 }
