@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 15:02:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/29 17:31:24 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 inline void		*vect_pop(t_vect *restrict arr)
 {
-	return (vect(arr, (arr->curlen)--));
+	return (vect(arr, --(arr->curlen)));
 }
 
 void		*vect_pop_i(t_vect *restrict arr, size_t i)
