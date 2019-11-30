@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 20:22:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/30 20:45:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,14 @@ void			*deq_front(t_deq *restrict deq);
 void			*deq_back(t_deq *restrict deq);
 void			*deq_(t_deq *restrict deq, long long int i);
 
-void			*deq_add_front(t_deq *restrict deque, void *data);
-void			*deq_add_back(t_deq *restrict deque, void *data);
+void			*deq_push_front(t_deq *restrict deque, void *data);
+void			*deq_push_back(t_deq *restrict deque, void *data);
 
 void			*deq_pop_front(t_deq *restrict deque);
 void			*deq_pop_back(t_deq *restrict deque);
+
+void			deq_rotate(t_deq *restrict deque);
+void			deq_rev_rotate(t_deq *restrict deque);
 
 // void			deq_reset(t_deq *deq);
 // void			deq_clean(t_deq *deq);
