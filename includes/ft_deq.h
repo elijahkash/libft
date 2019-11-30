@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 20:45:25 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/30 20:48:52 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void			*deq(t_deq *restrict deq, size_t i);
 void			*deq_front(t_deq *restrict deq);
 void			*deq_back(t_deq *restrict deq);
 void			*deq_(t_deq *restrict deq, long long int i);
+void			*deq_eq(t_deq *restrict deque, size_t i, void *data);
 
 void			*deq_push_front(t_deq *restrict deque, void *data);
 void			*deq_push_back(t_deq *restrict deque, void *data);
