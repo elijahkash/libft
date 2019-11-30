@@ -6,24 +6,13 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 16:10:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/30 16:33:15 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_vector.h>
 
 #include <libft.h>
-
-inline void		vect_extend(t_vect *restrict arr, size_t n)
-{
-	size_t	oldsize;
-
-	oldsize = arr->max_len;
-	while (arr->curlen + n > arr->max_len)
-		arr->max_len <<= 1;
-	arr->mem = ft_remalloc(arr->mem, oldsize * arr->item_size,
-									arr->max_len * arr->item_size);
-}
 
 void			vect_init(t_vect *restrict arr, size_t item_size,
 												size_t init_len)
@@ -43,6 +32,17 @@ void			vect_del(t_vect *restrict arr)
 	arr->curlen = 0;
 	arr->item_size = 0;
 	arr->max_len = 0;
+}
+
+inline void		vect_extend(t_vect *restrict arr, size_t n)
+{
+	size_t	oldsize;
+
+	oldsize = arr->max_len;
+	while (arr->curlen + n > arr->max_len)
+		arr->max_len <<= 1;
+	arr->mem = ft_remalloc(arr->mem, oldsize * arr->item_size,
+									arr->max_len * arr->item_size);
 }
 
 void			vect_shrink(t_vect *restrict arr, size_t reserve)

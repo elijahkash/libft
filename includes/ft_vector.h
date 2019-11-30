@@ -6,14 +6,14 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 12:10:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 15:15:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/30 15:27:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_VECTOR_H
 # define FT_VECTOR_H
 
-# include <string.h> // includes
+# include <string.h>
 
 typedef struct	s_vector
 {

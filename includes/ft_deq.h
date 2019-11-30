@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 12:10:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/30 20:22:33 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,26 @@ typedef struct	s_deq
 	size_t	curlen;
 	size_t	max_len;
 }				t_deq;
+
+void			deq_init(t_deq *restrict deq, size_t item_size,
+												size_t init_len);
+void			deq_del(t_deq *restrict deq);
+void			deq_align_front(t_deq *restrict deq);
+void			deq_extend(t_deq *restrict deq, size_t n);
+void			deq_shrink(t_deq *restrict deq, size_t reserve);
+
+void			*deq(t_deq *restrict deq, size_t i);
+void			*deq_front(t_deq *restrict deq);
+void			*deq_back(t_deq *restrict deq);
+void			*deq_(t_deq *restrict deq, long long int i);
+
+void			*deq_add_front(t_deq *restrict deque, void *data);
+void			*deq_add_back(t_deq *restrict deque, void *data);
+
+void			*deq_pop_front(t_deq *restrict deque);
+void			*deq_pop_back(t_deq *restrict deque);
+
+// void			deq_reset(t_deq *deq);
+// void			deq_clean(t_deq *deq);
 
 #endif
