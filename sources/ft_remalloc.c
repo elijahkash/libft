@@ -6,12 +6,13 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 16:30:43 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/11/30 16:30:06 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_memory_manager.h>
 
+#include <ft_libc.h>
 #include <ft_libft_mod.h>
 
 #include <stdlib.h>
