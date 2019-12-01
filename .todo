@@ -6,6 +6,7 @@
 [x]
 
 # This is TODO list for libft!
+[?] o3-o2 / native
 [!] makefile
 [ ] deq_align_front (mem managment)
 [ ] check vector for bugs!!!
