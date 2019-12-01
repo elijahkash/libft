@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 19:59:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 21:42:42 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 14:37:08 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ inline void		*deq_push_front(t_deq *restrict deque, void *data)
 		//TODO: optimize
 	if (UNLIKELY(deque->curlen == deque->max_len))
 		deq_extend(deque, 1);
-	if (UNLIKELY(((deque->front) -= (deque->curlen)++ ? 1 : 0) < 0))
+	if (UNLIKELY(((deque->front) -= (deque->curlen)++ ? 1 : 0) == __SIZE_MAX__))
 		deque->front = deque->max_len - 1;
 	return (ft_memcpy(deque->mem + deque->front * deque->item_size,
 					data, deque->item_size));
@@ -53,7 +53,7 @@ inline void		*deq_pop_back(t_deq *restrict deque)
 	register void	*tmp;
 
 	tmp = deque->mem + deque->back * deque->item_size;
-	if (UNLIKELY(((deque->back) -= --(deque->curlen) ? 1 : 0) < 0))
+	if (UNLIKELY(((deque->back) -= --(deque->curlen) ? 1 : 0) == __SIZE_MAX__))
 		deque->back = deque->max_len - 1;
 	return (tmp);
 }

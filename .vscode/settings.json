@@ -61,6 +61,7 @@
 		"__clang_cuda_complex_builtins.h": "c",
 		"ft_deq.h": "c",
 		"algorithm": "c",
-		"ft_vector.h": "c"
+		"ft_vector.h": "c",
+		"prf_handle_spec.h": "c"
 	}
 }
