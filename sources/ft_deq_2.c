@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 17:55:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 20:49:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 15:12:29 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void			*deq_(t_deq *restrict deque, long long int i)
 	while (UNLIKELY((size_t)ABS_LL(i) >= deque->curlen))
 		i += (i > 0) ? deque->curlen * -1 : deque->curlen;
 	return ((i >= 0) ? deq(deque, i) :
-						deq(deque, deque->curlen + i - 1));
+						deq(deque, deque->curlen + i));
 }
 
 inline void		*deq_eq(t_deq *restrict deque, size_t i, void *data)
