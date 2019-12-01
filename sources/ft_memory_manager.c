@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 16:29:48 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 16:53:11 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 static t_vect	g_mem_manager;
 
+#ifdef USE_MEM_MAN
+
 void			ft_memman_init(void)
 {
 	g_mem_manager.mem = malloc(sizeof(void *) * INIT_MM_SIZE);
@@ -27,6 +29,15 @@ void			ft_memman_init(void)
 	g_mem_manager.curlen = 0;
 	g_mem_manager.max_len = INIT_MM_SIZE;
 }
+
+#else
+
+inline void		ft_memman_init(void)
+{
+	return ;
+}
+
+#endif
 
 void			*ft_memman_malloc(size_t size)
 {
@@ -91,6 +102,8 @@ void			ft_memman_free(void *restrict ptr)
 	}
 }
 
+#ifdef USE_MEM_MAN
+
 void			ft_memman_clean(void)
 {
 	while (g_mem_manager.curlen > 0)
@@ -98,3 +111,12 @@ void			ft_memman_clean(void)
 	free(g_mem_manager.mem);
 	return ;
 }
+
+#else
+
+inline void		ft_memman_clean(void)
+{
+	return ;
+}
+
+#endif

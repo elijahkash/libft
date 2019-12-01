@@ -6,28 +6,22 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 16:30:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 17:03:20 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_memory_manager.h>
 
-#include <ft_libc.h>
-#include <ft_libft_mod.h>
+#include <libft.h>
 
 #include <stdlib.h>
 
-#ifdef USE_LIBC
+#ifdef USE_MEM_MAN
 
 inline void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
 	return ((LIKELY(newsize != oldsize)) ?
 			ft_memman_remalloc(ptr, newsize) : ptr);
-}
-
-inline void	*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
-{
-	return (realloc(ptr, newsize + oldsize * 0));
 }
 
 #else
@@ -48,6 +42,17 @@ void		*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 	return (newptr);
 }
 
+#endif
+
+#ifdef USE_LIBC
+
+inline void	*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
+{
+	return (realloc(ptr, newsize + oldsize * 0));
+}
+
+#else
+
 void		*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
 	void *newptr;
@@ -59,7 +64,7 @@ void		*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
 	if (ptr)
 	{
 		ft_memcpy(newptr, ptr, (oldsize < newsize) ? oldsize : newsize);
-		ft_free(ptr);
+		free(ptr);
 	}
 	return (newptr);
 }
