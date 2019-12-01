@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 16:46:28 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 17:03:20 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,12 @@
 
 #include <stdlib.h>
 
-#ifdef USE_LIBC
+#ifdef USE_MEM_MAN
 
 inline void	*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
 	return ((LIKELY(newsize != oldsize)) ?
 			ft_memman_remalloc(ptr, newsize) : ptr);
-}
-
-inline void	*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
-{
-	return (realloc(ptr, newsize + oldsize * 0));
 }
 
 #else
@@ -46,6 +41,17 @@ void		*ft_remalloc(void *ptr, size_t oldsize, size_t newsize)
 	}
 	return (newptr);
 }
+
+#endif
+
+#ifdef USE_LIBC
+
+inline void	*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
+{
+	return (realloc(ptr, newsize + oldsize * 0));
+}
+
+#else
 
 void		*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
 {
