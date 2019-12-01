@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 15:12:36 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 14:11:17 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 21:07:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define SWAP(a, b) ({(a) ^= (b); (b) ^= (a); (a) ^= (b);})
 # define MAXINT(a, b) ((b) & (((a) - (b)) >> 31) | (a) & (~((a) - (b)) >> 31))
 # define MININT(a, b) ((a) & (((a) - (b)) >> 31) | (b) & (~((a) - (b)) >> 31))
-# define SAMESIGN(a, b) (((x) ^ (y)) >= 0)
+# define SAMESIGN(a, b) (((a) ^ (b)) >= 0)
 # define GETBIT(n, m) (((n) >> (m)) & 1)
 # define SETBIT(n, m) ((n) | (1 << (m)))
 # define RESETBIT(n, m) ((n) & ~(1 << (m)))
