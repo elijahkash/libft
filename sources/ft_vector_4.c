@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 17:31:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 17:17:31 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ inline void		*vect_pop(t_vect *restrict arr)
 	return (vect(arr, --(arr->curlen)));
 }
 
-void		*vect_pop_i(t_vect *restrict arr, size_t i)
+void			*vect_pop_i(t_vect *restrict arr, size_t i)
 {
 	char			tmp[arr->item_size];
 	register void	*ptr;
@@ -31,7 +31,7 @@ void		*vect_pop_i(t_vect *restrict arr, size_t i)
 	return (ft_memcpy(vect(arr, --(arr->curlen)), tmp, arr->item_size));
 }
 
-void		*vect_pop_p(t_vect *restrict arr, void *item)
+void			*vect_pop_p(t_vect *restrict arr, void *item)
 {
 	char			tmp[arr->item_size];
 	register void	*ptr;

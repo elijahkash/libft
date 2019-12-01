@@ -6,10 +6,10 @@
 [x]
 
 # This is TODO list for libft!
-[!] NEED CHECK LIBFT MODS!!!!!!
-[ ] deq_align_frong (mem managment)
+[ ] deq_align_front (mem managment)
 [ ] check vector for bugs!!!
 [!] ft_p (change)
 [?] create nice author file
 [?] create general documentation and describe
+[-] NEED CHECK LIBFT MODS!!!!!!
 [-] vector optimise like deq

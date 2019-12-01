@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 14:51:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 17:17:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ inline void		*vect_add_mem(t_vect *restrict arr, void *data, size_t len)
 {
 	return (vect_add(arr, ft_p(ft_memcpy(ft_malloc(len), data, len))));
 }
-
