@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 16:30:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 16:42:15 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void		*ft_nomm_remalloc(void *ptr, size_t oldsize, size_t newsize)
 	if (ptr)
 	{
 		ft_memcpy(newptr, ptr, (oldsize < newsize) ? oldsize : newsize);
-		ft_free(ptr);
+		free(ptr);
 	}
 	return (newptr);
 }
