@@ -7,6 +7,7 @@
 
 # This is TODO list for libft!
 [!] NEED CHECK LIBFT MODS!!!!!!
+[ ] vector optimise like deq
 [ ] deq_align_frong (mem managment)
 [ ] check vector for bugs!!!
 [!] ft_p (change)
