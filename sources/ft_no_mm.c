@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_libft_mod.h                                     :+:      :+:    :+:   */
+/*   ft_no_mm.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/26 15:03:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 18:47:52 by mtrisha          ###   ########.fr       */
+/*   Created: 2019/12/01 18:39:38 by mtrisha           #+#    #+#             */
+/*   Updated: 2019/12/01 18:44:41 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_MOD_H
-# define FT_LIBFT_MOD_H
+#include <ft_memory_manager.h>
 
-# define USE_LIBC
-# define USE_MEM_MAN
-# define XMALLOC_MOD
+#include <libft.h>
 
-# define LIKELY(x)   __builtin_expect(!!(x), 1)
-# define UNLIKELY(x) __builtin_expect(!!(x), 0)
+void			this_is_for_norminette(void)
+{
+	return ;
+}
+
+#ifndef USE_MEM_MAN
+
+void			ft_memman_init(void)
+{
+	this_is_for_norminette();
+	return ;
+}
+
+void			ft_memman_clean(void)
+{
+	this_is_for_norminette();
+	return ;
+}
 
 #endif

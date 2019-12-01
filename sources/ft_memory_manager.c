@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 17:48:14 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/01 18:47:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@
 
 #include <stdlib.h>
 
+#ifdef USE_MEM_MAN
+
 static t_vect	g_mem_manager;
 
 void			ft_memman_init(void)
-
-#ifdef USE_MEM_MAN
-
 {
 	g_mem_manager.mem = malloc(sizeof(void *) * INIT_MM_SIZE);
 	if (!g_mem_manager.mem)
@@ -31,15 +30,6 @@ void			ft_memman_init(void)
 	g_mem_manager.max_len = INIT_MM_SIZE;
 	return ;
 }
-
-#else
-
-{
-	return ;
-}
-
-#endif
-
 
 void			*ft_memman_malloc(size_t size)
 {
@@ -105,20 +95,10 @@ void			ft_memman_free(void *restrict ptr)
 }
 
 void			ft_memman_clean(void)
-
-#ifdef USE_MEM_MAN
-
 {
-
 	while (g_mem_manager.curlen > 0)
 		free(*(void **)vect_pop(&g_mem_manager));
 	free(g_mem_manager.mem);
-	return ;
-}
-
-#else
-
-{
 	return ;
 }
 
