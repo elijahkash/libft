@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:37 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 16:30:24 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/02 15:31:21 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 inline void		*vect(t_vect *restrict arr, size_t i)
 {
-	return ((char *)(arr->mem) + i * arr->item_size);
+	return ((arr->mem) + i * arr->item_size);
 }
 
 inline size_t	vect_i(t_vect *restrict arr, void *item)
@@ -26,7 +26,7 @@ inline size_t	vect_i(t_vect *restrict arr, void *item)
 
 inline void		*vect_top(t_vect *restrict arr)
 {
-	return ((char *)(arr->mem) + (arr->curlen - 1) * arr->item_size);
+	return ((arr->mem) + (arr->curlen - 1) * arr->item_size);
 }
 
 void			*vect_(t_vect *restrict arr, long long int i)
