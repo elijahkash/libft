@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 20:51:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:56:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/02 15:22:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,11 +80,11 @@ static int		read_file(const int fd, char **line, t_list **lst_filebuff)
 	return (make_static_buff(line, lst_filebuff, fd));
 }
 
-static int		read_buffer(char *ptr, char **line)
+static int		read_buffer(char *ptr, char **line, char *nptr)
 {
 	size_t len;
 
-	len = ft_strchr(ptr, '\n') - ptr;
+	len = nptr - ptr;
 	if (!(*line = (char *)ft_remalloc(*line, 1, len + 1)))
 		return (-1);
 	ft_memcpy(*line, ptr, len);
@@ -109,7 +109,7 @@ int				ft_get_next_line(const int fd, char **line)
 		return (read_file(fd, line, &lst_filebuff));
 	buf = ((t_fdbuff *)(node->content))->content;
 	if ((ptr = ft_strchr((buf), '\n')))
-		return (read_buffer(buf, line));
+		return (read_buffer(buf, line, ptr));
 	else
 	{
 		if (ft_strlen(buf) != 0)
