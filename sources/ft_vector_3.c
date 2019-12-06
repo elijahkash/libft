@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/02 15:31:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/06 16:32:29 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ inline void		*vect_add_n(t_vect *restrict arr, void *data, size_t n)
 
 void			*vect_add_i(t_vect *restrict arr, void *data, size_t i)
 {
-	register void	*tmp;
+	register void *restrict	tmp;
 
 	if (UNLIKELY(arr->curlen == arr->max_len))
 		vect_extend(arr, 1);

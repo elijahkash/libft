@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/06 15:34:50 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/06 16:33:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include <unistd.h>
 
-static t_list	*restrict g_buff = NULL;
+static t_list	*g_buff = NULL;
 
 static int		is_equalfd_in_toutbuf(void *item1, void *item2)
 {
