@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 19:45:04 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/06 15:33:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 typedef struct	s_deq
 {
-	void	*mem;
-	size_t	item_size;
-	size_t	curlen;
-	size_t	max_len;
-	size_t	front;
-	size_t	back;
+	void *restrict	mem;
+	size_t			item_size;
+	size_t			curlen;
+	size_t			max_len;
+	size_t			front;
+	size_t			back;
 }				t_deq;
 
 void			deq_init(t_deq *restrict deq, size_t item_size,

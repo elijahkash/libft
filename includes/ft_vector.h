@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 12:10:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 15:27:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/06 15:33:08 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 typedef struct	s_vector
 {
-	void	*mem;
-	size_t	item_size;
-	size_t	curlen;
-	size_t	max_len;
+	void *restrict	mem;
+	size_t			item_size;
+	size_t			curlen;
+	size_t			max_len;
 }				t_vect;
 
 void			vect_init(t_vect *restrict arr, size_t item_size,
