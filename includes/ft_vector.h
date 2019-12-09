@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 12:10:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/09 12:52:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/09 18:25:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void			vect_sort(t_vect *restrict arr,
 							void (*sort)(void *, size_t, size_t,
 							int (*cmp)(const void *, const void *)));
 
-size_t			vect_flfind_i(t_vect *arr, void *data,
+size_t			vect_bin_find(t_vect *arr, void *data,
 							int (*cmp)(const void *, const void *));
 size_t			vect_insert_uniq(t_vect *arr, void *data,
 							int (*cmp)(const void *, const void *));
