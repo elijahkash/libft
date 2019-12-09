@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/06 16:32:29 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/09 20:41:42 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,13 @@ inline void		*vect_add(t_vect *restrict arr, void *data)
 
 inline void		*vect_add_n(t_vect *restrict arr, void *data, size_t n)
 {
+	void	*tmp;
+
 	if (UNLIKELY(arr->curlen + n == arr->max_len))
 		vect_extend(arr, n);
-	return (ft_memcpy(vect(arr, (arr->curlen)++), data, arr->item_size));
+	tmp = ft_memcpy(vect(arr, arr->curlen), data, arr->item_size * n);
+	arr->curlen += n;
+	return (tmp);
 }
 
 void			*vect_add_i(t_vect *restrict arr, void *data, size_t i)
