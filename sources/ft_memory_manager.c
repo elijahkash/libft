@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/10 12:17:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/11 21:49:14 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,8 @@ void			ft_memman_free(void *restrict ptr)
 		ft_error_print(ERR_MEMFREE_MSG);
 		return ;
 	}
-	vect_pop_p(&g_mem_manager, tmp);
+	(tmp == vect_top(&g_mem_manager)) ? vect_pop(&g_mem_manager) :
+										vect_pop_p(&g_mem_manager, tmp);
 	free(ptr);
 	if (UNLIKELY(g_mem_manager.max_len > INIT_MM_SIZE &&
 		g_mem_manager.curlen < (g_mem_manager.max_len >> 1) -
