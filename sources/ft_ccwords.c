@@ -6,13 +6,13 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 22:57:17 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:31:48 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/11 21:39:18 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_diff_utils.h>
 
-size_t	ft_ccwords(const char *str, char c)
+size_t	ft_ccwords(const char *restrict str, char c)
 {
 	size_t	count;
 	int		is_word;
@@ -28,11 +28,8 @@ size_t	ft_ccwords(const char *str, char c)
 			count++;
 			is_word = 0;
 		}
-		if (*str != c && !is_word)
-			is_word++;
+		is_word += (*str != c && is_word == 0) ? 1 : 0;
 		str++;
 	}
-	if (is_word)
-		count++;
-	return (count);
+	return (count + ((is_word) ? 1 : 0));
 }
