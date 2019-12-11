@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 13:01:32 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/11 18:56:54 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@
 # include <ft_list.h>
 # include <ft_options.h>
 # include <ft_get_next_line.h>
+# include <ft_fast_input_gnl.h>
 # include <ft_diff_utils.h>
 
 #endif
