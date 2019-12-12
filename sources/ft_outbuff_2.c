@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 14:30:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/12 15:06:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/12 18:36:25 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 
 #include <unistd.h>
 
-int		ft_is_equalfd_in_toutbuf(void *item1, void *item2)
+inline int	ft_is_equalfd_in_toutbuf(void *restrict item1, void *restrict item2)
 {
-	if (((t_outbuff *)item1)->fd == *(int *)item2)
-		return (1);
-	return (0);
+	return ((((t_outbuff *)item1)->fd == *(int *)item2) ? 1 : 0);
 }
 
-void		ft_force_outbuff(t_outbuff *buff)
+void		ft_force_outbuff(t_outbuff *restrict buff)
 {
 	size_t		len;
 
@@ -38,7 +36,7 @@ void		ft_force_outbuff(t_outbuff *buff)
 	buff->curlen = 0;
 }
 
-void			ft_force_buff_fd(int fd)
+void		ft_force_buff_fd(int fd)
 {
 	t_outbuff	*buff;
 
@@ -46,14 +44,13 @@ void			ft_force_buff_fd(int fd)
 	ft_force_outbuff(buff);
 }
 
-int				ft_buff_add_to_outbuff(t_outbuff *restrict buff,
+int			ft_buff_add_to_outbuff(t_outbuff *restrict buff,
 										const char *str, int len)
 {
 	const char	*ptr;
 	int			tmp;
 
 	ptr = str;
-	//write(1, str, len);
 	while (len + buff->curlen >= PRF_BUFF_SIZE)
 	{
 		tmp = (PRF_BUFF_SIZE - buff->curlen);
@@ -68,7 +65,7 @@ int				ft_buff_add_to_outbuff(t_outbuff *restrict buff,
 	return (1);
 }
 
-int				ft_buf_add(int fd, const char *str, int len)
+int			ft_buf_add(int fd, const char *str, int len)
 {
 	t_outbuff	*buff;
 
