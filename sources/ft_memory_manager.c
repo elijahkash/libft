@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:46 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/11 21:49:14 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/12 17:51:01 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void			*ft_memman_malloc(size_t size)
 	return (tmp);
 }
 
-//TODO: realloc in USE_LIBC mod ???
 void			*ft_memman_remalloc(void *restrict ptr, size_t newsize)
 {
 	void *tmp;
