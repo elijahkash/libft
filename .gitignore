@@ -13,8 +13,6 @@
 .DS_Store
 *.o
 *.dSYM
-/debug/test
+/test/test
 *.a
-.depend
-.depend.bak
-tmp
+/tmp

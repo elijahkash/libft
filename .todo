@@ -7,11 +7,11 @@
 
 # This is TODO list for libft!
 [?] native ?
-[!] makefile
 [ ] deq_align_front (mem managment)
 [?] check vector for bugs!!!
 [?] create nice author file
 [?] create general documentation and describe
+[-] makefile
 [-] NEED CHECK LIBFT MODS!!!!!!
 [-] vector optimise like deq
 [-] ft_p (change)
