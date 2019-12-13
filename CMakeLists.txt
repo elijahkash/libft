@@ -36,6 +36,7 @@ set(INC_DIRS ./)
 INCLUDE_DIRS(INC_DIRS)
 FILE(GLOB_RECURSE LIBFT_SOURCES ${SRC_DIR}*.c)
 
+
 add_library(${PROJECT_NAME} STATIC ${LIBFT_SOURCES})
 target_include_directories(${PROJECT_NAME} PUBLIC ${INC_DIRS})
 set_target_properties(${PROJECT_NAME} PROPERTIES
@@ -43,9 +44,11 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 	ARCHIVE_OUTPUT_NAME  ${DST_NAME}
 	COMPILE_FLAGS ${BUILD_FLAGS})
 
-add_library(debug STATIC EXCLUDE_FROM_ALL ${LIBFT_SOURCES})
-target_include_directories(debug PUBLIC ${INC_DIRS})
-set_target_properties(debug PROPERTIES
+set(DEBUG_RULE ${PROJECT_NAME}debug)
+
+add_library(${DEBUG_RULE} STATIC EXCLUDE_FROM_ALL ${LIBFT_SOURCES})
+target_include_directories(${DEBUG_RULE} PUBLIC ${INC_DIRS})
+set_target_properties(${DEBUG_RULE} PROPERTIES
 	ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
 	ARCHIVE_OUTPUT_NAME  ${DEBUG_NAME}
 	COMPILE_FLAGS ${DEBUG_FLAGS})
@@ -64,4 +67,4 @@ set_target_properties(test PROPERTIES
 		OUTPUT_NAME ${TEST_NAME}
 		COMPILE_FLAGS ${DEBUG_FLAGS})
 
-add_dependencies(test debug)
+add_dependencies(test ${DEBUG_RULE})
