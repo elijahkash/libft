@@ -63,3 +63,5 @@ set_target_properties(test PROPERTIES
 		RUNTIME_OUTPUT_DIRECTORY ${TEST_DIR}
 		OUTPUT_NAME ${TEST_NAME}
 		COMPILE_FLAGS ${DEBUG_FLAGS})
+
+add_dependencies(test debug)
