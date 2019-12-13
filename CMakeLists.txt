@@ -22,6 +22,7 @@ set(DST_NAME ft)
 set(DEBUG_NAME ftdebug)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/sources/)
 set(INC_DIR ${PROJECT_SOURCE_DIR}/includes/)
+
 MACRO(INCLUDE_DIRS return_list)
 	FILE(GLOB_RECURSE new_list ${INC_DIR}*.h)
 	SET(dir_list "")

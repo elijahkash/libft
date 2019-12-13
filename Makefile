@@ -6,14 +6,14 @@
 #    By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/12 21:57:42 by mtrisha           #+#    #+#              #
-#    Updated: 2019/12/13 14:56:15 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/12/13 15:54:00 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft
 
-LIB = libft.a
-DEBUGLIB = libftdebug.a
+LIB = ./libft.a
+DEBUGLIB = ./libftdebug.a
 TEST = ./test/test
 CMAKEDIR = ./tmp/
 
