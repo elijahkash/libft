@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/06 15:33:25 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/14 18:47:51 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ void			*deq_pop_back(t_deq *restrict deque);
 
 void			deq_rotate(t_deq *restrict deque);
 void			deq_rev_rotate(t_deq *restrict deque);
+
+void			*deq_find_front(t_deq *restrict deque, void *data,
+								int (*cmp)(const void *, const void *));
 
 /*
 ** void			deq_reset(t_deq *deq);

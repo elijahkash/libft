@@ -6,12 +6,14 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/11 18:56:54 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/14 19:56:58 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define TRUE (1)
 
 # define FD_STDERR 2
 # define FD_STDOUT 1
