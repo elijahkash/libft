@@ -8,6 +8,7 @@
 # This is TODO list for libft!
 [?] native ?
 [ ] deq_align_front (mem managment)
+[!] deq_align_front have TROUBLES
 [?] check vector for bugs!!!
 [?] create nice author file
 [?] create general documentation and describe
