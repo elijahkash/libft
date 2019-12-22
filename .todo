@@ -6,6 +6,7 @@
 [x]
 
 # This is TODO list for libft!
+[ ] in vect and deq 'self'
 [?] native ?
 [ ] deq_align_front (mem managment)
 [!] deq_align_front have TROUBLES
