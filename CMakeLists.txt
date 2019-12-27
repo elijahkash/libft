@@ -44,7 +44,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 	ARCHIVE_OUTPUT_NAME  ${DST_NAME}
 	COMPILE_FLAGS ${BUILD_FLAGS})
 
-set(DEBUG_RULE debug)
+set(DEBUG_RULE ${PROJECT_NAME}debug)
 
 add_library(${DEBUG_RULE} STATIC EXCLUDE_FROM_ALL ${LIBFT_SOURCES})
 target_include_directories(${DEBUG_RULE} PUBLIC ${INC_DIRS})
@@ -62,7 +62,6 @@ add_executable(test EXCLUDE_FROM_ALL ${TEST_SOURCES})
 target_include_directories(test PUBLIC ${TEST_DIR})
 target_include_directories(test PUBLIC ${INC_DIRS})
 target_link_directories(test PUBLIC ${PROJECT_SOURCE_DIR})
-# target_link_libraries(test ${DEBUG_NAME})
 target_link_libraries(test ${PROJECT_SOURCE_DIR}/lib${DEBUG_NAME}.a)
 set_target_properties(test PROPERTIES
 		RUNTIME_OUTPUT_DIRECTORY ${TEST_DIR}

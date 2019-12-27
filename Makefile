@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/12 21:57:42 by mtrisha           #+#    #+#              #
-#    Updated: 2019/12/13 15:54:00 by mtrisha          ###   ########.fr        #
+#    Updated: 2019/12/27 17:45:43 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ fclean: clean
 re: fclean
 	$(MAKE)
 
-debug: all
+debug: $(CMAKEDIR) $(CMAKEDIR)Makefile
+	$(MAKE) -C $(CMAKEDIR) libftdebug
 
 test: all
