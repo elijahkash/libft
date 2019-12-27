@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:31:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/22 21:45:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/27 15:42:23 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct	s_list_on_arr
 	size_t		max_size;
 }				t_alst;
 
-# define ALST_SPEC_VALUE ((size_t)(0 - 1))
+# define 		ALST_SPEC_VALUE ((size_t)(0 - 1))
 
 void			alst_init(t_alst *self, size_t item_size,
 										size_t init_len);
@@ -46,5 +46,9 @@ void			alst_extend(t_alst *self);
 size_t			alst_get_space(t_alst *self);
 
 t_alst_item		*alst_add_head(t_alst *self, void *data);
+t_alst_item		*alst_add_tail(t_alst *self, void *data);
+t_alst_item		*alst_add_after(t_alst *self, t_alst_item item, void *data);
+
+void			*alst_pop_head(t_alst *self);
 
 #endif

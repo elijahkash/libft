@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:32:14 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/22 21:52:12 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/27 15:41:33 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ t_alst_item		*alst_add_head(t_alst *self, void *data)
 		self->tail = item_place;
 	self->list[item_place].next = self->head;
 	self->head = item_place;
+	return (self->list + item_place);
 }
 
 t_alst_item		*alst_add_tail(t_alst *self, void *data)
@@ -102,10 +103,37 @@ t_alst_item		*alst_add_tail(t_alst *self, void *data)
 	self->list[item_place].self = item_place;
 	self->list[item_place].next = ALST_SPEC_VALUE;
 	if (self->curlen++ == 0)
-	{
 		self->head = item_place;
-		self->tail = item_place;
-	}
 	else
 		self->list[self->tail].next = item_place;
+	self->tail = item_place;
+	return (self->list + item_place);
+}
+
+t_alst_item		*alst_add_after(t_alst *self, t_alst_item item, void *data)
+{
+	size_t	item_place;
+
+	if (self->curlen == 0)
+		return (alst_add_head(self, data));
+	item_place = alst_get_space(self);
+	ft_memmove(self->items + self->item_size * item_place, data,
+				self->item_size);
+	self->list[item_place].self = item_place;
+	self->list[item_place].next = item.next;
+	item.next = item_place;
+	self->curlen++;
+	return (self->list + item_place);
+}
+
+void			*alst_pop_head(t_alst *self)
+{
+	size_t	item_place;
+
+	if (self->curlen == 0)
+		return (NULL);
+	item_place = self->head;
+	self->head = self->list[self->head].next;
+	self->curlen--;
+	return (self->items + item_place * self->item_size);
 }
