@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:32:14 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/27 17:41:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/27 18:33:13 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,7 @@ void			*alst_pop_head(t_alst *self)
 		return (NULL);
 	item_place = self->head;
 	self->head = self->list[self->head].next;
-	self->curlen--;
+	self->free_space_mask[item_place / 64] |= (1llu << item_place % 64);
+	(self->curlen)--;
 	return (self->items + item_place * self->item_size);
 }
