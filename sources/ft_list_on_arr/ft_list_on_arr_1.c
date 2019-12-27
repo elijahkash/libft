@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:32:14 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/27 15:41:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/27 15:58:28 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ t_alst_item		*alst_add_tail(t_alst *self, void *data)
 	return (self->list + item_place);
 }
 
-t_alst_item		*alst_add_after(t_alst *self, t_alst_item item, void *data)
+t_alst_item		*alst_add_after(t_alst *self, t_alst_item *item, void *data)
 {
 	size_t	item_place;
 
@@ -120,8 +120,8 @@ t_alst_item		*alst_add_after(t_alst *self, t_alst_item item, void *data)
 	ft_memmove(self->items + self->item_size * item_place, data,
 				self->item_size);
 	self->list[item_place].self = item_place;
-	self->list[item_place].next = item.next;
-	item.next = item_place;
+	self->list[item_place].next = item->next;
+	item->next = item_place;
 	self->curlen++;
 	return (self->list + item_place);
 }
