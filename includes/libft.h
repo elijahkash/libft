@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/14 19:56:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/27 15:44:57 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include <ft_dyn_arr.h>
 # include <ft_vector.h>
 # include <ft_deq.h>
+# include <ft_list_on_arr.h>
 # include <ft_error.h>
 # include <ft_sort.h>
 # include <ft_printf.h>
