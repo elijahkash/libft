@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:32:14 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/27 18:33:13 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/27 18:38:03 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 #include <libft.h>
 
-void			alst_init(t_alst *self, size_t item_size, size_t init_len)
+void			alst_init(t_alst *restrict self, size_t item_size,
+												size_t init_len)
 {
 	size_t	free_mem_mask_size;
 
@@ -33,14 +34,14 @@ void			alst_init(t_alst *self, size_t item_size, size_t init_len)
 	ft_memset(self->free_space_mask, -1, free_mem_mask_size);
 }
 
-void			alst_del(t_alst *self)
+void			alst_del(t_alst *restrict self)
 {
 	if (self->mem)
 		ft_free(self->mem);
 	ft_bzero(self, sizeof(t_alst));
 }
 
-void			alst_extend(t_alst *self)
+void			alst_extend(t_alst *restrict self)
 {
 	void	*tmp;
 	size_t	old_size;
@@ -65,7 +66,7 @@ void			alst_extend(t_alst *self)
 	self->mem = tmp;
 }
 
-size_t			alst_get_space(t_alst *self)
+size_t			alst_get_space(t_alst *restrict self)
 {
 	size_t		res;
 	__uint64_t	tmp;
@@ -81,7 +82,7 @@ size_t			alst_get_space(t_alst *self)
 	return (res * 64 + tmp);
 }
 
-t_alst_item		*alst_add_head(t_alst *self, void *data)
+t_alst_item		*alst_add_head(t_alst *restrict self, void *restrict data)
 {
 	size_t	item_place;
 
@@ -96,7 +97,7 @@ t_alst_item		*alst_add_head(t_alst *self, void *data)
 	return (self->list + item_place);
 }
 
-t_alst_item		*alst_add_tail(t_alst *self, void *data)
+t_alst_item		*alst_add_tail(t_alst *restrict self, void *restrict data)
 {
 	size_t	item_place;
 
@@ -113,7 +114,8 @@ t_alst_item		*alst_add_tail(t_alst *self, void *data)
 	return (self->list + item_place);
 }
 
-t_alst_item		*alst_add_after(t_alst *self, size_t item, void *data)
+t_alst_item		*alst_add_after(t_alst *restrict self, size_t item,
+								void *restrict data)
 {
 	size_t			item_place;
 	t_alst_item		*tmp;
@@ -131,7 +133,7 @@ t_alst_item		*alst_add_after(t_alst *self, size_t item, void *data)
 	return (self->list + item_place);
 }
 
-void			*alst_pop_head(t_alst *self)
+void			*alst_pop_head(t_alst *restrict self)
 {
 	size_t	item_place;
 
