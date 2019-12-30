@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 13:16:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:33:03 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/30 19:28:33 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,6 @@
 
 #include <ft_libc.h>
 #include <ft_bit_macro.h>
-
-static int						check_base(char *base)
-{
-	int i;
-	int j;
-	int len;
-
-	len = ft_strlen(base);
-	if (len < 2)
-		return (0);
-	i = -1;
-	while (++i < len)
-	{
-		if (base[i] == '-' || base[i] == '+')
-			return (0);
-		j = i;
-		while (++j < len)
-			if (base[i] == base[j])
-				return (0);
-	}
-	return (1);
-}
 
 static long long int			get_bit_counter_in_base(
 								long long int nbr, int base)
@@ -102,6 +80,21 @@ void							ft_getunbr_base(unsigned long long int nbr,
 		*output++ = base[nbr / bit_counter_in_base];
 		nbr %= bit_counter_in_base;
 		bit_counter_in_base /= base_len;
+	}
+	*output = '\0';
+}
+
+void							ft_getunbr_goodbase(unsigned long long int nbr,
+								char *base, __uint32_t baselen, char *output)
+{
+	unsigned long long int	bit_counter_in_base;
+
+	bit_counter_in_base = get_ubit_counter_in_base(nbr, baselen);
+	while (bit_counter_in_base)
+	{
+		*output++ = base[nbr / bit_counter_in_base];
+		nbr %= bit_counter_in_base;
+		bit_counter_in_base /= baselen;
 	}
 	*output = '\0';
 }

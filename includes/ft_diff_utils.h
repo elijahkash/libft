@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 19:04:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:55:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2019/12/30 19:28:13 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,12 @@ void			ft_del_arr(void ***arr, size_t item_size);
 int				ft_pow(int n, int pow);
 void			ft_strset(char *str, char c, int len);
 const char		*ft_skip_digits(const char *str);
+int				check_base(char *base);
 void			ft_getsnbr_base(long long int nbr, char *base, char *output);
-void			ft_getunbr_base(unsigned long long int nbr,
-								char *base, char *output);
+void			ft_getunbr_base(unsigned long long int nbr, char *base,
+									char *output);
+void			ft_getunbr_goodbase(unsigned long long int nbr, char *base,
+									__uint32_t baselen, char *output);
 
 void			ft_swap(void *p1, void *p2, size_t size);
 
