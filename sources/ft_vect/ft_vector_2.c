@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:37 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/02 15:31:21 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/09 18:34:43 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 #include <libft.h>
 
-inline void		*vect(t_vect *restrict arr, size_t i)
+inline void		*vect(t_vect *restrict self, size_t i)
 {
-	return ((arr->mem) + i * arr->item_size);
+	return ((self->mem) + i * self->item_size);
 }
 
-inline size_t	vect_i(t_vect *restrict arr, void *item)
+inline size_t	vect_i(t_vect *restrict self, void *item)
 {
-	return ((item - arr->mem) / arr->item_size);
+	return ((item - self->mem) / self->item_size);
 }
 
-inline void		*vect_top(t_vect *restrict arr)
+inline void		*vect_top(t_vect *restrict self)
 {
-	return ((arr->mem) + (arr->curlen - 1) * arr->item_size);
+	return ((self->mem) + (self->curlen - 1) * self->item_size);
 }
 
-void			*vect_(t_vect *restrict arr, long long int i)
+void			*vect_(t_vect *restrict self, long long int i)
 {
-	return ((i >= 0) ? vect(arr, arr->curlen - 1 - i) :
-						vect(arr, (i * -1) - 1));
+	return ((i >= 0) ? vect(self, self->curlen - 1 - i) :
+						vect(self, (i * -1) - 1));
 }
 
-inline void		*vect_eq(t_vect *restrict arr, size_t i, void *data)
+inline void		*vect_eq(t_vect *restrict self, size_t i, void *data)
 {
-	return (ft_memcpy(vect(arr, i), data, arr->item_size));
+	return (ft_memcpy(vect(self, i), data, self->item_size));
 }

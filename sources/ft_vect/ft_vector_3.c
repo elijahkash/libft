@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 20:48:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/10 12:24:08 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/09 18:35:17 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,35 @@
 
 #include <libft.h>
 
-inline void		*vect_add(t_vect *restrict arr, void *data)
+inline void		*vect_add(t_vect *restrict self, void *data)
 {
-	if (UNLIKELY(arr->curlen == arr->max_len))
-		vect_extend(arr, 1);
-	return (ft_memcpy(vect(arr, (arr->curlen)++), data, arr->item_size));
+	if (UNLIKELY(self->curlen == self->max_len))
+		vect_extend(self, 1);
+	return (ft_memcpy(vect(self, (self->curlen)++), data, self->item_size));
 }
 
-inline void		*vect_add_n(t_vect *restrict arr, void *data, size_t n)
+inline void		*vect_add_n(t_vect *restrict self, void *data, size_t n)
 {
-	if (UNLIKELY(arr->curlen + n >= arr->max_len))
-		vect_extend(arr, n);
-	ft_memcpy(vect(arr, arr->curlen), data, arr->item_size * n);
-	arr->curlen += n;
-	return (vect_top(arr));
+	if (UNLIKELY(self->curlen + n >= self->max_len))
+		vect_extend(self, n);
+	ft_memcpy(vect(self, self->curlen), data, self->item_size * n);
+	self->curlen += n;
+	return (vect_top(self));
 }
 
-void			*vect_add_i(t_vect *restrict arr, void *data, size_t i)
+void			*vect_add_i(t_vect *restrict self, void *data, size_t i)
 {
 	register void *restrict	tmp;
 
-	if (UNLIKELY(arr->curlen == arr->max_len))
-		vect_extend(arr, 1);
-	tmp = vect(arr, i);
-	ft_memmove(tmp + arr->item_size, tmp,
-				((arr->curlen)++ - i) * arr->item_size);
-	return (ft_memcpy(tmp, data, arr->item_size));
+	if (UNLIKELY(self->curlen == self->max_len))
+		vect_extend(self, 1);
+	tmp = vect(self, i);
+	ft_memmove(tmp + self->item_size, tmp,
+				((self->curlen)++ - i) * self->item_size);
+	return (ft_memcpy(tmp, data, self->item_size));
 }
 
-inline void		*vect_add_mem(t_vect *restrict arr, void *data, size_t len)
+inline void		*vect_add_mem(t_vect *restrict self, void *data, size_t len)
 {
-	return (vect_add(arr, ft_p(ft_memcpy(ft_malloc(len), data, len))));
+	return (vect_add(self, ft_p(ft_memcpy(ft_malloc(len), data, len))));
 }
