@@ -14,7 +14,6 @@ cmake_minimum_required(VERSION 3.15.3)
 
 project(libft)
 
-set(CMAKE_C_COMPILER /usr/bin/gcc)
 set(BUILD_FLAGS "-O3 -Wall -Wextra -Werror")
 set(DEBUG_FLAGS "-g3 -Wall -Wextra")
 set(DST_NAME ft)
