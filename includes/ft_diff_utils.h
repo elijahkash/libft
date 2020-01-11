@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 19:04:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/30 19:28:13 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/11 14:04:44 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FT_DIFF_UTILS_H
 
 # include <string.h>
+
+void			*ft_memrev(void *mem, size_t size);
 
 void			ft_print_memory(const void *addr, size_t size);
 
