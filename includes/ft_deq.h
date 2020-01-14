@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 15:08:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/14 18:47:51 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/14 19:30:37 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,29 +25,29 @@ typedef struct	s_deq
 	size_t			back;
 }				t_deq;
 
-void			deq_init(t_deq *restrict deq, size_t item_size,
+void			deq_init(t_deq *restrict self, size_t item_size,
 												size_t init_len);
-void			deq_del(t_deq *restrict deq);
-void			deq_align_front(t_deq *restrict deq);
-void			deq_extend(t_deq *restrict deq, size_t n);
-void			deq_shrink(t_deq *restrict deq, size_t reserve);
+void			deq_del(t_deq *restrict self);
+void			deq_align_front(t_deq *restrict self);
+void			deq_extend(t_deq *restrict self, size_t n);
+void			deq_shrink(t_deq *restrict self, size_t reserve);
 
-void			*deq(t_deq *restrict deq, size_t i);
-void			*deq_front(t_deq *restrict deq);
-void			*deq_back(t_deq *restrict deq);
-void			*deq_(t_deq *restrict deq, long long int i);
-void			*deq_eq(t_deq *restrict deque, size_t i, void *data);
+void			*deq(t_deq *restrict self, size_t i);
+void			*deq_front(t_deq *restrict self);
+void			*deq_back(t_deq *restrict self);
+void			*deq_(t_deq *restrict self, long long int i);
+void			*deq_eq(t_deq *restrict self, size_t i, void *data);
 
-void			*deq_push_front(t_deq *restrict deque, void *data);
-void			*deq_push_back(t_deq *restrict deque, void *data);
+void			*deq_push_front(t_deq *restrict self, void *data);
+void			*deq_push_back(t_deq *restrict self, void *data);
 
-void			*deq_pop_front(t_deq *restrict deque);
-void			*deq_pop_back(t_deq *restrict deque);
+void			*deq_pop_front(t_deq *restrict self);
+void			*deq_pop_back(t_deq *restrict self);
 
-void			deq_rotate(t_deq *restrict deque);
-void			deq_rev_rotate(t_deq *restrict deque);
+void			deq_rotate(t_deq *restrict self);
+void			deq_rev_rotate(t_deq *restrict self);
 
-void			*deq_find_front(t_deq *restrict deque, void *data,
+void			*deq_find_front(t_deq *restrict self, void *data,
 								int (*cmp)(const void *, const void *));
 
 /*

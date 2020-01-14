@@ -62,6 +62,7 @@
 		"ft_deq.h": "c",
 		"algorithm": "c",
 		"ft_vector.h": "c",
-		"prf_handle_spec.h": "c"
+		"prf_handle_spec.h": "c",
+		"ft_fast_input_gnl.h": "c"
 	}
 }

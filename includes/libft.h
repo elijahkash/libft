@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/27 15:44:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/14 19:37:34 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 # include <ft_libft_mod.h>
 # include <ft_libc.h>
 # include <ft_memory_manager.h>
-# include <ft_dyn_arr.h>
 # include <ft_vector.h>
 # include <ft_deq.h>
 # include <ft_list_on_arr.h>
@@ -42,5 +41,12 @@
 # include <ft_get_next_line.h>
 # include <ft_fast_input_gnl.h>
 # include <ft_diff_utils.h>
+
+/*
+** Outdated functionality!
+** Present for backward compatibility only!
+** USE 't_vector' instead!
+*/
+# include <ft_dyn_arr.h>
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 19:59:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 16:08:56 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/14 19:33:29 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,44 +14,44 @@
 
 #include <libft.h>
 
-inline void		*deq_push_front(t_deq *restrict deque, void *data)
+inline void		*deq_push_front(t_deq *restrict self, void *data)
 {
-	if (UNLIKELY(deque->curlen == deque->max_len))
-		deq_extend(deque, 1);
-	if (UNLIKELY(((deque->front) -= (deque->curlen)++ ? 1 : 0) == __SIZE_MAX__))
-		deque->front = deque->max_len - 1;
-	return (ft_memcpy(deque->mem + deque->front * deque->item_size,
-					data, deque->item_size));
+	if (UNLIKELY(self->curlen == self->max_len))
+		deq_extend(self, 1);
+	if (UNLIKELY(((self->front) -= (self->curlen)++ ? 1 : 0) == __SIZE_MAX__))
+		self->front = self->max_len - 1;
+	return (ft_memcpy(self->mem + self->front * self->item_size,
+					data, self->item_size));
 }
 
-inline void		*deq_push_back(t_deq *restrict deque, void *data)
+inline void		*deq_push_back(t_deq *restrict self, void *data)
 {
-	if (UNLIKELY(deque->curlen == deque->max_len))
-		deq_extend(deque, 1);
-	if (UNLIKELY(((deque->back) += (deque->curlen)++ ? 1 : 0) ==
-					deque->max_len))
-		deque->back = 0;
-	return (ft_memcpy(deque->mem + deque->back * deque->item_size,
-					data, deque->item_size));
+	if (UNLIKELY(self->curlen == self->max_len))
+		deq_extend(self, 1);
+	if (UNLIKELY(((self->back) += (self->curlen)++ ? 1 : 0) ==
+					self->max_len))
+		self->back = 0;
+	return (ft_memcpy(self->mem + self->back * self->item_size,
+					data, self->item_size));
 }
 
-inline void		*deq_pop_front(t_deq *restrict deque)
+inline void		*deq_pop_front(t_deq *restrict self)
 {
 	register void	*tmp;
 
-	tmp = deque->mem + deque->front * deque->item_size;
-	if (UNLIKELY(((deque->front) += --(deque->curlen) ? 1 : 0) ==
-					deque->max_len))
-		deque->front = 0;
+	tmp = self->mem + self->front * self->item_size;
+	if (UNLIKELY(((self->front) += --(self->curlen) ? 1 : 0) ==
+					self->max_len))
+		self->front = 0;
 	return (tmp);
 }
 
-inline void		*deq_pop_back(t_deq *restrict deque)
+inline void		*deq_pop_back(t_deq *restrict self)
 {
 	register void	*tmp;
 
-	tmp = deque->mem + deque->back * deque->item_size;
-	if (UNLIKELY(((deque->back) -= --(deque->curlen) ? 1 : 0) == __SIZE_MAX__))
-		deque->back = deque->max_len - 1;
+	tmp = self->mem + self->back * self->item_size;
+	if (UNLIKELY(((self->back) -= --(self->curlen) ? 1 : 0) == __SIZE_MAX__))
+		self->back = self->max_len - 1;
 	return (tmp);
 }

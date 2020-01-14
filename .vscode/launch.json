@@ -1,21 +1,21 @@
 {
-	// Используйте IntelliSense, чтобы узнать о возможных атрибутах.
-	// Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
-	// Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "clang build and debug active file",
+			"name": "(lldb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/test/test",
 			"args": [],
-			"stopAtEntry": true,
+			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
 			"externalConsole": false,
 			"MIMode": "lldb",
-			//"preLaunchTask": "clang build debug file"
+			"preLaunchTask": "build_debug"
 		}
 	]
 }

@@ -6,7 +6,7 @@
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/30 14:05:47 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/30 18:40:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/14 19:31:38 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 #include <libft.h>
 
-void			deq_init(t_deq *restrict deq, size_t item_size,
+void			deq_init(t_deq *restrict self, size_t item_size,
 												size_t init_len)
 {
-	if (!deq || !item_size || !init_len)
+	if (!self || !item_size || !init_len)
 		ft_error_free_exit(ERR_DARR_MSG, MEMERR_CODE);
-	deq->item_size = item_size;
-	deq->curlen = 0;
-	deq->max_len = init_len;
-	deq->front = 0;
-	deq->back = 0;
-	deq->mem = ft_malloc(init_len * item_size);
+	self->item_size = item_size;
+	self->curlen = 0;
+	self->max_len = init_len;
+	self->front = 0;
+	self->back = 0;
+	self->mem = ft_malloc(init_len * item_size);
 }
 
-void			deq_del(t_deq *restrict deq)
+void			deq_del(t_deq *restrict self)
 {
-	ft_free(deq->mem);
-	deq->mem = NULL;
-	deq->curlen = 0;
-	deq->item_size = 0;
-	deq->max_len = 0;
-	deq->front = 0;
-	deq->back = 0;
+	ft_free(self->mem);
+	self->mem = NULL;
+	self->curlen = 0;
+	self->item_size = 0;
+	self->max_len = 0;
+	self->front = 0;
+	self->back = 0;
 }
 
 void			deq_align_front(t_deq *restrict deq)
