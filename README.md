@@ -20,7 +20,7 @@ Here is a partial list:
 
 ## Contributors
 
-- I would like to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner)) by the `ft_printf` _project_, for develop `float/double/long doule` part! Thanks a lot!
+- I would like to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner)) by the `ft_printf` _project_, for develop `float/double/long double` part of printf! Thanks a lot!
 
 ## License
 See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
