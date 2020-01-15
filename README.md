@@ -63,7 +63,7 @@ and `add_dependencies(${YOUR_PROJECT} libft)` or `add_dependencies(${YOUR_PROJEC
 
 ## License
 - See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
-- Be welcome to use my code, `clone` it and `fork`!
+- Be welcome to use my code, `clone` and `fork` it!
 - If you find a bug, please, create new `issue` (or contact with me in any way you want) to report about it! I will be glad to fix it! If you find a mistake in my spelling (because I'm from Russia, and English is not my native language), please notify me too!
 - If you `clone/fork` this lib and realise some new feature, you can create `pull request`! I am definitely interested in this!
 - Also, I will be happy if you `follow` me, or `star` this project, ecpecially if you find it usefull, or use my code!
