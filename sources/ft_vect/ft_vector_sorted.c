@@ -1,46 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_5.c                                      :+:      :+:    :+:   */
+/*   ft_vector_sorted.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:20:39 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/09 18:35:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/15 14:55:53 by mtrisha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_vector.h>
 
 #include <libft.h>
-
-void			*vect_find_back(t_vect *restrict self, void *data,
-							int (*cmp)(const void *, const void *))
-{
-	register size_t i;
-
-	i = self->curlen;
-	while (i-- > 0)
-	{
-		if (UNLIKELY(!cmp(vect(self, i), &data)))
-			return (vect(self, i));
-	}
-	return (NULL);
-}
-
-void			*vect_find_front(t_vect *restrict self, void *data,
-							int (*cmp)(const void *, const void *))
-{
-	register size_t i;
-
-	i = __SIZE_MAX__;
-	while (++i < self->curlen)
-	{
-		if (UNLIKELY(!cmp(vect(self, i), &data)))
-			return (vect(self, i));
-	}
-	return (NULL);
-}
 
 inline void		vect_sort(t_vect *restrict self,
 							int (*cmp)(const void *, const void *),
