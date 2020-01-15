@@ -12,10 +12,10 @@ Here is a partial list:
 - output buffer (implemented for ft_printf() but as part of the libft)
 - print_memory (like `xdd` util in unix)
 - end other
-### More detailed description of my library posted on wiki (in work now)
+### More detailed description of my library [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
 
 
-Also, wona to say a few words of gratitude to my teammate @semrunner by the `ft_printf` _project_, for develop `float/double/long doule` part! Thanks a lot!
+Also, wona to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner/semrunner)) by the `ft_printf` _project_, for develop `float/double/long doule` part! Thanks a lot!
 
 
 ### How to use:
