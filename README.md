@@ -18,6 +18,14 @@ Here is a partial list:
 
 #### 1. Compile
 
+#### 2. Debug
+
+#### 3. Quick opportunity test
+
+#### 4. If you use Visual Studio code
+
+#### 5. Cmake
+
 ## Contributors
 
 - I would like to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner)) by the `ft_printf` _project_, for develop `float/double/long double` part of printf! Thanks a lot!
