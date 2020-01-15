@@ -11,8 +11,12 @@
 # **************************************************************************** #
 
 .DS_Store
-*.dSYM
+.vscode/settings.json
+
+/tmp
 /test/test
 *.a
-/tmp
-.vscode/settings.json
+
+# This is for valgrind
+*.dSYM
+*.out.*
