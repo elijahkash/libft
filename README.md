@@ -14,6 +14,18 @@ Here is a partial list:
 - and other
 ### More detailed description of my library [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
 
+## NORMINETTE
+
+If you are part of the **_42_** society, you now all about the *_norminette_* (and you may skip this part).
+Otherwise, you may discover some strange (or even ugly) `code` and /file_structure in this project.
+This is becouse all project in **_42_** must be written in [accordance with the NORM](/docs/norme.en.pdf).
+
+Here are the points that most affect the code:
+- Each function must be maximum 25 lines.
+- You cannot have more than 5 function-definitions in a .c file.
+
+We have programm called `norminette`. It check every project. If it found an error, project considered as **FAIL**
+
 ## How to use:
 
 #### 1. Compile
