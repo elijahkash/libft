@@ -6,7 +6,7 @@
 #    By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/12 21:57:42 by mtrisha           #+#    #+#              #
-#    Updated: 2019/12/27 17:45:43 by mtrisha          ###   ########.fr        #
+#    Updated: 2020/01/15 11:15:28 by mtrisha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,12 +34,12 @@ $(CMAKEDIR)Makefile:
 	cd $(CMAKEDIR); cmake ../
 
 clean:
+	rm -r -f $(DEBUGLIB)
 	rm -r -f $(CMAKEDIR)
 	rm -r -f $(TEST)
 
 fclean: clean
 	rm -r -f $(LIB)
-	rm -r -f $(DEBUGLIB)
 
 re: fclean
 	$(MAKE)

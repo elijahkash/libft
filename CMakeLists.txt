@@ -31,8 +31,10 @@ MACRO(INCLUDE_DIRS return_list)
 	LIST(REMOVE_DUPLICATES dir_list)
 	SET(${return_list} ${dir_list})
 ENDMACRO()
+
 set(INC_DIRS ./)
 INCLUDE_DIRS(INC_DIRS)
+
 FILE(GLOB_RECURSE LIBFT_SOURCES ${SRC_DIR}*.c)
 
 
