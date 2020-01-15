@@ -15,7 +15,7 @@ Here is a partial list:
 ### More detailed description of my library [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
 
 
-Also, wona to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner/semrunner)) by the `ft_printf` _project_, for develop `float/double/long doule` part! Thanks a lot!
+Also, wona to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner)) by the `ft_printf` _project_, for develop `float/double/long doule` part! Thanks a lot!
 
 
 ### How to use:
