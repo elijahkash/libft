@@ -13,7 +13,16 @@ Here is a partial list:
 - print_memory (like `xdd` util in unix)
 - qsort
 - and other
-### More detailed description of my library [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
+### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
+
+## Foreword
+
+- Be welcome to use my lib, `clone` and `fork` it!
+- If you find a bug, please, create new `issue` (or contact with me in any way you want) to report about it! I will be glad to fix it! If you find a mistake in my spelling (because I'm from Russia, and English is not my native language), please notify me too!
+- If you `clone/fork` this lib and realise some new feature, you can create `pull request`! I am definitely interested in this!
+- Also, I will be happy if you `follow` me, or `star` this project, ecpecially if you find it usefull, or use my code!
+- For all questions be welcome to contact me in any way you want 👋
+> Here is my  mail: _elijahkash.code@gmail.com_
 
 ## How to use:
 
@@ -91,9 +100,3 @@ We have programm called `norminette`. It check every project. If it found an err
 
 ## License
 - See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
-- Be welcome to use my code, `clone` and `fork` it!
-- If you find a bug, please, create new `issue` (or contact with me in any way you want) to report about it! I will be glad to fix it! If you find a mistake in my spelling (because I'm from Russia, and English is not my native language), please notify me too!
-- If you `clone/fork` this lib and realise some new feature, you can create `pull request`! I am definitely interested in this!
-- Also, I will be happy if you `follow` me, or `star` this project, ecpecially if you find it usefull, or use my code!
-- For all questions be welcome to contact me in any way you want 👋
-> Here is my  mail: _elijahkash.code@gmail.com_
