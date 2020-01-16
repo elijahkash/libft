@@ -28,6 +28,12 @@ Here is a partial list:
 
 #### 2. Include
 
+To use `libft` in you project:
+- just `#include <libft.h>`
+- compile `-c` you files with `-I /libft/includes` 
+- compile `libft`
+- link you binary with `-L /libft -lft`
+
 #### 3. Debug
 
 If you run `make` or` make libft`, the compiler will compile the library with the `-O3 -Wall -Wextra -Werror` flags for better code performance and strict error checking!
