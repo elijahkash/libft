@@ -11,6 +11,7 @@ Here is a partial list:
 - ft_printf() (my own printf() from stdio.h)
 - output buffer (implemented for ft_printf() but as part of the libft)
 - print_memory (like `xdd` util in unix)
+- qsort
 - and other
 ### More detailed description of my library [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
 
