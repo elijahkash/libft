@@ -39,7 +39,7 @@ Here is a partial list:
 #### 2. Include
 
 To use `libft` in you project:
-- just `#include <libft.h>`
+- just `#include <`[libft.h](/includes/libft.h)`>`
 - compile `-c` you files with `-I /libft/includes` 
 - compile `libft`
 - link you binary with `-L /libft -lft`
@@ -55,20 +55,20 @@ In that case
 
 #### 4. Quick opportunity test
 
-If you want to quick execute some code, to test something (does not matter what exactly), write it in `/test/test.c` than
+If you want to quick execute some code, to test something (does not matter what exactly), write it in [/test/test.c](/test/test.c) than
 - run `make test`
 
 `/test/test` binary file will be created! Also, it use `libftdebug.a` (and build it, if necessary) and use `-g3` flag, so you can use debugger to debug you code!
 
 #### 5. If you use Visual Studio code ...
 
-... then you can find something useful in `.vscode`
+... then you can find something useful in [.vscode](/.vscode)
 - press `CMD + SHIFT + B` to build `libft.a` (default keys is VSC) - same to run `make`
 - press `F5` to build `libftdebug.a`, `/test/test`, and start debug session of `/test/test` binary  
 
 #### 6. Cmake
 
-In fact, I use `Cmake`, to compile this lib. You may find `CMakeLists.txt` with it config.
+In fact, I use `Cmake`, to compile this lib. You may find [CMakeLists.txt](CMakeLists.txt) with it config.
 
 If you use my project, as `submodule` for you project, and use `Cmake` too, you can `add_subdirectory(${LIBFT_DIR})`
 and `add_dependencies(${YOUR_PROJECT} libft)` or `add_dependencies(${YOUR_PROJECT_DEBUG} libftdebug)` to easy configure dependencies!
@@ -96,7 +96,8 @@ We have programm called `norminette`. It check every project. If it found an err
 
 ## Contributors
 
-- I would like to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner)) by the `ft_printf` _project_, for develop `float/double/long double` part of printf! Thanks a lot!
+- I would like to say a few words of gratitude to my teammate @odrinkwa ([@semrunner](https://github.com/SemRunner)) by the `ft_printf` _project_, for develop [`float/double/long double`](/sources/printf_src/bn_for_double) part of printf! Thanks a lot!
 
 ## License
 - See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
+- All rights to files in [/docs](/docs) belong to [ECOLE 42](https://www.42.fr/)
