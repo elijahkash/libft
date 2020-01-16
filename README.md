@@ -96,4 +96,4 @@ We have programm called `norminette`. It check every project. If it found an err
 - If you `clone/fork` this lib and realise some new feature, you can create `pull request`! I am definitely interested in this!
 - Also, I will be happy if you `follow` me, or `star` this project, ecpecially if you find it usefull, or use my code!
 - For all questions be welcome to contact me in any way you want 👋
-> Here is my  mail: `elijahkash.code@gmail.com`
+> Here is my  mail: _elijahkash.code@gmail.com_
