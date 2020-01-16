@@ -76,7 +76,7 @@ You can use [THIS TEMPLATE](https://github.com/elijahkash/libft_based_template)
 
 ## NORMINETTE
 
-If you are part of the **_42_** society, you now all about the *_norminette_* (and you may skip this part).
+If you are part of the **_42_** society, you now all about the *_norminette_* and you may skip this part.
 Otherwise, you may discover some strange `code` and /file_structure in this project.
 This is becouse all project in **_42_** must be written in [accordance with the NORM](/docs/norme.en.pdf).
 
