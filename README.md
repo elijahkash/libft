@@ -81,7 +81,7 @@ Want to start new project and use my `libft`?
 
 You can use [THIS TEMPLATE](https://github.com/elijahkash/libft_based_template)
 
-> If you don't know nothing, about template repositories, [read man](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)!
+> If you don't know nothing about template repositories, [read man](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)!
 
 ## NORMINETTE
 
