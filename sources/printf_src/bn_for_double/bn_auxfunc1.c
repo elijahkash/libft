@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_auxfunc1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 15:00:02 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/26 20:42:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:48 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_handle_stars.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 23:11:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:30 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:01 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

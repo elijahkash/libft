@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector_pop.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/15 14:56:00 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:30 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

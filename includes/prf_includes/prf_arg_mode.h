@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_arg_mode.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 20:10:43 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/13 13:06:57 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:28 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

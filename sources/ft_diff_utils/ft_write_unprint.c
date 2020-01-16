@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_write_unprint.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 14:36:33 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:37:06 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:56:31 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

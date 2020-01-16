@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 20:36:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:19:50 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:56:22 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

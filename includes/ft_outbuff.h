@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_outbuff.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/12 14:33:20 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:24 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

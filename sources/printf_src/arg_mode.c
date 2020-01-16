@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   arg_mode.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 20:08:47 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:41:02 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:01 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

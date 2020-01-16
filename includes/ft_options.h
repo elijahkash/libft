@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_options.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 13:58:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:54:44 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:26 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

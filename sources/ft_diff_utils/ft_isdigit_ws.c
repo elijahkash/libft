@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit_ws.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 14:36:24 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:37:29 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:59 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

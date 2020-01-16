@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_get_item_by_size.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 13:50:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:14 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:17 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

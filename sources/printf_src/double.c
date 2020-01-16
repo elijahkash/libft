@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   double.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:55:24 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/26 20:44:10 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:03 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

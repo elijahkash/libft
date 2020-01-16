@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_opsub.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 17:45:08 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/26 20:43:22 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:45 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

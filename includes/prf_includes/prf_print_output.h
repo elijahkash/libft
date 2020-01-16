@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_print_output.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:05:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:33 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:00 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   spectostr_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 17:54:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:45:40 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:58 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

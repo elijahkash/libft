@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   change_outstr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:08:25 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:42:58 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:02 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

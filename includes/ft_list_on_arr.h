@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_on_arr.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:31:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/30 16:05:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:30 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

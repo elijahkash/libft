@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_zerostr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 20:27:53 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:08:45 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:56:31 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fast_input_gnl.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/11 18:51:11 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/11 21:29:39 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:16 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_libft_mod.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 15:03:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 18:47:52 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:32 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

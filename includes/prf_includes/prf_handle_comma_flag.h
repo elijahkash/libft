@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_handle_comma_flag.h                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 12:18:39 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:23 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:15 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 14:05:20 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/11 14:08:30 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:56:03 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

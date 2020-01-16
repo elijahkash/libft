@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_extend_dollar.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 21:02:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:08 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:19 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

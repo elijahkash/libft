@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memory_manager.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/29 15:57:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:28 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

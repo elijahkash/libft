@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_dyn_arr.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 14:07:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/14 20:05:25 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:45 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

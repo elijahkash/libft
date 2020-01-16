@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/30 19:23:57 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/30 19:24:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:52 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_diff_utils.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 19:04:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/11 14:04:44 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:46 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

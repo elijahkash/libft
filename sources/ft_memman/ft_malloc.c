@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 16:30:21 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 17:25:41 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:20 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

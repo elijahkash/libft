@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_stars.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 23:13:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:45:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:08 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

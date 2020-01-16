@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bn_outp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 19:31:16 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/26 20:43:47 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:44 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

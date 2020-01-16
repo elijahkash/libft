@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_printf_spec.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:37 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:58 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

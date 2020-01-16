@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dbl_input.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:54:48 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/26 20:41:31 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:03 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

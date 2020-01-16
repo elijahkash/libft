@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_remalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 17:43:04 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 17:03:20 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:22 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

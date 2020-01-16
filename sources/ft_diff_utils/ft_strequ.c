@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 21:00:28 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:26:52 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:56:22 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

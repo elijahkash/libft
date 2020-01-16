@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vector_sorted.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 19:20:39 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/15 14:55:53 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:57:30 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

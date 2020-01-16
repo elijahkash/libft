@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bit_macro.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 15:12:36 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/12/01 21:07:38 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:48 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:11:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 19:32:59 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:54:44 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

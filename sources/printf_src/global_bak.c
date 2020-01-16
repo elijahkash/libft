@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   global_bak.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:27:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:44:35 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:06 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

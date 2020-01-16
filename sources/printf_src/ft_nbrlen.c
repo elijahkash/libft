@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 17:51:00 by odrinkwa          #+#    #+#             */
-/*   Updated: 2019/11/26 20:44:42 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:05 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prf_global_bak.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:24:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:40:19 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:55:16 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

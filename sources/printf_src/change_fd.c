@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   change_fd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtrisha <mtrisha@student.21-school.ru>     +#+  +:+       +#+        */
+/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 19:43:08 by mtrisha           #+#    #+#             */
-/*   Updated: 2019/11/26 20:43:01 by mtrisha          ###   ########.fr       */
+/*   Updated: 2020/01/16 13:58:01 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
