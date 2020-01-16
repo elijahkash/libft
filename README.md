@@ -14,18 +14,6 @@ Here is a partial list:
 - and other
 ### More detailed description of my library [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
 
-## NORMINETTE
-
-If you are part of the **_42_** society, you now all about the *_norminette_* (and you may skip this part).
-Otherwise, you may discover some strange (or even ugly) `code` and /file_structure in this project.
-This is becouse all project in **_42_** must be written in [accordance with the NORM](/docs/norme.en.pdf).
-
-Here are the points that most affect the code:
-- Each function must be maximum 25 lines.
-- You cannot have more than 5 function-definitions in a .c file.
-
-We have programm called `norminette`. It check every project. If it found an error, project considered as **FAIL**
-
 ## How to use:
 
 #### 1. Compile
@@ -38,7 +26,9 @@ We have programm called `norminette`. It check every project. If it found an err
 
 > _There is no real need to do this! If you change a file and run `make`, the project will recompile this file, as well as all files that depend on this file and relink the lib!_
 
-#### 2. Debug
+#### 2. Include
+
+#### 3. Debug
 
 If you run `make` or` make libft`, the compiler will compile the library with the `-O3 -Wall -Wextra -Werror` flags for better code performance and strict error checking!
 But if you want to debug some code, you probably want to ignore warnings and be able to use a debugger (lldb, gdb, etc.).
@@ -47,20 +37,20 @@ In that case
 
 `libftdebug.a` will be created, and compiler flags now will be `-g3 -Wall -Wextra`.
 
-#### 3. Quick opportunity test
+#### 4. Quick opportunity test
 
 If you want to quick execute some code, to test something (does not matter what exactly), write it in `/test/test.c` than
 - run `make test`
 
 `/test/test` binary file will be created! Also, it use `libftdebug.a` (and build it, if necessary) and use `-g3` flag, so you can use debugger to debug you code!
 
-#### 4. If you use Visual Studio code ...
+#### 5. If you use Visual Studio code ...
 
 ... then you can find something useful in `.vscode`
 - press `CMD + SHIFT + B` to build `libft.a` (default keys is VSC) - same to run `make`
 - press `F5` to build `libftdebug.a`, `/test/test`, and start debug session of `/test/test` binary  
 
-#### 5. Cmake
+#### 6. Cmake
 
 In fact, I use `Cmake`, to compile this lib. You may find `CMakeLists.txt` with it config.
 
@@ -68,6 +58,17 @@ If you use my project, as `submodule` for you project, and use `Cmake` too, you 
 and `add_dependencies(${YOUR_PROJECT} libft)` or `add_dependencies(${YOUR_PROJECT_DEBUG} libftdebug)` to easy configure dependencies!
 
 > _Of course, first time I don't use Cmake, because it's forbidden by subject! So if you just started in 42, watch out! Write you own Makefile!_
+
+## NORMINETTE
+
+If you are part of the **_42_** society, you now all about the *_norminette_* (and you may skip this part).
+Otherwise, you may discover some strange `code` and /file_structure in this project.
+This is becouse all project in **_42_** must be written in [accordance with the NORM](/docs/norme.en.pdf).
+
+Here are the point that most affect the code:
+- You cannot have more than 5 function-definitions in a `.c` file.
+
+We have programm called `norminette`. It check every project. If it found an error, project considered as **FAIL**
 
 ## Contributors
 
