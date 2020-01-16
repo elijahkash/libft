@@ -66,6 +66,14 @@ and `add_dependencies(${YOUR_PROJECT} libft)` or `add_dependencies(${YOUR_PROJEC
 
 > _Of course, first time I don't use Cmake, because it's forbidden by subject! So if you just started in 42, watch out! Write you own Makefile!_
 
+## Template
+
+Want to start new project and use my `libft`?
+
+You can use [THIS TEMPLATE](https://github.com/elijahkash/libft_based_template)
+
+> If you don't now nothing, about template repositories, [read man](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)!
+
 ## NORMINETTE
 
 If you are part of the **_42_** society, you now all about the *_norminette_* (and you may skip this part).
