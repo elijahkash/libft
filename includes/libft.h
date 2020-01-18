@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:54:07 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/18 16:39:48 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,21 @@
 
 # define TRUE (1)
 
-# define FD_STDERR 2
-# define FD_STDOUT 1
 # define FD_STDIN 0
+# define FD_STDOUT 1
+# define FD_STDERR 2
 
+/*
+** For usability
+*/
 # define PTR_SIZE __SIZEOF_POINTER__
+
+/*
+** https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html
+** used for micro-optimization
+*/
+# define LIKELY(x)   __builtin_expect(!!(x), 1)
+# define UNLIKELY(x) __builtin_expect(!!(x), 0)
 
 # include <ft_libft_mod.h>
 # include <ft_libc.h>

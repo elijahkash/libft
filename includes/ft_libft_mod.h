@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 15:03:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:54:32 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/18 16:37:39 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 # define FT_LIBFT_MOD_H
 
 # define USE_LIBC
+
 # define USE_MEM_MAN
 # define XMALLOC_MOD
 
-# define LIKELY(x)   __builtin_expect(!!(x), 1)
-# define UNLIKELY(x) __builtin_expect(!!(x), 0)
+# define HOLD_OVER_FORCE 0
+# define IMMIDIATLY_FORCE 1
+# define FORCE_BUFF_POLICY HOLD_OVER_FORCE
 
 #endif
