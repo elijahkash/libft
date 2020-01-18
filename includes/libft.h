@@ -6,14 +6,16 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/18 16:39:48 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/18 23:12:00 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define TRUE (1)
+# ifndef TRUE
+#  define TRUE (1)
+# endif
 
 # define FD_STDIN 0
 # define FD_STDOUT 1
