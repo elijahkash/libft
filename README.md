@@ -29,8 +29,8 @@ Here is a partial list:
 #### 1. Compile
 
 - run `make` or `make libft` to compile `libft.a`
-- run `make clean` to delete temp files after compile
-- run `make fclean` to delete all files afret copile
+- run `make clean` to delete tmp files after compile (only `libft.a` will be remain)
+- run `make fclean` to delete all files after compile
 - run `make cmake` if you change any filename.c/h to update the configuration of build (and include new file)
 - run `make re` to recompile all files
 
