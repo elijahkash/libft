@@ -6,18 +6,18 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:54 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/19 13:40:13 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:23:25 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_OUTBUFF_H
 # define FT_OUTBUFF_H
 
-# define PRF_BUFF_SIZE 8196
+# define FT_OUTBUFF_SIZE 8196
 
 typedef struct	s_outbuff
 {
-	char	buff[PRF_BUFF_SIZE];
+	char	buff[FT_OUTBUFF_SIZE];
 	int		curlen;
 	int		fd;
 }				t_outbuff;

@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 14:30:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/19 13:39:22 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:23:54 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int			ft_buff_add_to_outbuff(t_outbuff *restrict buff,
 	int			tmp;
 
 	ptr = str;
-	while (len + buff->curlen >= PRF_BUFF_SIZE)
+	while (len + buff->curlen >= FT_OUTBUFF_SIZE)
 	{
-		tmp = (PRF_BUFF_SIZE - buff->curlen);
+		tmp = (FT_OUTBUFF_SIZE - buff->curlen);
 		ft_memcpy(buff->buff + buff->curlen, ptr, tmp);
 		len -= tmp;
 		ptr += tmp;
-		buff->curlen = PRF_BUFF_SIZE;
+		buff->curlen = FT_OUTBUFF_SIZE;
 		ft_force_outbuff(buff);
 	}
 	ft_memcpy(buff->buff + buff->curlen, ptr, len);
