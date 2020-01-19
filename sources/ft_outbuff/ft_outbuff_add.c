@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/12 14:30:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/19 14:23:54 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 15:01:07 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <libft.h>
 
 int			ft_buff_add_to_outbuff(t_outbuff *restrict buff,
-										const char *str, int len)
+										const char *str, size_t len)
 {
 	const char	*ptr;
 	int			tmp;
@@ -35,7 +35,7 @@ int			ft_buff_add_to_outbuff(t_outbuff *restrict buff,
 	return (1);
 }
 
-int			ft_buf_add(int fd, const char *str, int len)
+int			ft_buf_add(int fd, const char *str, size_t len)
 {
 	t_outbuff	*buff;
 
