@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 11:43:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/19 13:39:21 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:25:49 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static inline int	ft_is_equalfd_in_toutbuf(void *restrict item1,
 	return ((((t_outbuff *)item1)->fd == *(int *)item2) ? 1 : 0);
 }
 
-t_outbuff		*ft_get_outbuff_item(int fd)
+t_outbuff			*ft_get_outbuff_item(int fd)
 {
 	t_list		*item;
 
@@ -39,7 +39,7 @@ t_outbuff		*ft_get_outbuff_item(int fd)
 	return (item->content);
 }
 
-void			ft_force_buff(void)
+void				ft_force_buff(void)
 {
 	t_list		*tmp;
 
@@ -52,7 +52,7 @@ void			ft_force_buff(void)
 	}
 }
 
-void		ft_force_outbuff(t_outbuff *restrict buff)
+void				ft_force_outbuff(t_outbuff *restrict buff)
 {
 	size_t		len;
 
@@ -67,7 +67,7 @@ void		ft_force_outbuff(t_outbuff *restrict buff)
 	buff->curlen = 0;
 }
 
-void		ft_force_buff_fd(int fd)
+void				ft_force_buff_fd(int fd)
 {
 	t_outbuff	*buff;
 

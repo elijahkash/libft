@@ -6,13 +6,13 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/19 14:13:25 by Kashnitskiy       #+#    #+#             */
-/*   Updated: 2020/01/19 14:14:50 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:25:54 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_out_fd.h>
 
-# include <libft.h>
+#include <libft.h>
 
 static int		g_outfd = FD_STDOUT;
 
