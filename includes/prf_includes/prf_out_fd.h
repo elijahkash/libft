@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_outbuff_dst.c                                   :+:      :+:    :+:   */
+/*   prf_out_fd.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 17:42:42 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/19 14:13:45 by Kashnitskiy      ###   ########.fr       */
+/*   Created: 2020/01/19 14:12:52 by Kashnitskiy       #+#    #+#             */
+/*   Updated: 2020/01/19 14:14:46 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#ifndef PRF_OUT_FD_H
+# define PRF_OUT_FD_H
 
-#include <libft.h>
+void			ft_set_g_outfd(int value);
+int				ft_get_g_outfd(void);
 
-static char		*g_outstr = NULL;
-
-inline void		ft_set_g_outstr(char *ptr)
-{
-	g_outstr = ptr;
-}
-
-inline char		*ft_get_g_outstr(void)
-{
-	return (g_outstr);
-}
+#endif

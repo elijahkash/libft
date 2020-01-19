@@ -6,12 +6,13 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/22 15:06:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:58:09 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:15:57 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_print_output.h>
 
+#include <prf_out_fd.h>
 #include <libft.h>
 
 void		prepare_spec(t_specifications_def *spec)

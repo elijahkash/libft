@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 16:50:58 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:58:18 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:15:23 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <libft.h>
 #include <prf_handle_spec.h>
 #include <prf_global_bak.h>
+#include <prf_out_fd.h>
 
 static int	is_valid_format(const char *format)
 {

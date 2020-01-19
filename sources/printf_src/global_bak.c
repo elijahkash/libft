@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 18:27:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:58:06 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:15:40 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <libft.h>
 #include <prf_arg_mode.h>
+#include <prf_out_fd.h>
 
 t_global_bak	global_init(void)
 {

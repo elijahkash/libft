@@ -6,12 +6,13 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/27 19:43:08 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:58:01 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 14:16:09 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <prf_spectostr_funcs.h>
 
+#include <prf_out_fd.h>
 #include <libft.h>
 
 char	*change_fd(t_specifications_def spec, va_list argptr)
