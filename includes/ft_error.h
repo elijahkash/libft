@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 13:11:34 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:54:44 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 16:37:07 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@
 # define ERR_MEMALLOC_MSG ERRTYPE_ERROR MSG_MEMALLOC ERRACT_ABORT
 # define ERR_MEMFREE_MSG ERRTYPE_WARNING MSG_MEMFREE
 # define ERR_DARR_MSG ERRTYPE_ERROR MSG_DARR ERRACT_ABORT
-
-# ifndef MEMERR_CODE
-#  define MEMERR_CODE 0
-# endif
 
 void	ft_error_exit(const char *msg, int exit_code);
 void	ft_error_free_exit(const char *msg, int exit_code);

@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:04:45 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:54:28 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/19 16:36:27 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 # define INIT_MM_SIZE 128
 # define MM_DIFF_FOR_TRIM 64
 # define MM_MAX_INCREMENT 1024
+
+# ifndef MEMERR_CODE
+#  define MEMERR_CODE 0
+# endif
 
 void	ft_memman_init(void);
 void	*ft_malloc(size_t size);
