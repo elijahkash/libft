@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:57:29 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/21 14:37:36 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ void			vect_init(t_vect *restrict self, size_t item_size,
 void			vect_del(t_vect *restrict self)
 {
 	ft_free(self->mem);
-	self->mem = NULL;
-	self->curlen = 0;
-	self->item_size = 0;
-	self->max_len = 0;
+	ft_bzero(self, sizeof(t_vect));
 }
 
 inline void		vect_extend(t_vect *restrict self, size_t n)
