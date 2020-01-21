@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 17:56:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:54:58 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/21 19:33:36 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@
 # define SIZE_H		8
 # define SIZE_UP_L	16
 
-# define READ_DATA	(NOT_DETERM + 1)
 # define NOT_DETERM (1 << (sizeof(int) * 8 - 1))
+# define READ_DATA	(NOT_DETERM + 1)
 
 # define DEC_BASE "0123456789"
 # define OCT_BASE "01234567"
