@@ -62,7 +62,6 @@ FILE(GLOB_RECURSE TEST_SOURCES ${TEST_DIR}*.c)
 add_executable(test EXCLUDE_FROM_ALL ${TEST_SOURCES})
 target_include_directories(test PUBLIC ${TEST_DIR})
 target_include_directories(test PUBLIC ${INC_DIRS})
-target_link_directories(test PUBLIC ${PROJECT_SOURCE_DIR})
 target_link_libraries(test ${PROJECT_SOURCE_DIR}/lib${DEBUG_NAME}.a)
 set_target_properties(test PROPERTIES
 		RUNTIME_OUTPUT_DIRECTORY ${TEST_DIR}
