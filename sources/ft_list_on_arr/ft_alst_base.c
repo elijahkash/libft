@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_on_arr_base.c                              :+:      :+:    :+:   */
+/*   ft_alst_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:32:14 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/22 15:58:23 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/22 18:23:53 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,4 @@ size_t			alst_get_space(t_alst *restrict self)
 	BSR_ASM(tmp);
 	self->free_space_mask[res] &= ~(1llu << tmp);
 	return (res * 64 + tmp);
-}
-
-inline void		*alst(t_alst *restrict self, size_t item)
-{
-	return (self->items + item * self->item_size);
 }

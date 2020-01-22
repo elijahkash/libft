@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:31:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/22 15:58:58 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/22 18:54:39 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,13 @@ void			alst_del(t_alst *self);
 void			alst_extend(t_alst *self);
 size_t			alst_get_space(t_alst *self);
 
+/*
+** ft_list_on_arr_access.c
+*/
+
 void			*alst(t_alst *self, size_t item);
+void			*alst_head(t_alst *self);
+void			*alst_tail(t_alst *self);
 
 /*
 ** ft_list_on_arr_addpop.c
@@ -58,5 +64,11 @@ t_alst_item		*alst_add_after(t_alst *self, size_t item, void *data);
 
 void			*alst_pop_head(t_alst *self);
 void			*alst_pop_after(t_alst *self, size_t item);
+
+/*
+** ft_list_on_arr_utils.c
+*/
+
+void			alst_map(t_alst *self, void (*func)(void *));
 
 #endif
