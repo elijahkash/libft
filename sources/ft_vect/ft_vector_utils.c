@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:55:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:57:31 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/22 18:53:56 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void			*vect_find_front(t_vect *restrict self, void *data,
 	return (NULL);
 }
 
-void			vect_map(t_vect *restrict self, void (*func)(const void *))
+void			vect_map(t_vect *restrict self, void (*func)(void *))
 {
 	size_t	i;
 	void	*ptr;
