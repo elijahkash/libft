@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/02 14:01:32 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/23 16:55:55 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/23 17:14:53 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,5 @@ t_options						ft_get_options(const char *line)
 
 inline int						ft_opt_test(t_options opt, const char c)
 {
-	return (opt & ft_get_opt_bit(c));
+	return ((opt & ft_get_opt_bit(c)) ? 1 : 0);
 }
