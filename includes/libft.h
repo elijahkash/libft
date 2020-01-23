@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/18 23:12:00 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/23 15:41:41 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,8 @@
 */
 # define PTR_SIZE __SIZEOF_POINTER__
 
-/*
-** https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html
-** used for micro-optimization
-*/
-# define LIKELY(x)   __builtin_expect(!!(x), 1)
-# define UNLIKELY(x) __builtin_expect(!!(x), 0)
-
 # include <ft_libft_mod.h>
+# include <ft_compiler.h>
 # include <ft_libc.h>
 # include <ft_memory_manager.h>
 # include <ft_vector.h>
@@ -57,7 +51,7 @@
 /*
 ** Outdated functionality!
 ** Present for backward compatibility only!
-** USE 't_vector' instead!
+** USE 'vector' instead!
 */
 # include <ft_dyn_arr.h>
 
