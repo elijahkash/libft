@@ -6,14 +6,13 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 13:16:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:55:56 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/23 19:16:51 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_diff_utils.h>
 
 #include <ft_libc.h>
-#include <ft_bit_macro.h>
 
 static long long int			get_bit_counter_in_base(
 								long long int nbr, int base)

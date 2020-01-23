@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/23 15:41:41 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/23 19:16:37 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@
 # include <ft_outbuff_dst.h>
 # include <ft_eval.h>
 # include <ft_cmp.h>
-# include <ft_bit_macro.h>
 # include <ft_tstr.h>
 # include <ft_list.h>
 # include <ft_options.h>
