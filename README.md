@@ -13,7 +13,9 @@ Here is a partial list:
 - print_memory (like `xdd` util in unix)
 - qsort
 - and other
-### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
+### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki)
+
+_*Also this library includes 3 projects of "School 42":*_ [libft](/docs/libft.en.pdf), [ft_get_next_line](/docs/get_next_line.en.pdf), [ft_printf](/docs/ft_printf.en.pdf)
 
 ## Foreword
 
