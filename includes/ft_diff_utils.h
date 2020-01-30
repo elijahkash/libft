@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 19:04:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/30 15:46:39 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/30 18:07:52 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void			ft_del_arr(void ***arr, size_t item_size);
 int				ft_pow(int n, int pow);
 void			ft_strset(char *str, char c, int len);
 const char		*ft_skip_digits(const char *str);
-const char		*ft_skip_ws(const char *str);
+char			*ft_skip_ws(const char *str);
 int				check_base(char *base);
 void			ft_getsnbr_base(long long int nbr, char *base, char *output);
 void			ft_getunbr_base(unsigned long long int nbr, char *base,
