@@ -13,7 +13,9 @@ Here is a partial list:
 - print_memory (like `xdd` util in unix)
 - qsort
 - and other
-### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki) (in work now)
+### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki)
+
+_*Also this library includes 3 projects of "School 42":*_ [libft](/docs/libft.en.pdf), [ft_get_next_line](/docs/get_next_line.en.pdf), [ft_printf](/docs/ft_printf.en.pdf)
 
 ## Foreword
 
@@ -39,14 +41,14 @@ Here is a partial list:
 #### 2. Include
 
 To use `libft` in you project:
-- just `#include <`[libft.h](/includes/libft.h)`>`
-- compile `-c` you files with `-I /libft/includes` 
+- just `#include <libft.h>`
+- compile you files with `-I /libft/includes` 
 - compile `libft`
 - link you binary with `-L /libft -lft`
 
 #### 3. Debug
 
-If you run `make` or` make libft`, the compiler will compile the library with the `-O3 -Wall -Wextra -Werror` flags for better code performance and strict error checking!
+If you run `make` or `make libft`, the compiler will compile the library with the `-O3 -Wall -Wextra -Werror` flags for better code performance and strict error checking!
 But if you want to debug some code, you probably want to ignore warnings and be able to use a debugger (lldb, gdb, etc.).
 In that case
 - run `make debug`

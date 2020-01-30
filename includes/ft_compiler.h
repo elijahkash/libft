@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_options.h                                       :+:      :+:    :+:   */
+/*   ft_compiler.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 13:58:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/23 16:54:41 by Kashnitskiy      ###   ########.fr       */
+/*   Created: 2020/01/23 15:41:11 by Kashnitskiy       #+#    #+#             */
+/*   Updated: 2020/01/23 15:41:44 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_OPTIONS_H
-# define FT_OPTIONS_H
+#ifndef FT_COMPILER_H
+# define FT_COMPILER_H
 
-typedef unsigned long long int	t_options;
-
-int								ft_is_option(const char *line);
-char							ft_check_opt(char *line, char *base);
-t_options						ft_get_opt_bit(const char c);
-t_options						ft_get_options(const char *line);
-int								ft_opt_test(t_options opt, const char c);
+/*
+** https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html
+** used for micro-optimization
+*/
+# define LIKELY(x)   __builtin_expect((x), 1)
+# define UNLIKELY(x) __builtin_expect((x), 0)
 
 #endif

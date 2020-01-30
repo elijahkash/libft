@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 19:04:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/30 15:43:25 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/30 15:46:39 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 
 # include <string.h>
 
-void			*ft_memrev(void *mem, size_t size);
+# define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 
 void			ft_print_memory(const void *addr, size_t size);
+
+void			ft_swap(void *p1, void *p2, size_t size);
+void			*ft_memrev(void *mem, size_t size);
 
 char			*ft_strdup(const char *s1);
 void			ft_sfree(void *data, size_t size);
@@ -63,8 +66,6 @@ void			ft_getunbr_base(unsigned long long int nbr, char *base,
 									char *output);
 void			ft_getunbr_goodbase(unsigned long long int nbr, char *base,
 									__uint32_t baselen, char *output);
-
-void			ft_swap(void *p1, void *p2, size_t size);
 
 int				ft_write_unprint(int fd, char *str, size_t len);
 int				ft_is_empty_str(char *str, size_t len);

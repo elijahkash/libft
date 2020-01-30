@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:31:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:54:30 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/01/23 15:45:16 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,29 @@ typedef struct	s_list_on_arr
 	size_t					max_size;
 }				t_alst;
 
-# define ALST_SPEC_VALUE	((size_t)(0 - 1))
+# define ALST_SPEC_VALUE	((size_t)(-1))
+
+/*
+** ft_list_on_arr_base.c
+*/
 
 void			alst_init(t_alst *self, size_t item_size,
 										size_t init_len);
 void			alst_del(t_alst *self);
 void			alst_extend(t_alst *self);
-
 size_t			alst_get_space(t_alst *self);
 
+/*
+** ft_list_on_arr_access.c
+*/
+
 void			*alst(t_alst *self, size_t item);
+void			*alst_head(t_alst *self);
+void			*alst_tail(t_alst *self);
+
+/*
+** ft_list_on_arr_addpop.c
+*/
 
 t_alst_item		*alst_add_head(t_alst *self, void *data);
 t_alst_item		*alst_add_tail(t_alst *self, void *data);
@@ -51,5 +64,11 @@ t_alst_item		*alst_add_after(t_alst *self, size_t item, void *data);
 
 void			*alst_pop_head(t_alst *self);
 void			*alst_pop_after(t_alst *self, size_t item);
+
+/*
+** ft_list_on_arr_utils.c
+*/
+
+void			alst_map(t_alst *self, void (*func)(void *));
 
 #endif

@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_options.h                                       :+:      :+:    :+:   */
+/*   ft_alst_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/02 13:58:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/23 16:54:41 by Kashnitskiy      ###   ########.fr       */
+/*   Created: 2020/01/22 18:25:14 by Kashnitskiy       #+#    #+#             */
+/*   Updated: 2020/01/22 18:54:44 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_OPTIONS_H
-# define FT_OPTIONS_H
+#include <ft_list_on_arr.h>
 
-typedef unsigned long long int	t_options;
+#include <libft.h>
 
-int								ft_is_option(const char *line);
-char							ft_check_opt(char *line, char *base);
-t_options						ft_get_opt_bit(const char c);
-t_options						ft_get_options(const char *line);
-int								ft_opt_test(t_options opt, const char c);
+void			alst_map(t_alst *restrict self, void (*func)(void *))
+{
+	size_t		cur;
+	t_alst_item	tmp;
 
-#endif
+	cur = self->head;
+	while (cur != ALST_SPEC_VALUE)
+	{
+		tmp = self->list[cur];
+		func(alst(self, tmp.self));
+		cur = tmp.next;
+	}
+}
