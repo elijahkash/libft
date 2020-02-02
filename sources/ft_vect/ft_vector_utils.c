@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 14:55:16 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/02/02 11:51:50 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/02/02 12:05:26 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void			vect_map(t_vect *restrict self, void (*func)(void *))
 }
 
 void			vect_map_param(t_vect *restrict self,
-								void (*func)(void *, void *), void *param)
+							void (*func)(void *, size_t, void *), void *param)
 {
 	size_t	i;
 	void	*ptr;
@@ -68,7 +68,7 @@ void			vect_map_param(t_vect *restrict self,
 	ptr = self->mem;
 	while (i < self->curlen)
 	{
-		func(ptr, param);
+		func(ptr, i, param);
 		i++;
 		ptr += self->item_size;
 	}

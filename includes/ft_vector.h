@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 12:10:56 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/02/02 11:51:11 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/02/02 12:05:08 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void			*vect_find_front(t_vect *restrict self, void *data,
 							int (*cmp)(const void *, const void *));
 void			vect_map(t_vect *restrict self, void (*func)(void *));
 void			vect_map_param(t_vect *restrict self,
-								void (*func)(void *, void *), void *param);
+							void (*func)(void *, size_t, void *), void *param);
 
 /*
 ** ft_vector_sorted.c
