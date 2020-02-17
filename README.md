@@ -15,7 +15,7 @@ Here is a partial list:
 - and other
 ### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki)
 
-_*Also this library includes 3 projects of "School 42":*_ [libft, ft_get_next_line, ft_printf](https://www.google.com/search?q=ecole+42+subjects&oq=ecole+42+subjects)
+_*Also this library includes 3 projects of "School 42":*_ [libft, ft_get_next_line, ft_printf](https://www.google.com/search?q=ecole+42+subjects&oq=ecole+42+subjects) (Sorry for Google, but by law, I can't upload tasks.)
 
 ## Foreword
 
