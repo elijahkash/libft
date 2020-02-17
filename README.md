@@ -15,7 +15,7 @@ Here is a partial list:
 - and other
 ### More detailed description [posted on wiki](https://github.com/elijahkash/libft/wiki)
 
-_*Also this library includes 3 projects of "School 42":*_ [libft](/docs/libft.en.pdf), [ft_get_next_line](/docs/get_next_line.en.pdf), [ft_printf](/docs/ft_printf.en.pdf)
+_*Also this library includes 3 projects of "School 42":*_ [libft, ft_get_next_line, ft_printf](https://www.google.com/search?q=ecole+42+subjects&oq=ecole+42+subjects)
 
 ## Foreword
 
@@ -89,7 +89,7 @@ You can use [THIS TEMPLATE](https://github.com/elijahkash/libft_based_template)
 
 If you are part of the **_42_** society, you now all about the *_norminette_* and you may skip this part.
 Otherwise, you may discover some strange `code` and /file_structure in this project.
-This is becouse all project in **_42_** must be written in [accordance with the NORM](/docs/norme.en.pdf).
+This is becouse all project in **_42_** must be written in [accordance with the NORM](https://www.google.com/search?q=ecole+42+norme.en.pdf&oq=ecole+42+norme.en.pdf).
 
 Here are the point that most affect the code:
 - You cannot have more than 5 function-definitions in a `.c` file.
@@ -102,4 +102,3 @@ We have programm called `norminette`. It check every project. If it found an err
 
 ## License
 - See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
-- All rights to files in [/docs](/docs) belong to [ECOLE 42](https://www.42.fr/)
