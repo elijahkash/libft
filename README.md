@@ -104,4 +104,4 @@ We have programm called `norminette`. It check every project. If it found an err
 - See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
 
 ## Support
-- Use 'Sponsor' button in github (or contact with me, if you don't have paypal account)
+- If you like my activity, you may say “thank you” to me and support me for any amount! Use 'Sponsor' button in github!
