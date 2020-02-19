@@ -102,3 +102,6 @@ We have programm called `norminette`. It check every project. If it found an err
 
 ## License
 - See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
+
+## Support
+- Use 'Sponsor' button in github (or contact with me, if you don't have paypal account)
