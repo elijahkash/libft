@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:43:48 by odrinkwa          #+#    #+#             */
-/*   Updated: 2020/01/16 13:57:46 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/01 14:05:57 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void			ft_strcatnbr_wzeros(char *output, long long nbr, int len)
 	tmp[0] = 0;
 	if (nbr < 0)
 		ft_strcat(output, "-");
-	ft_strcatnbr(tmp, ABS(nbr));
+	ft_strcatnbr(tmp, (nbr >= 0) ? nbr : nbr * -1);
 	while (len-- > (int)ft_strlen(tmp))
 		ft_strcat(output, "0");
 	ft_strcat(output, tmp);

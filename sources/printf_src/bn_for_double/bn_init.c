@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 18:44:53 by odrinkwa          #+#    #+#             */
-/*   Updated: 2020/01/16 13:57:46 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/01 14:06:51 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,19 +79,22 @@ void			ft_deepcopy_bignum(t_bignum *res, t_bignum bn)
 
 int				countmaxsize_bignum(int exp)
 {
-	if (ABS(exp) >= 0)
+	int tmp;
+
+	tmp = (exp >= 0) ? exp : exp * -1;
+	if (tmp >= 0)
 	{
-		if (ABS(exp) < 600)
+		if (tmp < 600)
 			return (200);
-		else if (ABS(exp) < 1200)
+		else if (tmp < 1200)
 			return (400);
-		else if (ABS(exp) < 2400)
+		else if (tmp < 2400)
 			return (800);
-		else if (ABS(exp) < 3600)
+		else if (tmp < 3600)
 			return (1200);
-		else if (ABS(exp) < 6000)
+		else if (tmp < 6000)
 			return (2000);
-		else if (ABS(exp) < 12000)
+		else if (tmp < 12000)
 			return (3800);
 	}
 	return (SIZE_BN);

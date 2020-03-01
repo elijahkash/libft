@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/25 13:16:44 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/23 19:16:51 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/01 14:05:07 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void							ft_getsnbr_base(long long int nbr,
 {
 	int				base_len;
 	long long int	bit_counter_in_base;
+	long long int	tmp;
 
 	if (!check_base(base))
 		return ;
@@ -57,8 +58,10 @@ void							ft_getsnbr_base(long long int nbr,
 	bit_counter_in_base = get_bit_counter_in_base(nbr, base_len);
 	while (bit_counter_in_base)
 	{
-		*output++ = base[ABS(nbr / bit_counter_in_base)];
-		nbr = ABS(nbr % bit_counter_in_base);
+		tmp = nbr / bit_counter_in_base;
+		*output++ = base[tmp >= 0 ? tmp : tmp * -1];
+		tmp = nbr % bit_counter_in_base;
+		nbr = tmp >= 0 ? tmp : tmp * -1;
 		bit_counter_in_base /= base_len;
 	}
 	*output = '\0';
