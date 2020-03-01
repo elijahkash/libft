@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/23 19:49:47 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/01 13:37:19 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define LIBFT_H
 
 # ifndef TRUE
-#  define TRUE (1)
+#  define TRUE 1
 # endif
 
 # ifndef FALSE
-#  define FALSE (0)
+#  define FALSE 0
 # endif
 
 # define FD_STDIN 0
