@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:31:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/03/01 13:39:30 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/01 14:09:39 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct	s_list_on_arr
 	size_t					max_size;
 }				t_alst;
 
-# define ALST_SPEC_VALUE	SIZE_MAX
+# define ALST_SPEC_VALUE	__SIZE_MAX__
 
 /*
 ** ft_list_on_arr_base.c
