@@ -10,10 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-cmake_minimum_required(VERSION 3.15.3)
+cmake_minimum_required(VERSION 3.13.4)
 
 project(libft)
 
+set(BUILD_FLAGS "-O3 -Wall -Wextra")
 set(BUILD_FLAGS "-O3 -Wall -Wextra -Werror")
 set(DEBUG_FLAGS "-g3 -Wall -Wextra")
 set(DST_NAME ft)
