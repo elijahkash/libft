@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 22:15:30 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/03/01 13:37:19 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/17 14:19:52 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@
 ** For usability
 */
 # define PTR_SIZE __SIZEOF_POINTER__
+
+# ifdef __linux__
+#  include <stdint.h>
+# endif
 
 # include <ft_libft_mod.h>
 # include <ft_compiler.h>

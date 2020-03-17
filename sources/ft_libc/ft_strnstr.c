@@ -6,13 +6,13 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 21:34:28 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:56:59 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/17 14:22:40 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_libc.h>
 
-#ifdef USE_LIBC
+#if defined USE_LIBC && ! defined __linux__
 
 inline char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

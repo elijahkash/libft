@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 19:04:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/30 18:07:52 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/17 14:20:06 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define FT_DIFF_UTILS_H
 
 # include <string.h>
+
+# ifdef __linux__
+#  include <stdint.h>
+# endif
 
 # define ABS(value) (((value) < 0) ? ((value) * (-1)) : (value))
 

@@ -6,13 +6,13 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 18:32:10 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:56:55 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/17 14:22:19 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ft_libc.h>
 
-#ifdef USE_LIBC
+#if defined USE_LIBC && ! defined __linux__
 
 inline size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

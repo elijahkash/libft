@@ -6,7 +6,7 @@
 /*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:31:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/03/01 14:09:39 by Kashnitskiy      ###   ########.fr       */
+/*   Updated: 2020/03/17 14:23:14 by Kashnitskiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define FT_LIST_ON_ARR_H
 
 # include <string.h>
+
+# ifdef __linux__
+#  include <stdint.h>
+# endif
 
 typedef struct	s_alst_item
 {

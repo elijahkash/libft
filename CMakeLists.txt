@@ -12,7 +12,9 @@
 
 cmake_minimum_required(VERSION 3.13.4)
 
-project(libft)
+set(CMAKE_C_COMPILER "/usr/bin/clang")
+
+project(libft C)
 
 set(BUILD_FLAGS "-O3 -Wall -Wextra")
 set(BUILD_FLAGS "-O3 -Wall -Wextra -Werror")
