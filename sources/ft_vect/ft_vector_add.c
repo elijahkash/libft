@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_vector.h>
+#include "ft_vector.h"
 
-#include <libft.h>
+#include "libft.h"
 
 inline void		*vect_add(t_vect *restrict self, void *data)
 {

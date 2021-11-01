@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
 void	ft_putendl(char const *s)
 {

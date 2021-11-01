@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_list_on_arr.h>
+#include "ft_list_on_arr.h"
 
-#include <libft.h>
+#include "libft.h"
 
 t_alst_item		*alst_add_head(t_alst *restrict self, void *restrict data)
 {

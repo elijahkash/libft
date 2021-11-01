@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

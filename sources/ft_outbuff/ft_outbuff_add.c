@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff.h>
+#include "ft_outbuff.h"
 
-#include <libft.h>
+#include "libft.h"
 
 int			ft_buff_add_to_outbuff(t_outbuff *restrict buff,
 										const char *str, size_t len)

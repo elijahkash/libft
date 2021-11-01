@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_cmp.h>
+#include "ft_cmp.h"
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 #include <string.h>
 
 inline int		ft_icmp(const void *p1, const void *p2)

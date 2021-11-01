@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 int		ft_is_empty_str(char *str, size_t len)
 {

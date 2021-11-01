@@ -13,13 +13,13 @@
 #ifndef FT_LIBFT_MOD_H
 # define FT_LIBFT_MOD_H
 
-# define USE_LIBC
+// # define USE_LIBC
 
-# define USE_MEM_MAN
+// # define USE_MEM_MAN
 # define XMALLOC_MOD
 
-# define HOLD_OVER_FORCE 0
-# define IMMIDIATLY_FORCE 1
-# define FORCE_BUFF_POLICY HOLD_OVER_FORCE
+// # define HOLD_OVER_FORCE 0
+// # define IMMIDIATLY_FORCE 1
+// # define FORCE_BUFF_POLICY HOLD_OVER_FORCE
 
 #endif

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_options.h>
+#include "ft_options.h"
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 int								ft_is_option(const char *line)
 {

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_memory_manager.h>
+#include "ft_memory_manager.h"
 
-#include <libft.h>
+#include "libft.h"
 
 void			this_is_for_norminette(void)
 {

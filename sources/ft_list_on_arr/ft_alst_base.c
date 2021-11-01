@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_list_on_arr.h>
+#include "ft_list_on_arr.h"
 
-#include <libft.h>
+#include "libft.h"
 
 void			alst_init(t_alst *restrict self, size_t item_size,
 												size_t init_len)

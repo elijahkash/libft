@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_fast_input_gnl.h>
+#include "ft_fast_input_gnl.h"
 
-#include <libft.h>
+#include "libft.h"
 
 #include <unistd.h>
 

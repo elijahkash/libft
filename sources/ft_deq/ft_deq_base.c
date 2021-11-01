@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_deq.h>
+#include "ft_deq.h"
 
-#include <libft.h>
+#include "libft.h"
 
 void			deq_init(t_deq *restrict self, size_t item_size,
 												size_t init_len)

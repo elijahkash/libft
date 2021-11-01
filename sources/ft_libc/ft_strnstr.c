@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 #if defined USE_LIBC && ! defined __linux__
 

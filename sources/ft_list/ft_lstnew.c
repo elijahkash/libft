@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_list.h>
+#include "ft_list.h"
 
-#include <ft_memory_manager.h>
-#include <ft_libc.h>
+#include "ft_memory_manager.h"
+#include "ft_libc.h"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

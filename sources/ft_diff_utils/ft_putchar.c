@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <libft.h>
+#include "libft.h"
 
 #include <unistd.h>
 

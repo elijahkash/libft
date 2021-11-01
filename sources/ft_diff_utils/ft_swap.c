@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 void			ft_swap(void *p1, void *p2, size_t size)
 {

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_memory_manager.h>
+#include "ft_memory_manager.h"
 
-#include <ft_libft_mod.h>
+#include "ft_libft_mod.h"
 
 #include <stdlib.h>
 

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_memory_manager.h>
+#include "ft_memory_manager.h"
 
 void	ft_sfree(void *data, size_t size)
 {

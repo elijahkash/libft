@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_eval.h>
+#include "ft_eval.h"
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 static char	g_eval_mem[8];
 

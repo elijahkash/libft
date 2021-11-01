@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_deq.h>
+#include "ft_deq.h"
 
-#include <libft.h>
+#include "libft.h"
 
 inline void		*deq_push_front(t_deq *restrict self, void *data)
 {

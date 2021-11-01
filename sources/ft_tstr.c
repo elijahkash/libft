@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_tstr.h>
+#include "ft_tstr.h"
 
-#include <libft.h>
+#include "libft.h"
 
 t_str	*ft_tstrdup(t_str s)
 {

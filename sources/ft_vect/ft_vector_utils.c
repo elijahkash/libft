@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_vector.h>
+#include "ft_vector.h"
 
-#include <libft.h>
+#include "libft.h"
 
 void			*vect_find_back(t_vect *restrict self, void *data,
 							int (*cmp)(const void *, const void *))

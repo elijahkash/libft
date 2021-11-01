@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_libc.h>
+#include "ft_libc.h"
 
 size_t	ft_strcmp_l(const char *s1, const char *s2)
 {

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_list_on_arr.h>
+#include "ft_list_on_arr.h"
 
-#include <libft.h>
+#include "libft.h"
 
 inline void		*alst(t_alst *restrict self, size_t item)
 {

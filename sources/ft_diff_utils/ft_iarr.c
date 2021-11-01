@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_memory_manager.h>
+#include "ft_memory_manager.h"
 
 void		ft_init_iarr(int ***arr, int row, int col)
 {

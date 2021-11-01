@@ -10,14 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <libft.h>
+#include "libft.h"
+
+#include <stdio.h>
 
 static void	print_hex(char c)
 {
-	(c < 10) ? ft_printf("%c", ('0' + c)) :
-				ft_printf("%c", ('a' + c - 10));
+	(c < 10) ? printf("%c", ('0' + c)) :
+				printf("%c", ('a' + c - 10));
 }
 
 static void	print_byte(const void *ptr)
@@ -32,9 +34,9 @@ static void	print_str(char *str, int size)
 
 	i = -1;
 	while (++i < size)
-		(ft_isprint(str[i])) ? ft_printf("%c", str[i]) :
-								ft_printf(".");
-	ft_printf("\n");
+		(ft_isprint(str[i])) ? printf("%c", str[i]) :
+								printf(".");
+	printf("\n");
 }
 
 void		ft_print_memory(const void *addr, size_t size)
@@ -48,7 +50,7 @@ void		ft_print_memory(const void *addr, size_t size)
 	{
 		print_byte((void *)((unsigned char *)addr + i++));
 		sp -= 2;
-		(i % 2 == 0) ? ft_printf("%c", ' ' + (sp-- * 0)) : 0;
+		(i % 2 == 0) ? printf("%c", ' ' + (sp-- * 0)) : 0;
 		if (i % 16 == 0)
 		{
 			print_str((char *)addr + i - 16, 16);
@@ -57,7 +59,7 @@ void		ft_print_memory(const void *addr, size_t size)
 	}
 	if (i % 16 != 0)
 	{
-		ft_printf("%*s", sp, "");
+		printf("%*s", sp, "");
 		print_str((char *)addr + i - i % 16, i % 16);
 	}
 }

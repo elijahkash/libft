@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_outbuff_dst.h>
+#include "ft_outbuff_dst.h"
 
-#include <libft.h>
+#include "libft.h"
 
 static char		*g_outstr = NULL;
 

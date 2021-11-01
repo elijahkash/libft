@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_memory_manager.h>
+#include "ft_memory_manager.h"
 
 void	ft_del_arr(void ***arr, size_t item_size)
 {

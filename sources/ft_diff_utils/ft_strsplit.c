@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_diff_utils.h>
+#include "ft_diff_utils.h"
 
-#include <ft_libc.h>
-#include <ft_memory_manager.h>
+#include "ft_libc.h"
+#include "ft_memory_manager.h"
 
 static void	*destroy(char **start_destr, char **end_destr)
 {

@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_sort.h>
+#include "ft_sort.h"
 
-#include <ft_libft_mod.h>
+#include "ft_libft_mod.h"
 
-#include <libft.h>
+#include "libft.h"
 
 #ifdef USE_LIBC
 

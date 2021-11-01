@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_list.h>
+#include "ft_list.h"
 
-#include <ft_memory_manager.h>
+#include "ft_memory_manager.h"
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
