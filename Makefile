@@ -150,8 +150,7 @@ $(NAME): all
 all: $(LIB)
 
 %.d: %.c
-	$(CC) $(CFLAGS) -MM $^ -MF "$@"
-	@sed -i '1s=^=$(dir $@)=' "$@"
+	$(CC) $(CFLAGS) -MM $^ -MF "$@" -MT "$@"
 
 ifneq ($(MAKECMDGOALS), fclean)
 ifneq ($(MAKECMDGOALS), clean)
