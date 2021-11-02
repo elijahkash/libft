@@ -1,12 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_deq_pushpop.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/30 19:59:02 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/21 18:43:14 by Kashnitskiy      ###   ########.fr       */
+/*   Copyright (C) 2021 Ilya Kashnitskiy.                                     */
+/*   Contact: elijahkash.code@gmail.com                                       */
+/*                                                                            */
+/*   This file is part of the LIBFT project                                   */
+/*   https://github.com/elijahkash/libft                                      */
+/*                                                                            */
+/*   MIT License Usage                                                        */
+/*   This file may be used under the terms of the MIT License.                */
+/*   Check LICENSE included in the packaging of this file.                    */
 /*                                                                            */
 /* ************************************************************************** */
 

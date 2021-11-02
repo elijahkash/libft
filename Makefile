@@ -1,19 +1,22 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/12/12 21:57:42 by mtrisha           #+#    #+#              #
-#    Updated: 2020/01/16 14:01:02 by Kashnitskiy      ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#* ************************************************************************** *#
+#*                                                                            *#
+#*   Copyright (C) 2021 Ilya Kashnitskiy.                                     *#
+#*   Contact: elijahkash.code@gmail.com                                       *#
+#*                                                                            *#
+#*   This file is part of the LIBFT project                                   *#
+#*   https://github.com/elijahkash/libft                                      *#
+#*                                                                            *#
+#*   MIT License Usage                                                        *#
+#*   This file may be used under the terms of the MIT License.                *#
+#*   Check LICENSE included in the packaging of this file.                    *#
+#*                                                                            *#
+#* ************************************************************************** *#
 
 NAME = libft
 
 CC = clang
 CFLAGS = -Wall -Wextra -g -O2
+ARFLAGS = rcs
 
 LIB = $(NAME).a
 
@@ -162,7 +165,7 @@ endif
 endif
 
 $(LIB): $(LIB_OBJS)
-	$(AR) rcs $(LIB) $?
+	$(AR) $(ARFLAGS) $(LIB) $?
 
 clean:
 	rm -rf $(LIB_OBJS)

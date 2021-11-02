@@ -1,12 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/21 12:53:49 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/22 21:41:10 by Kashnitskiy      ###   ########.fr       */
+/*   Copyright (C) 2021 Ilya Kashnitskiy.                                     */
+/*   Contact: elijahkash.code@gmail.com                                       */
+/*                                                                            */
+/*   This file is part of the LIBFT project                                   */
+/*   https://github.com/elijahkash/libft                                      */
+/*                                                                            */
+/*   MIT License Usage                                                        */
+/*   This file may be used under the terms of the MIT License.                */
+/*   Check LICENSE included in the packaging of this file.                    */
 /*                                                                            */
 /* ************************************************************************** */
 

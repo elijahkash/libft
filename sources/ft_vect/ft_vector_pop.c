@@ -1,12 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_vector_pop.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 15:33:55 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:57:30 by Kashnitskiy      ###   ########.fr       */
+/*   Copyright (C) 2021 Ilya Kashnitskiy.                                     */
+/*   Contact: elijahkash.code@gmail.com                                       */
+/*                                                                            */
+/*   This file is part of the LIBFT project                                   */
+/*   https://github.com/elijahkash/libft                                      */
+/*                                                                            */
+/*   MIT License Usage                                                        */
+/*   This file may be used under the terms of the MIT License.                */
+/*   Check LICENSE included in the packaging of this file.                    */
 /*                                                                            */
 /* ************************************************************************** */
 

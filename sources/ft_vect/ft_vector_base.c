@@ -1,12 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_vector_base.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/03 15:22:03 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/21 14:37:36 by Kashnitskiy      ###   ########.fr       */
+/*   Copyright (C) 2021 Ilya Kashnitskiy.                                     */
+/*   Contact: elijahkash.code@gmail.com                                       */
+/*                                                                            */
+/*   This file is part of the LIBFT project                                   */
+/*   https://github.com/elijahkash/libft                                      */
+/*                                                                            */
+/*   MIT License Usage                                                        */
+/*   This file may be used under the terms of the MIT License.                */
+/*   Check LICENSE included in the packaging of this file.                    */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Kashnitskiy <elijahkash.code@gmail.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 12:04:28 by mtrisha           #+#    #+#             */
-/*   Updated: 2020/01/16 13:57:11 by Kashnitskiy      ###   ########.fr       */
+/*   Copyright (C) 2021 Ilya Kashnitskiy.                                     */
+/*   Contact: elijahkash.code@gmail.com                                       */
+/*                                                                            */
+/*   This file is part of the LIBFT project                                   */
+/*   https://github.com/elijahkash/libft                                      */
+/*                                                                            */
+/*   MIT License Usage                                                        */
+/*   This file may be used under the terms of the MIT License.                */
+/*   Check LICENSE included in the packaging of this file.                    */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "ft_list.h"
 
 #include "ft_memory_manager.h"
