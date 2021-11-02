@@ -22,7 +22,6 @@ LIB = $(NAME).a
 
 SRC_DIR = sources
 INC_DIR = includes
-BUILD_DIR = build
 
 INC_PARAMS = $(INC_DIR:%=-I%)
 CFLAGS += $(INC_PARAMS)
@@ -144,7 +143,6 @@ LIB_SRC = \
 LIB_OBJS := $(LIB_SRC:.c=.o)
 LIB_DEPS := $(LIB_OBJS:.o=.d)
 
-
 .PHONY: all clean fclean re
 
 $(NAME): all
@@ -154,7 +152,6 @@ all: $(LIB)
 %.d: %.c
 	$(CC) $(CFLAGS) -MM $^ -MF "$@"
 	@sed -i '1s=^=$(dir $@)=' "$@"
-
 
 ifneq ($(MAKECMDGOALS), fclean)
 ifneq ($(MAKECMDGOALS), clean)
