@@ -15,7 +15,7 @@
 NAME = libft
 
 CC = clang
-CFLAGS = -Wall -Wextra -g -O2
+CFLAGS = -Wall -Wextra -Werror -g -O2
 ARFLAGS = rcs
 
 LIB = $(NAME).a
