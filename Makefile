@@ -150,7 +150,7 @@ $(NAME): all
 all: $(LIB)
 
 %.d: %.c
-	$(CC) $(CFLAGS) -MM $^ -MF "$@" -MT "$@"
+	$(CC) $(CFLAGS) -MM $^ -MF "$@" -MT $(@:.d=.o)
 
 ifneq ($(MAKECMDGOALS), fclean)
 ifneq ($(MAKECMDGOALS), clean)
